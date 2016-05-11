@@ -1,0 +1,41 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "background.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "background(iphone 6).png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "background(iphone 6 PLUS)-1.png",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "background (2).png",
+      "height-class" : "compact",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "background (2)-1.png",
+      "height-class" : "compact",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "background (2)-2.png",
+      "height-class" : "compact",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
