@@ -61,7 +61,7 @@
 #pragma mark - Pickerview delegate methods
 
 - (CGFloat) pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
-	return (pickerView.frame.size.height / 1.5);
+	return (pickerView.frame.size.height / 2.5);
 }
 
 - (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
@@ -81,6 +81,10 @@
 
 	NSDictionary *attrs = @{ NSForegroundColorAttributeName : color , NSParagraphStyleAttributeName:paragraphStyle};
 	NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:string attributes:attrs];
+    
+    [[pickerView.subviews objectAtIndex:1] setHidden:TRUE];
+    [[pickerView.subviews objectAtIndex:2] setHidden:TRUE];
+    
 	return attrStr;
 }
 
