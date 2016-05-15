@@ -11,6 +11,9 @@
 
 @interface CalculatorViewController () {
 	NSArray *levelsArray;
+   
+    BOOL checkBoxSelected;
+    BOOL orderSelecting;
 }
 
 @end
@@ -40,6 +43,15 @@
 		[self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
 		[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 	}
+    
+    // setting the checkbox
+    [_checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
+                        forState:UIControlStateNormal];
+    [_checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+                        forState:UIControlStateSelected];
+    [_checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+                        forState:UIControlStateHighlighted];
+    _checkbox.adjustsImageWhenHighlighted=YES;
 
 	// making fancy corners
 	self.calculateButton.clipsToBounds = YES;
@@ -52,6 +64,7 @@
 
 	levelsArray = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -88,6 +101,34 @@
 	return attrStr;
 }
 
+#pragma mark - TableView delegate methods
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    cell.textLabel.text = @"OK";
+    return cell;
+}
+
+#pragma mark - Checkbox methods
+
+- (IBAction)addToHistoryCheckboxChecked:(id)sender {
+    checkBoxSelected = !checkBoxSelected; /* Toggle */
+    [_checkbox setSelected:checkBoxSelected];
+}
+
+- (IBAction)openOrderSelectionMenu:(id)sender {
+    orderSelecting =!orderSelecting;
+    self.orderSelectionMenuView.hidden = !orderSelecting;
+    [self.view setNeedsDisplay];
+}
 
 /*
 - (UIView *) pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {

@@ -3,7 +3,7 @@
 //  SwissPlanner
 //
 //  Created by User on 4/10/16.
-//  Copyright © 2016 Elena Baoychuk. All rights reserved.
+//  Copyright © 2016 Elena Boychuk. All rights reserved.
 //
 
 #import "AppDelegate.h"

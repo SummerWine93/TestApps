@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CalculatorViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface CalculatorViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *calculateButton;
 @property (weak, nonatomic) IBOutlet UIView *textDisplayView;
@@ -17,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *pickerViewPrepayment;
 @property (weak, nonatomic) UIView *pickerPrepayment;
 @property (weak, nonatomic) IBOutlet UILabel *euroSign;
+@property (weak, nonatomic) IBOutlet UIButton *checkbox;
+@property (weak, nonatomic) IBOutlet UIView *orderSelectionMenuView;
 
 @end
