@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "reward_badge.png",
+      "filename" : "iphone6+level1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reward_badge-1.png",
+      "filename" : "iphone6+level1-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reward_badge-2.png",
+      "filename" : "iphone6+level1-2.png",
       "scale" : "3x"
     }
   ],

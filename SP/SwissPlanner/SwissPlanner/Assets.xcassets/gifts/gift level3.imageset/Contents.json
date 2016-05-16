@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "reward_watches.png",
+      "filename" : "iphone6+clock.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reward_watches-1.png",
+      "filename" : "iphone6+clock-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reward_watches-2.png",
+      "filename" : "iphone6+clock-2.png",
       "scale" : "3x"
     }
   ],

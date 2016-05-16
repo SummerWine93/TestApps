@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "reward_cruise.png",
+      "filename" : "iphone6+cruise.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3-1.png",
+      "filename" : "iphone6+cruise-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3-2.png",
+      "filename" : "iphone6+cruise-2.png",
       "scale" : "3x"
     }
   ],

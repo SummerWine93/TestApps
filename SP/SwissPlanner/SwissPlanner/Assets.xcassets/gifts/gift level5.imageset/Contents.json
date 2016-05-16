@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "reward_pen.png",
+      "filename" : "iphone6+pen.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reward_pen-1.png",
+      "filename" : "iphone6+pen-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reward_pen-2.png",
+      "filename" : "iphone6+pen-2.png",
       "scale" : "3x"
     }
   ],
