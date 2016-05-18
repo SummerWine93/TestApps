@@ -7453,6 +7453,9 @@
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="0.0" width="60" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-p3-Yfk">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -7463,6 +7466,9 @@
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="68" y="1" width="99" height="43"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="1" width="102" height="43"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-XQ-0VI">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -7472,6 +7478,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="168" y="0.0" width="58" height="44"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="0.0" width="60" height="44"/>
                                                                             </variation>
                                                                         </label>
                                                                     </subviews>
@@ -9995,6 +10004,9 @@
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="2" width="60" height="42"/>
+                                                                            </variation>
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="2" width="60" height="42"/>
                                                                             </variation>
@@ -10008,6 +10020,9 @@
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="68" y="2" width="99" height="42"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="2" width="102" height="42"/>
+                                                                            </variation>
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="2" width="102" height="42"/>
                                                                             </variation>
@@ -10020,6 +10035,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="168" y="2" width="58" height="42"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="2" width="60" height="42"/>
                                                                             </variation>
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="2" width="60" height="42"/>
@@ -11639,19 +11657,19 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="8Hv-AN-AvQ"/>
-                                <exclude reference="ybI-fr-H8p"/>
                                 <exclude reference="303-cq-338"/>
                                 <exclude reference="9Np-hL-Hwh"/>
+                                <exclude reference="8Hv-AN-AvQ"/>
+                                <exclude reference="ybI-fr-H8p"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <exclude reference="ybI-fr-H8p"/>
                                 <include reference="303-cq-338"/>
                                 <include reference="ZSV-B2-PBg"/>
                                 <include reference="Zxe-cp-FC2"/>
                                 <include reference="9Np-hL-Hwh"/>
+                                <exclude reference="ybI-fr-H8p"/>
                             </mask>
                         </variation>
                     </view>
