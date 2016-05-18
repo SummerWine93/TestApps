@@ -33,6 +33,7 @@ typedef enum {
 				   [NSArray arrayWithObjects:@"gift level3", @"3 Level", nil],
 				   [NSArray arrayWithObjects:@"gift level5", @"5 Level", nil],
 				   [NSArray arrayWithObjects:@"gift level8", @"8 Level", nil],
+                   [NSArray arrayWithObjects:@"gift level 7-11", @"7-11 levels", nil],
 				   [NSArray arrayWithObjects:@"gift no level", @"", nil],
 				   nil];
 	
