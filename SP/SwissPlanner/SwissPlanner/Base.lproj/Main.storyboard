@@ -1035,6 +1035,9 @@
                                                                 <exclude reference="oU5-Mf-tcL"/>
                                                             </mask>
                                                         </variation>
+                                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="2" y="0.0" width="37" height="165"/>
+                                                        </variation>
                                                         <variation key="heightClass=compact-widthClass=regular">
                                                             <mask key="constraints">
                                                                 <exclude reference="oU5-Mf-tcL"/>
@@ -1055,6 +1058,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="165" width="41" height="55"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
@@ -1067,6 +1073,9 @@
                                                     <constraint firstItem="GAs-xg-fge" firstAttribute="width" secondItem="B7s-la-JDA" secondAttribute="width" multiplier="0.9" id="jcN-OY-hS1"/>
                                                     <constraint firstItem="GAs-xg-fge" firstAttribute="centerX" secondItem="B7s-la-JDA" secondAttribute="centerX" id="sOB-hb-GWb"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="56" y="8" width="41" height="220"/>
+                                                </variation>
                                             </view>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Mb-4r-VDd" userLabel="View3">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1091,6 +1100,9 @@
                                                                         <exclude reference="248-za-qox"/>
                                                                     </mask>
                                                                 </variation>
+                                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="18" y="0.0" width="46" height="165"/>
+                                                                </variation>
                                                                 <connections>
                                                                     <outlet property="dataSource" destination="cZ2-7A-SWo" id="ltY-vf-OwF"/>
                                                                     <outlet property="delegate" destination="cZ2-7A-SWo" id="55I-YC-hr6"/>
@@ -1107,12 +1119,18 @@
                                                             <constraint firstItem="TBT-0G-A4b" firstAttribute="centerY" secondItem="Eie-h9-aa7" secondAttribute="centerY" id="uUW-6O-VaC"/>
                                                             <constraint firstItem="dY3-f3-2Pg" firstAttribute="height" secondItem="Eie-h9-aa7" secondAttribute="height" id="zD2-MU-ubJ"/>
                                                         </constraints>
+                                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="3" y="0.0" width="64" height="165"/>
+                                                        </variation>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Prepayment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gT6-3g-rJO">
                                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="165" width="71" height="55"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
@@ -1163,7 +1181,8 @@
                                                         <include reference="Wqf-1x-qNd"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=compact-widthClass=compact">
+                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="105" y="8" width="71" height="220"/>
                                                     <mask key="constraints">
                                                         <exclude reference="6Ar-hd-I21"/>
                                                         <exclude reference="Dyq-vQ-EDA"/>
@@ -1378,7 +1397,7 @@
                                         </constraints>
                                         <state key="normal" image="calculate_button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmz-W5-fvG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmz-W5-fvG">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Add to plans">
@@ -1416,7 +1435,7 @@
                                             <constraint firstItem="y66-5p-jmm" firstAttribute="centerY" secondItem="32V-gu-phP" secondAttribute="centerY" id="arP-pf-EvH"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-fa-zWR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add to plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-fa-zWR">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1474,19 +1493,19 @@
                                         <exclude reference="Xmz-W5-fvG"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="31I-KX-eoS"/>
-                                        <exclude reference="O1A-mr-Pmb"/>
                                         <exclude reference="dak-g2-IYu"/>
                                         <exclude reference="hch-RA-y9Y"/>
+                                        <exclude reference="DDd-s3-eSj"/>
                                         <exclude reference="6YM-GX-bh0"/>
                                         <exclude reference="Wxs-zV-YjR"/>
                                         <exclude reference="pvA-W0-pGd"/>
-                                        <exclude reference="MZT-Ez-tir"/>
-                                        <exclude reference="yg5-4k-EYE"/>
-                                        <exclude reference="DDd-s3-eSj"/>
                                         <exclude reference="OLi-7F-sEk"/>
                                         <exclude reference="R5T-nE-xVl"/>
                                         <exclude reference="jiv-dw-YOF"/>
+                                        <exclude reference="MZT-Ez-tir"/>
+                                        <exclude reference="yg5-4k-EYE"/>
+                                        <exclude reference="31I-KX-eoS"/>
+                                        <exclude reference="O1A-mr-Pmb"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -1512,12 +1531,12 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="dak-g2-IYu"/>
-                                        <exclude reference="8AN-33-Phe"/>
-                                        <exclude reference="Rya-Kw-1t5"/>
                                         <exclude reference="6Mv-L9-MAQ"/>
                                         <include reference="9hL-YE-xf3"/>
                                         <include reference="p6z-vU-qAC"/>
                                         <include reference="wGe-1h-IKA"/>
+                                        <exclude reference="8AN-33-Phe"/>
+                                        <exclude reference="Rya-Kw-1t5"/>
                                         <exclude reference="R5T-nE-xVl"/>
                                         <include reference="jiv-dw-YOF"/>
                                     </mask>
@@ -1656,6 +1675,9 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <color key="textColor" red="1" green="0.80044903036913162" blue="0.36406796600682267" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                <rect key="frame" x="34" y="7" width="172" height="30"/>
+                                                            </variation>
                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="34" y="7" width="172" height="30"/>
                                                             </variation>
@@ -1733,11 +1755,11 @@
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
+                                                            <exclude reference="Fv3-xm-oMU"/>
+                                                            <exclude reference="Rc6-dh-7uH"/>
                                                             <exclude reference="50c-OP-MIg"/>
                                                             <exclude reference="ieR-QM-hlL"/>
                                                             <exclude reference="m5T-66-eg9"/>
-                                                            <exclude reference="Fv3-xm-oMU"/>
-                                                            <exclude reference="Rc6-dh-7uH"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="widthClass=compact">
@@ -1749,16 +1771,16 @@
                                                     </variation>
                                                     <variation key="heightClass=compact-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="50c-OP-MIg"/>
-                                                            <exclude reference="FwQ-dS-Y5I"/>
-                                                            <include reference="dAy-Dq-Is8"/>
-                                                            <include reference="ieR-QM-hlL"/>
-                                                            <include reference="m5T-66-eg9"/>
                                                             <include reference="Fv3-xm-oMU"/>
                                                             <include reference="Rc6-dh-7uH"/>
                                                             <exclude reference="cTX-KK-ef1"/>
                                                             <exclude reference="gyh-5j-N0I"/>
                                                             <exclude reference="xbl-mJ-Avo"/>
+                                                            <include reference="50c-OP-MIg"/>
+                                                            <exclude reference="FwQ-dS-Y5I"/>
+                                                            <include reference="dAy-Dq-Is8"/>
+                                                            <include reference="ieR-QM-hlL"/>
+                                                            <include reference="m5T-66-eg9"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
@@ -1793,6 +1815,9 @@
                                                             <color key="textColor" red="0.83921568629999999" green="0.54117647059999996" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                <rect key="frame" x="188" y="16" width="36" height="24"/>
+                                                            </variation>
                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="164" y="13" width="60" height="30"/>
                                                             </variation>
@@ -1805,6 +1830,9 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                <rect key="frame" x="63" y="16" width="125" height="24"/>
+                                                            </variation>
                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="63" y="13" width="93" height="30"/>
                                                             </variation>
