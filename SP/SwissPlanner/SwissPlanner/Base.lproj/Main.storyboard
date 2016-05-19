@@ -1732,6 +1732,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             </variation>
                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <rect key="frame" x="63" y="13" width="93" height="30"/>
                                                             </variation>
                                                         </label>
@@ -1743,7 +1744,7 @@
                                                         <constraint firstItem="5md-Or-LMK" firstAttribute="height" secondItem="iQi-jb-ifd" secondAttribute="height" multiplier="0.7" id="7BY-GY-eyY"/>
                                                         <constraint firstItem="i9i-kT-EV5" firstAttribute="width" secondItem="iQi-jb-ifd" secondAttribute="width" multiplier="0.15" id="8cN-JY-HNC"/>
                                                         <constraint firstItem="i9i-kT-EV5" firstAttribute="height" secondItem="dt6-oX-2D1" secondAttribute="height" id="BZo-K2-60X"/>
-                                                        <constraint firstItem="i9i-kT-EV5" firstAttribute="top" secondItem="dt6-oX-2D1" secondAttribute="bottom" id="Fv3-xm-oMU"/>
+                                                        <constraint firstItem="i9i-kT-EV5" firstAttribute="top" secondItem="dt6-oX-2D1" secondAttribute="bottom" constant="2" id="Fv3-xm-oMU"/>
                                                         <constraint firstItem="dt6-oX-2D1" firstAttribute="centerY" secondItem="iQi-jb-ifd" secondAttribute="centerY" id="FwQ-dS-Y5I"/>
                                                         <constraint firstItem="i9i-kT-EV5" firstAttribute="centerX" secondItem="dt6-oX-2D1" secondAttribute="centerX" id="Rc6-dh-7uH"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="i9i-kT-EV5" secondAttribute="trailing" constant="8" id="cTX-KK-ef1"/>
@@ -1839,27 +1840,57 @@
                                                         <constraint firstItem="V48-w7-j8k" firstAttribute="height" secondItem="XvG-Md-tR1" secondAttribute="height" id="5Zx-96-leN"/>
                                                         <constraint firstItem="0JE-8B-son" firstAttribute="height" secondItem="1Ws-j5-sfT" secondAttribute="height" multiplier="0.7" id="5go-Sp-3Ca"/>
                                                         <constraint firstItem="0JE-8B-son" firstAttribute="width" secondItem="0JE-8B-son" secondAttribute="height" multiplier="1:1" id="7Pd-Zs-Vh3"/>
+                                                        <constraint firstItem="XvG-Md-tR1" firstAttribute="top" secondItem="1Ws-j5-sfT" secondAttribute="topMargin" id="8OG-Ui-x2n"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="V48-w7-j8k" secondAttribute="trailing" constant="8" id="E01-rV-EM7"/>
+                                                        <constraint firstItem="V48-w7-j8k" firstAttribute="centerX" secondItem="1Ws-j5-sfT" secondAttribute="centerX" id="MfY-DG-r3o"/>
+                                                        <constraint firstItem="XvG-Md-tR1" firstAttribute="height" secondItem="1Ws-j5-sfT" secondAttribute="height" multiplier="0.4" id="OhN-EW-t4c"/>
                                                         <constraint firstItem="V48-w7-j8k" firstAttribute="centerY" secondItem="1Ws-j5-sfT" secondAttribute="centerY" id="Pf0-eR-4ph"/>
                                                         <constraint firstItem="V48-w7-j8k" firstAttribute="leading" secondItem="XvG-Md-tR1" secondAttribute="trailing" id="Ze9-R8-2lh"/>
                                                         <constraint firstItem="0JE-8B-son" firstAttribute="leading" secondItem="1Ws-j5-sfT" secondAttribute="leadingMargin" constant="8" id="k2U-FL-KhR"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="XvG-Md-tR1" secondAttribute="trailing" constant="5" id="mtm-bC-cwS"/>
                                                         <constraint firstItem="V48-w7-j8k" firstAttribute="width" secondItem="1Ws-j5-sfT" secondAttribute="width" multiplier="0.15" id="oc2-YU-Pjy"/>
+                                                        <constraint firstItem="V48-w7-j8k" firstAttribute="top" secondItem="XvG-Md-tR1" secondAttribute="bottom" constant="2" id="q4a-sC-bwm"/>
                                                         <constraint firstItem="XvG-Md-tR1" firstAttribute="leading" secondItem="0JE-8B-son" secondAttribute="trailing" constant="8" id="sWe-34-2gT"/>
                                                         <constraint firstItem="XvG-Md-tR1" firstAttribute="centerY" secondItem="1Ws-j5-sfT" secondAttribute="centerY" id="t2T-BO-4ad"/>
+                                                        <constraint firstItem="V48-w7-j8k" firstAttribute="top" secondItem="XvG-Md-tR1" secondAttribute="bottom" constant="2" id="yjK-sl-Eky"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="8OG-Ui-x2n"/>
+                                                            <exclude reference="OhN-EW-t4c"/>
+                                                            <exclude reference="mtm-bC-cwS"/>
+                                                            <exclude reference="MfY-DG-r3o"/>
+                                                            <exclude reference="q4a-sC-bwm"/>
+                                                            <exclude reference="yjK-sl-Eky"/>
+                                                        </mask>
+                                                    </variation>
                                                     <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="4RX-NS-jTX"/>
                                                             <include reference="5go-Sp-3Ca"/>
                                                             <include reference="7Pd-Zs-Vh3"/>
                                                             <include reference="k2U-FL-KhR"/>
+                                                            <include reference="sWe-34-2gT"/>
+                                                            <include reference="t2T-BO-4ad"/>
                                                             <include reference="5Zx-96-leN"/>
                                                             <include reference="E01-rV-EM7"/>
                                                             <include reference="Pf0-eR-4ph"/>
                                                             <include reference="Ze9-R8-2lh"/>
                                                             <include reference="oc2-YU-Pjy"/>
-                                                            <include reference="sWe-34-2gT"/>
-                                                            <include reference="t2T-BO-4ad"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="8OG-Ui-x2n"/>
+                                                            <include reference="OhN-EW-t4c"/>
+                                                            <include reference="mtm-bC-cwS"/>
+                                                            <exclude reference="t2T-BO-4ad"/>
+                                                            <exclude reference="E01-rV-EM7"/>
+                                                            <include reference="MfY-DG-r3o"/>
+                                                            <exclude reference="Pf0-eR-4ph"/>
+                                                            <exclude reference="Ze9-R8-2lh"/>
+                                                            <include reference="q4a-sC-bwm"/>
+                                                            <exclude reference="yjK-sl-Eky"/>
                                                         </mask>
                                                     </variation>
                                                 </tableViewCellContentView>
