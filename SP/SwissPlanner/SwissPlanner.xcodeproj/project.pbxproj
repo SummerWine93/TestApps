@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39C64E431CEE72F100270A55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39C64E421CEE72F100270A55 /* Localizable.strings */; };
 		CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */; };
 		CE05AA941CD0F0C900CB7A8E /* Slide3ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA931CD0F0C900CB7A8E /* Slide3ContentViewController.m */; };
 		CE05AA9D1CD0FFE000CB7A8E /* Slide1ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA9C1CD0FFE000CB7A8E /* Slide1ContentViewController.m */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39C64E421CEE72F100270A55 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CE05AA8F1CD0B1AA00CB7A8E /* Slide2ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide2ContentViewController.h; sourceTree = "<group>"; };
 		CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide2ContentViewController.m; sourceTree = "<group>"; };
 		CE05AA921CD0F0C900CB7A8E /* Slide3ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide3ContentViewController.h; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				CE59137F1CBA566D008A3042 /* main.m */,
+				39C64E421CEE72F100270A55 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE59138E1CBA566D008A3042 /* LaunchScreen.storyboard in Resources */,
+				39C64E431CEE72F100270A55 /* Localizable.strings in Resources */,
 				CE59138B1CBA566D008A3042 /* Assets.xcassets in Resources */,
 				CE5913891CBA566D008A3042 /* Main.storyboard in Resources */,
 			);
