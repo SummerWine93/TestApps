@@ -33,6 +33,7 @@
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 
 	// adding navigation capabilities
 	self.navigationItem.leftBarButtonItem = menuButton;
@@ -62,7 +63,11 @@
 	self.pickerPrepayment.layer.cornerRadius = 5;
 	self.pickerViewPrepayment.layer.cornerRadius = 5;
 
-	levelsArray = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
+	levelsArray = [NSArray arrayWithObjects:@"100", @"2000", @"3000", @"40000", @"500000", @"6", @"7", @"8", @"9", @"10", @"11",nil];
+}
+
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 }
 
 
@@ -86,35 +91,57 @@
 }
 
 
-- (NSAttributedString *) pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
-	UIColor *color = [UIColor whiteColor];
-	NSString *string = [levelsArray objectAtIndex:row];
-	NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
- paragraphStyle.alignment                = NSTextAlignmentCenter;
 
-	NSDictionary *attrs = @{ NSForegroundColorAttributeName : color , NSParagraphStyleAttributeName:paragraphStyle};
-	NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:string attributes:attrs];
-    
-    [[pickerView.subviews objectAtIndex:1] setHidden:TRUE];
-    [[pickerView.subviews objectAtIndex:2] setHidden:TRUE];
-    
-	return attrStr;
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+	UILabel* pickerLabel = (UILabel*)view;
+	
+	if (!pickerLabel)
+	{
+		pickerLabel = [[UILabel alloc] init];
+		
+		pickerLabel.font = [UIFont fontWithName:@"SourceSansPro-Semibold"                size:16];
+		pickerLabel.textColor = [UIColor whiteColor];
+		pickerLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+		
+		pickerLabel.textAlignment=NSTextAlignmentCenter;
+	}
+	[pickerLabel setText:[levelsArray objectAtIndex:row]];
+	
+	[[pickerView.subviews objectAtIndex:1] setHidden:TRUE];
+	[[pickerView.subviews objectAtIndex:2] setHidden:TRUE];
+	
+	return pickerLabel;
 }
 
 #pragma mark - TableView delegate methods
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 5;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return (tableView.frame.size.height / 5);
+}
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    cell.textLabel.text = @"OK";
+    cell.textLabel.text = [levelsArray objectAtIndex:indexPath.row];
+	cell.textLabel.textColor = [UIColor whiteColor];
+	cell.textLabel.adjustsFontSizeToFitWidth = YES;
+	cell.backgroundColor = [UIColor clearColor];
+	
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[self.pickerPrepayment selectRow:indexPath.row inComponent:0 animated:YES];
+	[self updateOrderSelectionMenu];
 }
 
 #pragma mark - Checkbox methods
@@ -122,12 +149,17 @@
 - (IBAction)addToHistoryCheckboxChecked:(id)sender {
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
+	self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
 }
 
 - (IBAction)openOrderSelectionMenu:(id)sender {
-    orderSelecting =!orderSelecting;
-    self.orderSelectionMenuView.hidden = !orderSelecting;
-    [self.view setNeedsDisplay];
+	[self updateOrderSelectionMenu];
+}
+
+- (void) updateOrderSelectionMenu {
+	orderSelecting =!orderSelecting;
+	self.orderSelectionMenuView.hidden = !orderSelecting;
+	[self.view setNeedsDisplay];
 }
 
 /*

@@ -114,7 +114,7 @@ typedef enum {
 					height = tableView.frame.size.height * 0.35;
 					break;
 				default:
-					height = tableView.frame.size.height * 0.15;
+					height = tableView.frame.size.height * 0.18;
 					//height = [UIScreen mainScreen].nativeBounds.size.height * 0.10;
 					break;
 			}
