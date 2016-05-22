@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icon_2(cabinet).png",
+      "filename" : "ic_plus_one_white.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon_2(cabinet)-1.png",
+      "filename" : "ic_plus_one_white_2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon_2(cabinet)-2.png",
+      "filename" : "ic_plus_one_white_3x.png",
       "scale" : "3x"
     }
   ],

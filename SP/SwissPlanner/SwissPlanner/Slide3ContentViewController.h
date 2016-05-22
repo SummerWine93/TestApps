@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentBlock1Label;
 @property (weak, nonatomic) IBOutlet UILabel *headerContentBlock2Label;
 @property (weak, nonatomic) IBOutlet UILabel *contentBlock2Label;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
