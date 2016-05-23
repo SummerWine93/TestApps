@@ -106,27 +106,22 @@ typedef enum {
 		case 0:
 			switch (indexPath.row) {
 				case ordersCell:
-					//height = [UIScreen mainScreen].nativeBounds.size.height * 0.15;
 					height = tableView.frame.size.height * 0.20;
 					break;
 				case footerCell:
-					//height = [UIScreen mainScreen].nativeBounds.size.height * 0.35;
 					height = tableView.frame.size.height * 0.35;
 					break;
 				default:
 					height = tableView.frame.size.height * 0.18;
-					//height = [UIScreen mainScreen].nativeBounds.size.height * 0.10;
 					break;
 			}
 			break;
 		case 1:
 			switch (indexPath.row) {
 				case 0:
-					//height = [UIScreen mainScreen].nativeBounds.size.height * 0.15;
 					height = tableView.frame.size.height * 0.35;
 					break;
 				case 1:
-					//height = [UIScreen mainScreen].nativeBounds.size.height * 0.35;
 					height = tableView.frame.size.height * 0.65;
 					break;
 			}
@@ -134,24 +129,6 @@ typedef enum {
 		default:
 			break;
 	}
-	
-	/*
-	 switch (indexPath.row) {
-		case ordersCell:
-	 //height = [UIScreen mainScreen].nativeBounds.size.height * 0.15;
-	 height = self.view.bounds.size.height * 0.20;
-	 break;
-		case footerCell:
-	 //height = [UIScreen mainScreen].nativeBounds.size.height * 0.35;
-	 height = self.view.bounds.size.height * 0.35;
-	 break;
-		default:
-	 height = self.view.bounds.size.height * 0.07;
-	 //height = [UIScreen mainScreen].nativeBounds.size.height * 0.10;
-	 break;
-	 }
-
-	 */
 	 return height;
 }
 

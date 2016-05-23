@@ -1354,6 +1354,7 @@
                         <outlet property="pickerPartnerLevel" destination="GAs-xg-fge" id="SVv-rk-Trp"/>
                         <outlet property="pickerPrepayment" destination="TBT-0G-A4b" id="AEE-N8-Vfg"/>
                         <outlet property="pickerViewPrepayment" destination="Eie-h9-aa7" id="Nfi-49-KRj"/>
+                        <outlet property="selectedPlanLabel" destination="i5R-2r-WUr" id="l8M-mD-RKA"/>
                         <outlet property="textDisplayView" destination="PJ1-oB-2RH" id="Tr5-y5-1EQ"/>
                     </connections>
                 </viewController>
@@ -1721,15 +1722,6 @@
                                                 <rect key="frame" x="0.0" y="274" width="240" height="55"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dT5-Tl-flN" id="9aM-M9-C6l">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="55"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="55" id="16d-gZ-0fu">
-                                                <rect key="frame" x="0.0" y="329" width="240" height="55"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="16d-gZ-0fu" id="abx-fd-98B">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="55"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
@@ -2320,9 +2312,6 @@
                     <navigationItem key="navigationItem" title="My Cabinet" id="tP2-Uj-dwy"/>
                     <connections>
                         <outlet property="tableView" destination="Ta7-bc-hYN" id="m8F-VK-D3p"/>
-                        <segue destination="0sG-lo-dTl" kind="show" identifier="segueCabinet1" id="NRq-SZ-JWx"/>
-                        <segue destination="0VX-Qv-WVF" kind="show" identifier="segueCabinet2" id="sI1-2h-S7w"/>
-                        <segue destination="nHC-fJ-WFK" kind="show" identifier="segueCabinet3" id="ZSK-Pa-Dqu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ay5-Jo-bGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2330,18 +2319,21 @@
                     <connections>
                         <action selector="openOrderButtonCLicked:" destination="kWn-9T-ghh" id="iuW-D1-fC6"/>
                         <outlet property="delegate" destination="kWn-9T-ghh" id="9lY-Ok-PIg"/>
+                        <segue destination="cZ2-7A-SWo" kind="show" identifier="segueCabinet1" id="Tqq-7b-Ixo"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="hd1-9b-3tz">
                     <connections>
                         <action selector="openOrderButtonCLicked:" destination="kWn-9T-ghh" id="UcS-Hi-Mwo"/>
                         <outlet property="delegate" destination="kWn-9T-ghh" id="bVV-jB-dqp"/>
+                        <segue destination="cZ2-7A-SWo" kind="show" identifier="segueCabinet2" id="THl-6r-zx5"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="X6y-JR-crT">
                     <connections>
                         <action selector="openOrderButtonCLicked:" destination="kWn-9T-ghh" id="cwr-z8-0X8"/>
                         <outlet property="delegate" destination="kWn-9T-ghh" id="bL2-n9-Ytq"/>
+                        <segue destination="cZ2-7A-SWo" kind="show" identifier="segueCabinet3" id="mrJ-do-5pt"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -11323,5 +11315,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="597-xI-Mli"/>
+        <segue reference="mrJ-do-5pt"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,12 +11,16 @@
 @interface CalculatorViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *calculateButton;
+@property (weak, nonatomic) IBOutlet UILabel *selectedPlanLabel;
+
+
 @property (weak, nonatomic) IBOutlet UIView *textDisplayView;
+
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerLevel;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerPartnerLevel;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerPrepayment;
 @property (weak, nonatomic) IBOutlet UIView *pickerViewPrepayment;
-//@property (weak, nonatomic) UIView *pickerPrepayment;
+
 @property (weak, nonatomic) IBOutlet UILabel *euroSign;
 @property (weak, nonatomic) IBOutlet UIButton *checkbox;
 @property (weak, nonatomic) IBOutlet UIView *orderSelectionMenuView;

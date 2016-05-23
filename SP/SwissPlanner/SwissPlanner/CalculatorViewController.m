@@ -16,6 +16,8 @@
    
     BOOL checkBoxSelected;
     BOOL orderSelecting;
+    
+    NSInteger selectedPlan;
 }
 
 @end
@@ -136,6 +138,21 @@
 	return pickerLabel;
 }
 
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    switch (pickerView.tag) {
+        case 0:
+            break;
+        case 1:
+            break;
+        case 2:
+            selectedPlan = row;
+            self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
+            break;
+        default:
+            break;
+    }
+}
+
 #pragma mark - TableView delegate methods
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -152,7 +169,8 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    cell.textLabel.text = [levelsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [plansArray objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
 	cell.textLabel.textColor = [UIColor whiteColor];
 	cell.textLabel.adjustsFontSizeToFitWidth = YES;
 	cell.backgroundColor = [UIColor clearColor];
@@ -161,9 +179,13 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[self.pickerPrepayment selectRow:indexPath.row inComponent:0 animated:YES];
+    selectedPlan = indexPath.row;
+    self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
+	[self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
 	[self updateOrderSelectionMenu];
 }
+
+
 
 #pragma mark - Checkbox methods
 
