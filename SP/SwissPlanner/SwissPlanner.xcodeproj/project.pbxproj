@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
 		CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */; };
 		CE05AA941CD0F0C900CB7A8E /* Slide3ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA931CD0F0C900CB7A8E /* Slide3ContentViewController.m */; };
 		CE05AA9D1CD0FFE000CB7A8E /* Slide1ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA9C1CD0FFE000CB7A8E /* Slide1ContentViewController.m */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide8aContentViewController.h; sourceTree = "<group>"; };
+		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
 		CE041F3F1CEF45DA0048C33D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		CE041F401CEF45DA0048C33D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE05AA8F1CD0B1AA00CB7A8E /* Slide2ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide2ContentViewController.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				CE05AAB51CD267E000CB7A8E /* Slide7ContentViewController.m */,
 				CE05AAB71CD271B500CB7A8E /* Slide8ContentViewController.h */,
 				CE05AAB81CD271B500CB7A8E /* Slide8ContentViewController.m */,
+				39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */,
+				39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */,
 				CE05AABA1CD27BA000CB7A8E /* Slide10ContentViewController.h */,
 				CE05AABB1CD27BA000CB7A8E /* Slide10ContentViewController.m */,
 				CE05AABD1CD2839000CB7A8E /* Slide11ContentViewController.h */,
@@ -437,6 +442,7 @@
 				CE05AAAD1CD2598900CB7A8E /* Slide4ContentViewController.m in Sources */,
 				CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */,
 				CE18D6181CC8EC600056D9A4 /* GiftsPageViewController.m in Sources */,
+				39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */,
 				CE5913C61CBCF968008A3042 /* CalculatorViewController.m in Sources */,
 				CE5913C91CBE3592008A3042 /* TestingViewController.m in Sources */,
 				CE05AABF1CD2839000CB7A8E /* Slide11ContentViewController.m in Sources */,
