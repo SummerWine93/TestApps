@@ -737,7 +737,7 @@
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7s-la-JDA" userLabel="View2">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <subviews>
-                                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-xg-fge">
+                                                    <pickerView tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-xg-fge">
                                                         <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
                                                         <color key="backgroundColor" red="0.52941176469999995" green="0.38431372549999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -802,7 +802,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBT-0G-A4b">
+                                                            <pickerView tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBT-0G-A4b">
                                                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
                                                                 <color key="backgroundColor" red="0.52941176469999995" green="0.38431372549999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
@@ -1004,7 +1004,7 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMT-x4-3bC" userLabel="View Add to history">
                                         <rect key="frame" x="20" y="120" width="400" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6V-sj-eq7">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6V-sj-eq7">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" backgroundImage="notselectedcheckbox"/>
@@ -1148,7 +1148,7 @@
                                             <constraint firstItem="y66-5p-jmm" firstAttribute="centerY" secondItem="32V-gu-phP" secondAttribute="centerY" id="arP-pf-EvH"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add to plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-fa-zWR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" text="Add to plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-fa-zWR">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

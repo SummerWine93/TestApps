@@ -11,6 +11,8 @@
 
 @interface CalculatorViewController () {
 	NSArray *levelsArray;
+    NSArray *prepaymentArray;
+    NSArray *plansArray;
    
     BOOL checkBoxSelected;
     BOOL orderSelecting;
@@ -63,7 +65,9 @@
 	self.pickerPrepayment.layer.cornerRadius = 5;
 	self.pickerViewPrepayment.layer.cornerRadius = 5;
 
-	levelsArray = [NSArray arrayWithObjects:@"100", @"2000", @"3000", @"40000", @"500000", @"6", @"7", @"8", @"9", @"10", @"11",nil];
+	levelsArray = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
+    prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
+    plansArray = [NSArray arrayWithObjects:@"pre Main", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -83,6 +87,9 @@
 }
 
 - (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    if (pickerView.tag == 2) {
+        return [plansArray count];
+    }
 	return [levelsArray count];
 }
 
@@ -90,7 +97,20 @@
 	return 1;
 }
 
-
+- (NSArray *)getPickerSourceArrayByTag: (NSInteger) tag {
+    switch (tag) {
+        case 0:
+        case 1:
+            return levelsArray;
+            break;
+        case 2:
+            return prepaymentArray;
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
 
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
@@ -107,7 +127,8 @@
 		
 		pickerLabel.textAlignment=NSTextAlignmentCenter;
 	}
-	[pickerLabel setText:[levelsArray objectAtIndex:row]];
+    
+	[pickerLabel setText:[[self getPickerSourceArrayByTag:pickerView.tag] objectAtIndex:row]];
 	
 	[[pickerView.subviews objectAtIndex:1] setHidden:TRUE];
 	[[pickerView.subviews objectAtIndex:2] setHidden:TRUE];
