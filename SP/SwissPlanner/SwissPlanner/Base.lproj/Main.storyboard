@@ -9923,7 +9923,7 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pJp-UB-smj">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pJp-UB-smj">
                                                 <rect key="frame" x="20" y="150" width="360" height="29"/>
                                                 <color key="backgroundColor" red="0.83921568629999999" green="0.54117647059999996" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 <segments>
@@ -10151,16 +10151,15 @@
                                             <constraint firstItem="7Bl-dn-bFW" firstAttribute="top" secondItem="pJp-UB-smj" secondAttribute="bottom" constant="10" id="CvV-hx-cfA"/>
                                             <constraint firstItem="tV5-3h-uRb" firstAttribute="centerX" secondItem="cZ5-Bs-3RJ" secondAttribute="centerX" id="HJP-5s-5cb"/>
                                             <constraint firstItem="7Bl-dn-bFW" firstAttribute="width" secondItem="tV5-3h-uRb" secondAttribute="width" id="Mso-RJ-6ig"/>
-                                            <constraint firstAttribute="height" constant="790" id="ZmS-Cy-hoc"/>
-                                            <constraint firstItem="tV5-3h-uRb" firstAttribute="top" secondItem="cZ5-Bs-3RJ" secondAttribute="top" constant="20" id="aOR-vZ-dhn"/>
-                                            <constraint firstItem="tV5-3h-uRb" firstAttribute="height" secondItem="cZ5-Bs-3RJ" secondAttribute="height" multiplier="0.15" id="hG8-av-o08"/>
+                                            <constraint firstAttribute="height" constant="690" id="ZmS-Cy-hoc"/>
+                                            <constraint firstItem="tV5-3h-uRb" firstAttribute="top" secondItem="cZ5-Bs-3RJ" secondAttribute="top" constant="10" id="aOR-vZ-dhn"/>
+                                            <constraint firstItem="tV5-3h-uRb" firstAttribute="height" secondItem="cZ5-Bs-3RJ" secondAttribute="height" multiplier="0.1" id="hG8-av-o08"/>
                                             <constraint firstItem="pJp-UB-smj" firstAttribute="centerX" secondItem="tV5-3h-uRb" secondAttribute="centerX" id="s4M-pR-eSL"/>
-                                            <constraint firstItem="pJp-UB-smj" firstAttribute="height" secondItem="cZ5-Bs-3RJ" secondAttribute="height" multiplier="0.075" id="wxQ-jK-xzF"/>
+                                            <constraint firstItem="pJp-UB-smj" firstAttribute="height" secondItem="cZ5-Bs-3RJ" secondAttribute="height" multiplier="0.13" id="wxQ-jK-xzF"/>
                                             <constraint firstAttribute="bottom" secondItem="7Bl-dn-bFW" secondAttribute="bottom" constant="20" id="z3A-lt-Zk7"/>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="ZmS-Cy-hoc"/>
                                                 <include reference="2UR-hp-uuw"/>
                                                 <include reference="hG8-av-o08"/>
                                                 <include reference="30I-nY-9WO"/>

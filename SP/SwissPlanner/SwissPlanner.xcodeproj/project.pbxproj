@@ -28,6 +28,7 @@
 		CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AADA1CD74E8800CB7A8E /* NavigationTableViewCell.m */; };
 		CE18D6181CC8EC600056D9A4 /* GiftsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18D6171CC8EC600056D9A4 /* GiftsPageViewController.m */; };
 		CE18D61B1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18D61A1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m */; };
+		CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5519011CF326CF00196675 /* UISegmentedControl+Multiline.m */; };
 		CE5913801CBA566D008A3042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59137F1CBA566D008A3042 /* main.m */; };
 		CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913821CBA566D008A3042 /* AppDelegate.m */; };
 		CE5913891CBA566D008A3042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5913871CBA566D008A3042 /* Main.storyboard */; };
@@ -101,6 +102,8 @@
 		CE18D6171CC8EC600056D9A4 /* GiftsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsPageViewController.m; sourceTree = "<group>"; };
 		CE18D6191CC8EC8E0056D9A4 /* GiftsPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftsPageContentViewController.h; sourceTree = "<group>"; };
 		CE18D61A1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsPageContentViewController.m; sourceTree = "<group>"; };
+		CE5519001CF326CF00196675 /* UISegmentedControl+Multiline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+Multiline.h"; sourceTree = "<group>"; };
+		CE5519011CF326CF00196675 /* UISegmentedControl+Multiline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+Multiline.m"; sourceTree = "<group>"; };
 		CE59137B1CBA566C008A3042 /* SwissPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwissPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE59137F1CBA566D008A3042 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE5913811CBA566D008A3042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 			children = (
 				CE59137F1CBA566D008A3042 /* main.m */,
 				CE5A3F851CEF58FF00B8C8E9 /* Localizable.strings */,
+				CE5519001CF326CF00196675 /* UISegmentedControl+Multiline.h */,
+				CE5519011CF326CF00196675 /* UISegmentedControl+Multiline.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				CE5913C01CBCE6ED008A3042 /* PageViewController.m in Sources */,
 				CE05AAA91CD24C1F00CB7A8E /* Slide9ContentWithMultipleTablesViewController.m in Sources */,
 				CE05AAAD1CD2598900CB7A8E /* Slide4ContentViewController.m in Sources */,
+				CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */,
 				CE18D6181CC8EC600056D9A4 /* GiftsPageViewController.m in Sources */,
 				CE5913C61CBCF968008A3042 /* CalculatorViewController.m in Sources */,
 				CE5913C91CBE3592008A3042 /* TestingViewController.m in Sources */,
