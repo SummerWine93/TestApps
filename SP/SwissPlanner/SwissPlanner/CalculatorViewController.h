@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *calculateButton;
 @property (weak, nonatomic) IBOutlet UILabel *selectedPlanLabel;
-
+@property (strong, nonatomic) NSNumber *selectedPlanNumber;
 
 @property (weak, nonatomic) IBOutlet UIView *textDisplayView;
 

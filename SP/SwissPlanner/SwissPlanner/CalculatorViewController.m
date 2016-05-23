@@ -72,6 +72,11 @@
     plansArray = [NSArray arrayWithObjects:@"pre Main", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    selectedPlan = [self.selectedPlanNumber isEqual:nil] ? 1 : [self.selectedPlanNumber integerValue];
+}
+
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 }

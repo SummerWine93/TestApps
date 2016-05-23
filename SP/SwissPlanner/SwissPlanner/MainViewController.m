@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SWRevealViewController.h"
+#import "CalculatorViewController.h"
 
 @interface MainViewController () {
 	NSArray *cellsReuseIdentifiers;
@@ -162,6 +163,7 @@ typedef enum {
 	switch (recogniser.view.tag) {
 		case 0:
 			segueIdentifier = [NSString stringWithFormat:@"segueCabinet1"];
+            
 			break;
 		case 1:
 			segueIdentifier = [NSString stringWithFormat:@"segueCabinet2"];
