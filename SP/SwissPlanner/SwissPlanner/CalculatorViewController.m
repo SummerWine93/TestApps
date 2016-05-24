@@ -12,6 +12,7 @@
 @interface CalculatorViewController () {
 	NSArray *levelsArray;
     NSArray *prepaymentArray;
+	NSArray *prepaymentValuesArray;
     NSArray *plansArray;
    
     BOOL checkBoxSelected;
@@ -69,6 +70,7 @@
 
 	levelsArray = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
     prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
+	prepaymentValuesArray = [NSArray arrayWithObjects:@220, @720, @1050, @2800, @3550, @9850, nil];
     plansArray = [NSArray arrayWithObjects:@"pre Main", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
 }
 
@@ -208,6 +210,24 @@
 	orderSelecting =!orderSelecting;
 	self.orderSelectionMenuView.hidden = !orderSelecting;
 	[self.view setNeedsDisplay];
+}
+
+- (IBAction)countIncomeButtonTapped:(id)sender {
+}
+
+- (NSString *) countIncomeResult {
+	NSString *resultingString = @"Prepayment = %@\nTurnover = %@ x 4 - 10% = %@\nNumber of carier points = %@ / 500 = %@\nPrice of a carier point = %@ - %@ = %@\nIncome = %@ x %@ = %@";
+	// Showing the prepayment value
+	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
+	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
+	// Showing the turnover value
+	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * [prepaymentValue integerValue]*4)];
+	NSString *turnoverString = [NSString stringWithFormat:@"Turnover = %@ x 4 - 10% = %@\n", [prepaymentValue stringValue],[turnoverValue stringValue]];
+	// Showing the number of carier points value
+	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue integerValue]/500)];
+	NSString *carierPointsString = [NSString stringWithFormat:@"Number of carier points = %@ - %@ = %@\n", @"USER", @"PARTNER"];
+
+	return nil;
 }
 
 /*
