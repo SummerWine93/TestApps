@@ -12,12 +12,15 @@
 @interface CalculatorViewController () {
 	NSArray *levelsArray;
     NSArray *prepaymentArray;
+	NSArray *prepaymentValuesArray;
     NSArray *plansArray;
    
     BOOL checkBoxSelected;
     BOOL orderSelecting;
     
     NSInteger selectedPlan;
+	NSInteger myLevel;
+	NSInteger partnersLevel;
 }
 
 @end
@@ -69,6 +72,7 @@
 
 	levelsArray = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
     prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
+	prepaymentValuesArray = [NSArray arrayWithObjects:@220, @720, @1050, @2800, @3550, @9850, nil];
     plansArray = [NSArray arrayWithObjects:@"pre Main", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
 }
 
@@ -210,6 +214,37 @@
 	[self.view setNeedsDisplay];
 }
 
+
+
+- (NSAttributedString *) countIncomeResult {
+	NSString *resultingString = @"Prepayment = %@\nTurnover = %@ x 4 - 10% = %@\nNumber of carier points = %@ / 500 = %@\nPrice of a carier point = %@ - %@ = %@\nIncome = %@ x %@ = %@";
+	// Showing the prepayment value
+	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
+	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
+	// Showing the turnover value
+	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * [prepaymentValue integerValue]*4)];
+	NSString *turnoverString = [NSString stringWithFormat:@"Turnover = %@ x 4 - 10%% = %@\n", [prepaymentValue stringValue],[turnoverValue stringValue]];
+	// Showing the number of carier points value
+	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue integerValue]/500)];
+	NSString *carierPointsString = [NSString stringWithFormat:@"Number of carier points = %@ / 500 = %@\n", [turnoverValue stringValue], [carierPointsValue stringValue]];
+	// Showing the number of carier points value
+#warning set them
+	NSNumber *carierPointPriceValue =  [NSNumber numberWithDouble:10];
+	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of carier points = %@ - %@ = %@\n", @"USER", @"PARTNER", [carierPointPriceValue stringValue]];
+	// Showing the income value
+	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue integerValue]*[carierPointsValue integerValue])];
+	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [incomeValue stringValue]];
+	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", prepaymentString, turnoverString, carierPointsString, carierPointPriceString]];
+	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
+	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
+	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, resultAppendix.string.length)];
+	
+	[attributedResultsString appendAttributedString:resultAppendix];
+	
+	return attributedResultsString;
+}
+
 /*
 - (UIView *) pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
 	UIView *newView = [[UIView alloc] initWithFrame:view.frame];
@@ -239,4 +274,7 @@
 }
 */
 
+- (IBAction)countIncomeButtonTapped:(id)sender {
+	self.textDisplayViewLabel.attributedText = [self countIncomeResult];
+}
 @end

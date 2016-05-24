@@ -46,6 +46,8 @@
 		CE5913CD1CBE3616008A3042 /* GiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913CC1CBE3616008A3042 /* GiftsViewController.m */; };
 		CE5913D31CBE60D4008A3042 /* LauncherButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913D21CBE60D4008A3042 /* LauncherButton.m */; };
 		CE5A3F831CEF58FF00B8C8E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE5A3F851CEF58FF00B8C8E9 /* Localizable.strings */; };
+		CE6BEC321CF48487009FB218 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6BEC311CF48487009FB218 /* Settings.plist */; };
+		CE6BEC351CF48BB3009FB218 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,9 @@
 		CE5A3F861CEF590400B8C8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE5A3F871CEF590500B8C8E9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE5A3F881CEF590600B8C8E9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE6BEC311CF48487009FB218 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +254,9 @@
 				CE59138C1CBA566D008A3042 /* LaunchScreen.storyboard */,
 				CE59138F1CBA566D008A3042 /* Info.plist */,
 				CE59137E1CBA566D008A3042 /* Supporting Files */,
+				CE6BEC311CF48487009FB218 /* Settings.plist */,
+				CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */,
+				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
 			);
 			path = SwissPlanner;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 				CE5A3F831CEF58FF00B8C8E9 /* Localizable.strings in Resources */,
 				CE59138B1CBA566D008A3042 /* Assets.xcassets in Resources */,
 				CE5913891CBA566D008A3042 /* Main.storyboard in Resources */,
+				CE6BEC321CF48487009FB218 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +428,7 @@
 				CE05AAB91CD271B500CB7A8E /* Slide8ContentViewController.m in Sources */,
 				CE5913CD1CBE3616008A3042 /* GiftsViewController.m in Sources */,
 				CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */,
+				CE6BEC351CF48BB3009FB218 /* SettingsTableViewController.m in Sources */,
 				CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */,
 				CE5913801CBA566D008A3042 /* main.m in Sources */,
 				CE05AAA61CD203F900CB7A8E /* PageContentWithMultipleTablesViewController.m in Sources */,
