@@ -21,14 +21,14 @@
 }
 
 - (void) setSpecificViews {
-	self.headerBlockLabel.text = @"Доходы в ЛИДЕРСКОЙ программе";
-	self.headerContentBlock3Label.text = @"ГЛАВНАЯ таблица заказов";
-	self.headerContentBlock4Label.text = @"VIP таблица заказов";
+	self.headerBlockLabel.text = @"Income in the Leadership program";
+	self.headerContentBlock3Label.text = @"Main table of orders";
+	self.headerContentBlock4Label.text = @"VIP table of orders";
 	
-	self.contentBlock1Label.text = @"ТОВАРООБОРОТ / 500 = Бонусные единицы";
-	self.contentBlock2Label.text = @"Бонусные единицы в ЛИДЕРСКОЙ программе накапливаются";
-	self.contentBlock3Label.text = @"2100€ - 10% = 1890€ (товарооборот)\n1890€ / 500 = 3.78 бонусных единиц\nВы получаете за одну закрытую Главную таблицу";
-	self.contentBlock4Label.text = @"8250€ - 10% = 7425€ (товарооборот)\n7425€ / 500 = 14.85 бонусных единиц\nВы получаете за одну закрытую VIP таблицу";
+	self.contentBlock1Label.text = @"Commodity circulation / 500 = Bonus units";
+	self.contentBlock2Label.text = @"The bonus units accumulate in the leadership program";
+	self.contentBlock3Label.text = @"2100€ - 10% = 1890€ (commodity circulation)\n1890€ / 500 = 3.78 bonus units\nyou will get for one closed Main table";
+	self.contentBlock4Label.text = @"8250€ - 10% = 7425€ (commodity circulation)\n7425€ / 500 = 14.85 bonus units\nyou will get for one closed VIP table";
 }
 
 - (void)didReceiveMemoryWarning {

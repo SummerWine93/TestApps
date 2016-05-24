@@ -20,11 +20,11 @@
 }
 
 - (void) setSpecificViews {
-	self.headerBlockLabel.text = @"Доход в компании SWISSGOLDEN";
-	self.headerContentBlock1Label.text = @"БОНУСНАЯ программа";
-	self.headerContentBlock2Label.text = @"ЛИДЕРСКАЯ программа";
-	self.contentBlock1Label.text = @"Быстрый старт\nАктивный доход";
-	self.contentBlock2Label.text = @"Пассивный доход";
+	self.headerBlockLabel.text = @"Income in the SWISSGOLDEN company";
+	self.headerContentBlock1Label.text = @"Bonus Program";
+	self.headerContentBlock2Label.text = @"Leadership Program";
+	self.contentBlock1Label.text = @"Quick start\nActive income";
+	self.contentBlock2Label.text = @"Passive income";
 }
 
 - (void)didReceiveMemoryWarning {

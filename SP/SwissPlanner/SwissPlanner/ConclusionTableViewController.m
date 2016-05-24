@@ -31,20 +31,20 @@ typedef enum {
 	
 	currentTableType = mainTable;
 	
-	cellNames = [NSArray arrayWithObjects:@"Главная", @"Pre VIP", @"VIP", @"Pre VIP PLUS", @"VIP PLUS",nil];
+	cellNames = [NSArray arrayWithObjects:@"Main table", @"Pre VIP", @"VIP", @"Pre VIP PLUS", @"VIP PLUS",nil];
 	
 	self.baseDataArray = [NSArray arrayWithObjects:
-						  [NSArray arrayWithObjects:@"1", @"-", @"15€", nil],
-						  [NSArray arrayWithObjects:@"2", @"100", @"20€", nil],
-						  [NSArray arrayWithObjects:@"3", @"300", @"25€", nil],
-						  [NSArray arrayWithObjects:@"4", @"1 000", @"30€", nil],
-						  [NSArray arrayWithObjects:@"5", @"2 500", @"35€", nil],
-						  [NSArray arrayWithObjects:@"6", @"5 000", @"40€", nil],
-						  [NSArray arrayWithObjects:@"7", @"10 000", @"43€", nil],
-						  [NSArray arrayWithObjects:@"8", @"25 000", @"45€", nil],
-						  [NSArray arrayWithObjects:@"9", @"50 000", @"47€", nil],
-						  [NSArray arrayWithObjects:@"10", @"100 000", @"49€", nil],
-						  [NSArray arrayWithObjects:@"11", @"200 000", @"50€", nil],
+						  [NSArray arrayWithObjects:@"1", @"-", @"€15", nil],
+						  [NSArray arrayWithObjects:@"2", @"100", @"€20", nil],
+						  [NSArray arrayWithObjects:@"3", @"300", @"€25", nil],
+						  [NSArray arrayWithObjects:@"4", @"1 000", @"€30", nil],
+						  [NSArray arrayWithObjects:@"5", @"2 500", @"€35", nil],
+						  [NSArray arrayWithObjects:@"6", @"5 000", @"€40", nil],
+						  [NSArray arrayWithObjects:@"7", @"10 000", @"€43", nil],
+						  [NSArray arrayWithObjects:@"8", @"25 000", @"€45", nil],
+						  [NSArray arrayWithObjects:@"9", @"50 000", @"€47", nil],
+						  [NSArray arrayWithObjects:@"10", @"100 000", @"€49", nil],
+						  [NSArray arrayWithObjects:@"11", @"200 000", @"€50", nil],
 						  nil];
 	self.extraDataArray = [NSArray arrayWithObjects:
 						  [NSArray arrayWithObjects:@"56.70", @"32.40", @"222.75", @"112.05", @"793,80", nil],

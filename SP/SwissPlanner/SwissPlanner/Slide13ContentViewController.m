@@ -19,16 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	dataArray = [NSArray arrayWithObjects:
-				 [NSArray arrayWithObjects:@"11", @"1€ x 100 000e = 100 000€", nil],
-				 [NSArray arrayWithObjects:@"10", @"2€ x 50 000e = 100 000€", nil],
-				 [NSArray arrayWithObjects:@"9", @"2€ x 25 000e = 50 000€", nil],
-				 [NSArray arrayWithObjects:@"8", @"2€ x 15 000e = 30 000€", nil],
-				 [NSArray arrayWithObjects:@"7", @"3€ x 5 000e = 15 000€", nil],
-				 [NSArray arrayWithObjects:@"6", @"5€ x 2 500e = 12 500€", nil],
-				 [NSArray arrayWithObjects:@"5", @"5€ x 1 500e = 7 500€", nil],
-				 [NSArray arrayWithObjects:@"4", @"5€ x 700e = 3 500€", nil],
-				 [NSArray arrayWithObjects:@"3", @"5€ x 200e = 1 000€", nil],
-				 [NSArray arrayWithObjects:@"2", @"5€ x 100e = 500€", nil],
+				 [NSArray arrayWithObjects:@"11", @"€1 x 100 000e = €100 000", nil],
+				 [NSArray arrayWithObjects:@"10", @"€2 x 50 000e = €100 000", nil],
+				 [NSArray arrayWithObjects:@"9", @"€2 x 25 000e = €50 000", nil],
+				 [NSArray arrayWithObjects:@"8", @"€2 x 15 000e = €30 000", nil],
+				 [NSArray arrayWithObjects:@"7", @"€3 x 5 000e = €15 000", nil],
+				 [NSArray arrayWithObjects:@"6", @"€5 x 2 500e = €12 500", nil],
+				 [NSArray arrayWithObjects:@"5", @"€5 x 1 500e = €7 500", nil],
+				 [NSArray arrayWithObjects:@"4", @"€5 x 700e = €3 500", nil],
+				 [NSArray arrayWithObjects:@"3", @"€5 x 200e = €1 000", nil],
+				 [NSArray arrayWithObjects:@"2", @"€5 x 100e = €500", nil],
 				 [NSArray arrayWithObjects:@"1", nil],
 				  nil];
 }

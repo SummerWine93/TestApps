@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsTableViewController : UITableViewController
+@interface SettingsTableViewController : UITableViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSMutableDictionary *userSettingsDictionary;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *levelLabel;
+@property (weak, nonatomic) IBOutlet UITextField *pointsLabel;
 
 @end

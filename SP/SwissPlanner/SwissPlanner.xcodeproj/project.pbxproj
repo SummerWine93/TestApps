@@ -63,8 +63,6 @@
 /* Begin PBXFileReference section */
 		39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide8aContentViewController.h; sourceTree = "<group>"; };
 		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
-		CE041F3F1CEF45DA0048C33D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		CE041F401CEF45DA0048C33D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE05AA8F1CD0B1AA00CB7A8E /* Slide2ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide2ContentViewController.h; sourceTree = "<group>"; };
 		CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide2ContentViewController.m; sourceTree = "<group>"; };
 		CE05AA921CD0F0C900CB7A8E /* Slide3ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide3ContentViewController.h; sourceTree = "<group>"; };
@@ -138,8 +136,6 @@
 		CE5913CC1CBE3616008A3042 /* GiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsViewController.m; sourceTree = "<group>"; };
 		CE5913D11CBE60D4008A3042 /* LauncherButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherButton.h; sourceTree = "<group>"; };
 		CE5913D21CBE60D4008A3042 /* LauncherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherButton.m; sourceTree = "<group>"; };
-		CE5A3F811CEF4A7D00B8C8E9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
-		CE5A3F821CEF4A7E00B8C8E9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE5A3F841CEF58FF00B8C8E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE5A3F861CEF590400B8C8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE5A3F871CEF590500B8C8E9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -482,8 +478,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE5913881CBA566D008A3042 /* Base */,
-				CE041F3F1CEF45DA0048C33D /* ru */,
-				CE5A3F811CEF4A7D00B8C8E9 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -492,8 +486,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE59138D1CBA566D008A3042 /* Base */,
-				CE041F401CEF45DA0048C33D /* ru */,
-				CE5A3F821CEF4A7E00B8C8E9 /* uk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

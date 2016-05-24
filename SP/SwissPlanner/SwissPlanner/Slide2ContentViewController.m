@@ -25,9 +25,9 @@
 }
 
 - (void) setSpecificViews {
-	self.block90label.text = @"90% - Покупка золота партнеру в БОНУСНОЙ программе";
-	self.block9label.text = @"9% - Распределяется по ЛИДЕРСКОЙ программе";
-	self.block1label.text = @"1% - Доход компании";
+	self.block90label.text = @"90% - The company buys Gold for its partner in Bonus program";
+	self.block9label.text = @"9% - The company distributes in the Leadership program";
+	self.block1label.text = @"1% - Income of the company";
 }
 
 /*

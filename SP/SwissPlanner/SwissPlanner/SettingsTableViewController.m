@@ -50,11 +50,16 @@
 	NSString *plistSettingsFilePath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
 	settings = [NSMutableDictionary dictionaryWithDictionary:[[NSDictionary alloc] initWithContentsOfFile:plistSettingsFilePath]];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.nameLabel setHighlighted:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +77,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
     return 3;
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    return NO;
+}
+
+-(void)dismissKeyboard {
+    [self.view endEditing:YES];
 }
 
 /*

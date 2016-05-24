@@ -21,11 +21,11 @@
 }
 
 - (void) setSpecificViews {
-	self.headerBlockLabel.text = @"Условия выхода в лидерскую программу";
-	self.headerContentBlock1Label.text = @"В ГЛАВНОМ договоре";
-	self.headerContentBlock2Label.text = @"В VIP договоре";
-	self.contentBlock1Label.text = @"1 Вы должны закрыть свою ГЛАВНУЮ таблицу\n\n2 Ваши 2 приглашенных должны также закрыть свои таблицы\n\n3 И их по 2 приглашенных должны закрыть свои таблицы";
-	self.contentBlock2Label.text = @"1 Вы должны закрыть свою VIP таблицу\n\n2 Ваши 2 приглашенных должны также закрыть свои таблицы";
+	self.headerBlockLabel.text = @"Terms of access to the leadership program";
+	self.headerContentBlock1Label.text = @"in a Main agreement";
+	self.headerContentBlock2Label.text = @"in a VIP agreement";
+	self.contentBlock1Label.text = @"1 You need to close your Main table\n\n2 Your 2 attracted customers should also close their Main tables\n\n3 And their 2 attracted customers should do the same";
+	self.contentBlock2Label.text = @"1 You need to close your VIP table\n\n2 Your 2 attracted customers should also close their VIP tables";
 }
 
 - (void)didReceiveMemoryWarning {

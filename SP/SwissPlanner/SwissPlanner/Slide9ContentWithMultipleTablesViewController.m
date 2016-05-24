@@ -20,11 +20,11 @@
 }
 
 - (void) setSpecificViews {
-	self.headerBlockLabel.text = @"Сколько денег распределяется компанией в Главном договоре в Лидерской программе";
-	self.contentBlock1Label.text = @"3.78 x (50 - 49) = 3.78€ \n3.78 x (49 - 47) = 7.56€ \n3.78 x (47 - 45) = 7.56€ \n3.78 x (45 - 43) = 7.56€ \n3.78 x (43 - 40) = 11.34€ \n3.78 x (40 - 35) = 18.90€ \n3.78 x (35 - 30) = 18.90€ \n3.78 x (30 - 25) = 18.90€ \n3.78 x (25 - 20) = 18.90€ \n3.78 x (20 - 15) = 18.90€ \n3.78 x 15 = 56.70€";
-	self.contentBlock2Label.text = @"2100 x 10% = 210€ \n10% - комиссия компании с одной Главной таблицы";
-	self.contentBlock3Label.text = @"189.00€ - компания распределяет в Л.п.";
-	self.contentBlock4Label.text = @"2100 x 9% = 189€ \n9% - идет в Лидерскую пр. \n1% - остается, как доход компании";
+	self.headerBlockLabel.text = @"How much money the company distributes in the Main agreement of the Leadership program";
+	self.contentBlock1Label.text = @"3.78 x (50 - 49) = €3.78 \n3.78 x (49 - 47) = €7.56 \n3.78 x (47 - 45) = €7.56 \n3.78 x (45 - 43) = 7.56€ \n3.78 x (43 - 40) = €11.34 \n3.78 x (40 - 35) = €18.90 \n3.78 x (35 - 30) = €18.90 \n3.78 x (30 - 25) = €18.90 \n3.78 x (25 - 20) = €18.90 \n3.78 x (20 - 15) = €18.90 \n3.78 x 15 = €56.70";
+	self.contentBlock2Label.text = @"2100 x 10% = €210 \n10% - company commission for one Main table";
+	self.contentBlock3Label.text = @"€189.00 - the company distributes in the Leadership program";
+	self.contentBlock4Label.text = @"2100 x 9% = €189 \n9% - goesto the Leadership program \n1% - remains as an income of the company";
 }
 
 - (void)didReceiveMemoryWarning {

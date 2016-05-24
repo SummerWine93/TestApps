@@ -22,14 +22,15 @@
 }
 
 - (void) setSpecificViews {
-	self.headerBlockLabel.text = @"Доходы в ЛИДЕРСКОЙ программе";
-	self.headerContentBlock2Label.text = @"ГЛАВНАЯ таблица заказов";
-	self.headerContentBlock3Label.text = @"VIP таблица заказов";
+
+    self.headerBlockLabel.text = @"Income in the leadership program";
+    self.headerContentBlock2Label.text = @"Main table of orders";
+    self.headerContentBlock3Label.text = @"VIP table of orders";
 	
-	self.contentBlock1Label.text = @"ДОХОД = Цена за бонусную единицу х Бонусные единицы";
+	self.contentBlock1Label.text = @"Income = Price for 1 bonus unit х Bonus units";
 	
-	self.contentBlock2Label.text = @"Если Вы находитесь в ЛИДЕРСКОЙ программе, а Ваш партнер еще нет - тогда на 3 уровне Вы зарабатываете 25€ за 1 бонусную единицу\n25€ х 3.78 = 94.50€ и т.д.";
-	self.contentBlock3Label.text = @"Если Вы находитесь в ЛИДЕРСКОЙ программе, а Ваш партнер еще нет - тогда на 3 уровне Вы зарабатываете 25€ за 1 бонусную единицу\n25€ х 14.85 = 371.25€ и т.д.";
+	self.contentBlock2Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 и etc.";
+	self.contentBlock3Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 и etc.";
 }
 
 
