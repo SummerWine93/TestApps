@@ -142,7 +142,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background(launcher)" width="1136" height="640"/>
+        <image name="background(launcher)" width="640" height="1136"/>
         <image name="eleaboychulk" width="640" height="496"/>
         <image name="greetings_gold" width="1242" height="1206"/>
         <image name="swissgolden" width="640" height="304"/>
