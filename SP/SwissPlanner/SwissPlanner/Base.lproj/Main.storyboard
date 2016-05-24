@@ -1062,7 +1062,7 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-oB-2RH">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="56,70" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-A4-AHO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Count income" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-A4-AHO">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2009,7 +2009,7 @@
                                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0HO-dF-oNg" userLabel="label container">
                                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VIP PLUS order" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZE-C7-8wC">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VIP PLUS order" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dZE-C7-8wC">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2799,7 +2799,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6ng-sc-iEi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection headerTitle="USER SETTINGS" id="QH2-cd-Pmx">
                                 <cells>
@@ -2826,7 +2826,7 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="L6x-5O-yxX" firstAttribute="width" secondItem="fUH-Of-LvX" secondAttribute="width" multiplier="0.4" id="82x-uu-HXt"/>
+                                                <constraint firstItem="L6x-5O-yxX" firstAttribute="width" secondItem="fUH-Of-LvX" secondAttribute="width" multiplier="0.45" id="82x-uu-HXt"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="L6x-5O-yxX" secondAttribute="leading" id="N2b-76-hf6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lwT-KB-O2u" secondAttribute="trailing" id="aEX-Dj-irB"/>
                                                 <constraint firstItem="lwT-KB-O2u" firstAttribute="centerY" secondItem="fUH-Of-LvX" secondAttribute="centerY" id="fpt-iP-jRq"/>
@@ -2863,7 +2863,7 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dhk-Id-PH8" firstAttribute="width" secondItem="ba5-VS-RBW" secondAttribute="width" multiplier="0.4" id="1Ad-aM-wYm"/>
+                                                <constraint firstItem="dhk-Id-PH8" firstAttribute="width" secondItem="ba5-VS-RBW" secondAttribute="width" multiplier="0.45" id="1Ad-aM-wYm"/>
                                                 <constraint firstItem="dhk-Id-PH8" firstAttribute="centerY" secondItem="ba5-VS-RBW" secondAttribute="centerY" id="B2i-Fe-7G8"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="dhk-Id-PH8" secondAttribute="leading" id="Q1i-b2-phv"/>
                                                 <constraint firstItem="yby-jn-Pnk" firstAttribute="centerY" secondItem="ba5-VS-RBW" secondAttribute="centerY" id="QmA-PA-7o0"/>
@@ -2897,7 +2897,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Q2O-C3-iWw" secondAttribute="trailing" id="Qop-Lh-e1z"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="leading" secondItem="abq-NF-vG0" secondAttribute="trailing" constant="8" id="YzI-GG-YyK"/>
-                                                <constraint firstItem="abq-NF-vG0" firstAttribute="width" secondItem="xXI-YR-dm8" secondAttribute="width" multiplier="0.4" id="buo-v4-wF1"/>
+                                                <constraint firstItem="abq-NF-vG0" firstAttribute="width" secondItem="xXI-YR-dm8" secondAttribute="width" multiplier="0.45" id="buo-v4-wF1"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="centerY" secondItem="xXI-YR-dm8" secondAttribute="centerY" id="xOn-WI-AcD"/>
                                                 <constraint firstItem="abq-NF-vG0" firstAttribute="centerY" secondItem="xXI-YR-dm8" secondAttribute="centerY" id="yrp-vg-Gba"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="abq-NF-vG0" secondAttribute="leading" id="zRX-Ug-MCz"/>
@@ -11134,9 +11134,6 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
-                                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                    <rect key="frame" x="18" y="8" width="324" height="20"/>
-                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VFL-fq-kUq">
                                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -11282,7 +11279,7 @@
                                             <constraint firstItem="dbf-Y9-vlN" firstAttribute="height" secondItem="WPP-fM-hrb" secondAttribute="height" multiplier="0.1" id="G2k-Bf-CDI">
                                                 <variation key="widthClass=compact" constant="0.0"/>
                                             </constraint>
-                                            <constraint firstItem="T19-ed-aB8" firstAttribute="top" secondItem="dbf-Y9-vlN" secondAttribute="bottom" id="MNN-oc-Hgq"/>
+                                            <constraint firstItem="T19-ed-aB8" firstAttribute="top" secondItem="dbf-Y9-vlN" secondAttribute="bottom" constant="10" id="MNN-oc-Hgq"/>
                                             <constraint firstItem="KHd-ad-TkN" firstAttribute="top" secondItem="uaW-7e-m15" secondAttribute="bottom" constant="8" id="hoE-g6-Kd8"/>
                                             <constraint firstItem="T19-ed-aB8" firstAttribute="height" secondItem="WPP-fM-hrb" secondAttribute="height" multiplier="0.4" id="iYJ-xr-jle">
                                                 <variation key="widthClass=compact" constant="0.0"/>

@@ -12,6 +12,9 @@
 
 @interface MainViewController () {
 	NSArray *cellsReuseIdentifiers;
+    NSString *userName;
+    NSNumber *userLevel;
+    NSNumber *userPoints;
 }
 
 @end
@@ -70,6 +73,10 @@ typedef enum {
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self restrictRotation:YES];
+    
+    // Get the stored data before the view loads
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
 }
 
 - (void) viewWillDisappear:(BOOL)animated {

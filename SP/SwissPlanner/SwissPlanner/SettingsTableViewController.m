@@ -88,6 +88,39 @@
     [self.view endEditing:YES];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    // Store the user data
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:self.nameLabel.text forKey:@"userName"];
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    
+    if ([self.levelLabel.text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+    {
+        NSInteger level = [[f numberFromString:self.levelLabel.text] integerValue];
+        if((level >= 0)&&(level <=11)) {
+            [defaults setObject:[NSNumber numberWithInteger:level] forKey:@"userLevel"];
+        } else {
+            [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userLevel"];
+        }
+    } else {
+        [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userLevel"];
+    }
+    
+    if ([self.pointsLabel.text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+    {
+        NSInteger points = [[f numberFromString:self.levelLabel.text] integerValue];
+        [defaults setObject:[NSNumber numberWithInteger:points] forKey:@"userPoints"];
+    } else {
+        [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userPoints"];
+    }
+    
+    [defaults synchronize];
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
