@@ -230,7 +230,7 @@
 	// Showing the number of carier points value
 #warning set them
 	NSNumber *carierPointPriceValue =  [NSNumber numberWithDouble:10];
-	NSString *carierPointPriceString = [NSString stringWithFormat:@"Number of carier points = %@ - %@ = %@\n", @"USER", @"PARTNER", [carierPointPriceValue stringValue]];
+	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of carier points = %@ - %@ = %@\n", @"USER", @"PARTNER", [carierPointPriceValue stringValue]];
 	// Showing the income value
 	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue integerValue]*[carierPointsValue integerValue])];
 	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [incomeValue stringValue]];
