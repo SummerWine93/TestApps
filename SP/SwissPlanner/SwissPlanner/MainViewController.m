@@ -76,6 +76,9 @@ typedef enum {
     
     // Get the stored data before the view loads
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    userName = [defaults objectForKey:@"userName"];
+    userLevel = [defaults objectForKey:@"userLevel"];
+    userPoints = [defaults objectForKey:@"userPoints"];
     
 }
 

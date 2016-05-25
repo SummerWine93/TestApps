@@ -60,6 +60,11 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.nameLabel setHighlighted:YES];
+    
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.nameLabel.text = [defaults objectForKey:@"userName"];
+    self.levelLabel.text = [[defaults objectForKey:@"userLevel"] stringValue];
+    self.pointsLabel.text = [[defaults objectForKey:@"userPoints"] stringValue];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,17 +110,20 @@
             [defaults setObject:[NSNumber numberWithInteger:level] forKey:@"userLevel"];
         } else {
             [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userLevel"];
+           self.levelLabel.text = @"The levels are in range from 0 to 11";
         }
     } else {
         [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userLevel"];
+         self.levelLabel.text = @"The level must be a number";
     }
     
     if ([self.pointsLabel.text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
     {
-        NSInteger points = [[f numberFromString:self.levelLabel.text] integerValue];
+        NSInteger points = [[f numberFromString:self.pointsLabel.text] integerValue];
         [defaults setObject:[NSNumber numberWithInteger:points] forKey:@"userPoints"];
     } else {
         [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userPoints"];
+        self.pointsLabel.text = @"The points value must be a number";
     }
     
     [defaults synchronize];
