@@ -34,7 +34,11 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+selector:@selector(orientationChanged:)
+name:UIDeviceOrientationDidChangeNotification
+object:nil];
+
 	
 	// setting navigation bar
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
@@ -73,18 +77,31 @@ typedef enum {
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self restrictRotation:YES];
+	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     
     // Get the stored data before the view loads
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     userName = [defaults objectForKey:@"userName"];
     userLevel = [defaults objectForKey:@"userLevel"];
     userPoints = [defaults objectForKey:@"userPoints"];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(orientationChanged:)
+												 name:UIDeviceOrientationDidChangeNotification
+											   object:nil];
     
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	[self restrictRotation:NO];
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)orientationChanged:(NSNotification *)notification {
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
 }
 
 #pragma mark - Table view data source
@@ -150,6 +167,10 @@ typedef enum {
 	}
 	NSString *reuseIdentifier = [NSString stringWithString:[cellsReuseIdentifiers objectAtIndex:number]];
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+	/*
+	if (condition) {
+		statements
+	}*/
 	return cell;
 }
 
@@ -157,6 +178,10 @@ typedef enum {
 {
 	AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
 	appDelegate.restrictRotation = restriction;
+}
+
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
 }
 
 #pragma mark - UITextField delegate methods
