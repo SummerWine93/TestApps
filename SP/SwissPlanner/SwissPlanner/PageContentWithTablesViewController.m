@@ -64,7 +64,7 @@
 	if (indexPath.section != 0) {
 		cell.firstCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section - 1)] objectAtIndex:0];
 		cell.secondCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section - 1)] objectAtIndex:1];
-		cell.thirdCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section - 1)] objectAtIndex:1];
+		cell.thirdCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section - 1)] objectAtIndex:2];
 	}
 	
 	return cell;

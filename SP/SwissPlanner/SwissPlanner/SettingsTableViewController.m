@@ -22,8 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-	
 	// setting navigation bar
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
 																   style:UIBarButtonItemStylePlain
@@ -43,12 +41,6 @@
 		[self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
 		[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 	}
-
-	
-	
-	
-	//NSString *plistSettingsFilePath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
-	//settings = [NSMutableDictionary dictionaryWithDictionary:[[NSDictionary alloc] initWithContentsOfFile:plistSettingsFilePath]];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -69,7 +61,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
