@@ -14,6 +14,7 @@
     NSArray *prepaymentArray;
 	NSArray *prepaymentValuesArray;
     NSArray *plansArray;
+	NSArray *bonusForLevelsArray;
    
     BOOL checkBoxSelected;
     BOOL orderSelecting;
@@ -74,6 +75,8 @@
     prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
 	prepaymentValuesArray = [NSArray arrayWithObjects:@220, @720, @1050, @2800, @3550, @9850, nil];
     plansArray = [NSArray arrayWithObjects:@"pre Main", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
+	
+	bonusForLevelsArray = [NSArray arrayWithObjects: @0, @15, @20, @25, @30, @35, @40, @43, @45, @47, @49, @50, nil];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -94,7 +97,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Pickerview delegate methods
@@ -238,28 +240,29 @@
 
 
 - (NSAttributedString *) countIncomeResult {
-	NSInteger yourLevel = [self.pickerLevel selectedRowInComponent:0];
-	NSInteger partnerLevel = [self.pickerPartnerLevel selectedRowInComponent:0];
-	if (partnerLevel > yourLevel) {
+	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
+	NSInteger partnerLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
+	
+	if (partnerLevelBonus > yourLevelBonus) {
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
 		return attributedResultsString;
 	}
-	NSString *resultingString = @"Prepayment = %@\nTurnover = %@ x 4 - 10% = %@\nNumber of carier points = %@ / 500 = %@\nPrice of a carier point = %@ - %@ = %@\nIncome = %@ x %@ = %@";
+	//NSString *resultingString = @"Prepayment = %@\nTurnover = %@ x 4 - 10% = %@\nNumber of carier points = %@ / 500 = %@\nPrice of a carier point = %@ - %@ = %@\nIncome = %@ x %@ = %@";
 	// Showing the prepayment value
 	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
 	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
 	// Showing the turnover value
 	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * [prepaymentValue integerValue]*4)];
-	NSString *turnoverString = [NSString stringWithFormat:@"Turnover = %@ x 4 - 10%% = %@\n", [prepaymentValue stringValue],[turnoverValue stringValue]];
+	NSString *turnoverString = [NSString stringWithFormat:@"Commodity circulation = %@ x 4 - 10%% = %@\n", [prepaymentValue stringValue],[turnoverValue stringValue]];
 	// Showing the number of carier points value
-	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue integerValue]/500)];
-	NSString *carierPointsString = [NSString stringWithFormat:@"Number of carier points = %@ / 500 = %@\n", [turnoverValue stringValue], [carierPointsValue stringValue]];
+	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue doubleValue]/500)];
+	NSString *carierPointsString = [NSString stringWithFormat:@"Number of bonus units = %@ / 500 = %@\n", [turnoverValue stringValue], [carierPointsValue stringValue]];
 	// Showing the number of carier points value
 	
-	NSNumber *carierPointPriceValue =  [NSNumber numberWithInteger:(yourLevel - partnerLevel)];
-	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of carier points = %n - %n = %@\n", yourLevel, partnerLevel, [carierPointPriceValue stringValue]];
+	NSNumber *carierPointPriceValue =  [NSNumber numberWithInteger:(yourLevelBonus - partnerLevelBonus)];
+	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of bonus units = %d - %d = %@\n", yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
 	// Showing the income value
-	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue integerValue]*[carierPointsValue integerValue])];
+	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue doubleValue]*[carierPointsValue doubleValue])];
 	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [incomeValue stringValue]];
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", prepaymentString, turnoverString, carierPointsString, carierPointPriceString]];
 	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
@@ -271,35 +274,6 @@
 	
 	return attributedResultsString;
 }
-
-/*
-- (UIView *) pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
-	UIView *newView = [[UIView alloc] initWithFrame:view.frame];
-	
-	CALayer *border = [CALayer layer];
-	CGFloat borderWidth = 2;
-	border.borderColor = [UIColor whiteColor].CGColor;
-	border.frame = CGRectMake(5, view.frame.size.height - borderWidth, view.frame.size.width - 5, view.frame.size.height);
-	border.borderWidth = borderWidth;
-	[newView.layer addSublayer:border];
-	newView.layer.masksToBounds = YES;
-	
-	UILabel *textLabel = [[UILabel alloc] initWithFrame:newView.frame];
-	textLabel.text = [levelsArray objectAtIndex:row];
-	[newView addSubview:textLabel];
-	
-	return newView;
-}*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)countIncomeButtonTapped:(id)sender {
 	self.textDisplayViewLabel.attributedText = [self countIncomeResult];
