@@ -186,7 +186,7 @@
 #pragma mark - TableView delegate methods
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [plansArray count];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -194,7 +194,7 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return (tableView.frame.size.height / 5);
+	return (tableView.frame.size.height / [plansArray count]);
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -261,7 +261,6 @@
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
 		return attributedResultsString;
 	}
-	//NSString *resultingString = @"Prepayment = %@\nTurnover = %@ x 4 - 10% = %@\nNumber of carier points = %@ / 500 = %@\nPrice of a carier point = %@ - %@ = %@\nIncome = %@ x %@ = %@";
 	// Showing the prepayment value
 	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
 	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
