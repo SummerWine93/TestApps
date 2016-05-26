@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
+		39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */; };
 		CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */; };
 		CE05AA941CD0F0C900CB7A8E /* Slide3ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA931CD0F0C900CB7A8E /* Slide3ContentViewController.m */; };
 		CE05AA9D1CD0FFE000CB7A8E /* Slide1ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA9C1CD0FFE000CB7A8E /* Slide1ContentViewController.m */; };
@@ -63,6 +64,8 @@
 /* Begin PBXFileReference section */
 		39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide8aContentViewController.h; sourceTree = "<group>"; };
 		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
+		39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinetContentTableViewCell.h; sourceTree = "<group>"; };
+		39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabinetContentTableViewCell.m; sourceTree = "<group>"; };
 		CE05AA8F1CD0B1AA00CB7A8E /* Slide2ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide2ContentViewController.h; sourceTree = "<group>"; };
 		CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide2ContentViewController.m; sourceTree = "<group>"; };
 		CE05AA921CD0F0C900CB7A8E /* Slide3ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide3ContentViewController.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				CE6BEC311CF48487009FB218 /* Settings.plist */,
 				CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */,
 				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
+				39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */,
+				39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */,
 			);
 			path = SwissPlanner;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */,
 				CE18D6181CC8EC600056D9A4 /* GiftsPageViewController.m in Sources */,
 				39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */,
+				39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */,
 				CE5913C61CBCF968008A3042 /* CalculatorViewController.m in Sources */,
 				CE5913C91CBE3592008A3042 /* TestingViewController.m in Sources */,
 				CE05AABF1CD2839000CB7A8E /* Slide11ContentViewController.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1390,14 +1390,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userNameCell" rowHeight="44" id="Xoy-wf-2IN">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userNameCell" rowHeight="44" id="Xoy-wf-2IN" customClass="CabinetContentTableViewCell">
                                                 <rect key="frame" x="0.0" y="65" width="240" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xoy-wf-2IN" id="m1Z-7h-08o">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-Ta-K5R">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-Ta-K5R">
                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <color key="textColor" red="1" green="0.80044903036913162" blue="0.36406796600682267" alpha="1" colorSpace="calibratedRGB"/>
@@ -1405,15 +1405,30 @@
                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="34" y="7" width="172" height="30"/>
                                                             </variation>
-                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                <rect key="frame" x="34" y="7" width="172" height="30"/>
-                                                            </variation>
                                                         </label>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name Surname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2S-Xn-1lX">
+                                                            <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                                            <color key="textColor" red="0.79607843140000001" green="0.46666666670000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                                            </variation>
+                                                        </textField>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="zTK-Ta-K5R" firstAttribute="centerX" secondItem="m1Z-7h-08o" secondAttribute="centerX" id="067-Bw-6qc"/>
+                                                        <constraint firstItem="u2S-Xn-1lX" firstAttribute="height" secondItem="m1Z-7h-08o" secondAttribute="height" id="41M-mD-ljh"/>
                                                         <constraint firstItem="zTK-Ta-K5R" firstAttribute="centerY" secondItem="m1Z-7h-08o" secondAttribute="centerY" id="YNB-HU-ZAX"/>
+                                                        <constraint firstItem="u2S-Xn-1lX" firstAttribute="centerY" secondItem="m1Z-7h-08o" secondAttribute="centerY" id="d9q-rt-OjH"/>
+                                                        <constraint firstItem="u2S-Xn-1lX" firstAttribute="centerX" secondItem="m1Z-7h-08o" secondAttribute="centerX" id="h8M-2M-sHL"/>
+                                                        <constraint firstItem="u2S-Xn-1lX" firstAttribute="width" secondItem="m1Z-7h-08o" secondAttribute="width" id="q6z-uZ-evM"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="zTK-Ta-K5R"/>
+                                                        </mask>
+                                                    </variation>
                                                     <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="067-Bw-6qc"/>
@@ -1422,8 +1437,11 @@
                                                     </variation>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="contentLabel" destination="u2S-Xn-1lX" id="ceK-19-ZLK"/>
+                                                </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leadershipLevelCell" rowHeight="55" id="dMe-oj-MJb">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leadershipLevelCell" rowHeight="55" id="dMe-oj-MJb" customClass="CabinetContentTableViewCell">
                                                 <rect key="frame" x="0.0" y="109" width="240" height="55"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dMe-oj-MJb" id="iQi-jb-ifd">
@@ -1528,8 +1546,11 @@
                                                     </variation>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="contentLabel" destination="i9i-kT-EV5" id="qxr-fj-BdR"/>
+                                                </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="amountOfPartnersCell" rowHeight="55" id="vNK-MP-MsR">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bonusUnitsCell" rowHeight="55" id="vNK-MP-MsR" customClass="CabinetContentTableViewCell">
                                                 <rect key="frame" x="0.0" y="164" width="240" height="55"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vNK-MP-MsR" id="1Ws-j5-sfT">
@@ -1562,7 +1583,7 @@
                                                                 <outlet property="delegate" destination="kWn-9T-ghh" id="Ymn-hT-LuW"/>
                                                             </connections>
                                                         </textField>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My partner's level:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XvG-Md-tR1">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My leadership units:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XvG-Md-tR1">
                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1635,8 +1656,11 @@
                                                     </variation>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="contentLabel" destination="V48-w7-j8k" id="EKl-dC-M3q"/>
+                                                </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="testResultCell" rowHeight="55" id="o3c-br-OD2">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="testResultCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="testResultCell" rowHeight="55" id="o3c-br-OD2" customClass="CabinetContentTableViewCell">
                                                 <rect key="frame" x="0.0" y="219" width="240" height="55"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o3c-br-OD2" id="u6v-b9-pvz">
@@ -1745,8 +1769,11 @@
                                                     </variation>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="contentLabel" destination="ADD-Vs-iCJ" id="vre-Hr-6OQ"/>
+                                                </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviderCell" rowHeight="55" id="dT5-Tl-flN">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviderCell" rowHeight="55" id="dT5-Tl-flN" customClass="CabinetContentTableViewCell">
                                                 <rect key="frame" x="0.0" y="274" width="240" height="55"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dT5-Tl-flN" id="9aM-M9-C6l">
@@ -2145,6 +2172,9 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gold(my cabinet)" translatesAutoresizingMaskIntoConstraints="NO" id="2aO-f2-Br3">
                                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="155"/>
+                                                            </variation>
+                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="155"/>
                                                             </variation>
                                                         </imageView>
@@ -2953,7 +2983,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gift level1" translatesAutoresizingMaskIntoConstraints="NO" id="gRN-hK-15a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gift level 1" translatesAutoresizingMaskIntoConstraints="NO" id="gRN-hK-15a">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="0.0" y="40" width="400" height="530"/>
@@ -2980,23 +3010,31 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="gRN-hK-15a" firstAttribute="leading" secondItem="xS0-ox-JWk" secondAttribute="leadingMargin" constant="-20" id="9fy-rO-uKP"/>
                             <constraint firstItem="gRN-hK-15a" firstAttribute="centerY" secondItem="xS0-ox-JWk" secondAttribute="centerY" id="9uf-DC-fXO"/>
                             <constraint firstItem="Ks9-V1-FqQ" firstAttribute="centerY" secondItem="xS0-ox-JWk" secondAttribute="centerY" id="HLR-aT-n2o"/>
+                            <constraint firstItem="gRN-hK-15a" firstAttribute="centerX" secondItem="xS0-ox-JWk" secondAttribute="centerX" id="KZ9-H3-7wx"/>
                             <constraint firstItem="G4D-7Z-mz9" firstAttribute="top" secondItem="gRN-hK-15a" secondAttribute="bottom" constant="30" id="Ks5-cd-kyv"/>
                             <constraint firstItem="NZF-hs-Yaz" firstAttribute="width" secondItem="xS0-ox-JWk" secondAttribute="width" id="NIX-90-qHy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gRN-hK-15a" secondAttribute="trailing" constant="-20" id="PCT-ms-D33"/>
                             <constraint firstItem="gRN-hK-15a" firstAttribute="height" secondItem="xS0-ox-JWk" secondAttribute="height" id="VIQ-wE-GAy"/>
                             <constraint firstItem="gRN-hK-15a" firstAttribute="centerX" secondItem="xS0-ox-JWk" secondAttribute="centerX" id="ZeL-Ya-4lU"/>
                             <constraint firstItem="gRN-hK-15a" firstAttribute="width" secondItem="xS0-ox-JWk" secondAttribute="width" id="aeh-fC-i77"/>
                             <constraint firstItem="Ks9-V1-FqQ" firstAttribute="centerX" secondItem="xS0-ox-JWk" secondAttribute="centerX" id="c6T-oX-2A7"/>
                             <constraint firstItem="Ks9-V1-FqQ" firstAttribute="width" secondItem="xS0-ox-JWk" secondAttribute="width" multiplier="0.9" id="dus-0a-LfY"/>
                             <constraint firstItem="Ks9-V1-FqQ" firstAttribute="height" secondItem="xS0-ox-JWk" secondAttribute="height" multiplier="0.98" id="elL-bg-Qr8"/>
+                            <constraint firstItem="gRN-hK-15a" firstAttribute="width" secondItem="xS0-ox-JWk" secondAttribute="width" id="oro-ef-HzN"/>
                             <constraint firstItem="NZF-hs-Yaz" firstAttribute="centerY" secondItem="xS0-ox-JWk" secondAttribute="centerY" id="ucT-7e-IHV"/>
                             <constraint firstItem="NZF-hs-Yaz" firstAttribute="centerX" secondItem="xS0-ox-JWk" secondAttribute="centerX" id="yk7-kh-KzY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="9fy-rO-uKP"/>
                                 <exclude reference="9uf-DC-fXO"/>
+                                <exclude reference="PCT-ms-D33"/>
                                 <exclude reference="VIQ-wE-GAy"/>
+                                <exclude reference="ZeL-Ya-4lU"/>
+                                <exclude reference="aeh-fC-i77"/>
                                 <exclude reference="2s6-DU-Be7"/>
                                 <exclude reference="4rj-Ae-77j"/>
                                 <exclude reference="NIX-90-qHy"/>
@@ -3008,8 +3046,6 @@
                         <variation key="widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="VIQ-wE-GAy"/>
-                                <include reference="ZeL-Ya-4lU"/>
-                                <include reference="aeh-fC-i77"/>
                                 <exclude reference="yk7-kh-KzY"/>
                                 <exclude reference="Ks5-cd-kyv"/>
                             </mask>
@@ -9520,6 +9556,9 @@
                                                                             <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                                                 <rect key="frame" x="68" y="0.0" width="99" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="1" width="102" height="43"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAh-GZ-Qzz">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -9532,6 +9571,9 @@
                                                                             </variation>
                                                                             <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                                                 <rect key="frame" x="168" y="0.0" width="58" height="44"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="0.0" width="60" height="44"/>
                                                                             </variation>
                                                                         </label>
                                                                     </subviews>
@@ -9599,6 +9641,9 @@
                                                                             <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="0.0" width="60" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="0.0" width="60" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWx-Ri-t5n">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -9615,6 +9660,9 @@
                                                                             <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="0.0" width="102" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="0.0" width="102" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJM-r0-GhM">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -9629,6 +9677,9 @@
                                                                                 <rect key="frame" x="172" y="0.0" width="60" height="44"/>
                                                                             </variation>
                                                                             <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="0.0" width="60" height="44"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="0.0" width="60" height="44"/>
                                                                             </variation>
                                                                         </label>
@@ -11546,7 +11597,7 @@
         <image name="facebook" width="24" height="24"/>
         <image name="forslide" width="293" height="36"/>
         <image name="frame" width="640" height="944"/>
-        <image name="gift level1" width="629" height="755"/>
+        <image name="gift level 1" width="640" height="944"/>
         <image name="gifts" width="24" height="24"/>
         <image name="glass(my cabinet)" width="640" height="162"/>
         <image name="gold" width="630" height="420"/>

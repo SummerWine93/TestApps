@@ -9,12 +9,14 @@
 #import "MainViewController.h"
 #import "SWRevealViewController.h"
 #import "CalculatorViewController.h"
+#import "CabinetContentTableViewCell.h"
 
 @interface MainViewController () {
 	NSArray *cellsReuseIdentifiers;
     NSString *userName;
     NSNumber *userLevel;
     NSNumber *userPoints;
+    NSNumber *testPoints;
 }
 
 @end
@@ -22,7 +24,7 @@
 typedef enum {
 	userNameCell,
 	leadershipLevelCell,
-	amountOfPartnersCell,
+	bonusUnitsCell,
 	testResultCell,
 	deviderCell,
 	ordersCell,
@@ -46,10 +48,7 @@ object:nil];
 																  target:self
 																  action:nil];
 	self.navigationItem.leftBarButtonItem = menuButton;
-	/*[self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(186/255.0)
-																			 green:(134/255.0)
-																			  blue:(111/255.0)
-																			 alpha:1]];*/
+	
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -66,7 +65,7 @@ object:nil];
 	cellsReuseIdentifiers = [[NSArray alloc] initWithObjects:
 							 @"userNameCell",
 							 @"leadershipLevelCell",
-							 @"amountOfPartnersCell",
+							 @"bonusUnitsCell",
 							 @"testResultCell",
 							 @"deviderCell",
 							 @"ordersCell",
@@ -85,6 +84,7 @@ object:nil];
     userName = [defaults objectForKey:@"userName"];
     userLevel = [defaults objectForKey:@"userLevel"];
     userPoints = [defaults objectForKey:@"userPoints"];
+    testPoints = [defaults objectForKey:@"userTestPoints"];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(orientationChanged:)
@@ -166,12 +166,36 @@ object:nil];
 		number += 5;
 	}
 	NSString *reuseIdentifier = [NSString stringWithString:[cellsReuseIdentifiers objectAtIndex:number]];
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-	/*
-	if (condition) {
-		statements
-	}*/
-	return cell;
+	
+	
+	if (tableView.tag == 0) {
+        CabinetContentTableViewCell *cell = (CabinetContentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+        NSString *cellText;
+        switch (indexPath.row) {
+            case userNameCell:
+                cellText = ([userName length])?userName:@"User Name";
+                break;
+            case leadershipLevelCell:
+                cellText = (userLevel)?[userLevel stringValue]:@"0";
+                break;
+            case bonusUnitsCell:
+                cellText = (userPoints)?[userPoints stringValue]:@"0";
+                 break;
+            case testResultCell:
+                cellText = (testPoints)?[testPoints stringValue]:@"0";
+                 break;
+            default:
+                break;
+        }
+        if (cellText != nil) {
+            [cell contentLabel].text = cellText;
+        }
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+        return cell;
+    }
+	return nil;
 }
 
 -(void) restrictRotation:(BOOL) restriction
@@ -212,14 +236,22 @@ object:nil];
 	[self performSegueWithIdentifier:segueIdentifier sender:self];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     CalculatorViewController *vc = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"segueCabinet1"]) {
+        vc.selectedPlanNumber = [NSNumber numberWithInt:1];
+    } else if ([segue.identifier isEqualToString:@"segueCabinet2"]) {
+        vc.selectedPlanNumber = [NSNumber numberWithInt:3];
+    } else if ([segue.identifier isEqualToString:@"segueCabinet3"]) {
+        vc.selectedPlanNumber = [NSNumber numberWithInt:5];
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

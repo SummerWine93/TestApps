@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *checkbox;
 @property (weak, nonatomic) IBOutlet UIView *orderSelectionMenuView;
 
+@property (strong, nonatomic) NSString *selectedPlan;
+
 - (IBAction)countIncomeButtonTapped:(id)sender;
 
 @end
