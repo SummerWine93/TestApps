@@ -238,6 +238,12 @@
 
 
 - (NSAttributedString *) countIncomeResult {
+	NSInteger yourLevel = [self.pickerLevel selectedRowInComponent:0];
+	NSInteger partnerLevel = [self.pickerPartnerLevel selectedRowInComponent:0];
+	if (partnerLevel > yourLevel) {
+		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
+		return attributedResultsString;
+	}
 	NSString *resultingString = @"Prepayment = %@\nTurnover = %@ x 4 - 10% = %@\nNumber of carier points = %@ / 500 = %@\nPrice of a carier point = %@ - %@ = %@\nIncome = %@ x %@ = %@";
 	// Showing the prepayment value
 	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
@@ -249,9 +255,9 @@
 	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue integerValue]/500)];
 	NSString *carierPointsString = [NSString stringWithFormat:@"Number of carier points = %@ / 500 = %@\n", [turnoverValue stringValue], [carierPointsValue stringValue]];
 	// Showing the number of carier points value
-#warning set them
-	NSNumber *carierPointPriceValue =  [NSNumber numberWithDouble:10];
-	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of carier points = %@ - %@ = %@\n", @"USER", @"PARTNER", [carierPointPriceValue stringValue]];
+	
+	NSNumber *carierPointPriceValue =  [NSNumber numberWithInteger:(yourLevel - partnerLevel)];
+	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of carier points = %n - %n = %@\n", yourLevel, partnerLevel, [carierPointPriceValue stringValue]];
 	// Showing the income value
 	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue integerValue]*[carierPointsValue integerValue])];
 	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [incomeValue stringValue]];

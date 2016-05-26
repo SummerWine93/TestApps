@@ -1101,7 +1101,7 @@
                                             <constraint firstItem="Vlf-go-JsC" firstAttribute="centerY" secondItem="PJ1-oB-2RH" secondAttribute="centerY" id="Pty-vC-2pB"/>
                                             <constraint firstItem="Adw-A4-AHO" firstAttribute="centerY" secondItem="PJ1-oB-2RH" secondAttribute="centerY" id="QmP-Tp-eyr"/>
                                             <constraint firstItem="Vlf-go-JsC" firstAttribute="height" secondItem="PJ1-oB-2RH" secondAttribute="height" id="UHZ-G8-yQT"/>
-                                            <constraint firstItem="Adw-A4-AHO" firstAttribute="width" secondItem="PJ1-oB-2RH" secondAttribute="width" id="gqs-oy-7FQ"/>
+                                            <constraint firstItem="Adw-A4-AHO" firstAttribute="width" secondItem="PJ1-oB-2RH" secondAttribute="width" multiplier="0.9" id="gqs-oy-7FQ"/>
                                             <constraint firstItem="Vlf-go-JsC" firstAttribute="centerX" secondItem="PJ1-oB-2RH" secondAttribute="centerX" id="hgP-iG-BxF"/>
                                             <constraint firstItem="Adw-A4-AHO" firstAttribute="height" secondItem="PJ1-oB-2RH" secondAttribute="height" id="nx0-dH-gf5"/>
                                         </constraints>
