@@ -5092,7 +5092,7 @@
                                                                 <connections>
                                                                     <outlet property="firstCellItem" destination="uEW-ko-DVf" id="7MF-TK-Rqg"/>
                                                                     <outlet property="secondCellItem" destination="ndW-MP-0OQ" id="mNO-C6-ynl"/>
-                                                                    <outlet property="selectedBackgroundView" destination="Stw-Hj-s7d" id="yKp-nU-5xG"/>
+                                                                    <outlet property="thirdCellItem" destination="Stw-Hj-s7d" id="jEO-cf-FeY"/>
                                                                 </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentPartnerCell" id="ncV-oT-CUH" customClass="PrettyTableViewCell">
