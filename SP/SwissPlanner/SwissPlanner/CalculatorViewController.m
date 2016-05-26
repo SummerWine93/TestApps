@@ -82,6 +82,10 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     selectedPlan = [self.selectedPlanNumber isEqual:nil] ? 1 : [self.selectedPlanNumber integerValue];
+	if (selectedPlan) {
+		self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
+		[self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
+	}
     
 }
 
