@@ -41,7 +41,6 @@
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 
 	// adding navigation capabilities
 	self.navigationItem.leftBarButtonItem = menuButton;
@@ -90,8 +89,18 @@
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    // before rotation
+    
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        // during rotation
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    } completion:^(id  _Nonnull context) {
+        
+        // after rotation
+    }];
 }
+
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -210,9 +219,10 @@
 
 #pragma mark - Checkbox methods
 
-- (IBAction)addToHistoryCheckboxChecked:(id)sender {
+- (IBAction)isDirectButtonClicked:(id)sender {
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
+    /*
 	self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
     NSInteger level;
     if (checkBoxSelected) {
@@ -228,7 +238,7 @@
     }
     [self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
     self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
-    [self.pickerLevel selectRow:level inComponent:0 animated:YES];
+    [self.pickerLevel selectRow:level inComponent:0 animated:YES]; */
 }
 
 - (IBAction)openOrderSelectionMenu:(id)sender {
@@ -245,7 +255,7 @@
 
 - (NSAttributedString *) countIncomeResult {
 	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
-	NSInteger partnerLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
+    NSInteger partnerLevelBonus = (checkBoxSelected)? 1:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
 	
 	if (partnerLevelBonus > yourLevelBonus) {
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
