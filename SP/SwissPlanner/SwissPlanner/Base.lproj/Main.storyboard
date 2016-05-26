@@ -10576,7 +10576,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ul4-Kc-gfv">
                                 <rect key="frame" x="-20" y="10" width="440" height="590"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLJ-hw-aQy">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLJ-hw-aQy" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-1e-N5D" userLabel="View1">
@@ -10587,12 +10587,18 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="16" y="8" width="308" height="56"/>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="if the difference between you and your partner is always one level" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Q2-uB-bqD">
                                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="16" y="64" width="308" height="68"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75200591220000002" colorSpace="calibratedRGB"/>
@@ -10622,6 +10628,9 @@
                                                         <include reference="qR8-qG-oRY"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="20" y="10" width="342" height="140"/>
+                                                </variation>
                                             </view>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyp-r7-z0G" userLabel="View2">
                                                 <rect key="frame" x="20" y="178" width="400" height="392"/>
@@ -10647,6 +10656,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="0.0" y="2" width="240" height="33"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="0.0" y="2" width="54" height="33"/>
                                                                             </variation>
                                                                         </label>
                                                                     </subviews>
@@ -10686,18 +10698,12 @@
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="forslide" translatesAutoresizingMaskIntoConstraints="NO" id="5xT-XI-m5Q">
                                                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
-                                                                            </variation>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1ft-mi-WQ7">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
-                                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                                <rect key="frame" x="16" y="7" width="216" height="21"/>
-                                                                            </variation>
                                                                         </label>
                                                                     </subviews>
                                                                     <constraints>
@@ -10730,6 +10736,9 @@
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="21" width="298" height="351"/>
+                                                        </variation>
                                                         <connections>
                                                             <outlet property="dataSource" destination="ifS-jT-q5M" id="OF4-hV-sRg"/>
                                                             <outlet property="delegate" destination="ifS-jT-q5M" id="p3d-Ug-Rbw"/>
@@ -10769,6 +10778,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                         <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="15" y="5" width="282" height="86"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -10800,7 +10812,7 @@
                                             <constraint firstItem="ZJr-1e-N5D" firstAttribute="top" secondItem="wLJ-hw-aQy" secondAttribute="top" constant="10" id="MKP-9k-fYT"/>
                                             <constraint firstItem="zyp-r7-z0G" firstAttribute="centerX" secondItem="wLJ-hw-aQy" secondAttribute="centerX" id="Osw-aS-5QA"/>
                                             <constraint firstItem="zyp-r7-z0G" firstAttribute="top" secondItem="ZJr-1e-N5D" secondAttribute="bottom" constant="20" id="tMQ-LX-LNy"/>
-                                            <constraint firstItem="ZJr-1e-N5D" firstAttribute="width" secondItem="wLJ-hw-aQy" secondAttribute="width" multiplier="0.9" id="tPR-eg-a8y"/>
+                                            <constraint firstItem="ZJr-1e-N5D" firstAttribute="width" secondItem="wLJ-hw-aQy" secondAttribute="width" id="tPR-eg-a8y"/>
                                             <constraint firstItem="31A-As-QXB" firstAttribute="width" secondItem="wLJ-hw-aQy" secondAttribute="width" multiplier="0.8" id="uUr-Me-shU"/>
                                             <constraint firstItem="31A-As-QXB" firstAttribute="centerX" secondItem="wLJ-hw-aQy" secondAttribute="centerX" id="wan-oG-a9c"/>
                                             <constraint firstAttribute="height" constant="700" id="xv0-86-XJg"/>
@@ -10843,10 +10855,10 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="ul4-Kc-gfv" firstAttribute="top" secondItem="oex-Bx-SM0" secondAttribute="topMargin" id="303-cq-338"/>
-                            <constraint firstItem="wLJ-hw-aQy" firstAttribute="height" secondItem="oex-Bx-SM0" secondAttribute="height" id="8Hv-AN-AvQ"/>
+                            <constraint firstItem="wLJ-hw-aQy" firstAttribute="height" secondItem="oex-Bx-SM0" secondAttribute="height" priority="700" id="8Hv-AN-AvQ"/>
                             <constraint firstItem="wBM-w0-lhJ" firstAttribute="top" secondItem="ul4-Kc-gfv" secondAttribute="bottom" id="9Np-hL-Hwh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ul4-Kc-gfv" secondAttribute="trailing" id="ZSV-B2-PBg"/>
-                            <constraint firstItem="ul4-Kc-gfv" firstAttribute="leading" secondItem="oex-Bx-SM0" secondAttribute="leadingMargin" id="Zxe-cp-FC2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ul4-Kc-gfv" secondAttribute="trailing" constant="-20" id="ZSV-B2-PBg"/>
+                            <constraint firstItem="ul4-Kc-gfv" firstAttribute="leading" secondItem="oex-Bx-SM0" secondAttribute="leadingMargin" constant="-20" id="Zxe-cp-FC2"/>
                         </constraints>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
