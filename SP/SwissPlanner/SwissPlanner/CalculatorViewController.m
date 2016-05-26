@@ -79,10 +79,16 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     selectedPlan = [self.selectedPlanNumber isEqual:nil] ? 1 : [self.selectedPlanNumber integerValue];
+    
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.selectedPlan = nil;
 }
 
 
@@ -202,6 +208,21 @@
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
 	self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
+    NSInteger level;
+    if (checkBoxSelected) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        level = [[defaults objectForKey:@"userLevel"] integerValue];
+    } else {
+        level = 0;
+    }
+    if (checkBoxSelected && _selectedPlanNumber) {
+        selectedPlan = [_selectedPlanNumber integerValue];
+    } else {
+        selectedPlan = 0;
+    }
+    [self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
+    self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
+    [self.pickerLevel selectRow:level inComponent:0 animated:YES];
 }
 
 - (IBAction)openOrderSelectionMenu:(id)sender {

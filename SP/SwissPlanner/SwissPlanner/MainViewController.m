@@ -84,7 +84,7 @@ object:nil];
     userName = [defaults objectForKey:@"userName"];
     userLevel = [defaults objectForKey:@"userLevel"];
     userPoints = [defaults objectForKey:@"userPoints"];
-    userPoints = [defaults objectForKey:@"userTestPoints"];
+    testPoints = [defaults objectForKey:@"userTestPoints"];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(orientationChanged:)
@@ -173,7 +173,7 @@ object:nil];
         NSString *cellText;
         switch (indexPath.row) {
             case userNameCell:
-                cellText = userName;
+                cellText = ([userName length])?userName:@"User Name";
                 break;
             case leadershipLevelCell:
                 cellText = (userLevel)?[userLevel stringValue]:@"0";
@@ -236,14 +236,22 @@ object:nil];
 	[self performSegueWithIdentifier:segueIdentifier sender:self];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     CalculatorViewController *vc = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"segueCabinet1"]) {
+        vc.selectedPlanNumber = [NSNumber numberWithInt:1];
+    } else if ([segue.identifier isEqualToString:@"segueCabinet2"]) {
+        vc.selectedPlanNumber = [NSNumber numberWithInt:3];
+    } else if ([segue.identifier isEqualToString:@"segueCabinet3"]) {
+        vc.selectedPlanNumber = [NSNumber numberWithInt:5];
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

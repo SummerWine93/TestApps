@@ -207,7 +207,7 @@ typedef enum {
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.facebook.com/olena.boychuk.1"]];
 				break;
 			case Skype:
-				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: [NSString stringWithFormat:@"skype:elenaboychuk621?call"]]];
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: [NSString stringWithFormat:@"https://www.instagram.com/swissgolden_online_shop/?call"]]];
 				break;
 			case YouTube:
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/channel/UCh-pDvDJX8knJQtDRFhiQ7g"]];
@@ -246,7 +246,7 @@ typedef enum {
 			[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.facebook.com/olena.boychuk.1"]];
 			break;
   case Skype:
-			[[UIApplication sharedApplication] openURL:[NSURL URLWithString: [NSString stringWithFormat:@"skype:elenaboychuk621?call"]]];
+			[[UIApplication sharedApplication] openURL:[NSURL URLWithString: [NSString stringWithFormat:@"https://www.instagram.com/swissgolden_online_shop/"]]];
 			break;
   case YouTube:
 			[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/channel/UCh-pDvDJX8knJQtDRFhiQ7g"]];
