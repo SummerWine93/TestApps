@@ -59,6 +59,16 @@ typedef enum {
 						  [NSArray arrayWithObjects:@"185.22", @"105.84", @"727.65", @"366.03", @"2 593.08", nil],
 						  [NSArray arrayWithObjects:@"189", @"108", @"742.50", @"373.50", @"2 646", nil],
 						  nil];
+	
+	for (id segment in [self.segmentedControl subviews]) {
+		for (id label in [segment subviews]) {
+			if ([label isKindOfClass:[UILabel class]]) {
+				UILabel *titleLabel = (UILabel *) label;
+				titleLabel.numberOfLines = 0;
+				//[titleLabel setTextColor:[UIColor redColor]];
+			}
+		}
+	}
 }
 
 - (void)didReceiveMemoryWarning {
