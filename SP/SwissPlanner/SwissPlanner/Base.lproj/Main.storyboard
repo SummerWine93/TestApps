@@ -1572,6 +1572,9 @@
                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="102" y="32" width="36" height="22"/>
                                                             </variation>
+                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                <rect key="frame" x="188" y="16" width="36" height="24"/>
+                                                            </variation>
                                                             <connections>
                                                                 <outlet property="delegate" destination="kWn-9T-ghh" id="Ymn-hT-LuW"/>
                                                             </connections>
@@ -1583,6 +1586,9 @@
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="63" y="8" width="164" height="22"/>
+                                                            </variation>
+                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                <rect key="frame" x="63" y="16" width="125" height="24"/>
                                                             </variation>
                                                         </label>
                                                     </subviews>
@@ -5699,6 +5705,9 @@
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="2" width="60" height="42"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="2" width="60" height="42"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-lk-8md">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -5712,6 +5721,9 @@
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="2" width="102" height="42"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="2" width="102" height="42"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFv-KZ-fOP">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -5723,6 +5735,9 @@
                                                                                 <rect key="frame" x="172" y="2" width="60" height="42"/>
                                                                             </variation>
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="2" width="60" height="42"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="2" width="60" height="42"/>
                                                                             </variation>
                                                                         </label>
@@ -6707,6 +6722,9 @@
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="0.0" width="60" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="2" width="60" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-kX-Ghg">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -6717,6 +6735,9 @@
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="0.0" width="102" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="2" width="102" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay7-pD-I8j">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -6726,6 +6747,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="0.0" width="60" height="44"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="2" width="60" height="44"/>
                                                                             </variation>
                                                                         </label>
                                                                     </subviews>
@@ -8142,6 +8166,9 @@
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="0.0" width="60" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="2" width="60" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyv-yE-TRK">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -8152,6 +8179,9 @@
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="1" width="102" height="43"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="2" width="102" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmj-3O-Zzt">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -8161,6 +8191,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="0.0" width="60" height="44"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="2" width="60" height="44"/>
                                                                             </variation>
                                                                         </label>
                                                                     </subviews>
