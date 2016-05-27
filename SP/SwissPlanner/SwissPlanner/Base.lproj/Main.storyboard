@@ -4436,6 +4436,14 @@
                                                                             <include reference="jDP-HJ-Tlm"/>
                                                                         </mask>
                                                                     </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="biq-3r-gUL"/>
+                                                                            <exclude reference="sGI-tf-CaC"/>
+                                                                            <exclude reference="Bsm-Wd-TZb"/>
+                                                                            <exclude reference="W22-XK-vSy"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
                                                                         <mask key="constraints">
                                                                             <exclude reference="biq-3r-gUL"/>
@@ -4474,6 +4482,9 @@
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="0.0" width="60" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="2" width="90" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-K4-Zsv">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -4484,6 +4495,9 @@
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="0.0" width="102" height="44"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="99" y="2" width="162" height="44"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24x-eM-KAZ">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -4493,6 +4507,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="0.0" width="60" height="44"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="262" y="2" width="90" height="44"/>
                                                                             </variation>
                                                                         </label>
                                                                     </subviews>
@@ -4533,6 +4550,16 @@
                                                                             <include reference="1S6-Tl-hy6"/>
                                                                             <include reference="54L-Fy-oyW"/>
                                                                             <include reference="lHg-dd-E65"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="SfS-ut-N6O"/>
+                                                                            <exclude reference="UFZ-eM-K46"/>
+                                                                            <exclude reference="Xfp-dE-aYM"/>
+                                                                            <exclude reference="dIa-wu-ap2"/>
+                                                                            <exclude reference="54L-Fy-oyW"/>
+                                                                            <exclude reference="lHg-dd-E65"/>
                                                                         </mask>
                                                                     </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
@@ -5171,6 +5198,16 @@
                                                                             <include reference="tke-c0-JOK"/>
                                                                         </mask>
                                                                     </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="OIT-gH-bJf"/>
+                                                                            <exclude reference="up9-Xr-QSg"/>
+                                                                            <exclude reference="t8D-gU-aw0"/>
+                                                                            <exclude reference="xW6-5I-SRR"/>
+                                                                            <exclude reference="Xkp-aW-adZ"/>
+                                                                            <exclude reference="tke-c0-JOK"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
                                                                         <mask key="constraints">
                                                                             <include reference="KOe-Wh-1a9"/>
@@ -5281,6 +5318,16 @@
                                                                             <include reference="WA5-Ny-q6G"/>
                                                                             <include reference="dJH-1y-X2h"/>
                                                                             <include reference="sbi-cZ-EFv"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="H2z-cR-DfM"/>
+                                                                            <exclude reference="upS-nn-Uhe"/>
+                                                                            <exclude reference="Lju-sZ-Ckc"/>
+                                                                            <exclude reference="kIk-g4-4T0"/>
+                                                                            <exclude reference="WA5-Ny-q6G"/>
+                                                                            <exclude reference="sbi-cZ-EFv"/>
                                                                         </mask>
                                                                     </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
@@ -8329,6 +8376,16 @@
                                                                             <include reference="rPe-P0-JYN"/>
                                                                         </mask>
                                                                     </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="D9H-nz-yfC"/>
+                                                                            <exclude reference="TBx-e0-T4d"/>
+                                                                            <exclude reference="09r-ik-hOC"/>
+                                                                            <exclude reference="fAF-6g-U2M"/>
+                                                                            <exclude reference="1vM-FJ-GoC"/>
+                                                                            <exclude reference="9cM-Sr-6cz"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
                                                                         <mask key="constraints">
                                                                             <exclude reference="D9H-nz-yfC"/>
@@ -8437,6 +8494,16 @@
                                                                             <include reference="62a-0n-Gvv"/>
                                                                             <include reference="6qS-vF-j01"/>
                                                                             <include reference="g1A-Xr-H7b"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="A2M-RC-oM0"/>
+                                                                            <exclude reference="enZ-tL-rLP"/>
+                                                                            <exclude reference="gEe-kN-RJv"/>
+                                                                            <exclude reference="r1K-y4-xXE"/>
+                                                                            <exclude reference="62a-0n-Gvv"/>
+                                                                            <exclude reference="g1A-Xr-H7b"/>
                                                                         </mask>
                                                                     </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
@@ -11433,6 +11500,16 @@
                                                                             <include reference="zEH-UA-xOz"/>
                                                                         </mask>
                                                                     </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="00s-2S-s4G"/>
+                                                                            <exclude reference="gOG-kV-sjg"/>
+                                                                            <exclude reference="Cl4-5v-1KM"/>
+                                                                            <exclude reference="hlS-aH-ipu"/>
+                                                                            <exclude reference="Qa3-8R-sRw"/>
+                                                                            <exclude reference="rDS-Ln-bSS"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
                                                                         <mask key="constraints">
                                                                             <exclude reference="00s-2S-s4G"/>
@@ -11543,6 +11620,16 @@
                                                                             <include reference="Tsu-OY-UVp"/>
                                                                             <include reference="Yye-Bz-rdK"/>
                                                                             <include reference="aro-cY-9fW"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="Hoc-BW-ZY3"/>
+                                                                            <exclude reference="ueb-uC-mdr"/>
+                                                                            <exclude reference="Uca-ok-itL"/>
+                                                                            <exclude reference="fIh-r3-v0l"/>
+                                                                            <exclude reference="Yye-Bz-rdK"/>
+                                                                            <exclude reference="aro-cY-9fW"/>
                                                                         </mask>
                                                                     </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
