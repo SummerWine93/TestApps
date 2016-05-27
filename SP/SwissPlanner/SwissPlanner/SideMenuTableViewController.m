@@ -315,7 +315,17 @@ typedef enum {
 	[self.view updateConstraints];
 }
 
-
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    // before rotation
+    
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        // during rotation
+        [self.tableView reloadData];
+    } completion:^(id  _Nonnull context) {
+        
+        // after rotation
+    }];
+}
 
 /*
 // Override to support conditional editing of the table view.

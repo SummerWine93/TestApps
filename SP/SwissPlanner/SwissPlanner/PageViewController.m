@@ -141,6 +141,20 @@
 {
 	return 0;
 }
+
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    // before rotation
+    
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        // during rotation
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)"]];
+    } completion:^(id  _Nonnull context) {
+        
+        // after rotation
+    }];
+}
+
 /*
 #pragma mark - Navigation
 

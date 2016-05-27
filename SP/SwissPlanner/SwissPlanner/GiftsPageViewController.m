@@ -36,7 +36,7 @@ typedef enum {
 				   [NSArray arrayWithObjects:@"gift level 6", @"6 Level", nil],
 				   [NSArray arrayWithObjects:@"gift level 6_1", @"6 Level", nil],
 				   [NSArray arrayWithObjects:@"gift level 8", @"8 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 7-11", @"7-11 levels", nil],
+                   [NSArray arrayWithObjects:@"gift level 7-11", @"7-11 \nlevels", nil],
 				   [NSArray arrayWithObjects:@"gift no level", @"Cruise", nil],
 				   nil];
 	
@@ -77,6 +77,19 @@ typedef enum {
 		[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 	}
  
+}
+
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    // before rotation
+    
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        // during rotation
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
+    } completion:^(id  _Nonnull context) {
+        
+        // after rotation
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

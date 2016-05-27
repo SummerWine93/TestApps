@@ -35,14 +35,11 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-selector:@selector(orientationChanged:)
-name:UIDeviceOrientationDidChangeNotification
-object:nil];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
 
-	
 	// setting navigation bar
+    
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
 																   style:UIBarButtonItemStylePlain
 																  target:self
@@ -75,9 +72,6 @@ object:nil];
 
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	[self restrictRotation:YES];
-	
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     
     // Get the stored data before the view loads
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -85,23 +79,21 @@ object:nil];
     userLevel = [defaults objectForKey:@"userLevel"];
     userPoints = [defaults objectForKey:@"userPoints"];
     testPoints = [defaults objectForKey:@"userTestPoints"];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(orientationChanged:)
-												 name:UIDeviceOrientationDidChangeNotification
-											   object:nil];
+
     
 }
 
-- (void) viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-	[self restrictRotation:NO];
-	
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)orientationChanged:(NSNotification *)notification {
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    // before rotation
+    
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        // during rotation
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    } completion:^(id  _Nonnull context) {
+        
+        // after rotation
+    }];
 }
 
 #pragma mark - Table view data source
@@ -198,15 +190,7 @@ object:nil];
 	return nil;
 }
 
--(void) restrictRotation:(BOOL) restriction
-{
-	AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-	appDelegate.restrictRotation = restriction;
-}
 
-- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-}
 
 #pragma mark - UITextField delegate methods
 
@@ -249,8 +233,6 @@ object:nil];
     } else if ([segue.identifier isEqualToString:@"segueCabinet3"]) {
         vc.selectedPlanNumber = [NSNumber numberWithInt:5];
     }
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 

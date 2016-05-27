@@ -41,7 +41,6 @@
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 
 	// adding navigation capabilities
 	self.navigationItem.leftBarButtonItem = menuButton;
@@ -90,8 +89,18 @@
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    // before rotation
+    
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        // during rotation
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    } completion:^(id  _Nonnull context) {
+        
+        // after rotation
+    }];
 }
+
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -177,7 +186,7 @@
 #pragma mark - TableView delegate methods
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [plansArray count];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -185,7 +194,7 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return (tableView.frame.size.height / 5);
+	return (tableView.frame.size.height / [plansArray count]);
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -210,9 +219,10 @@
 
 #pragma mark - Checkbox methods
 
-- (IBAction)addToHistoryCheckboxChecked:(id)sender {
+- (IBAction)isDirectButtonClicked:(id)sender {
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
+    /*
 	self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
     NSInteger level;
     if (checkBoxSelected) {
@@ -228,7 +238,7 @@
     }
     [self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
     self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
-    [self.pickerLevel selectRow:level inComponent:0 animated:YES];
+    [self.pickerLevel selectRow:level inComponent:0 animated:YES]; */
 }
 
 - (IBAction)openOrderSelectionMenu:(id)sender {
@@ -245,13 +255,12 @@
 
 - (NSAttributedString *) countIncomeResult {
 	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
-	NSInteger partnerLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
+    NSInteger partnerLevelBonus = (checkBoxSelected)? 1:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
 	
 	if (partnerLevelBonus > yourLevelBonus) {
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
 		return attributedResultsString;
 	}
-	//NSString *resultingString = @"Prepayment = %@\nTurnover = %@ x 4 - 10% = %@\nNumber of carier points = %@ / 500 = %@\nPrice of a carier point = %@ - %@ = %@\nIncome = %@ x %@ = %@";
 	// Showing the prepayment value
 	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
 	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
