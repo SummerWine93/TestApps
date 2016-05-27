@@ -2,34 +2,34 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "background.png",
+      "filename" : "phone2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "background(iphone 6).png",
+      "filename" : "phone2-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "background(iphone 6 PLUS).png",
+      "filename" : "phone2-2.png",
       "scale" : "3x"
     },
     {
       "idiom" : "universal",
-      "filename" : "background (2).png",
+      "filename" : "2x-1.png",
       "height-class" : "compact",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "background (2)-1.png",
+      "filename" : "2x-3.png",
       "height-class" : "compact",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3x_11.png",
+      "filename" : "2x-2.png",
       "height-class" : "compact",
       "scale" : "3x"
     }

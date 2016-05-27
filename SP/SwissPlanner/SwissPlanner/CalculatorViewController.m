@@ -255,7 +255,7 @@
 
 - (NSAttributedString *) countIncomeResult {
 	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
-    NSInteger partnerLevelBonus = (checkBoxSelected)? 1:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
+    NSInteger partnerLevelBonus = (checkBoxSelected)? [[bonusForLevelsArray objectAtIndex:1] integerValue]:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
 	
 	if (partnerLevelBonus > yourLevelBonus) {
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];

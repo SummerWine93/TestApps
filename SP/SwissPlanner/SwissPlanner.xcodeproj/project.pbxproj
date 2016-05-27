@@ -30,6 +30,7 @@
 		CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AADA1CD74E8800CB7A8E /* NavigationTableViewCell.m */; };
 		CE18D6181CC8EC600056D9A4 /* GiftsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18D6171CC8EC600056D9A4 /* GiftsPageViewController.m */; };
 		CE18D61B1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18D61A1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m */; };
+		CE3CAF751CF8773100B276CD /* PlatformTypeChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */; };
 		CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5519011CF326CF00196675 /* UISegmentedControl+Multiline.m */; };
 		CE5913801CBA566D008A3042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59137F1CBA566D008A3042 /* main.m */; };
 		CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913821CBA566D008A3042 /* AppDelegate.m */; };
@@ -108,6 +109,8 @@
 		CE18D6171CC8EC600056D9A4 /* GiftsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsPageViewController.m; sourceTree = "<group>"; };
 		CE18D6191CC8EC8E0056D9A4 /* GiftsPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftsPageContentViewController.h; sourceTree = "<group>"; };
 		CE18D61A1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsPageContentViewController.m; sourceTree = "<group>"; };
+		CE3CAF731CF8773100B276CD /* PlatformTypeChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformTypeChecker.h; sourceTree = "<group>"; };
+		CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformTypeChecker.m; sourceTree = "<group>"; };
 		CE5519001CF326CF00196675 /* UISegmentedControl+Multiline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+Multiline.h"; sourceTree = "<group>"; };
 		CE5519011CF326CF00196675 /* UISegmentedControl+Multiline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+Multiline.m"; sourceTree = "<group>"; };
 		CE59137B1CBA566C008A3042 /* SwissPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwissPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +261,8 @@
 				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
 				39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */,
 				39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */,
+				CE3CAF731CF8773100B276CD /* PlatformTypeChecker.h */,
+				CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */,
 			);
 			path = SwissPlanner;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */,
 				CE5913801CBA566D008A3042 /* main.m in Sources */,
 				CE05AAA61CD203F900CB7A8E /* PageContentWithMultipleTablesViewController.m in Sources */,
+				CE3CAF751CF8773100B276CD /* PlatformTypeChecker.m in Sources */,
 				CE05AABC1CD27BA000CB7A8E /* Slide10ContentViewController.m in Sources */,
 				CE05AAC21CD28D9C00CB7A8E /* ConclusionTableViewController.m in Sources */,
 				CE05AAA31CD12D4D00CB7A8E /* PageContentWithTablesViewController.m in Sources */,
