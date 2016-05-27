@@ -17,13 +17,13 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "1x-1.png",
+      "filename" : "background(gifts)-1.png",
       "height-class" : "compact",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "2x-1.png",
+      "filename" : "background(gifts).png",
       "height-class" : "compact",
       "scale" : "2x"
     },

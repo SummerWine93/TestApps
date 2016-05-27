@@ -32,21 +32,18 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "background.png",
-      "width-class" : "compact",
-      "scale" : "1x"
+      "scale" : "1x",
+      "width-class" : "compact"
     },
     {
       "idiom" : "universal",
-      "filename" : "background-1.png",
-      "width-class" : "compact",
-      "scale" : "2x"
+      "scale" : "2x",
+      "width-class" : "compact"
     },
     {
       "idiom" : "universal",
-      "filename" : "background-2.png",
-      "width-class" : "compact",
-      "scale" : "3x"
+      "scale" : "3x",
+      "width-class" : "compact"
     },
     {
       "idiom" : "universal",

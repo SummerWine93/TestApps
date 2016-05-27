@@ -17,24 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	//[self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back"]]];
-	//UIPageControl *pageControl = [UIPageControl appearance];
-	//pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
-	//pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-	//pageControl.backgroundColor = [UIColor whiteColor];
+
 	[NSThread sleepForTimeInterval:3.0];
 	[self.window setTintColor:[UIColor whiteColor]];
-	//[application setStatusBarStyle:UIStatusBarStyleLightContent];
 	
 	return YES;
 }
 
 -(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
-	//if(self.restrictRotation)
-	//	return UIInterfaceOrientationMaskPortrait;
-	//else
-		return UIInterfaceOrientationMaskAll;
+	return UIInterfaceOrientationMaskAll;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

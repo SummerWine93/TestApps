@@ -7747,8 +7747,16 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-8q-pot" userLabel="View0">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="GeQ-0N-7C5">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="GeQ-0N-7C5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="GeQ-0N-7C5" secondAttribute="height" multiplier="59:34" id="BX2-GN-QT9"/>
+                                                                </constraints>
+                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                    <mask key="constraints">
+                                                                        <include reference="BX2-GN-QT9"/>
+                                                                    </mask>
+                                                                </variation>
                                                             </imageView>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_upward" translatesAutoresizingMaskIntoConstraints="NO" id="SuK-KM-4ID">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -7998,6 +8006,7 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="mf0-xF-sNb"/>
                                                 <exclude reference="BKc-ta-7q7"/>
                                             </mask>
                                         </variation>
@@ -9316,8 +9325,11 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Dw-jQ-2xn" userLabel="View0">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="oNW-Mo-paB">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="oNW-Mo-paB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="oNW-Mo-paB" secondAttribute="height" multiplier="118:67" id="HCI-p5-GJc"/>
+                                                                </constraints>
                                                             </imageView>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_upward" translatesAutoresizingMaskIntoConstraints="NO" id="gNg-vK-PX4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -9582,6 +9594,11 @@
                                             </constraint>
                                             <constraint firstItem="z5A-RG-Hv9" firstAttribute="top" secondItem="enY-WB-FPQ" secondAttribute="top" constant="10" id="xpt-pe-X3W"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="01s-1x-i5m"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="z5A-RG-Hv9"/>
@@ -9602,7 +9619,6 @@
                                                 <include reference="Aoq-WT-XaK"/>
                                                 <include reference="Dkk-eR-Qu0"/>
                                                 <include reference="Ipa-6p-PMe"/>
-                                                <include reference="01s-1x-i5m"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -10193,8 +10209,11 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-5c-rNa" userLabel="View0">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="x4X-Yk-QCz">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="x4X-Yk-QCz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="x4X-Yk-QCz" secondAttribute="height" multiplier="118:67" id="nQh-QG-v1C"/>
+                                                                </constraints>
                                                             </imageView>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_upward" translatesAutoresizingMaskIntoConstraints="NO" id="Bhq-et-nPY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -10459,6 +10478,11 @@
                                             <constraint firstItem="zjr-b0-9Uw" firstAttribute="top" secondItem="rnd-0C-aGh" secondAttribute="top" constant="10" id="hlM-0E-PWA"/>
                                             <constraint firstItem="kgQ-P6-0Qj" firstAttribute="centerX" secondItem="lbY-fz-v5m" secondAttribute="centerX" id="klw-v7-HZ7"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="h0g-Pp-Axd"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="zjr-b0-9Uw"/>
@@ -10479,7 +10503,6 @@
                                                 <include reference="XOF-Wr-pvw"/>
                                                 <include reference="b5M-Pw-8ai"/>
                                                 <include reference="klw-v7-HZ7"/>
-                                                <include reference="h0g-Pp-Axd"/>
                                             </mask>
                                         </variation>
                                     </view>
