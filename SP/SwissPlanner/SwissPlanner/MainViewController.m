@@ -15,6 +15,7 @@
 
 @interface MainViewController () {
 	NSArray *cellsReuseIdentifiers;
+	
     NSString *userName;
     NSNumber *userLevel;
     NSNumber *userPoints;
