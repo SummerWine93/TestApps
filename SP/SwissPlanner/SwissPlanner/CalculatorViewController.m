@@ -255,7 +255,7 @@
 
 - (NSAttributedString *) countIncomeResult {
 	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
-    NSInteger partnerLevelBonus = (checkBoxSelected)? 1:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
+    NSInteger partnerLevelBonus = (checkBoxSelected)? [[bonusForLevelsArray objectAtIndex:1] integerValue]:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
 	
 	if (partnerLevelBonus > yourLevelBonus) {
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
@@ -275,8 +275,10 @@
 	NSNumber *carierPointPriceValue =  [NSNumber numberWithInteger:(yourLevelBonus - partnerLevelBonus)];
 	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of bonus units = %d - %d = %@\n", yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
 	// Showing the income value
+	NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
+	[nf setMaximumFractionDigits:3];
 	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue doubleValue]*[carierPointsValue doubleValue])];
-	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [incomeValue stringValue]];
+	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue]];
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", prepaymentString, turnoverString, carierPointsString, carierPointPriceString]];
 	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];

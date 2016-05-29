@@ -13,6 +13,7 @@
 @interface SettingsTableViewController () {
 	NSDictionary *settingsCategories;
 	NSMutableDictionary *settings;
+	NSArray *bonusPointsArray;
 }
 
 @end
@@ -47,6 +48,8 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+	
+	bonusPointsArray = [NSArray arrayWithObjects:@0, @0, @100, @300, @1000, @2500, @5000, @10000, @25000, @50000, @100000, @20000, nil];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

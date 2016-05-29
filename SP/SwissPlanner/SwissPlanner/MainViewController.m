@@ -11,8 +11,11 @@
 #import "CalculatorViewController.h"
 #import "CabinetContentTableViewCell.h"
 
+#import "PlatformTypeChecker.h"
+
 @interface MainViewController () {
 	NSArray *cellsReuseIdentifiers;
+	
     NSString *userName;
     NSNumber *userLevel;
     NSNumber *userPoints;
@@ -35,8 +38,15 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+	NSString *platform = [PlatformTypeChecker platformType];
+	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+		self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+		[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+	} else {
+		self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+		[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+	}
+	
 
 	// setting navigation bar
     
@@ -46,7 +56,7 @@ typedef enum {
 																  action:nil];
 	self.navigationItem.leftBarButtonItem = menuButton;
 	
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+	
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 	
