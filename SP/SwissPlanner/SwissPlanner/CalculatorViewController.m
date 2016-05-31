@@ -271,8 +271,9 @@
 	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
 	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
 	// Showing the turnover value
-	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * [prepaymentValue integerValue]*4)];
-	NSString *turnoverString = [NSString stringWithFormat:@"Commodity circulation = %@ x 4 - 10%% = %@\n", [prepaymentValue stringValue],[turnoverValue stringValue]];
+	NSInteger internetCommission = (selectedPlan>1)?50:20;
+	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * ([prepaymentValue integerValue] - internetCommission)*3)];
+	NSString *turnoverString = [NSString stringWithFormat:@"Commodity circulation = (%@ - %d) x 3 - 10%% = %@\n", [prepaymentValue stringValue], internetCommission,[turnoverValue stringValue]];
 	// Showing the number of carier points value
 	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue doubleValue]/500)];
 	NSString *carierPointsString = [NSString stringWithFormat:@"Number of bonus units = %@ / 500 = %@\n", [turnoverValue stringValue], [carierPointsValue stringValue]];
