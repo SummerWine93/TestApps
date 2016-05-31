@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background(launcher)" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tg-eHC">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greetings_gold" translatesAutoresizingMaskIntoConstraints="NO" id="cON-gK-AFX">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="-303" width="600" height="1206"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cON-gK-AFX" secondAttribute="height" multiplier="3:2" id="wPl-hW-PSc"/>
                                 </constraints>
@@ -39,7 +39,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swissgolden" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-Ba-rMf">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="-32" width="600" height="304"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Zn-Ba-rMf" secondAttribute="height" multiplier="25:6" id="UUS-c9-qaO"/>
@@ -56,7 +56,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eleaboychulk" translatesAutoresizingMaskIntoConstraints="NO" id="175-wq-fyd">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="202" width="600" height="496"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="175-wq-fyd" secondAttribute="height" multiplier="40:21" id="4j1-gd-zqn"/>
                                 </constraints>
@@ -88,29 +88,6 @@
                             <constraint firstItem="cON-gK-AFX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="urM-pJ-tQy"/>
                             <constraint firstItem="mdA-tg-eHC" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="utd-NU-MLe"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="mdA-tg-eHC"/>
-                                <exclude reference="cON-gK-AFX"/>
-                                <exclude reference="6Zn-Ba-rMf"/>
-                                <exclude reference="175-wq-fyd"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="A7e-7f-Ll9"/>
-                                <exclude reference="Dfn-Lv-p5C"/>
-                                <exclude reference="qzQ-un-e1W"/>
-                                <exclude reference="Wkm-4C-GWn"/>
-                                <exclude reference="hYn-Rl-LzJ"/>
-                                <exclude reference="pwx-MO-aGa"/>
-                                <exclude reference="8HR-EO-h73"/>
-                                <exclude reference="ukO-mM-0Rm"/>
-                                <exclude reference="urM-pJ-tQy"/>
-                                <exclude reference="Iv9-Ho-vRq"/>
-                                <exclude reference="L56-3c-hTd"/>
-                                <exclude reference="qWw-gY-obU"/>
-                                <exclude reference="utd-NU-MLe"/>
-                            </mask>
-                        </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="mdA-tg-eHC"/>
@@ -142,7 +119,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background(launcher)" width="640" height="1136"/>
+        <image name="background(launcher)" width="640" height="960"/>
         <image name="eleaboychulk" width="640" height="496"/>
         <image name="greetings_gold" width="1242" height="1206"/>
         <image name="swissgolden" width="640" height="304"/>
