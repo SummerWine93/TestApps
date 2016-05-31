@@ -1102,7 +1102,7 @@
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <color key="backgroundColor" red="0.37254901960784315" green="0.1803921568627451" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="76" id="ZVX-r4-5Kl"/>
+                                            <constraint firstAttribute="height" constant="65" id="ZVX-r4-5Kl"/>
                                             <constraint firstAttribute="width" secondItem="cqr-Js-0Ga" secondAttribute="height" multiplier="1:1" id="zwi-Co-PVf"/>
                                         </constraints>
                                         <state key="normal" image="calculate_button"/>

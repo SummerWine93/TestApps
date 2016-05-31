@@ -63,7 +63,7 @@
 
 	// making fancy corners
 	self.calculateButton.clipsToBounds = YES;
-	self.calculateButton.layer.cornerRadius = 76 / 2.0 ;
+	self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
 	self.textDisplayView.layer.cornerRadius = self.textDisplayView.frame.size.width / 40;
 	self.pickerLevel.layer.cornerRadius = 5;
 	self.pickerPartnerLevel.layer.cornerRadius = 5;
