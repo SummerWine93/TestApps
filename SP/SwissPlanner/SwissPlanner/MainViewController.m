@@ -30,7 +30,7 @@ typedef enum {
 	userNameCell,
 	leadershipLevelCell,
 	bonusUnitsCell,
-	testResultCell,
+	pointsLeftCell,
 	deviderCell,
 	ordersCell,
 	footerCell
@@ -75,7 +75,7 @@ typedef enum {
 							 @"userNameCell",
 							 @"leadershipLevelCell",
 							 @"bonusUnitsCell",
-							 @"testResultCell",
+							 @"pointsLeftCell",
 							 @"deviderCell",
 							 @"ordersCell",
 							 @"footerCell",
@@ -92,7 +92,7 @@ typedef enum {
     userName = [defaults objectForKey:@"userName"];
     userLevel = [defaults objectForKey:@"userLevel"];
     userPoints = [defaults objectForKey:@"userPoints"];
-    testPoints = [defaults objectForKey:@"userTestPoints"];
+    testPoints = [defaults objectForKey:@"pointsLeft"];
 
     
 }
@@ -190,7 +190,7 @@ typedef enum {
             case bonusUnitsCell:
                 cellText = (isInLeadershipProgram)?[userPoints stringValue]:@"None";
                  break;
-            case testResultCell:
+            case pointsLeftCell:
 				cellText = (([userLevel integerValue]<11) && isInLeadershipProgram)?[userLevel stringValue]:@"None";
                  break;
             default:

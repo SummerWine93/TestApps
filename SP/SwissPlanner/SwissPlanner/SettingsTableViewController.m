@@ -50,7 +50,7 @@
     
     [self.view addGestureRecognizer:tap];
 	
-	bonusPointsArray = [NSArray arrayWithObjects:@0, @0, @100, @300, @1000, @2500, @5000, @10000, @25000, @50000, @100000, @20000, nil];
+	bonusPointsArray = [NSArray arrayWithObjects:@0, @0, @100, @300, @1000, @2500, @5000, @10000, @25000, @50000, @100000, @200000, nil];
 	
 	// setting the checkbox
 	[_checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
@@ -121,8 +121,10 @@
 		NSInteger maxPoints = [[bonusPointsArray objectAtIndex:([bonusPointsArray count]-1)] integerValue];
 		[defaults setObject:[NSNumber numberWithInteger:((points < maxPoints)?points:maxPoints)] forKey:@"userPoints"];
 		for (int i=0; i<[bonusPointsArray count]-1; i++) {
-			if ([[bonusPointsArray objectAtIndex:i+1] integerValue] >= maxPoints) {
+			if ([[bonusPointsArray objectAtIndex:i+1] integerValue] >= points) {
 				[defaults setObject:[NSNumber numberWithInteger:i] forKey:@"userLevel"];
+                [defaults setObject:[NSNumber numberWithInteger:([[bonusPointsArray objectAtIndex:i+1] integerValue] - points)] forKey:@"pointsLeft"];
+                break;
 			}
 		}
 		
