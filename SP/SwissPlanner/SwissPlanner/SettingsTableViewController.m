@@ -14,6 +14,7 @@
 	NSDictionary *settingsCategories;
 	NSMutableDictionary *settings;
 	NSArray *bonusPointsArray;
+	BOOL checkBoxSelected;
 }
 
 @end
@@ -50,6 +51,15 @@
     [self.view addGestureRecognizer:tap];
 	
 	bonusPointsArray = [NSArray arrayWithObjects:@0, @0, @100, @300, @1000, @2500, @5000, @10000, @25000, @50000, @100000, @20000, nil];
+	
+	// setting the checkbox
+	[_checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
+						 forState:UIControlStateNormal];
+	[_checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+						 forState:UIControlStateSelected];
+	[_checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+						 forState:UIControlStateHighlighted];
+	_checkbox.adjustsImageWhenHighlighted=YES;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -58,7 +68,6 @@
     
      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.nameLabel.text = [defaults objectForKey:@"userName"];
-    self.levelLabel.text = [[defaults objectForKey:@"userLevel"] stringValue];
     self.pointsLabel.text = [[defaults objectForKey:@"userPoints"] stringValue];
 }
 
@@ -106,28 +115,35 @@
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     
-    if ([self.levelLabel.text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
-    {
-        NSInteger level = [[f numberFromString:self.levelLabel.text] integerValue];
-        if((level >= 0)&&(level <=11)) {
-            [defaults setObject:[NSNumber numberWithInteger:level] forKey:@"userLevel"];
-        } else {
-            [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userLevel"];
-        }
-    } else {
-        [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userLevel"];
-    }
-    
     if ([self.pointsLabel.text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
     {
         NSInteger points = [[f numberFromString:self.pointsLabel.text] integerValue];
-        [defaults setObject:[NSNumber numberWithInteger:points] forKey:@"userPoints"];
+		NSInteger maxPoints = [[bonusPointsArray objectAtIndex:([bonusPointsArray count]-1)] integerValue];
+		[defaults setObject:[NSNumber numberWithInteger:((points < maxPoints)?points:maxPoints)] forKey:@"userPoints"];
+		for (int i=0; i<[bonusPointsArray count]-1; i++) {
+			if ([[bonusPointsArray objectAtIndex:i+1] integerValue] >= maxPoints) {
+				[defaults setObject:[NSNumber numberWithInteger:i] forKey:@"userLevel"];
+			}
+		}
+		
     } else {
         [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"userPoints"];
         self.pointsLabel.text = @"The points value must be a number";
     }
+	if (checkBoxSelected) {
+		[defaults setObject:[NSNumber numberWithBool:checkBoxSelected] forKey:@"isInLeadershipProgram"];
+	}
     
     [defaults synchronize];
 }
+
+#pragma mark - Checkbox methods
+
+- (IBAction)isInProgramButtonClicked:(id)sender {
+	checkBoxSelected = !checkBoxSelected; /* Toggle */
+	[_checkbox setSelected:checkBoxSelected];
+	
+}
+
 
 @end

@@ -113,7 +113,7 @@ typedef enum {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	switch (section) {
 		case 0:
-			return 6;
+			return 7;
 			break;
 		case 1:
 			return 5;

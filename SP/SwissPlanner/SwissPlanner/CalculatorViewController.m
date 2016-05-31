@@ -63,7 +63,7 @@
 
 	// making fancy corners
 	self.calculateButton.clipsToBounds = YES;
-	self.calculateButton.layer.cornerRadius = 76 / 2.0 ;
+	self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
 	self.textDisplayView.layer.cornerRadius = self.textDisplayView.frame.size.width / 40;
 	self.pickerLevel.layer.cornerRadius = 5;
 	self.pickerPartnerLevel.layer.cornerRadius = 5;
@@ -73,7 +73,7 @@
 	levelsArray = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
     prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
 	prepaymentValuesArray = [NSArray arrayWithObjects:@220, @720, @1050, @2800, @3550, @9850, nil];
-    plansArray = [NSArray arrayWithObjects:@"pre Main", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
+    plansArray = [NSArray arrayWithObjects:@"pre", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
 	
 	bonusForLevelsArray = [NSArray arrayWithObjects: @0, @15, @20, @25, @30, @35, @40, @43, @45, @47, @49, @50, nil];
 }
@@ -222,23 +222,28 @@
 - (IBAction)isDirectButtonClicked:(id)sender {
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
-    /*
+	
 	self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
     NSInteger level;
+	NSInteger partnersLevel;
     if (checkBoxSelected) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         level = [[defaults objectForKey:@"userLevel"] integerValue];
+		partnersLevel = 1;
     } else {
         level = 0;
+		partnersLevel = 0;
     }
+	/*
     if (checkBoxSelected && _selectedPlanNumber) {
         selectedPlan = [_selectedPlanNumber integerValue];
     } else {
         selectedPlan = 0;
     }
     [self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
-    self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
-    [self.pickerLevel selectRow:level inComponent:0 animated:YES]; */
+    self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];*/
+    [self.pickerLevel selectRow:level inComponent:0 animated:YES];
+	[self.pickerPartnerLevel selectRow:partnersLevel inComponent:0 animated:YES];
 }
 
 - (IBAction)openOrderSelectionMenu:(id)sender {
@@ -256,17 +261,19 @@
 - (NSAttributedString *) countIncomeResult {
 	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
     NSInteger partnerLevelBonus = (checkBoxSelected)? [[bonusForLevelsArray objectAtIndex:1] integerValue]:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
-	
+	/*
 	if (partnerLevelBonus > yourLevelBonus) {
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
 		return attributedResultsString;
-	}
+	}*/
+	
 	// Showing the prepayment value
 	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
 	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
 	// Showing the turnover value
-	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * [prepaymentValue integerValue]*4)];
-	NSString *turnoverString = [NSString stringWithFormat:@"Commodity circulation = %@ x 4 - 10%% = %@\n", [prepaymentValue stringValue],[turnoverValue stringValue]];
+	NSInteger internetCommission = (selectedPlan>1)?50:20;
+	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * ([prepaymentValue integerValue] - internetCommission)*3)];
+	NSString *turnoverString = [NSString stringWithFormat:@"Commodity circulation = (%@ - %d) x 3 - 10%% = %@\n", [prepaymentValue stringValue], internetCommission,[turnoverValue stringValue]];
 	// Showing the number of carier points value
 	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue doubleValue]/500)];
 	NSString *carierPointsString = [NSString stringWithFormat:@"Number of bonus units = %@ / 500 = %@\n", [turnoverValue stringValue], [carierPointsValue stringValue]];
@@ -278,12 +285,14 @@
 	NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
 	[nf setMaximumFractionDigits:3];
 	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue doubleValue]*[carierPointsValue doubleValue])];
-	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue]];
+	NSString *extraInfo = @"\nYou are wasting your money!";
+	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@%@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
+	
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", prepaymentString, turnoverString, carierPointsString, carierPointPriceString]];
 	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
-	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, resultAppendix.string.length)];
-	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, resultAppendix.string.length)];
 	
 	[attributedResultsString appendAttributedString:resultAppendix];
 	
