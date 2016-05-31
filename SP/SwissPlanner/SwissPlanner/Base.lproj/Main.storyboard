@@ -701,6 +701,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
@@ -766,6 +769,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
@@ -834,6 +840,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <rect key="frame" x="0.0" y="188" width="71" height="62"/>
                                                         </variation>
                                                     </label>
@@ -919,17 +926,25 @@
                                         <constraints>
                                             <constraint firstItem="B7s-la-JDA" firstAttribute="centerY" secondItem="7su-A5-aIn" secondAttribute="centerY" id="5JX-c4-LWt"/>
                                             <constraint firstItem="B7s-la-JDA" firstAttribute="height" secondItem="7su-A5-aIn" secondAttribute="height" id="8hW-hp-cd4"/>
-                                            <constraint firstItem="B7s-la-JDA" firstAttribute="leading" secondItem="7su-A5-aIn" secondAttribute="trailing" constant="8" id="Ihh-hN-KO2"/>
+                                            <constraint firstItem="B7s-la-JDA" firstAttribute="leading" secondItem="7su-A5-aIn" secondAttribute="trailing" constant="8" id="Ihh-hN-KO2">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                                            </constraint>
                                             <constraint firstItem="gT6-3g-rJO" firstAttribute="height" secondItem="nle-va-TYK" secondAttribute="height" id="LXP-E2-0Q6"/>
                                             <constraint firstItem="B7s-la-JDA" firstAttribute="width" secondItem="7su-A5-aIn" secondAttribute="width" id="QG5-Uh-Cha"/>
                                             <constraint firstItem="7su-A5-aIn" firstAttribute="width" secondItem="Bny-kv-eK4" secondAttribute="width" multiplier="0.22" id="Tyf-OT-sht"/>
                                             <constraint firstItem="5Mb-4r-VDd" firstAttribute="height" secondItem="7su-A5-aIn" secondAttribute="height" id="U8L-P6-huQ"/>
                                             <constraint firstAttribute="bottom" secondItem="7su-A5-aIn" secondAttribute="bottom" constant="8" id="aie-mC-QrF"/>
-                                            <constraint firstItem="7su-A5-aIn" firstAttribute="width" secondItem="Bny-kv-eK4" secondAttribute="width" multiplier="0.25" id="dZg-2R-6lK"/>
+                                            <constraint firstItem="7su-A5-aIn" firstAttribute="width" secondItem="Bny-kv-eK4" secondAttribute="width" multiplier="0.275" id="dZg-2R-6lK"/>
                                             <constraint firstItem="5Mb-4r-VDd" firstAttribute="centerY" secondItem="7su-A5-aIn" secondAttribute="centerY" id="j9u-zw-QEn"/>
-                                            <constraint firstItem="7su-A5-aIn" firstAttribute="leading" secondItem="Bny-kv-eK4" secondAttribute="leading" constant="8" id="njt-vm-zkf"/>
-                                            <constraint firstAttribute="trailing" secondItem="5Mb-4r-VDd" secondAttribute="trailing" constant="8" id="siv-uV-lxv"/>
-                                            <constraint firstItem="5Mb-4r-VDd" firstAttribute="leading" secondItem="B7s-la-JDA" secondAttribute="trailing" constant="8" id="teK-vz-CC6"/>
+                                            <constraint firstItem="7su-A5-aIn" firstAttribute="leading" secondItem="Bny-kv-eK4" secondAttribute="leading" constant="8" id="njt-vm-zkf">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="5Mb-4r-VDd" secondAttribute="trailing" constant="8" id="siv-uV-lxv">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                                            </constraint>
+                                            <constraint firstItem="5Mb-4r-VDd" firstAttribute="leading" secondItem="B7s-la-JDA" secondAttribute="trailing" constant="8" id="teK-vz-CC6">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                                            </constraint>
                                             <constraint firstItem="7su-A5-aIn" firstAttribute="top" secondItem="Bny-kv-eK4" secondAttribute="top" constant="8" id="yjM-vZ-ULg"/>
                                         </constraints>
                                         <variation key="default">
@@ -1285,7 +1300,7 @@
                             <constraint firstItem="iH8-Iv-6mb" firstAttribute="height" secondItem="cTb-nl-C6W" secondAttribute="height" multiplier="0.35" id="USR-0U-r6k"/>
                             <constraint firstItem="tdo-jW-yHm" firstAttribute="top" secondItem="iH8-Iv-6mb" secondAttribute="bottom" id="bIJ-Mv-acN"/>
                             <constraint firstItem="tdo-jW-yHm" firstAttribute="height" secondItem="cTb-nl-C6W" secondAttribute="height" multiplier="0.55" id="iSh-kt-xXs"/>
-                            <constraint firstItem="iH8-Iv-6mb" firstAttribute="width" secondItem="tdo-jW-yHm" secondAttribute="width" multiplier="0.85" id="ptU-yl-soW"/>
+                            <constraint firstItem="iH8-Iv-6mb" firstAttribute="width" secondItem="tdo-jW-yHm" secondAttribute="width" multiplier="1.05" id="ptU-yl-soW"/>
                             <constraint firstItem="iH8-Iv-6mb" firstAttribute="centerX" secondItem="cTb-nl-C6W" secondAttribute="centerX" id="vMD-9Y-65D"/>
                         </constraints>
                         <variation key="default">
