@@ -20,6 +20,8 @@
     NSNumber *userLevel;
     NSNumber *userPoints;
     NSNumber *testPoints;
+	
+	NSArray *levelsPointsArray;
 }
 
 @end
@@ -78,6 +80,8 @@ typedef enum {
 							 @"ordersCell",
 							 @"footerCell",
 							 nil];
+	
+	levelsPointsArray = [NSArray arrayWithObjects:@0, @0, @100, @300, @1000, @2500, @5000, @10000, @25000, @50000, @100000, @20000, nil];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -173,6 +177,9 @@ typedef enum {
 	if (tableView.tag == 0) {
         CabinetContentTableViewCell *cell = (CabinetContentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
         NSString *cellText;
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		BOOL isInLeadershipProgram = [[defaults objectForKey:@"userName"] boolValue];
+		
         switch (indexPath.row) {
             case userNameCell:
                 cellText = ([userName length])?userName:@"User Name";
@@ -181,10 +188,10 @@ typedef enum {
                 cellText = (userLevel)?[userLevel stringValue]:@"0";
                 break;
             case bonusUnitsCell:
-                cellText = (userPoints)?[userPoints stringValue]:@"0";
+                cellText = (isInLeadershipProgram)?[userPoints stringValue]:@"None";
                  break;
             case testResultCell:
-                cellText = (testPoints)?[testPoints stringValue]:@"0";
+				cellText = (([userLevel integerValue]<11) && isInLeadershipProgram)?[userLevel stringValue]:@"None";
                  break;
             default:
                 break;

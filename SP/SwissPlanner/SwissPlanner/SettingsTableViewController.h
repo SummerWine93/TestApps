@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSMutableDictionary *userSettingsDictionary;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameLabel;
-@property (weak, nonatomic) IBOutlet UITextField *levelLabel;
 @property (weak, nonatomic) IBOutlet UITextField *pointsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *checkbox;
 
 @end
