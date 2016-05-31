@@ -222,23 +222,28 @@
 - (IBAction)isDirectButtonClicked:(id)sender {
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
-    /*
+	
 	self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
     NSInteger level;
+	NSInteger partnersLevel;
     if (checkBoxSelected) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         level = [[defaults objectForKey:@"userLevel"] integerValue];
+		partnersLevel = 1;
     } else {
         level = 0;
+		partnersLevel = 0;
     }
+	/*
     if (checkBoxSelected && _selectedPlanNumber) {
         selectedPlan = [_selectedPlanNumber integerValue];
     } else {
         selectedPlan = 0;
     }
     [self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
-    self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
-    [self.pickerLevel selectRow:level inComponent:0 animated:YES]; */
+    self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];*/
+    [self.pickerLevel selectRow:level inComponent:0 animated:YES];
+	[self.pickerPartnerLevel selectRow:partnersLevel inComponent:0 animated:YES];
 }
 
 - (IBAction)openOrderSelectionMenu:(id)sender {
@@ -282,8 +287,8 @@
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", prepaymentString, turnoverString, carierPointsString, carierPointPriceString]];
 	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
-	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, resultAppendix.string.length)];
-	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, resultAppendix.string.length)];
 	
 	[attributedResultsString appendAttributedString:resultAppendix];
 	
