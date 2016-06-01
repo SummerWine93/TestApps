@@ -2918,12 +2918,13 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your full name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwT-KB-O2u">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your full name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwT-KB-O2u" customClass="TextFieldValidator">
                                                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="obk-ld-jSP" id="cuR-e2-SVJ"/>
+                                                        <outlet property="presentInView" destination="6ng-sc-iEi" id="5mt-Zu-gY1"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -2934,10 +2935,19 @@
                                                 <constraint firstItem="lwT-KB-O2u" firstAttribute="centerY" secondItem="fUH-Of-LvX" secondAttribute="centerY" id="fpt-iP-jRq"/>
                                                 <constraint firstItem="lwT-KB-O2u" firstAttribute="leading" secondItem="L6x-5O-yxX" secondAttribute="trailing" constant="8" id="of2-BH-gfD"/>
                                                 <constraint firstItem="L6x-5O-yxX" firstAttribute="centerY" secondItem="fUH-Of-LvX" secondAttribute="centerY" id="sR2-37-fUX"/>
+                                                <constraint firstItem="lwT-KB-O2u" firstAttribute="height" secondItem="fUH-Of-LvX" secondAttribute="height" id="yif-nI-02o"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="yif-nI-02o"/>
+                                                </mask>
+                                            </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="lwT-KB-O2u"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="yif-nI-02o"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -2955,23 +2965,35 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your carier points" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-C3-iWw">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your carier points" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-C3-iWw" customClass="TextFieldValidator">
                                                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="obk-ld-jSP" id="Szc-My-HZ8"/>
+                                                        <outlet property="presentInView" destination="6ng-sc-iEi" id="Rkf-Gi-kJd"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Q2O-C3-iWw" secondAttribute="trailing" id="Qop-Lh-e1z"/>
+                                                <constraint firstItem="Q2O-C3-iWw" firstAttribute="height" secondItem="xXI-YR-dm8" secondAttribute="height" id="Yvc-SI-TLe"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="leading" secondItem="abq-NF-vG0" secondAttribute="trailing" constant="8" id="YzI-GG-YyK"/>
                                                 <constraint firstItem="abq-NF-vG0" firstAttribute="width" secondItem="xXI-YR-dm8" secondAttribute="width" multiplier="0.45" id="buo-v4-wF1"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="centerY" secondItem="xXI-YR-dm8" secondAttribute="centerY" id="xOn-WI-AcD"/>
                                                 <constraint firstItem="abq-NF-vG0" firstAttribute="centerY" secondItem="xXI-YR-dm8" secondAttribute="centerY" id="yrp-vg-Gba"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="abq-NF-vG0" secondAttribute="leading" id="zRX-Ug-MCz"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Yvc-SI-TLe"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="Yvc-SI-TLe"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hzV-NQ-lYv">

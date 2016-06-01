@@ -60,6 +60,11 @@
 	[_checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
 						 forState:UIControlStateHighlighted];
 	_checkbox.adjustsImageWhenHighlighted=YES;
+	
+	[_nameLabel addRegx:@"^.{1,50}$" withMsg:@"User name characters limit should be come between 1-50"];
+	//[_nameLabel addRegx:@"[A-Za-z]|{1,50}" withMsg:@"Only alpha numeric characters are allowed."];
+	
+	[_pointsLabel addRegx:@"^([0-9]|[1-9][0-9]|[1-9][0-9][0-9]||[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9]|1[1-9][0-9][0-9][0-9][0-9]|200000)$" withMsg:@"Only numeric characters in range from 0-200000 are allowed."];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -96,6 +101,15 @@
     return 3;
 }
 
+#pragma mark - Text field delegate methods
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+	if ([(TextFieldValidator *)textField validate]) {
+		return YES;
+	}
+	return NO;
+}
+
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     [self.view endEditing:YES];
     return NO;
@@ -122,8 +136,16 @@
 		[defaults setObject:[NSNumber numberWithInteger:((points < maxPoints)?points:maxPoints)] forKey:@"userPoints"];
 		for (int i=0; i<[bonusPointsArray count]-1; i++) {
 			if ([[bonusPointsArray objectAtIndex:i+1] integerValue] >= points) {
-				[defaults setObject:[NSNumber numberWithInteger:i] forKey:@"userLevel"];
-                [defaults setObject:[NSNumber numberWithInteger:([[bonusPointsArray objectAtIndex:i+1] integerValue] - points)] forKey:@"pointsLeft"];
+				
+				if (points == [[bonusPointsArray objectAtIndex:i+1] integerValue]) {
+					NSInteger pointsLeft = ([bonusPointsArray count]==i+2)?0:([[bonusPointsArray objectAtIndex:i+2] integerValue] - points);
+					[defaults setObject:[NSNumber numberWithInteger:pointsLeft] forKey:@"pointsLeft"];
+					[defaults setObject:[NSNumber numberWithInteger:i+1] forKey:@"userLevel"];
+				} else {
+					NSInteger pointsLeft = ([[bonusPointsArray objectAtIndex:i+1] integerValue] - points);
+					[defaults setObject:[NSNumber numberWithInteger:pointsLeft] forKey:@"pointsLeft"];
+					[defaults setObject:[NSNumber numberWithInteger:i] forKey:@"userLevel"];
+				}
                 break;
 			}
 		}
