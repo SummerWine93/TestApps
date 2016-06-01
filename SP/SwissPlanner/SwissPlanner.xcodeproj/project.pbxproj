@@ -35,7 +35,6 @@
 		CE5913801CBA566D008A3042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59137F1CBA566D008A3042 /* main.m */; };
 		CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913821CBA566D008A3042 /* AppDelegate.m */; };
 		CE5913891CBA566D008A3042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5913871CBA566D008A3042 /* Main.storyboard */; };
-		CE59138B1CBA566D008A3042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE59138A1CBA566D008A3042 /* Assets.xcassets */; };
 		CE59138E1CBA566D008A3042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE59138C1CBA566D008A3042 /* LaunchScreen.storyboard */; };
 		CE5913991CBA566E008A3042 /* SwissPlannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913981CBA566E008A3042 /* SwissPlannerTests.m */; };
 		CE5913B01CBB8664008A3042 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913AF1CBB8664008A3042 /* SWRevealViewController.m */; };
@@ -50,6 +49,8 @@
 		CE5A3F831CEF58FF00B8C8E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE5A3F851CEF58FF00B8C8E9 /* Localizable.strings */; };
 		CE6BEC321CF48487009FB218 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6BEC311CF48487009FB218 /* Settings.plist */; };
 		CE6BEC351CF48BB3009FB218 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */; };
+		CEDA437F1CFF018500BB1AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA437E1CFF018500BB1AE0 /* Assets.xcassets */; };
+		CEDA43821CFF021F00BB1AE0 /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDA43811CFF021F00BB1AE0 /* TextFieldValidator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +119,6 @@
 		CE5913811CBA566D008A3042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE5913821CBA566D008A3042 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CE5913881CBA566D008A3042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE59138A1CBA566D008A3042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE59138D1CBA566D008A3042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE59138F1CBA566D008A3042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5913941CBA566E008A3042 /* SwissPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwissPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +149,9 @@
 		CE6BEC311CF48487009FB218 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		CEDA437E1CFF018500BB1AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDA43801CFF021F00BB1AE0 /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
+		CEDA43811CFF021F00BB1AE0 /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +255,6 @@
 				CE5913D11CBE60D4008A3042 /* LauncherButton.h */,
 				CE5913D21CBE60D4008A3042 /* LauncherButton.m */,
 				CE5913871CBA566D008A3042 /* Main.storyboard */,
-				CE59138A1CBA566D008A3042 /* Assets.xcassets */,
 				CE59138C1CBA566D008A3042 /* LaunchScreen.storyboard */,
 				CE59138F1CBA566D008A3042 /* Info.plist */,
 				CE59137E1CBA566D008A3042 /* Supporting Files */,
@@ -270,6 +272,8 @@
 		CE59137E1CBA566D008A3042 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA437E1CFF018500BB1AE0 /* Assets.xcassets */,
+				CEDA437D1CFF009300BB1AE0 /* TextFieldValidator */,
 				CE59137F1CBA566D008A3042 /* main.m */,
 				CE5A3F851CEF58FF00B8C8E9 /* Localizable.strings */,
 				CE5519001CF326CF00196675 /* UISegmentedControl+Multiline.h */,
@@ -320,6 +324,15 @@
 				CE05AAC41CD2998500CB7A8E /* PrettyExpandedTableViewCell.m */,
 			);
 			name = EducationSlides;
+			sourceTree = "<group>";
+		};
+		CEDA437D1CFF009300BB1AE0 /* TextFieldValidator */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA43801CFF021F00BB1AE0 /* TextFieldValidator.h */,
+				CEDA43811CFF021F00BB1AE0 /* TextFieldValidator.m */,
+			);
+			name = TextFieldValidator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +420,9 @@
 			files = (
 				CE59138E1CBA566D008A3042 /* LaunchScreen.storyboard in Resources */,
 				CE5A3F831CEF58FF00B8C8E9 /* Localizable.strings in Resources */,
-				CE59138B1CBA566D008A3042 /* Assets.xcassets in Resources */,
 				CE5913891CBA566D008A3042 /* Main.storyboard in Resources */,
 				CE6BEC321CF48487009FB218 /* Settings.plist in Resources */,
+				CEDA437F1CFF018500BB1AE0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA43821CFF021F00BB1AE0 /* TextFieldValidator.m in Sources */,
 				CE05AAB01CD25AFB00CB7A8E /* Slide5ViewController.m in Sources */,
 				CE18D61B1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m in Sources */,
 				CE05AAA01CD11C3E00CB7A8E /* PrettyTableViewCell.m in Sources */,
