@@ -2931,7 +2931,7 @@
                                             <constraints>
                                                 <constraint firstItem="L6x-5O-yxX" firstAttribute="width" secondItem="fUH-Of-LvX" secondAttribute="width" multiplier="0.45" id="82x-uu-HXt"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="L6x-5O-yxX" secondAttribute="leading" id="N2b-76-hf6"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="lwT-KB-O2u" secondAttribute="trailing" id="aEX-Dj-irB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lwT-KB-O2u" secondAttribute="trailing" constant="8" id="aEX-Dj-irB"/>
                                                 <constraint firstItem="lwT-KB-O2u" firstAttribute="centerY" secondItem="fUH-Of-LvX" secondAttribute="centerY" id="fpt-iP-jRq"/>
                                                 <constraint firstItem="lwT-KB-O2u" firstAttribute="leading" secondItem="L6x-5O-yxX" secondAttribute="trailing" constant="8" id="of2-BH-gfD"/>
                                                 <constraint firstItem="L6x-5O-yxX" firstAttribute="centerY" secondItem="fUH-Of-LvX" secondAttribute="centerY" id="sR2-37-fUX"/>
@@ -2976,7 +2976,7 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Q2O-C3-iWw" secondAttribute="trailing" id="Qop-Lh-e1z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Q2O-C3-iWw" secondAttribute="trailing" constant="8" id="Qop-Lh-e1z"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="height" secondItem="xXI-YR-dm8" secondAttribute="height" id="Yvc-SI-TLe"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="leading" secondItem="abq-NF-vG0" secondAttribute="trailing" constant="8" id="YzI-GG-YyK"/>
                                                 <constraint firstItem="abq-NF-vG0" firstAttribute="width" secondItem="xXI-YR-dm8" secondAttribute="width" multiplier="0.45" id="buo-v4-wF1"/>
@@ -3023,7 +3023,7 @@
                                                 <constraint firstItem="ylH-6b-T9T" firstAttribute="centerY" secondItem="z24-VY-4Gc" secondAttribute="centerY" id="7rn-pd-dcD"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="ylH-6b-T9T" secondAttribute="leading" id="8Ez-bq-WpW"/>
                                                 <constraint firstItem="ylH-6b-T9T" firstAttribute="width" secondItem="z24-VY-4Gc" secondAttribute="width" multiplier="0.75" id="8sh-mz-rj3"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ZD5-Px-FfX" secondAttribute="trailing" id="JUA-ky-OCF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZD5-Px-FfX" secondAttribute="trailing" constant="8" id="JUA-ky-OCF"/>
                                                 <constraint firstItem="ZD5-Px-FfX" firstAttribute="centerY" secondItem="z24-VY-4Gc" secondAttribute="centerY" id="qO5-UK-6JL"/>
                                             </constraints>
                                             <variation key="heightClass=compact-widthClass=compact">

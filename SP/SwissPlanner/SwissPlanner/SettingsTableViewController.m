@@ -74,6 +74,7 @@
      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.nameLabel.text = [defaults objectForKey:@"userName"];
     self.pointsLabel.text = [[defaults objectForKey:@"userPoints"] stringValue];
+	[_checkbox setSelected:[[defaults objectForKey:@"isInLeadershipProgram"] boolValue]];
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
