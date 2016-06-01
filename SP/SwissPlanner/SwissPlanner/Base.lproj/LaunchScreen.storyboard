@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,22 +22,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background(launcher)" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tg-eHC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greetings_gold" translatesAutoresizingMaskIntoConstraints="NO" id="cON-gK-AFX">
-                                <rect key="frame" x="0.0" y="-303" width="600" height="1206"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="cON-gK-AFX" secondAttribute="height" multiplier="3:2" id="wPl-hW-PSc"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="wPl-hW-PSc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="wPl-hW-PSc"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swissgolden" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-Ba-rMf">
                                 <rect key="frame" x="0.0" y="-32" width="600" height="304"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -52,6 +36,22 @@
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="UUS-c9-qaO"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greetings_gold" translatesAutoresizingMaskIntoConstraints="NO" id="cON-gK-AFX">
+                                <rect key="frame" x="0.0" y="-303" width="600" height="1206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cON-gK-AFX" secondAttribute="height" multiplier="3:2" id="wPl-hW-PSc"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wPl-hW-PSc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="wPl-hW-PSc"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -91,8 +91,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="mdA-tg-eHC"/>
-                                <include reference="cON-gK-AFX"/>
                                 <include reference="6Zn-Ba-rMf"/>
+                                <include reference="cON-gK-AFX"/>
                                 <include reference="175-wq-fyd"/>
                             </mask>
                             <mask key="constraints">
