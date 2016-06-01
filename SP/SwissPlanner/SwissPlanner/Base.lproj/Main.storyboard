@@ -8105,7 +8105,7 @@
                                                                 </variation>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.70386402027027029" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="nEi-eg-zbw" firstAttribute="centerX" secondItem="SIG-Xy-YU5" secondAttribute="centerX" id="2va-oe-ci5"/>
                                                             <constraint firstItem="nEi-eg-zbw" firstAttribute="height" secondItem="SIG-Xy-YU5" secondAttribute="height" multiplier="0.9" id="V6F-mg-83L"/>
@@ -9724,7 +9724,7 @@
                                                                 </variation>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.70386402029999995" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="8ta-Ee-fnf" firstAttribute="height" secondItem="kBk-aK-nXv" secondAttribute="height" multiplier="0.9" id="6AV-CX-lNe"/>
                                                             <constraint firstItem="8ta-Ee-fnf" firstAttribute="width" secondItem="kBk-aK-nXv" secondAttribute="width" multiplier="0.9" id="6g3-OK-QtE"/>
@@ -10635,7 +10635,7 @@
                                                                 </variation>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.70386402029999995" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="myh-nG-gns" firstAttribute="height" secondItem="wxm-NX-Ae8" secondAttribute="height" multiplier="0.9" id="McJ-Ep-zck"/>
                                                             <constraint firstItem="myh-nG-gns" firstAttribute="centerX" secondItem="wxm-NX-Ae8" secondAttribute="centerX" id="fAD-BA-IhQ"/>
@@ -11410,7 +11410,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.65075041119999999" blue="0.0" alpha="0.70386402029999995" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="rO9-Pq-5oW" firstAttribute="width" secondItem="31A-As-QXB" secondAttribute="width" multiplier="0.9" id="E93-Bh-ba9"/>
                                                     <constraint firstItem="rO9-Pq-5oW" firstAttribute="centerY" secondItem="31A-As-QXB" secondAttribute="centerY" id="Fod-S1-YLL"/>
