@@ -1049,8 +1049,9 @@
                                             <rect key="frame" x="0.0" y="8" width="293" height="58"/>
                                         </variation>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5R-2r-WUr">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5R-2r-WUr">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="c4A-z5-SM4"/>
                                         </constraints>
@@ -1060,6 +1061,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="169" y="27" width="90" height="21"/>
                                         </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="vnE-ga-uQb" appends="YES" id="aVA-90-LET"/>
+                                        </connections>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6a-9C-5yl" userLabel="OpenSelectionButton">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1428,6 +1432,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38Q-FW-Iup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vnE-ga-uQb">
+                    <connections>
+                        <action selector="openOrderSelectionMenu:" destination="cZ2-7A-SWo" id="DrA-zX-nPL"/>
+                        <outlet property="delegate" destination="cZ2-7A-SWo" id="18k-Wk-Syk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3657" y="40.5"/>
         </scene>
