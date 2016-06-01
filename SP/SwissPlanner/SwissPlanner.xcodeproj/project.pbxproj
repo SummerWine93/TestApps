@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3908F5631CFF922D00261709 /* TestPageViewController.m */; };
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
 		39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */; };
 		CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */; };
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3908F5621CFF922D00261709 /* TestPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPageViewController.h; sourceTree = "<group>"; };
+		3908F5631CFF922D00261709 /* TestPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPageViewController.m; sourceTree = "<group>"; };
 		39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide8aContentViewController.h; sourceTree = "<group>"; };
 		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
 		39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinetContentTableViewCell.h; sourceTree = "<group>"; };
@@ -172,6 +175,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3908F5611CFF91EC00261709 /* TestSlides */ = {
+			isa = PBXGroup;
+			children = (
+				3908F5621CFF922D00261709 /* TestPageViewController.h */,
+				3908F5631CFF922D00261709 /* TestPageViewController.m */,
+			);
+			name = TestSlides;
+			sourceTree = "<group>";
+		};
 		CE05AAAA1CD258CF00CB7A8E /* Slides */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +251,7 @@
 		CE59137D1CBA566D008A3042 /* SwissPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				3908F5611CFF91EC00261709 /* TestSlides */,
 				CE5913B11CBB9431008A3042 /* MainViewController.h */,
 				CE5913B21CBB9431008A3042 /* MainViewController.m */,
 				CE5913C41CBCF968008A3042 /* CalculatorViewController.h */,
@@ -453,6 +466,7 @@
 				CE5913801CBA566D008A3042 /* main.m in Sources */,
 				CE05AAA61CD203F900CB7A8E /* PageContentWithMultipleTablesViewController.m in Sources */,
 				CE3CAF751CF8773100B276CD /* PlatformTypeChecker.m in Sources */,
+				3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */,
 				CE05AABC1CD27BA000CB7A8E /* Slide10ContentViewController.m in Sources */,
 				CE05AAC21CD28D9C00CB7A8E /* ConclusionTableViewController.m in Sources */,
 				CE05AAA31CD12D4D00CB7A8E /* PageContentWithTablesViewController.m in Sources */,
