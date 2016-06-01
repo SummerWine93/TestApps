@@ -2894,7 +2894,7 @@
             </objects>
             <point key="canvasLocation" x="2637" y="2135"/>
         </scene>
-        <!--Settings Table View Controller-->
+        <!--Settings-->
         <scene sceneID="cj3-1X-cau">
             <objects>
                 <tableViewController id="obk-ld-jSP" customClass="SettingsTableViewController" sceneMemberID="viewController">
@@ -3045,7 +3045,7 @@
                             <outlet property="delegate" destination="obk-ld-jSP" id="BsX-a9-ucs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="l4e-dp-7Ow"/>
+                    <navigationItem key="navigationItem" title="Settings" id="l4e-dp-7Ow"/>
                     <connections>
                         <outlet property="checkbox" destination="ZD5-Px-FfX" id="gFi-z3-zEj"/>
                         <outlet property="nameLabel" destination="lwT-KB-O2u" id="0Ip-Fe-2Rv"/>
