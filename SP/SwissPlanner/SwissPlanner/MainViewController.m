@@ -19,7 +19,8 @@
     NSString *userName;
     NSNumber *userLevel;
     NSNumber *userPoints;
-    NSNumber *testPoints;
+    NSNumber *pointsLeft;
+	BOOL isInLeadershipProgram;
 	
 	NSArray *levelsPointsArray;
 }
@@ -92,8 +93,8 @@ typedef enum {
     userName = [defaults objectForKey:@"userName"];
     userLevel = [defaults objectForKey:@"userLevel"];
     userPoints = [defaults objectForKey:@"userPoints"];
-    testPoints = [defaults objectForKey:@"pointsLeft"];
-
+    pointsLeft = [defaults objectForKey:@"pointsLeft"];
+	isInLeadershipProgram = [[defaults objectForKey:@"isInLeadershipProgram"] boolValue];
     
 }
 
@@ -177,8 +178,6 @@ typedef enum {
 	if (tableView.tag == 0) {
         CabinetContentTableViewCell *cell = (CabinetContentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
         NSString *cellText;
-		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-		BOOL isInLeadershipProgram = [[defaults objectForKey:@"userName"] boolValue];
 		
         switch (indexPath.row) {
             case userNameCell:
@@ -191,7 +190,7 @@ typedef enum {
                 cellText = (isInLeadershipProgram)?[userPoints stringValue]:@"None";
                  break;
             case pointsLeftCell:
-				cellText = (([userLevel integerValue]<11) && isInLeadershipProgram)?[userLevel stringValue]:@"None";
+				cellText = (([userLevel integerValue]<11) && isInLeadershipProgram)?[pointsLeft stringValue]:@"None";
                  break;
             default:
                 break;
