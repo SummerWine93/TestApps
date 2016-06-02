@@ -425,7 +425,7 @@
 				TargetAttributes = {
 					CE59137A1CBA566C008A3042 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = RCC8C9ZN9J;
+						DevelopmentTeam = F2NHY2ECRQ;
 					};
 					CE5913931CBA566E008A3042 = {
 						CreatedOnToolsVersion = 7.3;
@@ -668,9 +668,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwissPlanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Elena-Boychuk.SwissPlanner";
+				PRODUCT_BUNDLE_IDENTIFIER = ElenaBoychuk.SwissPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -682,9 +683,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwissPlanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Elena-Boychuk.SwissPlanner";
+				PRODUCT_BUNDLE_IDENTIFIER = ElenaBoychuk.SwissPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
