@@ -10,6 +10,8 @@
 #import "GiftsPageContentViewController.h"
 #import "SWRevealViewController.h"
 
+#import "PlatformTypeChecker.h"
+
 #define MAX_NUM 3
 
 typedef enum {
@@ -37,9 +39,12 @@ typedef enum {
                    [NSArray arrayWithObjects:@"gift level 7-11", @"7-11 levels", nil],
 				   [NSArray arrayWithObjects:@"gift no level", @"Cruise", nil],
 				   nil];
-	
+	/*
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];*/
+    
+    [self updateViewBackground];
+    
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 	
@@ -82,8 +87,7 @@ typedef enum {
     
     [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
         // during rotation
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
+        [self updateViewBackground];
     } completion:^(id  _Nonnull context) {
         
         // after rotation
@@ -147,6 +151,17 @@ typedef enum {
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
 	return 0;
+}
+
+- (void) updateViewBackground {
+    NSString *platform = [PlatformTypeChecker platformType];
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)_iphone6"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+    } else {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    }
 }
 
 

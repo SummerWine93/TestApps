@@ -9,6 +9,8 @@
 #import "TestPageViewController.h"
 #import "TestsPageContentViewController.h"
 
+#import "PlatformTypeChecker.h"
+
 @implementation TestPageViewController {
     NSArray *pageContent;
 }
@@ -27,8 +29,7 @@
                    [NSArray arrayWithObjects:@"Question 6", @"Answer", nil],
                    nil];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    [self updateViewBackground];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
@@ -65,8 +66,7 @@
     
     [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
         // during rotation
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
+        [self updateViewBackground];
     } completion:^(id  _Nonnull context) {
         
         // after rotation
@@ -130,6 +130,17 @@
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
     return 0;
+}
+
+- (void) updateViewBackground {
+    NSString *platform = [PlatformTypeChecker platformType];
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)_iphone6"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+    } else {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    }
 }
 
 
