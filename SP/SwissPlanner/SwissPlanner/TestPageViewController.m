@@ -17,17 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   /* pageContent = [NSArray arrayWithObjects:
-                   [NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:
-                                                       [NSDictionary dictionaryWithObject:@1 forKey:@]
-                                                       , nil] forKey:@"question 1"],
-                   [NSArray arrayWithObjects:@"gift level 3", @"3 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 4", @"4 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 5", @"5 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 6", @"6 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 7-11", @"7-11 levels", nil],
-                   [NSArray arrayWithObjects:@"gift no level", @"Cruise", nil],
-                   nil];*/
+    pageContent = [NSArray arrayWithObjects:
+				   
+                   [NSArray arrayWithObjects:@"Question 1", @"Answer", nil],
+                   [NSArray arrayWithObjects:@"Question 2", @"Answer", nil],
+                   [NSArray arrayWithObjects:@"Question 3", @"Answer", nil],
+                   [NSArray arrayWithObjects:@"Question 4", @"Answer", nil],
+                   [NSArray arrayWithObjects:@"Question 5", @"Answer", nil],
+                   [NSArray arrayWithObjects:@"Question 6", @"Answer", nil],
+                   nil];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
