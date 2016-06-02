@@ -2,34 +2,34 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "phone2.png",
+      "filename" : "2х background_2-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "2x_1.png",
+      "filename" : "2х background_2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3x-1.png",
+      "filename" : "2х background_2-2.png",
       "scale" : "3x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3x-2.png",
+      "filename" : "2х background.png",
       "height-class" : "compact",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "2x1.png",
+      "filename" : "2х background-1.png",
       "height-class" : "compact",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3x-3.png",
+      "filename" : "2х background-2.png",
       "height-class" : "compact",
       "scale" : "3x"
     }

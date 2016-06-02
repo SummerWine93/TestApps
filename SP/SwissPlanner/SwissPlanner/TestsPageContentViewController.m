@@ -47,6 +47,20 @@
 	}
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	switch (section) {
+		case 0:
+			return @"Question";
+			break;
+		case 1:
+			return @"Choose one of the options";
+			break;
+		default:
+			return 0;
+			break;
+	}
+}
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.section) {
 		case 0:
