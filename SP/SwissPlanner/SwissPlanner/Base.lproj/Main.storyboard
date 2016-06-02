@@ -2951,7 +2951,7 @@
         <!--Test Page View Controller-->
         <scene sceneID="TRE-TY-hJP">
             <objects>
-                <viewController id="SpF-uD-Z1n" customClass="TestPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestsPageViewController" id="SpF-uD-Z1n" customClass="TestPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ihl-Wv-baI"/>
                         <viewControllerLayoutGuide type="bottom" id="yWa-SL-LUQ"/>
@@ -2965,16 +2965,16 @@
             </objects>
             <point key="canvasLocation" x="3256.5" y="1401"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Tests Page Content View Controller-->
         <scene sceneID="Hd7-JZ-lX2">
             <objects>
-                <tableViewController id="KVh-gI-Fvz" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TestsPageContentViewController" id="KVh-gI-Fvz" customClass="TestsPageContentViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bz1-4N-ab5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="120" id="RMX-nZ-khY" customClass="TestTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TestTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionTestTableViewCell" rowHeight="120" id="RMX-nZ-khY" customClass="QuestionTestTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RMX-nZ-khY" id="bR9-Yo-inx">
@@ -3021,7 +3021,7 @@
                                     <outlet property="contentLabel" destination="a55-ED-f8s" id="YMM-Ps-4ja"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answerCell" rowHeight="100" id="NDo-fJ-yOl" customClass="AnswerTestTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerTestTableViewCell" rowHeight="100" id="NDo-fJ-yOl" customClass="AnswerTestTableViewCell">
                                 <rect key="frame" x="0.0" y="148" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDo-fJ-yOl" id="KNr-Fk-Plx">
@@ -3507,45 +3507,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NyB-I0-TCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1954.5" y="2135"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="6MI-S3-BNV">
-            <objects>
-                <viewController id="0VX-Qv-WVF" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Vl-Qi-jd2"/>
-                        <viewControllerLayoutGuide type="bottom" id="h0D-BP-r99"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3vR-WY-DQg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cabinet 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-mE-KzC">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="163" y="289" width="74" height="21"/>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Oev-mE-KzC"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Oev-mE-KzC"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wLD-WV-fMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4326" y="836"/>
         </scene>
         <!--Slide2 Content View Controller-->
         <scene sceneID="048-eD-YMf">

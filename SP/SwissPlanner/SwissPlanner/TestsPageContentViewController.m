@@ -7,6 +7,9 @@
 //
 
 #import "TestsPageContentViewController.h"
+#import "AnswerTestTableViewCell.h"
+#import "QuestionTestTableViewCell.h"
+#import "TestTableViewCell.h"
 
 @interface TestsPageContentViewController ()
 
@@ -44,6 +47,44 @@
 	}
 }
 
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	switch (indexPath.section) {
+		case 0:
+		{
+			QuestionTestTableViewCell *cell = (QuestionTestTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"QuestionTestTableViewCell"];
+			cell.contentLabel.text = self.question;
+			
+			return cell;
+		}
+			break;
+		case 1:
+		{
+			AnswerTestTableViewCell *cell = (AnswerTestTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"AnswerTestTableViewCell"];
+			cell.contentLabel.text = self.answer;
+			// setting the checkbox
+			[cell.checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
+								 forState:UIControlStateNormal];
+			[cell.checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+								 forState:UIControlStateSelected];
+			[cell.checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+								 forState:UIControlStateHighlighted];
+			cell.checkbox.adjustsImageWhenHighlighted=YES;
+			
+			return cell;
+		}
+			break;
+		default:
+			break;
+	}
+	UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+	//cell.textLabel.text = [plansArray objectAtIndex:indexPath.row];
+	//cell.textLabel.font = [UIFont systemFontOfSize:14];
+	//cell.textLabel.textColor = [UIColor whiteColor];
+	//cell.textLabel.adjustsFontSizeToFitWidth = YES;
+	//cell.backgroundColor = [UIColor clearColor];
+	
+	return cell;
+}
 
 /*
 #pragma mark - Navigation
