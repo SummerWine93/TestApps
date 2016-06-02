@@ -52,6 +52,10 @@
 		CE6BEC351CF48BB3009FB218 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */; };
 		CEDA437F1CFF018500BB1AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA437E1CFF018500BB1AE0 /* Assets.xcassets */; };
 		CEDA43821CFF021F00BB1AE0 /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDA43811CFF021F00BB1AE0 /* TextFieldValidator.m */; };
+		CEDA43851D00297600BB1AE0 /* TestsPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDA43841D00297600BB1AE0 /* TestsPageContentViewController.m */; };
+		CEDA43881D002BDE00BB1AE0 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDA43871D002BDD00BB1AE0 /* TestTableViewCell.m */; };
+		CEDA438C1D002C8200BB1AE0 /* QuestionTestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDA438B1D002C8200BB1AE0 /* QuestionTestTableViewCell.m */; };
+		CEDA438F1D002FD600BB1AE0 /* AnswerTestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDA438E1D002FD600BB1AE0 /* AnswerTestTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +159,14 @@
 		CEDA437E1CFF018500BB1AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDA43801CFF021F00BB1AE0 /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
 		CEDA43811CFF021F00BB1AE0 /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
+		CEDA43831D00297600BB1AE0 /* TestsPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsPageContentViewController.h; sourceTree = "<group>"; };
+		CEDA43841D00297600BB1AE0 /* TestsPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsPageContentViewController.m; sourceTree = "<group>"; };
+		CEDA43861D002BDD00BB1AE0 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		CEDA43871D002BDD00BB1AE0 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		CEDA438A1D002C8200BB1AE0 /* QuestionTestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTestTableViewCell.h; sourceTree = "<group>"; };
+		CEDA438B1D002C8200BB1AE0 /* QuestionTestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTestTableViewCell.m; sourceTree = "<group>"; };
+		CEDA438D1D002FD600BB1AE0 /* AnswerTestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerTestTableViewCell.h; sourceTree = "<group>"; };
+		CEDA438E1D002FD600BB1AE0 /* AnswerTestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerTestTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +190,11 @@
 		3908F5611CFF91EC00261709 /* TestSlides */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA43891D002C5000BB1AE0 /* Test Cell */,
 				3908F5621CFF922D00261709 /* TestPageViewController.h */,
 				3908F5631CFF922D00261709 /* TestPageViewController.m */,
+				CEDA43831D00297600BB1AE0 /* TestsPageContentViewController.h */,
+				CEDA43841D00297600BB1AE0 /* TestsPageContentViewController.m */,
 			);
 			name = TestSlides;
 			sourceTree = "<group>";
@@ -348,6 +363,19 @@
 			name = TextFieldValidator;
 			sourceTree = "<group>";
 		};
+		CEDA43891D002C5000BB1AE0 /* Test Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA43861D002BDD00BB1AE0 /* TestTableViewCell.h */,
+				CEDA43871D002BDD00BB1AE0 /* TestTableViewCell.m */,
+				CEDA438A1D002C8200BB1AE0 /* QuestionTestTableViewCell.h */,
+				CEDA438B1D002C8200BB1AE0 /* QuestionTestTableViewCell.m */,
+				CEDA438D1D002FD600BB1AE0 /* AnswerTestTableViewCell.h */,
+				CEDA438E1D002FD600BB1AE0 /* AnswerTestTableViewCell.m */,
+			);
+			name = "Test Cell";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,6 +483,7 @@
 			files = (
 				CEDA43821CFF021F00BB1AE0 /* TextFieldValidator.m in Sources */,
 				CE05AAB01CD25AFB00CB7A8E /* Slide5ViewController.m in Sources */,
+				CEDA43851D00297600BB1AE0 /* TestsPageContentViewController.m in Sources */,
 				CE18D61B1CC8EC8E0056D9A4 /* GiftsPageContentViewController.m in Sources */,
 				CE05AAA01CD11C3E00CB7A8E /* PrettyTableViewCell.m in Sources */,
 				CE05AAB31CD2646F00CB7A8E /* Slide6ContentViewController.m in Sources */,
@@ -465,10 +494,12 @@
 				CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */,
 				CE5913801CBA566D008A3042 /* main.m in Sources */,
 				CE05AAA61CD203F900CB7A8E /* PageContentWithMultipleTablesViewController.m in Sources */,
+				CEDA43881D002BDE00BB1AE0 /* TestTableViewCell.m in Sources */,
 				CE3CAF751CF8773100B276CD /* PlatformTypeChecker.m in Sources */,
 				3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */,
 				CE05AABC1CD27BA000CB7A8E /* Slide10ContentViewController.m in Sources */,
 				CE05AAC21CD28D9C00CB7A8E /* ConclusionTableViewController.m in Sources */,
+				CEDA438F1D002FD600BB1AE0 /* AnswerTestTableViewCell.m in Sources */,
 				CE05AAA31CD12D4D00CB7A8E /* PageContentWithTablesViewController.m in Sources */,
 				CE05AA9D1CD0FFE000CB7A8E /* Slide1ContentViewController.m in Sources */,
 				CE05AAB61CD267E000CB7A8E /* Slide7ContentViewController.m in Sources */,
@@ -478,6 +509,7 @@
 				CE05AAC51CD2998500CB7A8E /* PrettyExpandedTableViewCell.m in Sources */,
 				CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */,
 				CE5913D31CBE60D4008A3042 /* LauncherButton.m in Sources */,
+				CEDA438C1D002C8200BB1AE0 /* QuestionTestTableViewCell.m in Sources */,
 				CE5913B01CBB8664008A3042 /* SWRevealViewController.m in Sources */,
 				CE05AAC81CD2AEC000CB7A8E /* PrettySimpleTableViewCell.m in Sources */,
 				CE5913BD1CBCE019008A3042 /* PageContentViewController.m in Sources */,
