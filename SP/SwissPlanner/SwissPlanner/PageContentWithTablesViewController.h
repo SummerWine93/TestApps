@@ -15,6 +15,6 @@
 @property (nonatomic, strong) NSMutableArray *yourCellsRows;
 @property (nonatomic, strong) NSMutableArray *partnerCellsRows;
 
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
