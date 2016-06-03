@@ -10,4 +10,6 @@
 
 @interface TestingViewController : UIViewController
 
+@property (nonatomic, strong) IBOutletCollection(UIView) NSArray *roundedCorners;
+
 @end
