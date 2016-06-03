@@ -9,6 +9,8 @@
 #import "TestingViewController.h"
 #import "SWRevealViewController.h"
 
+#import "PlatformTypeChecker.h"
+
 @interface TestingViewController ()
 
 @end
@@ -18,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
+	//self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
+    [self updateViewBackground];
 	
 	// setting navigation bar
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
@@ -30,6 +33,8 @@
 																			 green:(134/255.0)
 																			  blue:(111/255.0)
 																			 alpha:1]];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 	
 	// setting slide menu view controller
 	SWRevealViewController *revealViewController = self.revealViewController;
@@ -42,10 +47,34 @@
 
 }
 
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    // before rotation
+    
+    [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
+        // during rotation
+        [self updateViewBackground];
+    } completion:^(id  _Nonnull context) {
+        
+        // after rotation
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) updateViewBackground {
+    NSString *platform = [PlatformTypeChecker platformType];
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)_iphone6"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+    } else {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    }
+}
+
 
 /*
 #pragma mark - Navigation
