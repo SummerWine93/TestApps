@@ -21,12 +21,13 @@
     
     pageContent = [NSArray arrayWithObjects:
 				   
-                   [NSArray arrayWithObjects:@"Question 1", @"Answer", nil],
-                   [NSArray arrayWithObjects:@"Question 2", @"Answer", nil],
-                   [NSArray arrayWithObjects:@"Question 3", @"Answer", nil],
-                   [NSArray arrayWithObjects:@"Question 4", @"Answer", nil],
-                   [NSArray arrayWithObjects:@"Question 5", @"Answer", nil],
-                   [NSArray arrayWithObjects:@"Question 6", @"Answer", nil],
+                   [NSArray arrayWithObjects:@"Question 1",
+                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
                    nil];
     
     [self updateViewBackground];
@@ -113,7 +114,7 @@
     // Create a new view controller and pass suitable data.
     TestsPageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TestsPageContentViewController"];
     pageContentViewController.question = [[pageContent objectAtIndex:index] objectAtIndex:0];
-    pageContentViewController.answer = [[pageContent objectAtIndex:index] objectAtIndex:1];
+    pageContentViewController.answers = [[pageContent objectAtIndex:index] objectAtIndex:1];
     
     pageContentViewController.pageIndex = index;
     

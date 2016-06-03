@@ -47,26 +47,13 @@
 	}
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	switch (section) {
-		case 0:
-			return @"Question";
-			break;
-		case 1:
-			return @"Choose one of the options";
-			break;
-		default:
-			return 0;
-			break;
-	}
-}
-
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.section) {
 		case 0:
 		{
 			QuestionTestTableViewCell *cell = (QuestionTestTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"QuestionTestTableViewCell"];
 			cell.contentLabel.text = self.question;
+            cell.backgroundColor = [UIColor clearColor];
 			
 			return cell;
 		}
@@ -74,7 +61,9 @@
 		case 1:
 		{
 			AnswerTestTableViewCell *cell = (AnswerTestTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"AnswerTestTableViewCell"];
-			cell.contentLabel.text = self.answer;
+			cell.contentLabel.text = [self.answers objectAtIndex:indexPath.row];
+            cell.backgroundColor = [UIColor clearColor];
+            
 			// setting the checkbox
 			[cell.checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
 								 forState:UIControlStateNormal];
@@ -98,6 +87,20 @@
 	//cell.backgroundColor = [UIColor clearColor];
 	
 	return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            return tableView.frame.size.height * 0.3;
+            break;
+        case 1:
+            return tableView.frame.size.height * 0.2;
+            break;
+        default:
+            return 0;
+            break;
+    }
 }
 
 /*

@@ -12,7 +12,7 @@
 
 @property NSUInteger pageIndex;
 @property NSString *question;
-@property NSString *answer;
+@property NSArray *answers;
 
 
 @end

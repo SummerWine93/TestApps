@@ -23,17 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	UIGraphicsBeginImageContext(self.view.frame.size);
-	[[UIImage imageNamed:@"background(education)"] drawInRect:self.view.bounds];
-	UIImage *backImage = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-		
-	self.view.backgroundColor = [UIColor colorWithPatternImage:backImage];
-	[self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(186/255.0)
-																			 green:(134/255.0)
-																			  blue:(111/255.0)
-																			 alpha:1]];
+    
+    [self updateViewBackground];
 	[self.navigationController.navigationBar setTranslucent:NO];
 	
 	_pageIds = [NSArray arrayWithObjects:
@@ -75,7 +66,7 @@
 																  target:self
 																  action:nil];
 	self.navigationItem.leftBarButtonItem = menuButton;
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+	//[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 	
@@ -149,8 +140,7 @@
     
     [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
         // during rotation
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)"]];
+        [self updateViewBackground];
     } completion:^(id  _Nonnull context) {
         
         // after rotation
@@ -160,10 +150,10 @@
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
     if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_iphone6"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)_iphone6"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
     } else {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
 }
