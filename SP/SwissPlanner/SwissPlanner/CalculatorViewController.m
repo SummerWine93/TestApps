@@ -47,15 +47,18 @@
     
     
 
-	// adding navigation capabilities
-	self.navigationItem.leftBarButtonItem = menuButton;
-	SWRevealViewController *revealViewController = self.revealViewController;
-	if ( revealViewController )
-	{
-		[self.navigationItem.leftBarButtonItem setTarget: self.revealViewController];
-		[self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
-		[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-	}
+    if ((self.viewControllerIsInSecondaryLine == nil)||([self.viewControllerIsInSecondaryLine boolValue] == NO)) {
+        // adding navigation capabilities
+        self.navigationItem.leftBarButtonItem = menuButton;
+        SWRevealViewController *revealViewController = self.revealViewController;
+        if ( revealViewController )
+        {
+            [self.navigationItem.leftBarButtonItem setTarget: self.revealViewController];
+            [self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
+            [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+        }
+    }
+	
     
     // setting the checkbox
     [_checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
@@ -109,6 +112,7 @@
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.selectedPlan = nil;
+    self.viewControllerIsInSecondaryLine = nil;
 }
 
 

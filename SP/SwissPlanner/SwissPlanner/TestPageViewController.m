@@ -48,13 +48,13 @@
     [self addChildViewController:_pageViewController];
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
-    
+    /*
     // setting navigation bar
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
                                                                    style:UIBarButtonItemStylePlain
                                                                   target:self
                                                                   action:nil];
-    self.navigationItem.leftBarButtonItem = menuButton;
+    self.navigationItem.leftBarButtonItem = menuButton;*/
     self.navigationController.navigationBar.translucent = NO;
     
     

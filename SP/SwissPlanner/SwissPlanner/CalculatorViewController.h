@@ -28,6 +28,8 @@
 
 @property (strong, nonatomic) NSString *selectedPlan;
 
+@property (strong, nonatomic) NSNumber *viewControllerIsInSecondaryLine;
+
 - (IBAction)countIncomeButtonTapped:(id)sender;
 
 @end

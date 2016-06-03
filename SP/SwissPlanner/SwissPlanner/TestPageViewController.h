@@ -11,5 +11,6 @@
 @interface TestPageViewController : UIViewController <UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) NSNumber *viewControllerIsInSecondaryLine;
 
 @end

@@ -251,6 +251,7 @@ typedef enum {
     } else if ([segue.identifier isEqualToString:@"segueCabinet3"]) {
         vc.selectedPlanNumber = [NSNumber numberWithInt:5];
     }
+    vc.viewControllerIsInSecondaryLine = [NSNumber numberWithBool:YES];
 }
 
 
