@@ -51,6 +51,7 @@ typedef enum {
 	// Create page view controller
 	self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
 	self.pageViewController.dataSource = self;
+    self.pageViewController.delegate = self;
 	
 	GiftsPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
 	NSArray *viewControllers = @[startingViewController];
@@ -108,6 +109,7 @@ typedef enum {
 	}
 	
 	index--;
+    
 	return [self viewControllerAtIndex:index];
 }
 
@@ -120,6 +122,7 @@ typedef enum {
 	}
 	
 	index++;
+    
 	if (index == [pageContent count]) {
 		return nil;
 	}
@@ -136,7 +139,7 @@ typedef enum {
 	pageContentViewController.titleText = [[pageContent objectAtIndex:index] objectAtIndex:labelText];	
 	pageContentViewController.imageFile = [[pageContent objectAtIndex:index] objectAtIndex:mainImage];
 	
-	pageContentViewController.pageIndex = index;
+	//pageContentViewController.pageIndex = index;
 	
 	return pageContentViewController;
 }

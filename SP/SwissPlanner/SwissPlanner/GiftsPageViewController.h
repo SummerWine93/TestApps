@@ -8,7 +8,7 @@
 
 #import "PageViewController.h"
 
-@interface GiftsPageViewController : UIViewController <UIPageViewControllerDataSource>
+@interface GiftsPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 

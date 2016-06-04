@@ -8,9 +8,10 @@
 
 #import "PageViewController.h"
 
-@interface TestPageViewController : UIViewController <UIPageViewControllerDataSource>
+@interface TestPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSNumber *viewControllerIsInSecondaryLine;
+@property (weak, nonatomic) IBOutlet UILabel *questionNumberIndicatorLabel;
 
 @end
