@@ -214,6 +214,7 @@
     // Create a new view controller and pass suitable data.
     TestsPageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TestsPageContentViewController"];
     
+    pageContentViewController.testCheckerDelegate = self;
     pageContentViewController.question = [[pageContent objectAtIndex:index] objectAtIndex:0];
     pageContentViewController.answers = [[pageContent objectAtIndex:index] objectAtIndex:1];
     
@@ -246,6 +247,12 @@
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
+}
+
+#pragma mark - Test checker delegate methods
+
+- (NSInteger) getRightAnswerForTheQuestion:(NSInteger)questionNumber {
+    return 0;
 }
 
 

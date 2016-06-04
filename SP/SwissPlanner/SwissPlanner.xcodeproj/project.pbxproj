@@ -78,6 +78,7 @@
 		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
 		39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinetContentTableViewCell.h; sourceTree = "<group>"; };
 		39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabinetContentTableViewCell.m; sourceTree = "<group>"; };
+		39F869691D0376C500CA09C2 /* TestCheckerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCheckerDelegate.h; sourceTree = "<group>"; };
 		CE05AA8F1CD0B1AA00CB7A8E /* Slide2ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide2ContentViewController.h; sourceTree = "<group>"; };
 		CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide2ContentViewController.m; sourceTree = "<group>"; };
 		CE05AA921CD0F0C900CB7A8E /* Slide3ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide3ContentViewController.h; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 				CEDA43841D00297600BB1AE0 /* TestsPageContentViewController.m */,
 				39AB1C661D017CDA00A1622C /* TestsStartingViewController.h */,
 				39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */,
+				39F869691D0376C500CA09C2 /* TestCheckerDelegate.h */,
 			);
 			name = TestSlides;
 			sourceTree = "<group>";

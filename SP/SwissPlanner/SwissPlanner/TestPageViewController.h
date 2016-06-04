@@ -7,8 +7,9 @@
 //
 
 #import "PageViewController.h"
+#import "TestCheckerDelegate.h"
 
-@interface TestPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface TestPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, TestCheckerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSNumber *viewControllerIsInSecondaryLine;

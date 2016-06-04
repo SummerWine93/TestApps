@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestCheckerDelegate.h"
 
 @interface TestsPageContentViewController : UITableViewController
 
@@ -14,5 +15,6 @@
 @property NSString *question;
 @property NSArray *answers;
 
+@property (assign, nonatomic) id<TestCheckerDelegate> testCheckerDelegate;
 
 @end

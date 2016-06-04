@@ -103,6 +103,18 @@
     }
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    tableView.userInteractionEnabled = NO;
+    NSInteger rightAnswerIndex = [self.testCheckerDelegate getRightAnswerForTheQuestion:indexPath.row];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:rightAnswerIndex inSection:1]];
+    cell.backgroundColor = [UIColor greenColor];
+    if (rightAnswerIndex != indexPath.row) {
+        cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:1]];
+        cell.backgroundColor = [UIColor redColor];
+    }
+    
+}
+
 /*
 #pragma mark - Navigation
 
