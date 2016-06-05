@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "table_3@1x.png",
+      "filename" : "VIP PLUS-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "table_3@3x.png",
+      "filename" : "VIP PLUS-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "table_3@3x-1.png",
+      "filename" : "VIP PLUS.png",
       "scale" : "3x"
     }
   ],

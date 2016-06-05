@@ -36,6 +36,7 @@ typedef enum {
                    [NSArray arrayWithObjects:@"gift level 4", @"4 Level", nil],
 				   [NSArray arrayWithObjects:@"gift level 5", @"5 Level", nil],
 				   [NSArray arrayWithObjects:@"gift level 6", @"6 Level", nil],
+                   [NSArray arrayWithObjects:@"gift level 6_1", @"6 Level", nil],
                    [NSArray arrayWithObjects:@"gift level 7-11", @"7-11 levels", nil],
 				   [NSArray arrayWithObjects:@"gift no level", @"Cruise", nil],
 				   nil];
@@ -51,7 +52,7 @@ typedef enum {
 	// Create page view controller
 	self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
 	self.pageViewController.dataSource = self;
-    self.pageViewController.delegate = self;
+    //self.pageViewController.delegate = self;
 	
 	GiftsPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
 	NSArray *viewControllers = @[startingViewController];
@@ -103,30 +104,28 @@ typedef enum {
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
 	NSUInteger index = ((GiftsPageContentViewController*) viewController).pageIndex;
-	
-	if ((index == 0) || (index == NSNotFound)) {
-		return nil;
-	}
-	
-	index--;
     
-	return [self viewControllerAtIndex:index];
+    if ((index == 0) || (index == NSNotFound)) {
+        return nil;
+    }
+    
+    index--;
+    return [self viewControllerAtIndex:index];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
 	NSUInteger index = ((GiftsPageContentViewController*) viewController).pageIndex;
 	
-	if (index == NSNotFound) {
-		return nil;
-	}
-	
-	index++;
+    if (index == NSNotFound) {
+        return nil;
+    }
     
-	if (index == [pageContent count]) {
-		return nil;
-	}
-	return [self viewControllerAtIndex:index];
+    index++;
+    if (index == [pageContent count]) {
+        return nil;
+    }
+    return [self viewControllerAtIndex:index];
 }
 
 - (GiftsPageContentViewController *)viewControllerAtIndex:(NSUInteger)index
@@ -139,7 +138,7 @@ typedef enum {
 	pageContentViewController.titleText = [[pageContent objectAtIndex:index] objectAtIndex:labelText];	
 	pageContentViewController.imageFile = [[pageContent objectAtIndex:index] objectAtIndex:mainImage];
 	
-	//pageContentViewController.pageIndex = index;
+	pageContentViewController.pageIndex = index;
 	
 	return pageContentViewController;
 }
