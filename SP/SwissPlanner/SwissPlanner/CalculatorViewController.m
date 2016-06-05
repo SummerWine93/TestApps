@@ -242,7 +242,7 @@
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
 	
-	self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
+	//self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
     NSInteger level;
 	NSInteger partnersLevel;
     if (checkBoxSelected) {

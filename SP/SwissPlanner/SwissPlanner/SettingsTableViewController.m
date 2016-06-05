@@ -9,6 +9,8 @@
 #import "SettingsTableViewController.h"
 #import "SWRevealViewController.h"
 
+#import "PlatformTypeChecker.h"
+
 
 @interface SettingsTableViewController () {
 	NSDictionary *settingsCategories;
@@ -29,10 +31,10 @@
 																   style:UIBarButtonItemStylePlain
 																  target:self
 																  action:nil];
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+	[self updateViewBackground];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+	//[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	
 	// adding navigation capabilities
 	self.navigationItem.leftBarButtonItem = menuButton;
@@ -82,11 +84,23 @@
     
     [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
         // during rotation
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        [self updateViewBackground];
     } completion:^(id  _Nonnull context) {
         // after rotation
     }];
 }
+
+- (void) updateViewBackground {
+    NSString *platform = [PlatformTypeChecker platformType];
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
+        //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)_iphone6"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+    } else {
+       // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

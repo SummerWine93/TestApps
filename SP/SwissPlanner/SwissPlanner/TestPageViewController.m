@@ -11,6 +11,11 @@
 
 #import "PlatformTypeChecker.h"
 
+typedef enum {
+    questionItem,
+    answersArrayItem
+} pageContentItems;
+
 @implementation TestPageViewController {
     NSArray *pageContent;
     NSInteger lastTestQuestion;
@@ -18,6 +23,8 @@
     NSUserDefaults *defaults;
     
     NSInteger nextFlag;
+    
+    NSInteger selectedCheckboxTag;
 }
 
 
@@ -33,74 +40,7 @@
                    [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
                    [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
                    [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   [NSArray arrayWithObjects:@"Question 7",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 8", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 9", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 10", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 11", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 12", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   [NSArray arrayWithObjects:@"Question 13",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 14", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   [NSArray arrayWithObjects:@"Question 1",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   
-                   [NSArray arrayWithObjects:@"Question 1",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   [NSArray arrayWithObjects:@"Question 1",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   [NSArray arrayWithObjects:@"Question 1",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   [NSArray arrayWithObjects:@"Question 1",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   [NSArray arrayWithObjects:@"Question 1",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   
-                   
-                   
+
                    nil];
     
     [self updateViewBackground];
@@ -108,24 +48,48 @@
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     // Create page view controller
-    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
-    self.pageViewController.dataSource = self;
-    self.pageViewController.delegate = self;
+    //self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
+    //self.pageViewController.dataSource = self;
+    //self.pageViewController.delegate = self;
     
-    TestsPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    //TestsPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
+    //NSArray *viewControllers = @[startingViewController];
+    //[self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     // Change the size of page view controller
-    self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height + 5);
+    //self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height + 5);
     
     
-    [self addChildViewController:_pageViewController];
-    [self.view addSubview:_pageViewController.view];
-    [self.pageViewController didMoveToParentViewController:self];
+   // [self addChildViewController:_pageViewController];
+    //[self.view addSubview:_pageViewController.view];
+    //[self.pageViewController didMoveToParentViewController:self];
     self.navigationController.navigationBar.translucent = NO;
+    [self setCheckboxes];
     
     defaults = [NSUserDefaults standardUserDefaults];
+}
+
+- (void) setCheckboxes {
+    for (UIButton *checkbox in self.checkboxButtons) {
+        // setting the checkbox
+        [checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
+                             forState:UIControlStateNormal];
+        [checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+                             forState:UIControlStateSelected];
+        [checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+                             forState:UIControlStateHighlighted];
+        checkbox.adjustsImageWhenHighlighted=YES;
+    }
+}
+
+- (IBAction)checkboxButtonClicked:(id)sender {
+    UIButton *currentlySelectedCheckbox = (UIButton *)sender;
+    NSInteger currentlySelectedCheckboxTag = currentlySelectedCheckbox.tag;
+    selectedCheckboxTag = currentlySelectedCheckboxTag;
+    for (UIButton *checkbox in self.checkboxButtons) {
+        BOOL isCurrentCheckboxSelected = (checkbox.tag==selectedCheckboxTag);
+        [checkbox setSelected: isCurrentCheckboxSelected];
+    }
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -147,12 +111,23 @@
 }
 
 - (void) jumpToTheLastVisitedSlide {
-    
-    
+    [self jumpToQuestion:lastTestQuestion];
+    /*
     [self.pageViewController setViewControllers:@[[self viewControllerAtIndex:lastTestQuestion]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
 
-    }];
+    }];*/
+    
+}
+
+- (void) jumpToQuestion: (NSInteger) questionNumber {
+    
     self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"Question %d of %d", (lastTestQuestion + 1), [pageContent count]];
+    
+    //setting the layout
+    self.questionTextLabel.text = [[pageContent objectAtIndex:questionNumber] objectAtIndex:questionItem];
+    self.question1Label.text = [[[pageContent objectAtIndex:questionNumber] objectAtIndex:answersArrayItem] objectAtIndex:0];
+     self.question2Label.text = [[[pageContent objectAtIndex:questionNumber] objectAtIndex:answersArrayItem] objectAtIndex:1];
+     self.question3Label.text = [[[pageContent objectAtIndex:questionNumber] objectAtIndex:answersArrayItem] objectAtIndex:2];
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {

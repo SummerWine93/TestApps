@@ -47,6 +47,8 @@
 	}
 }
 
+/*
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.section) {
 		case 0:
@@ -64,14 +66,6 @@
 			cell.contentLabel.text = [self.answers objectAtIndex:indexPath.row];
             cell.backgroundColor = [UIColor clearColor];
             
-			// setting the checkbox
-			[cell.checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
-								 forState:UIControlStateNormal];
-			[cell.checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
-								 forState:UIControlStateSelected];
-			[cell.checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
-								 forState:UIControlStateHighlighted];
-			cell.checkbox.adjustsImageWhenHighlighted=YES;
 			
 			return cell;
 		}
@@ -87,18 +81,18 @@
 	//cell.backgroundColor = [UIColor clearColor];
 	
 	return cell;
-}
+}*/
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case 0:
-            return tableView.frame.size.height * 0.3;
+            return tableView.frame.size.height * 0.21;
             break;
         case 1:
             return tableView.frame.size.height * 0.2;
             break;
         default:
-            return 0;
+            return tableView.frame.size.height * 0.09;
             break;
     }
 }

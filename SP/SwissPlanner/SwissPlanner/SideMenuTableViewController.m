@@ -211,7 +211,7 @@ typedef enum {
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: [NSString stringWithFormat:@"https://www.instagram.com/swissgolden_online_shop/?call"]]];
 				break;
 			case YouTube:
-				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/channel/UCh-pDvDJX8knJQtDRFhiQ7g"]];
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/user/infoswissgolden"]];
 				break;
 				
 			default:

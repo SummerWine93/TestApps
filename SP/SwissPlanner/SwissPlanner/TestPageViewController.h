@@ -13,6 +13,18 @@
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSNumber *viewControllerIsInSecondaryLine;
+
 @property (weak, nonatomic) IBOutlet UILabel *questionNumberIndicatorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *questionBlockTitleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *questionTextLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *question1Label;
+@property (weak, nonatomic) IBOutlet UILabel *question2Label;
+@property (weak, nonatomic) IBOutlet UILabel *question3Label;
+
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *checkboxButtons;
+
+@property (weak, nonatomic) IBOutlet UIButton *activeButton;
 
 @end

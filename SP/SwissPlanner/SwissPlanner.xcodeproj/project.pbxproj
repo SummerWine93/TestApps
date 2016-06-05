@@ -10,6 +10,7 @@
 		3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3908F5631CFF922D00261709 /* TestPageViewController.m */; };
 		39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */; };
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
+		39D47B081D0437AB003D05EA /* TestQuestionPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */; };
 		39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */; };
 		CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */; };
 		CE05AA941CD0F0C900CB7A8E /* Slide3ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA931CD0F0C900CB7A8E /* Slide3ContentViewController.m */; };
@@ -76,6 +77,8 @@
 		39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsStartingViewController.m; sourceTree = "<group>"; };
 		39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide8aContentViewController.h; sourceTree = "<group>"; };
 		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
+		39D47B061D0437AA003D05EA /* TestQuestionPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestQuestionPageContentViewController.h; sourceTree = "<group>"; };
+		39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestQuestionPageContentViewController.m; sourceTree = "<group>"; };
 		39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinetContentTableViewCell.h; sourceTree = "<group>"; };
 		39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabinetContentTableViewCell.m; sourceTree = "<group>"; };
 		39F869691D0376C500CA09C2 /* TestCheckerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCheckerDelegate.h; sourceTree = "<group>"; };
@@ -279,8 +282,8 @@
 				CE5913C41CBCF968008A3042 /* CalculatorViewController.h */,
 				CE5913C51CBCF968008A3042 /* CalculatorViewController.m */,
 				CE5913CA1CBE35A1008A3042 /* EducationSlides */,
-				CE5913C71CBE3592008A3042 /* TestingViewController.h */,
 				CE18D6151CC8EC230056D9A4 /* GiftsSlides */,
+				CE5913C71CBE3592008A3042 /* TestingViewController.h */,
 				CE5913C81CBE3592008A3042 /* TestingViewController.m */,
 				CE5913CB1CBE3616008A3042 /* GiftsViewController.h */,
 				CE5913CC1CBE3616008A3042 /* GiftsViewController.m */,
@@ -379,6 +382,8 @@
 				CEDA438B1D002C8200BB1AE0 /* QuestionTestTableViewCell.m */,
 				CEDA438D1D002FD600BB1AE0 /* AnswerTestTableViewCell.h */,
 				CEDA438E1D002FD600BB1AE0 /* AnswerTestTableViewCell.m */,
+				39D47B061D0437AA003D05EA /* TestQuestionPageContentViewController.h */,
+				39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */,
 			);
 			name = "Test Cell";
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 				CE05AAB31CD2646F00CB7A8E /* Slide6ContentViewController.m in Sources */,
 				CE05AAB91CD271B500CB7A8E /* Slide8ContentViewController.m in Sources */,
 				CE5913CD1CBE3616008A3042 /* GiftsViewController.m in Sources */,
+				39D47B081D0437AB003D05EA /* TestQuestionPageContentViewController.m in Sources */,
 				CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */,
 				CE6BEC351CF48BB3009FB218 /* SettingsTableViewController.m in Sources */,
 				39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */,
