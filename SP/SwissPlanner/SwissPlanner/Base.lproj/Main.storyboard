@@ -8972,7 +8972,7 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-8q-pot" userLabel="View0">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="GeQ-0N-7C5">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table3" translatesAutoresizingMaskIntoConstraints="NO" id="GeQ-0N-7C5">
                                                                 <rect key="frame" x="20" y="20" width="118" height="68"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="GeQ-0N-7C5" secondAttribute="height" multiplier="59:34" id="BX2-GN-QT9"/>
@@ -10609,7 +10609,7 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Dw-jQ-2xn" userLabel="View0">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="oNW-Mo-paB">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table3" translatesAutoresizingMaskIntoConstraints="NO" id="oNW-Mo-paB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="oNW-Mo-paB" secondAttribute="height" multiplier="118:67" id="HCI-p5-GJc"/>
@@ -11520,7 +11520,7 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-5c-rNa" userLabel="View0">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table_3" translatesAutoresizingMaskIntoConstraints="NO" id="x4X-Yk-QCz">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="table3" translatesAutoresizingMaskIntoConstraints="NO" id="x4X-Yk-QCz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="x4X-Yk-QCz" secondAttribute="height" multiplier="118:67" id="nQh-QG-v1C"/>
@@ -13408,7 +13408,6 @@
         <image name="table2" width="547" height="289"/>
         <image name="table3" width="547" height="289"/>
         <image name="tableForSlide3" width="858" height="462"/>
-        <image name="table_3" width="547" height="289"/>
         <image name="testing" width="24" height="24"/>
         <image name="upImage" width="364" height="403"/>
         <image name="youtube" width="24" height="24"/>
