@@ -27,4 +27,5 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *activeButton;
 
+- (IBAction)activeButtonClicked:(id)sender;
 @end

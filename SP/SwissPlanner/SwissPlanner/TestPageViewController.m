@@ -25,6 +25,7 @@ typedef enum {
     NSInteger nextFlag;
     
     NSInteger selectedCheckboxTag;
+    BOOL answerAccepted;
 }
 
 
@@ -47,22 +48,7 @@ typedef enum {
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
-    // Create page view controller
-    //self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
-    //self.pageViewController.dataSource = self;
-    //self.pageViewController.delegate = self;
     
-    //TestsPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-    //NSArray *viewControllers = @[startingViewController];
-    //[self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    // Change the size of page view controller
-    //self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height + 5);
-    
-    
-   // [self addChildViewController:_pageViewController];
-    //[self.view addSubview:_pageViewController.view];
-    //[self.pageViewController didMoveToParentViewController:self];
     self.navigationController.navigationBar.translucent = NO;
     [self setCheckboxes];
     
@@ -92,6 +78,7 @@ typedef enum {
     }
 }
 
+
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
@@ -112,10 +99,6 @@ typedef enum {
 
 - (void) jumpToTheLastVisitedSlide {
     [self jumpToQuestion:lastTestQuestion];
-    /*
-    [self.pageViewController setViewControllers:@[[self viewControllerAtIndex:lastTestQuestion]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
-
-    }];*/
     
 }
 
@@ -169,7 +152,7 @@ typedef enum {
         return nil;
     }
     
-    self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"Question %d of %d", (index + 1), [pageContent count]];
+    self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"%d/%d", (index + 1), [pageContent count]];
     
     index++;
     
@@ -216,10 +199,10 @@ typedef enum {
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
     if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)_iphone6"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)_iphone6"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
     } else {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(testing)"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
 }
@@ -231,4 +214,23 @@ typedef enum {
 }
 
 
+- (IBAction)activeButtonClicked:(id)sender {
+   
+    [self.activeButton setBackgroundImage:[UIImage imageNamed:(!answerAccepted?@"next_question":@"accept_answer")] forState:UIControlStateNormal];
+   
+    if (answerAccepted) {
+        if ([pageContent count]==(lastTestQuestion+1)) {
+            lastTestQuestion = 0;
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            lastTestQuestion ++;
+            [self jumpToQuestion:lastTestQuestion];
+        }
+    } else {
+        
+        
+        selectedCheckboxTag = 0;
+    }
+     answerAccepted = !answerAccepted;
+}
 @end

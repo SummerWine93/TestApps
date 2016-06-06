@@ -248,7 +248,7 @@
     if (checkBoxSelected) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         level = [[defaults objectForKey:@"userLevel"] integerValue];
-		partnersLevel = 1;
+		partnersLevel = 0;
     } else {
         level = 0;
 		partnersLevel = 0;
@@ -279,7 +279,7 @@
 
 - (NSAttributedString *) countIncomeResult {
 	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
-    NSInteger partnerLevelBonus = (checkBoxSelected)? [[bonusForLevelsArray objectAtIndex:1] integerValue]:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
+    NSInteger partnerLevelBonus = (checkBoxSelected)? [[bonusForLevelsArray objectAtIndex:0] integerValue]:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
 	/*
 	if (partnerLevelBonus > yourLevelBonus) {
 		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
@@ -287,27 +287,33 @@
 	}*/
 	
 	// Showing the prepayment value
-	NSNumber *prepaymentValue =  [prepaymentValuesArray objectAtIndex:selectedPlan];
-	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = %@\n", [prepaymentValue stringValue]];
+    NSInteger internetCommission = (selectedPlan>1)?50:20;
+	NSNumber *prepaymentValue =  [NSNumber numberWithInteger:([[prepaymentValuesArray objectAtIndex:selectedPlan] integerValue] - internetCommission)];
+	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = €%@ - €%d(internet comission) = €%@\n", [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
 	// Showing the turnover value
-	NSInteger internetCommission = (selectedPlan>1)?50:20;
-	NSNumber *turnoverValue =  [NSNumber numberWithDouble:(0.9 * ([prepaymentValue integerValue] - internetCommission)*3)];
-	NSString *turnoverString = [NSString stringWithFormat:@"Commodity circulation = (%@ - %d) x 3 - 10%% = %@\n", [prepaymentValue stringValue], internetCommission,[turnoverValue stringValue]];
+	
+	NSNumber *turnoverValue =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *3 )];
+	NSString *turnoverString = [NSString stringWithFormat:@"€%@ x 4 Orders - €%@ (reinvestment) = €%@\n", [prepaymentValue stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
+    // Showing the turnover value
+    
+    NSNumber *turnoverValue2 =  [NSNumber numberWithDouble:( [turnoverValue doubleValue] * 0.9 )];
+    NSString *turnoverString2 = [NSString stringWithFormat:@"€%@  - 10%% (comisssion) = €%@\n", [turnoverValue stringValue],[turnoverValue2 stringValue]];
+    
 	// Showing the number of carier points value
-	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue doubleValue]/500)];
-	NSString *carierPointsString = [NSString stringWithFormat:@"Number of bonus units = %@ / 500 = %@\n", [turnoverValue stringValue], [carierPointsValue stringValue]];
+	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue2 doubleValue]/500)];
+	NSString *carierPointsString = [NSString stringWithFormat:@"€%@ / 500 = %@ bonus units\n", [turnoverValue2 stringValue], [carierPointsValue stringValue]];
 	// Showing the number of carier points value
 	
 	NSNumber *carierPointPriceValue =  [NSNumber numberWithInteger:(yourLevelBonus - partnerLevelBonus)];
-	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price of bonus units = %d - %d = %@\n", yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
+	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n", yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
 	// Showing the income value
 	NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
 	[nf setMaximumFractionDigits:3];
 	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue doubleValue]*[carierPointsValue doubleValue])];
 	NSString *extraInfo = @"\nYou are wasting your money!";
-	NSString *incomeString = [NSString stringWithFormat:@"Income = %@ * %@ = %@%@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
+	NSString *incomeString = [NSString stringWithFormat:@"Income = €%@ * %@ = €%@%@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
 	
-	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", prepaymentString, turnoverString, carierPointsString, carierPointPriceString]];
+	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
 	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
 	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, resultAppendix.string.length)];
