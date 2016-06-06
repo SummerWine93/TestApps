@@ -3029,12 +3029,11 @@
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjb-sr-jhL">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <color key="backgroundColor" red="0.79607843140000001" green="0.46666666670000001" blue="0.035294117649999998" alpha="0.74509698280000003" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Xjb-sr-jhL" secondAttribute="height" id="4ol-b1-lit"/>
                                                     <constraint firstAttribute="height" constant="24" id="dtZ-If-S8u"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="notselectedcheckbox"/>
+                                                <state key="normal" backgroundImage="answer_not_selected"/>
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="dtZ-If-S8u"/>
@@ -3082,12 +3081,11 @@
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUP-YH-wvI">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <color key="backgroundColor" red="0.79607843140000001" green="0.46666666670000001" blue="0.035294117649999998" alpha="0.74509698280000003" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="BUP-YH-wvI" secondAttribute="height" id="dXF-ng-75M"/>
                                                     <constraint firstAttribute="height" constant="24" id="iag-4g-miJ"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="notselectedcheckbox"/>
+                                                <state key="normal" backgroundImage="answer_not_selected"/>
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="iag-4g-miJ"/>
@@ -3135,12 +3133,11 @@
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-wS-SXv">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <color key="backgroundColor" red="0.79607843140000001" green="0.46666666670000001" blue="0.035294117649999998" alpha="0.74509698280000003" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="Q5M-Tm-RZM"/>
                                                     <constraint firstAttribute="width" secondItem="2Sr-wS-SXv" secondAttribute="height" id="V2g-sW-JeD"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="notselectedcheckbox"/>
+                                                <state key="normal" backgroundImage="answer_not_selected"/>
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="Q5M-Tm-RZM"/>
@@ -13361,6 +13358,7 @@
     </scenes>
     <resources>
         <image name="accept_answer" width="76" height="76"/>
+        <image name="answer_not_selected" width="29" height="29"/>
         <image name="arrow_drop_down" width="24" height="24"/>
         <image name="arrow_upward" width="24" height="24"/>
         <image name="cabinet" width="24" height="24"/>

@@ -19,7 +19,7 @@ typedef enum {
 @implementation TestPageViewController {
     NSArray *pageContent;
     NSInteger lastTestQuestion;
-    NSInteger testResult;
+    NSInteger currentTestResult;
     NSUserDefaults *defaults;
     
     NSInteger nextFlag;
@@ -57,16 +57,18 @@ typedef enum {
 	}
 	
     defaults = [NSUserDefaults standardUserDefaults];
+	
+	currentTestResult = [[defaults objectForKey:@"lastTestResult"] integerValue];
 }
 
 - (void) setCheckboxes {
     for (UIButton *checkbox in self.checkboxButtons) {
         // setting the checkbox
-        [checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
+        [checkbox setBackgroundImage:[UIImage imageNamed:@"answer_not_selected"]
                              forState:UIControlStateNormal];
-        [checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+        [checkbox setBackgroundImage:[UIImage imageNamed:@"answer_selected"]
                              forState:UIControlStateSelected];
-        [checkbox setBackgroundImage:[UIImage imageNamed:@"selectedcheckbox.png"]
+        [checkbox setBackgroundImage:[UIImage imageNamed:@"answer_selected"]
                              forState:UIControlStateHighlighted];
         checkbox.adjustsImageWhenHighlighted=YES;
     }
@@ -122,6 +124,7 @@ typedef enum {
     [super viewWillDisappear:animated];
    
     [defaults setObject:[NSNumber numberWithInteger:lastTestQuestion] forKey:@"lastTestQuestion"];
+	[defaults setObject:[NSNumber numberWithInteger:currentTestResult] forKey:@"lastTestResult"];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
@@ -276,6 +279,8 @@ typedef enum {
 		
 		[self indicateRightAnswerWithTagNumber:rightAnswer andWrongTagNumber:(rightAnswer == selectedCheckboxTag)?0:selectedCheckboxTag];
 #warning Add point to the testResult in NSUserDefaults
+		currentTestResult += (rightAnswer == selectedCheckboxTag)?1:0;
+		
 		
     }
      answerAccepted = !answerAccepted;
