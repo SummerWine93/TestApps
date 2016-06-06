@@ -11,7 +11,11 @@
 
 @interface TestPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, TestCheckerDelegate>
 
+@property (nonatomic, strong) IBOutletCollection(UIView) NSArray *roundedCorners;
+@property (nonatomic, strong) IBOutletCollection(UILabel) NSArray *answerLabels;
+
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (weak, nonatomic) IBOutlet UIView *questionBlockView;
 @property (strong, nonatomic) NSNumber *viewControllerIsInSecondaryLine;
 
 @property (weak, nonatomic) IBOutlet UILabel *questionNumberIndicatorLabel;

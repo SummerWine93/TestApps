@@ -325,6 +325,12 @@
 }
 
 - (IBAction)countIncomeButtonTapped:(id)sender {
-	self.textDisplayViewLabel.attributedText = [self countIncomeResult];
+	
+	[UIView animateWithDuration:0.5 animations:^{
+		self.textDisplayView.alpha = 0.5;
+	} completion:^(BOOL finished) {
+		self.textDisplayViewLabel.attributedText = [self countIncomeResult];
+		self.textDisplayView.alpha = 1;
+	}];
 }
 @end

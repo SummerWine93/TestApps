@@ -34,13 +34,13 @@ typedef enum {
     
     pageContent = [NSArray arrayWithObjects:
 				   
-                   [NSArray arrayWithObjects:@"Question 1",
+                   [NSArray arrayWithObjects:@"Question text label 1",
                     [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question text label 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question text label 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
                    [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question text label 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
+                   [NSArray arrayWithObjects:@"Question text label 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
 
                    nil];
     
@@ -51,7 +51,11 @@ typedef enum {
     
     self.navigationController.navigationBar.translucent = NO;
     [self setCheckboxes];
-    
+	
+	for (UIView * view in self.roundedCorners) {
+		view.layer.cornerRadius = 15;
+	}
+	
     defaults = [NSUserDefaults standardUserDefaults];
 }
 
@@ -72,10 +76,37 @@ typedef enum {
     UIButton *currentlySelectedCheckbox = (UIButton *)sender;
     NSInteger currentlySelectedCheckboxTag = currentlySelectedCheckbox.tag;
     selectedCheckboxTag = currentlySelectedCheckboxTag;
+	/*
     for (UIButton *checkbox in self.checkboxButtons) {
         BOOL isCurrentCheckboxSelected = (checkbox.tag==selectedCheckboxTag);
         [checkbox setSelected: isCurrentCheckboxSelected];
-    }
+    }*/
+	[self updateCheckBoxesWithSelectedTagNumber:selectedCheckboxTag];
+}
+
+- (void) updateCheckBoxesWithSelectedTagNumber: (NSInteger) selectedTagNumber {
+	// every checkbox has its unique tag set by the developer
+	// the range is 1..n
+	// 0 means no checkbox selected
+	for (UIButton *checkbox in self.checkboxButtons) {
+		BOOL isCurrentCheckboxSelected = (checkbox.tag==selectedTagNumber);
+		[checkbox setSelected: isCurrentCheckboxSelected];
+	}
+}
+
+- (void) indicateRightAnswerWithTagNumber: (NSInteger) rightTagNumber andWrongTagNumber: (NSInteger) wrongTagNumber{
+	// every label has its unique tag set by the developer
+	// the range is 1..n
+	// 0 means no label should be indicated
+	for (UILabel *label in self.answerLabels) {
+		if (label.tag == rightTagNumber) {
+			label.textColor = [UIColor greenColor];
+		} else if (label.tag == wrongTagNumber) {
+			label.textColor = [UIColor redColor];
+		} else {
+			label.textColor = [UIColor blackColor];
+		}
+	}
 }
 
 
@@ -210,6 +241,7 @@ typedef enum {
 #pragma mark - Test checker delegate methods
 
 - (NSInteger) getRightAnswerForTheQuestion:(NSInteger)questionNumber {
+#warning Update this method to return the right value
     return 0;
 }
 
@@ -225,12 +257,30 @@ typedef enum {
         } else {
             lastTestQuestion ++;
             [self jumpToQuestion:lastTestQuestion];
+			
+			[UIView animateWithDuration:0.5 animations:^{
+				self.questionBlockView.alpha = 0.5;
+			} completion:^(BOOL finished) {
+				
+				selectedCheckboxTag = 0;
+				[self indicateRightAnswerWithTagNumber:0 andWrongTagNumber:0];
+				[self updateCheckBoxesWithSelectedTagNumber:selectedCheckboxTag];
+				self.questionBlockView.alpha = 1;
+			}];
         }
+		
     } else {
-        
-        
-        selectedCheckboxTag = 0;
+		// the answers are in range 0..n-1
+		// but the tags are in 1..n
+		NSInteger rightAnswer = [self getRightAnswerForTheQuestion:lastTestQuestion] + 1;
+		
+		[self indicateRightAnswerWithTagNumber:rightAnswer andWrongTagNumber:(rightAnswer == selectedCheckboxTag)?0:selectedCheckboxTag];
+#warning Add point to the testResult in NSUserDefaults
+		
     }
      answerAccepted = !answerAccepted;
 }
+
+
+
 @end
