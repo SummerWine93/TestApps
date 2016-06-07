@@ -10,8 +10,12 @@
 #import "SWRevealViewController.h"
 
 #import "PlatformTypeChecker.h"
+#import "TestBaseHelper.h"
 
-@interface TestingViewController ()
+@interface TestingViewController () {
+    NSUserDefaults *defaults;
+    TestBaseHelper *testBaseHelper;
+}
 
 @end
 
@@ -48,7 +52,8 @@
     for (UIView * view in self.roundedCorners) {
         view.layer.cornerRadius = 15;
     }
-
+    defaults = [NSUserDefaults standardUserDefaults];
+    testBaseHelper = [[TestBaseHelper alloc] init];
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -61,6 +66,14 @@
         
         // after rotation
     }];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSInteger questionsNumber = [testBaseHelper getNumberOfQuestions];
+    NSString *bestTestResult = [[defaults objectForKey:@"bestTestResult"] stringValue];
+    NSString *lastTestResult = [[defaults objectForKey:@"lastTestResult"] stringValue];
+    self.resultLabel.text = [NSString stringWithFormat:@"BEST TEST TESULT\n%@ of %d\n\nLAST TEST TESULT\n%@ of %d", bestTestResult, questionsNumber, lastTestResult, questionsNumber];
 }
 
 - (void)didReceiveMemoryWarning {

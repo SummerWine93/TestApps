@@ -11,5 +11,6 @@
 @interface TestingViewController : UIViewController
 
 @property (nonatomic, strong) IBOutletCollection(UIView) NSArray *roundedCorners;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
