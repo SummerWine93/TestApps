@@ -55,8 +55,7 @@
             [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         }
     }
-	
-    
+
     // setting the checkbox
     [_checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
                         forState:UIControlStateNormal];
