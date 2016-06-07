@@ -6,9 +6,9 @@
 			"Benefit-society": 0
 		},
 
-		"2. What is Swissgolden corporation doing? ": {
+		"2. What is the Swissgolden corporation doing? ": {
 			"Selling the gold ": 0,
-			"Giving services of purchasing-selling of the gold, delivering and keeping of  gold bullions  ": 1,
+			"Giving services of purchasing-selling of the gold, delivering and keeping of  gold bullions": 1,
 			"Taking money from people and giving them guaranties about income from investings.": 0
 		},
 
@@ -66,7 +66,7 @@
 			"Up to 5 grams inclusive": 1
 		},
 
-		"12. Where and how is organized the storage of gold, which were bought by clients in the internet-shop of company?": {
+		"12. Where and how the storage of gold, which was bought by the clients in the internet-shop of the company is organized?": {
 			"Storage in Pro Aurum storage on personal accounts": 0,
 			"Collective keeping in Pro Aurum и VIA MAT storages": 1,
 			"Collective keeping in VIA MAT storages": 0
@@ -90,13 +90,13 @@
 			"On the base of data CB RF ": 0
 		},
 
-		"16. What kind of bullions company is purchasing from clients?": {
+		"16. What kind of bullions company is purchasing from the clients?": {
 			"Any gold bullion of any value from 1 to 100 grams ": 0,
-			"Gold bullions, which had bought in the internet-shop of the company": 1,
-			"Gold bullions, which had bought in the internet-shop and had delivered to client’s house": 0
+			"Gold bullions, bought in the internet-shop of the company": 1,
+			"Gold bullions, bought in the internet-shop and delivered to the client’s house": 0
 		},
 
-		"17. Bullions of which standard is selling in the Swissgolden internet-shop? ": {
+		"17. Bullions of which standard are sold in the Swissgolden internet-shop? ": {
 			"LBMA \"good delivery\" standard": 1,
 			"DMCC standard": 0,
 			"Russian GOST ": 0
@@ -108,7 +108,7 @@
 			"Price is depending from the mood of owner of the company": 0
 		},
 
-		"19. Which kind of marketing is using in the company for trade movement?": {
+		"19. Which kind of marketing is used by the company for trade movement?": {
 			"Classic": 0,
 			"Network": 0,
 			"Partners": 1
@@ -116,17 +116,17 @@
 
 		"20. What is the source of the income in Swissgolden company?": {
 			"Investment activity": 0,
-			"New users": 0,
-			"Turnover": 1
+			"New customers": 0,
+			"Commodity circulation": 1
 		},
 
-		"21. What goal of  Swissgolden like a commercial company ?": {
+		"21. What is the goal of Swissgolden as a commercial company ?": {
 			"Growing of clients base ": 1,
 			"Income": 0,
 			"Opening of new offices": 0
 		},
 
-		"22. How is creating a turnover in the company?": {
+		"22. Who provides the turnover for the company?": {
 			"Hired employees": 0,
 			"Clients": 1,
 			"Partners": 0
@@ -144,21 +144,21 @@
 			"To sell more gold.": 0
 		},
 
-		"25. What benefits advertising partners is getting from cooperation with the company. Chose a few answers": {
-			"Partners program is the opportunity for creating of own information online-business and purchasing the gold on the most good price.": 1,
+		"25. What benefits advertising partners are getting from cooperation with the company?": {
+			"The opportunity for creating information online-business and purchasing the gold at the best price.": 1,
 			"Partners program are allowing to organize own financial pyramid.": 0,
 			"The opportunity of getting income after minimal initial costs.": 0
 		},
 
-		"26. Who can be advertising partner of the company? ": {
+		"26. Who can be an advertising partner of the company? ": {
 			"That one, who have an experience in the advertising.": 0,
 			"That one, who have an experience in the network companies.": 0,
 			"Any adult person who can work.": 1
 		},
 
-		"27. What are the business objectives of the advertising partner of Swissgolden? Chose a few answers": {
+		"27. What are the business objectives of the advertising partner of Swissgolden?": {
 			"To add as much as possible people": 0,
-			"Public spreading of information about the company and  its servicesHelp in the learning of information about the company,  about product and about rules of cooperation": 1,
+			"Public spreading of information about the company and its services. Help in learning about the company, product and rules of cooperation": 1,
 			"Registration of clients, sending documents to the company": 0
 		},
 

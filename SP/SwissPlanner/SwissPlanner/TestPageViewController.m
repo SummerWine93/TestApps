@@ -89,9 +89,9 @@ typedef enum {
 	// 0 means no label should be indicated
 	for (UILabel *label in self.answerLabels) {
 		if (label.tag == rightTagNumber) {
-			label.textColor = [UIColor greenColor];
+			label.textColor = [UIColor colorWithRed:(50.0/255.0) green:(129.0/255.0) blue:(11.0/255.0) alpha:1];
 		} else if (label.tag == wrongTagNumber) {
-			label.textColor = [UIColor redColor];
+			label.textColor = [UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1];
 		} else {
 			label.textColor = [UIColor blackColor];
 		}

@@ -120,7 +120,7 @@
 
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
-	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_iphone6"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
     } else {
@@ -274,15 +274,22 @@
 	// Showing the prepayment value
     NSInteger internetCommission = (selectedPlan>1)?50:20;
 	NSNumber *prepaymentValue =  [NSNumber numberWithInteger:([[prepaymentValuesArray objectAtIndex:selectedPlan] integerValue] - internetCommission)];
-	NSString *prepaymentString = [NSString stringWithFormat:@"\nPrepayment = €%@ - €%d(internet comission) = €%@\n\n", [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
+	NSString *prepaymentString = [NSString stringWithFormat:@"\nPrepayment = €%@ - €%d(internet commission) = €%@\n\n", [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
+    
+    
+    // Showing the turnover value
+    
+    NSNumber *turnoverValue0 =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *4 )];
+    NSString *turnoverString0 = [NSString stringWithFormat:@"€%@ x 4 Orders = €%@ (commodity circulation)\n\n", [prepaymentValue stringValue], [turnoverValue0 stringValue]];
+    
 	// Showing the turnover value
 	
 	NSNumber *turnoverValue =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *3 )];
-	NSString *turnoverString = [NSString stringWithFormat:@"€%@ x 4 Orders - €%@ (reinvestment) = €%@\n\n", [prepaymentValue stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
+	NSString *turnoverString = [NSString stringWithFormat:@"€%@ - €%@ (reinvestment) = €%@\n\n", [turnoverValue0 stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
     // Showing the turnover value
     
     NSNumber *turnoverValue2 =  [NSNumber numberWithDouble:( [turnoverValue doubleValue] * 0.9 )];
-    NSString *turnoverString2 = [NSString stringWithFormat:@"€%@  - 10%% (comisssion) = €%@\n\n", [turnoverValue stringValue],[turnoverValue2 stringValue]];
+    NSString *turnoverString2 = [NSString stringWithFormat:@"€%@  - 10%% (comission) = €%@\n\n", [turnoverValue stringValue],[turnoverValue2 stringValue]];
     
 	// Showing the number of carier points value
 	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue2 doubleValue]/500)];
@@ -298,12 +305,12 @@
 	NSString *extraInfo = @"\nYou are wasting your money!";
 	NSString *incomeString = [NSString stringWithFormat:@"Income = €%@ * %@ = €%@%@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
 	
-	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
-	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
+	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@%@", turnoverString0, turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
+	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, attributedResultsString.string.length)];
     
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
 	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, resultAppendix.string.length)];
-	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(0, resultAppendix.string.length)];
 	
 	[attributedResultsString appendAttributedString:resultAppendix];
     

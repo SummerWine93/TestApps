@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1139,7 +1139,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wpZ-UB-BoB">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
@@ -2845,7 +2845,7 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8OV-aG-puh" userLabel="Label container view">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slidesback" translatesAutoresizingMaskIntoConstraints="NO" id="cYg-Mu-7IZ">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="slidesback" translatesAutoresizingMaskIntoConstraints="NO" id="cYg-Mu-7IZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz2-cy-cRa">
@@ -2855,6 +2855,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.74808728449999995" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="cYg-Mu-7IZ" firstAttribute="centerX" secondItem="8OV-aG-puh" secondAttribute="centerX" id="AQT-HP-xiJ"/>
                                             <constraint firstAttribute="bottom" secondItem="Nz2-cy-cRa" secondAttribute="bottom" constant="8" id="E8b-L5-ERi"/>
@@ -2871,14 +2872,14 @@
                                                 <include reference="Nz2-cy-cRa"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="E8b-L5-ERi"/>
-                                                <include reference="Hby-zg-ih0"/>
-                                                <include reference="OZ3-Qb-ezt"/>
-                                                <include reference="vxg-hN-79k"/>
                                                 <include reference="AQT-HP-xiJ"/>
                                                 <include reference="NEd-br-zma"/>
                                                 <include reference="NIc-cN-hrm"/>
                                                 <include reference="axw-iU-JFv"/>
+                                                <include reference="E8b-L5-ERi"/>
+                                                <include reference="Hby-zg-ih0"/>
+                                                <include reference="OZ3-Qb-ezt"/>
+                                                <include reference="vxg-hN-79k"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -3122,7 +3123,7 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Xjb-sr-jhL" firstAttribute="leading" secondItem="xEK-Cd-2QZ" secondAttribute="leading" constant="15" id="Mi6-sT-PNl"/>
+                                            <constraint firstItem="Xjb-sr-jhL" firstAttribute="leading" secondItem="xEK-Cd-2QZ" secondAttribute="leading" id="Mi6-sT-PNl"/>
                                             <constraint firstItem="Xjb-sr-jhL" firstAttribute="centerY" secondItem="xEK-Cd-2QZ" secondAttribute="centerY" id="d8E-lJ-RBO"/>
                                             <constraint firstAttribute="trailing" secondItem="2Lf-Y3-fMh" secondAttribute="trailing" constant="8" id="m2d-sl-HXo"/>
                                             <constraint firstItem="2Lf-Y3-fMh" firstAttribute="height" secondItem="xEK-Cd-2QZ" secondAttribute="height" id="n56-he-MVR"/>
@@ -3132,8 +3133,7 @@
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="45" width="648" height="44"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="18" y="167" width="324" height="96"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="Xjb-sr-jhL"/>
                                                 <include reference="2Lf-Y3-fMh"/>
@@ -3177,7 +3177,7 @@
                                         <constraints>
                                             <constraint firstItem="Q9z-Yv-M3b" firstAttribute="height" secondItem="flL-TL-2a7" secondAttribute="height" id="0UO-ad-uX1"/>
                                             <constraint firstItem="BUP-YH-wvI" firstAttribute="centerY" secondItem="flL-TL-2a7" secondAttribute="centerY" id="87h-ax-eLc"/>
-                                            <constraint firstItem="BUP-YH-wvI" firstAttribute="leading" secondItem="flL-TL-2a7" secondAttribute="leading" constant="15" id="ALl-73-6ji"/>
+                                            <constraint firstItem="BUP-YH-wvI" firstAttribute="leading" secondItem="flL-TL-2a7" secondAttribute="leading" id="ALl-73-6ji"/>
                                             <constraint firstItem="Q9z-Yv-M3b" firstAttribute="centerY" secondItem="flL-TL-2a7" secondAttribute="centerY" id="Emr-ae-m0C"/>
                                             <constraint firstAttribute="trailing" secondItem="Q9z-Yv-M3b" secondAttribute="trailing" constant="8" id="NMS-3v-Nd7"/>
                                             <constraint firstItem="Q9z-Yv-M3b" firstAttribute="leading" secondItem="BUP-YH-wvI" secondAttribute="trailing" constant="8" id="Zet-BP-Z3Z"/>
@@ -3185,8 +3185,7 @@
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="97" width="648" height="44"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="18" y="271" width="324" height="96"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="BUP-YH-wvI"/>
                                                 <include reference="Q9z-Yv-M3b"/>
@@ -3211,8 +3210,7 @@
                                                     <constraint firstAttribute="width" secondItem="2Sr-wS-SXv" secondAttribute="height" id="V2g-sW-JeD"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="answer_not_selected"/>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="15" y="36" width="24" height="24"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="Q5M-Tm-RZM"/>
                                                     </mask>
@@ -3229,15 +3227,12 @@
                                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                     <rect key="frame" x="47" y="5" width="593" height="35"/>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="47" y="0.0" width="269" height="95"/>
-                                                </variation>
                                             </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="2Sr-wS-SXv" firstAttribute="centerY" secondItem="diR-NW-biY" secondAttribute="centerY" id="cjr-QK-TyX"/>
                                             <constraint firstItem="H5g-2k-jkM" firstAttribute="height" secondItem="diR-NW-biY" secondAttribute="height" id="lmo-wC-aTX"/>
-                                            <constraint firstItem="2Sr-wS-SXv" firstAttribute="leading" secondItem="diR-NW-biY" secondAttribute="leading" constant="15" id="r1g-5c-UGl"/>
+                                            <constraint firstItem="2Sr-wS-SXv" firstAttribute="leading" secondItem="diR-NW-biY" secondAttribute="leading" id="r1g-5c-UGl"/>
                                             <constraint firstItem="H5g-2k-jkM" firstAttribute="leading" secondItem="2Sr-wS-SXv" secondAttribute="trailing" constant="8" id="tmR-Mx-vie"/>
                                             <constraint firstItem="H5g-2k-jkM" firstAttribute="centerY" secondItem="diR-NW-biY" secondAttribute="centerY" id="uaW-8t-lj0"/>
                                             <constraint firstAttribute="trailing" secondItem="H5g-2k-jkM" secondAttribute="trailing" constant="8" id="v5C-Ii-XE7"/>
@@ -3245,8 +3240,7 @@
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="149" width="648" height="45"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="18" y="375" width="324" height="95"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="2Sr-wS-SXv"/>
                                                 <include reference="H5g-2k-jkM"/>
@@ -3268,9 +3262,6 @@
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="8" width="648" height="29"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="18" y="8" width="324" height="151"/>
                                         </variation>
                                     </label>
                                 </subviews>

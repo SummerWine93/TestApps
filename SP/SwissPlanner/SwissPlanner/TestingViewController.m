@@ -71,9 +71,18 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSInteger questionsNumber = [testBaseHelper getNumberOfQuestions];
-	NSString *bestTestResult = ([defaults objectForKey:@"bestTestResult"])? [[defaults objectForKey:@"bestTestResult"] stringValue] : @"0";
-    NSString *lastTestResult = ([defaults objectForKey:@"lastTestResult"])?[[defaults objectForKey:@"lastTestResult"] stringValue] : @"0";
-    self.resultLabel.text = [NSString stringWithFormat:@"BEST TEST RESULT\n%@ of %d\n\nLAST TEST RESULT\n%@ of %d", bestTestResult, questionsNumber, lastTestResult, questionsNumber];
+    
+	
+    NSString *bestTestResult = [NSString stringWithFormat:@"BEST TEST RESULT\n%@ of %d\n\n", ([defaults objectForKey:@"bestTestResult"])? [[defaults objectForKey:@"bestTestResult"] stringValue] : @"0", questionsNumber];
+    NSMutableAttributedString *bestResults = [[NSMutableAttributedString alloc] initWithString:bestTestResult];
+    [bestResults addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(23.0/255.0) green:(105.0/255.0) blue:(90.0/255.0) alpha:1] range:NSMakeRange(0, bestResults.string.length)];
+    
+    NSString *lastTestResult = [NSString stringWithFormat:@"LAST TEST RESULT\n%@ of %d", ([defaults objectForKey:@"lastTestResult"])? [[defaults objectForKey:@"lastTestResult"] stringValue] : @"0", questionsNumber];
+    NSMutableAttributedString *lastResults = [[NSMutableAttributedString alloc] initWithString:lastTestResult];
+    [lastResults addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, lastResults.string.length)];
+
+    [bestResults appendAttributedString:lastResults];
+    self.resultLabel.attributedText = bestResults;
 }
 
 - (void)didReceiveMemoryWarning {
