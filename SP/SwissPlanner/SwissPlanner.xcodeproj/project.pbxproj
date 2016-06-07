@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3908F5631CFF922D00261709 /* TestPageViewController.m */; };
+		39546FFB1D06096E00710FD2 /* tests_source.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39546FFA1D06096E00710FD2 /* tests_source.txt */; };
+		39546FFE1D060A1100710FD2 /* TestBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39546FFD1D060A1100710FD2 /* TestBaseHelper.m */; };
 		39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */; };
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
 		39D47B081D0437AB003D05EA /* TestQuestionPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */; };
@@ -73,6 +75,9 @@
 /* Begin PBXFileReference section */
 		3908F5621CFF922D00261709 /* TestPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPageViewController.h; sourceTree = "<group>"; };
 		3908F5631CFF922D00261709 /* TestPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPageViewController.m; sourceTree = "<group>"; };
+		39546FFA1D06096E00710FD2 /* tests_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tests_source.txt; sourceTree = "<group>"; };
+		39546FFC1D060A1100710FD2 /* TestBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBaseHelper.h; sourceTree = "<group>"; };
+		39546FFD1D060A1100710FD2 /* TestBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBaseHelper.m; sourceTree = "<group>"; };
 		39AB1C661D017CDA00A1622C /* TestsStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsStartingViewController.h; sourceTree = "<group>"; };
 		39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsStartingViewController.m; sourceTree = "<group>"; };
 		39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide8aContentViewController.h; sourceTree = "<group>"; };
@@ -205,6 +210,8 @@
 				39AB1C661D017CDA00A1622C /* TestsStartingViewController.h */,
 				39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */,
 				39F869691D0376C500CA09C2 /* TestCheckerDelegate.h */,
+				39546FFC1D060A1100710FD2 /* TestBaseHelper.h */,
+				39546FFD1D060A1100710FD2 /* TestBaseHelper.m */,
 			);
 			name = TestSlides;
 			sourceTree = "<group>";
@@ -311,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDA437E1CFF018500BB1AE0 /* Assets.xcassets */,
+				39546FFA1D06096E00710FD2 /* tests_source.txt */,
 				CEDA437D1CFF009300BB1AE0 /* TextFieldValidator */,
 				CE59137F1CBA566D008A3042 /* main.m */,
 				CE5A3F851CEF58FF00B8C8E9 /* Localizable.strings */,
@@ -476,6 +484,7 @@
 				CE5913891CBA566D008A3042 /* Main.storyboard in Resources */,
 				CE6BEC321CF48487009FB218 /* Settings.plist in Resources */,
 				CEDA437F1CFF018500BB1AE0 /* Assets.xcassets in Resources */,
+				39546FFB1D06096E00710FD2 /* tests_source.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +514,7 @@
 				CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */,
 				CE6BEC351CF48BB3009FB218 /* SettingsTableViewController.m in Sources */,
 				39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */,
+				39546FFE1D060A1100710FD2 /* TestBaseHelper.m in Sources */,
 				CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */,
 				CE5913801CBA566D008A3042 /* main.m in Sources */,
 				CE05AAA61CD203F900CB7A8E /* PageContentWithMultipleTablesViewController.m in Sources */,

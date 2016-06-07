@@ -20,6 +20,9 @@
 
 	[NSThread sleepForTimeInterval:3.0];
 	[self.window setTintColor:[UIColor whiteColor]];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"en" forKey:@"currentLanguage"];
 	
 	return YES;
 }

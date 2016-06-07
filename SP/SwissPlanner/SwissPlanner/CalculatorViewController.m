@@ -81,7 +81,7 @@
 	levelsArray = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
     prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
 	prepaymentValuesArray = [NSArray arrayWithObjects:@220, @720, @1050, @2800, @3550, @9850, nil];
-    plansArray = [NSArray arrayWithObjects:@"pre", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
+    plansArray = [NSArray arrayWithObjects:@"preliminary", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
 	
 	bonusForLevelsArray = [NSArray arrayWithObjects: @0, @15, @20, @25, @30, @35, @40, @43, @45, @47, @49, @50, nil];
 }
@@ -92,8 +92,9 @@
 	if (selectedPlan) {
 		self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];
 		[self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
-	}
-    
+    } else {
+        self.selectedPlanLabel.text = [plansArray objectAtIndex:0];
+    }
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -122,9 +123,10 @@
 
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
-    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_iphone6"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+        self.textDisplayViewLabel.font = [UIFont systemFontOfSize:(16 * 1.5)];
     } else {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
@@ -289,23 +291,23 @@
 	// Showing the prepayment value
     NSInteger internetCommission = (selectedPlan>1)?50:20;
 	NSNumber *prepaymentValue =  [NSNumber numberWithInteger:([[prepaymentValuesArray objectAtIndex:selectedPlan] integerValue] - internetCommission)];
-	NSString *prepaymentString = [NSString stringWithFormat:@"Prepayment = €%@ - €%d(internet comission) = €%@\n", [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
+	NSString *prepaymentString = [NSString stringWithFormat:@"\nPrepayment = €%@ - €%d(internet comission) = €%@\n\n", [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
 	// Showing the turnover value
 	
 	NSNumber *turnoverValue =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *3 )];
-	NSString *turnoverString = [NSString stringWithFormat:@"€%@ x 4 Orders - €%@ (reinvestment) = €%@\n", [prepaymentValue stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
+	NSString *turnoverString = [NSString stringWithFormat:@"€%@ x 4 Orders - €%@ (reinvestment) = €%@\n\n", [prepaymentValue stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
     // Showing the turnover value
     
     NSNumber *turnoverValue2 =  [NSNumber numberWithDouble:( [turnoverValue doubleValue] * 0.9 )];
-    NSString *turnoverString2 = [NSString stringWithFormat:@"€%@  - 10%% (comisssion) = €%@\n", [turnoverValue stringValue],[turnoverValue2 stringValue]];
+    NSString *turnoverString2 = [NSString stringWithFormat:@"€%@  - 10%% (comisssion) = €%@\n\n", [turnoverValue stringValue],[turnoverValue2 stringValue]];
     
 	// Showing the number of carier points value
 	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue2 doubleValue]/500)];
-	NSString *carierPointsString = [NSString stringWithFormat:@"€%@ / 500 = %@ bonus units\n", [turnoverValue2 stringValue], [carierPointsValue stringValue]];
+	NSString *carierPointsString = [NSString stringWithFormat:@"€%@ / 500 = %@ bonus units\n\n", [turnoverValue2 stringValue], [carierPointsValue stringValue]];
 	// Showing the number of carier points value
 	
 	NSNumber *carierPointPriceValue =  [NSNumber numberWithInteger:(yourLevelBonus - partnerLevelBonus)];
-	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n", yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
+	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n\n", yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
 	// Showing the income value
 	NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
 	[nf setMaximumFractionDigits:3];
@@ -315,11 +317,16 @@
 	
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
 	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attributedResultsString.string.length)];
+    
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
 	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, resultAppendix.string.length)];
 	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, resultAppendix.string.length)];
 	
 	[attributedResultsString appendAttributedString:resultAppendix];
+    
+    NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
+    paragraphStyle.alignment                = NSTextAlignmentCenter;
+    [attributedResultsString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, attributedResultsString.length)];
 	
 	return attributedResultsString;
 }
@@ -327,10 +334,10 @@
 - (IBAction)countIncomeButtonTapped:(id)sender {
 	
 	[UIView animateWithDuration:0.5 animations:^{
-		self.textDisplayView.alpha = 0.5;
+        self.textView.alpha = 0.5;
 	} completion:^(BOOL finished) {
-		self.textDisplayViewLabel.attributedText = [self countIncomeResult];
-		self.textDisplayView.alpha = 1;
+        [self.textView setAttributedText:[self countIncomeResult]];
+        self.textView.alpha = 1;
 	}];
 }
 @end

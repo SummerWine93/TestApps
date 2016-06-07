@@ -10,6 +10,7 @@
 #import "TestsPageContentViewController.h"
 
 #import "PlatformTypeChecker.h"
+#import "TestBaseHelper.h"
 
 typedef enum {
     questionItem,
@@ -17,7 +18,7 @@ typedef enum {
 } pageContentItems;
 
 @implementation TestPageViewController {
-    NSArray *pageContent;
+    //NSArray *pageContent;
     NSInteger lastTestQuestion;
     NSInteger currentTestResult;
     NSUserDefaults *defaults;
@@ -25,6 +26,7 @@ typedef enum {
     NSInteger nextFlag;
     
     NSInteger selectedCheckboxTag;
+    TestBaseHelper *testBaseHelper;
     BOOL answerAccepted;
 }
 
@@ -32,7 +34,7 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    pageContent = [NSArray arrayWithObjects:
+   /* pageContent = [NSArray arrayWithObjects:
 				   
                    [NSArray arrayWithObjects:@"Question text label 1",
                     [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
@@ -42,7 +44,7 @@ typedef enum {
                    [NSArray arrayWithObjects:@"Question text label 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
                    [NSArray arrayWithObjects:@"Question text label 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
 
-                   nil];
+                   nil]; */
     
     [self updateViewBackground];
     [self.navigationController.navigationBar
@@ -57,6 +59,7 @@ typedef enum {
 	}
 	
     defaults = [NSUserDefaults standardUserDefaults];
+    testBaseHelper = [[TestBaseHelper alloc] init];
 	
 	currentTestResult = [[defaults objectForKey:@"lastTestResult"] integerValue];
 }
@@ -138,13 +141,14 @@ typedef enum {
 
 - (void) jumpToQuestion: (NSInteger) questionNumber {
     
-    self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"Question %d of %d", (lastTestQuestion + 1), [pageContent count]];
+    self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"Question %d of %d", (lastTestQuestion + 1), [testBaseHelper getNumberOfQuestions]];
     
     //setting the layout
-    self.questionTextLabel.text = [[pageContent objectAtIndex:questionNumber] objectAtIndex:questionItem];
-    self.question1Label.text = [[[pageContent objectAtIndex:questionNumber] objectAtIndex:answersArrayItem] objectAtIndex:0];
-     self.question2Label.text = [[[pageContent objectAtIndex:questionNumber] objectAtIndex:answersArrayItem] objectAtIndex:1];
-     self.question3Label.text = [[[pageContent objectAtIndex:questionNumber] objectAtIndex:answersArrayItem] objectAtIndex:2];
+    self.questionTextLabel.text = [testBaseHelper getTestQuestionWithIndex:lastTestQuestion];
+    self.question1Label.text = [[testBaseHelper getTestAnswersForQuestionWithIndex:lastTestQuestion] objectAtIndex:0];
+    self.question2Label.text = [[testBaseHelper getTestAnswersForQuestionWithIndex:lastTestQuestion] objectAtIndex:1];
+    self.question3Label.text = [[testBaseHelper getTestAnswersForQuestionWithIndex:lastTestQuestion] objectAtIndex:2];
+
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -164,71 +168,6 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
-{
-    NSUInteger index = ((TestsPageContentViewController*) viewController).pageIndex;
-     self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"Question %d of %d", (index + 1), [pageContent count]];
-    
-    if ((index == 0) || (index == NSNotFound)) {
-        return nil;
-    }
-    
-    index--;
-    return [self viewControllerAtIndex:index];
-}
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
-{
-    
-    NSUInteger index = ((TestsPageContentViewController*) viewController).pageIndex;
-    
-    if (index == NSNotFound) {
-        return nil;
-    }
-    
-    self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"%d/%d", (index + 1), [pageContent count]];
-    
-    index++;
-    
-    if (index == [pageContent count]) {
-        return nil;
-    }
-    return [self viewControllerAtIndex:index];
-}
-
-- (TestsPageContentViewController *)viewControllerAtIndex:(NSUInteger)index
-{
-    
-    if (index >= [pageContent count]) {
-        return nil;
-    }
-    
-    // Create a new view controller and pass suitable data.
-    TestsPageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TestsPageContentViewController"];
-    
-    pageContentViewController.testCheckerDelegate = self;
-    pageContentViewController.question = [[pageContent objectAtIndex:index] objectAtIndex:0];
-    pageContentViewController.answers = [[pageContent objectAtIndex:index] objectAtIndex:1];
-    
-    pageContentViewController.pageIndex = index;
-    //lastTestQuestion = index;
-    
-    return pageContentViewController;
-}
-
-
-
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-    //return [pageContent count];
-    return 0;
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-    return lastTestQuestion;
-}
-
 
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
@@ -241,20 +180,13 @@ typedef enum {
     }
 }
 
-#pragma mark - Test checker delegate methods
-
-- (NSInteger) getRightAnswerForTheQuestion:(NSInteger)questionNumber {
-#warning Update this method to return the right value
-    return 0;
-}
-
 
 - (IBAction)activeButtonClicked:(id)sender {
    
     [self.activeButton setBackgroundImage:[UIImage imageNamed:(!answerAccepted?@"next_question":@"accept_answer")] forState:UIControlStateNormal];
    
     if (answerAccepted) {
-        if ([pageContent count]==(lastTestQuestion+1)) {
+        if ([testBaseHelper getNumberOfQuestions]==(lastTestQuestion+1)) {
             lastTestQuestion = 0;
             [self.navigationController popViewControllerAnimated:YES];
         } else {
@@ -262,12 +194,12 @@ typedef enum {
             [self jumpToQuestion:lastTestQuestion];
 			
 			[UIView animateWithDuration:0.5 animations:^{
+                selectedCheckboxTag = 0;
+                [self indicateRightAnswerWithTagNumber:0 andWrongTagNumber:0];
+                [self updateCheckBoxesWithSelectedTagNumber:selectedCheckboxTag];
+                
 				self.questionBlockView.alpha = 0.5;
 			} completion:^(BOOL finished) {
-				
-				selectedCheckboxTag = 0;
-				[self indicateRightAnswerWithTagNumber:0 andWrongTagNumber:0];
-				[self updateCheckBoxesWithSelectedTagNumber:selectedCheckboxTag];
 				self.questionBlockView.alpha = 1;
 			}];
         }
@@ -275,13 +207,11 @@ typedef enum {
     } else {
 		// the answers are in range 0..n-1
 		// but the tags are in 1..n
-		NSInteger rightAnswer = [self getRightAnswerForTheQuestion:lastTestQuestion] + 1;
+        NSInteger rightAnswer = [testBaseHelper getRightTestAnswerForQuestionWithIndex:lastTestQuestion] + 1;
 		
 		[self indicateRightAnswerWithTagNumber:rightAnswer andWrongTagNumber:(rightAnswer == selectedCheckboxTag)?0:selectedCheckboxTag];
-#warning Add point to the testResult in NSUserDefaults
+
 		currentTestResult += (rightAnswer == selectedCheckboxTag)?1:0;
-		
-		
     }
      answerAccepted = !answerAccepted;
 }
