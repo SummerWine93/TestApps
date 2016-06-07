@@ -49,7 +49,7 @@ typedef enum {
     defaults = [NSUserDefaults standardUserDefaults];
     testBaseHelper = [[TestBaseHelper alloc] init];
 	
-	currentTestResult = [[defaults objectForKey:@"lastTestResult"] integerValue];
+	
 }
 
 - (void) setCheckboxes {
@@ -103,6 +103,7 @@ typedef enum {
     [super viewWillAppear:animated];
     
     lastTestQuestion = [[defaults objectForKey:@"lastTestQuestion"] integerValue];
+	currentTestResult = lastTestQuestion?[[defaults objectForKey:@"lastTestResult"] integerValue]:0;
     
     [self jumpToTheLastVisitedSlide];
 }

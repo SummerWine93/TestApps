@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1141,23 +1141,35 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="34" y="17" width="292" height="315"/>
+                                                </variation>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.65075041118421051" blue="0.0" alpha="0.7020692567567568" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="wpZ-UB-BoB" firstAttribute="height" secondItem="Adw-A4-AHO" secondAttribute="height" multiplier="0.9" id="0V8-hR-V8p"/>
                                             <constraint firstItem="Vlf-go-JsC" firstAttribute="width" secondItem="PJ1-oB-2RH" secondAttribute="width" id="4V9-dK-WYX"/>
+                                            <constraint firstItem="wpZ-UB-BoB" firstAttribute="width" secondItem="PJ1-oB-2RH" secondAttribute="width" multiplier="0.9" id="7r3-S4-P0W"/>
+                                            <constraint firstItem="wpZ-UB-BoB" firstAttribute="height" secondItem="PJ1-oB-2RH" secondAttribute="height" multiplier="0.9" id="Cr5-Ih-n2X"/>
                                             <constraint firstItem="Adw-A4-AHO" firstAttribute="centerX" secondItem="PJ1-oB-2RH" secondAttribute="centerX" id="LAw-Xd-aDa"/>
                                             <constraint firstItem="Vlf-go-JsC" firstAttribute="centerY" secondItem="PJ1-oB-2RH" secondAttribute="centerY" id="Pty-vC-2pB"/>
                                             <constraint firstItem="Adw-A4-AHO" firstAttribute="centerY" secondItem="PJ1-oB-2RH" secondAttribute="centerY" id="QmP-Tp-eyr"/>
+                                            <constraint firstItem="wpZ-UB-BoB" firstAttribute="centerX" secondItem="PJ1-oB-2RH" secondAttribute="centerX" id="QzN-9c-MgH"/>
                                             <constraint firstItem="wpZ-UB-BoB" firstAttribute="width" secondItem="Adw-A4-AHO" secondAttribute="width" multiplier="0.9" id="SZC-Jk-Qef"/>
                                             <constraint firstItem="Vlf-go-JsC" firstAttribute="height" secondItem="PJ1-oB-2RH" secondAttribute="height" multiplier="0.95" id="UHZ-G8-yQT"/>
                                             <constraint firstItem="wpZ-UB-BoB" firstAttribute="centerX" secondItem="Adw-A4-AHO" secondAttribute="centerX" id="XLa-pS-RLB"/>
+                                            <constraint firstItem="wpZ-UB-BoB" firstAttribute="centerY" secondItem="PJ1-oB-2RH" secondAttribute="centerY" id="XjO-hH-HwX"/>
                                             <constraint firstItem="Adw-A4-AHO" firstAttribute="width" secondItem="PJ1-oB-2RH" secondAttribute="width" multiplier="0.9" id="gqs-oy-7FQ"/>
                                             <constraint firstItem="Vlf-go-JsC" firstAttribute="centerX" secondItem="PJ1-oB-2RH" secondAttribute="centerX" id="hgP-iG-BxF"/>
                                             <constraint firstItem="wpZ-UB-BoB" firstAttribute="centerY" secondItem="Adw-A4-AHO" secondAttribute="centerY" id="kVk-Ne-6IH"/>
                                             <constraint firstItem="Adw-A4-AHO" firstAttribute="height" secondItem="PJ1-oB-2RH" secondAttribute="height" id="nx0-dH-gf5"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="Adw-A4-AHO"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="20" y="56" width="351" height="262"/>
                                             <mask key="constraints">
@@ -1169,10 +1181,14 @@
                                                 <include reference="wpZ-UB-BoB"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="0V8-hR-V8p"/>
-                                                <include reference="SZC-Jk-Qef"/>
-                                                <include reference="XLa-pS-RLB"/>
-                                                <include reference="kVk-Ne-6IH"/>
+                                                <exclude reference="0V8-hR-V8p"/>
+                                                <include reference="7r3-S4-P0W"/>
+                                                <include reference="Cr5-Ih-n2X"/>
+                                                <include reference="QzN-9c-MgH"/>
+                                                <exclude reference="SZC-Jk-Qef"/>
+                                                <exclude reference="XLa-pS-RLB"/>
+                                                <include reference="XjO-hH-HwX"/>
+                                                <exclude reference="kVk-Ne-6IH"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -3112,7 +3128,8 @@
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="45" width="648" height="44"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="18" y="167" width="324" height="96"/>
                                             <mask key="subviews">
                                                 <include reference="Xjb-sr-jhL"/>
                                                 <include reference="2Lf-Y3-fMh"/>
@@ -3164,7 +3181,8 @@
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="97" width="648" height="44"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="18" y="271" width="324" height="96"/>
                                             <mask key="subviews">
                                                 <include reference="BUP-YH-wvI"/>
                                                 <include reference="Q9z-Yv-M3b"/>
@@ -3189,7 +3207,8 @@
                                                     <constraint firstAttribute="width" secondItem="2Sr-wS-SXv" secondAttribute="height" id="V2g-sW-JeD"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="answer_not_selected"/>
-                                                <variation key="heightClass=regular-widthClass=compact">
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="15" y="36" width="24" height="24"/>
                                                     <mask key="constraints">
                                                         <include reference="Q5M-Tm-RZM"/>
                                                     </mask>
@@ -3206,6 +3225,9 @@
                                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                                     <rect key="frame" x="47" y="5" width="593" height="35"/>
                                                 </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="47" y="0.0" width="269" height="95"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <constraints>
@@ -3219,7 +3241,8 @@
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="149" width="648" height="45"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="18" y="375" width="324" height="95"/>
                                             <mask key="subviews">
                                                 <include reference="2Sr-wS-SXv"/>
                                                 <include reference="H5g-2k-jkM"/>
@@ -3241,6 +3264,9 @@
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                             <rect key="frame" x="36" y="8" width="648" height="29"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="18" y="8" width="324" height="151"/>
                                         </variation>
                                     </label>
                                 </subviews>

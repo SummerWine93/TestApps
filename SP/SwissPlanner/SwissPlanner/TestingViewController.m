@@ -71,8 +71,8 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSInteger questionsNumber = [testBaseHelper getNumberOfQuestions];
-	NSString *bestTestResult = ([defaults objectForKey:@"bestTestResult"])? [[defaults objectForKey:@"bestTestResult"] stringValue] : @"None";
-    NSString *lastTestResult = ([defaults objectForKey:@"lastTestResult"])?[[defaults objectForKey:@"lastTestResult"] stringValue] : @"None";
+	NSString *bestTestResult = ([defaults objectForKey:@"bestTestResult"])? [[defaults objectForKey:@"bestTestResult"] stringValue] : @"0";
+    NSString *lastTestResult = ([defaults objectForKey:@"lastTestResult"])?[[defaults objectForKey:@"lastTestResult"] stringValue] : @"0";
     self.resultLabel.text = [NSString stringWithFormat:@"BEST TEST TESULT\n%@ of %d\n\nLAST TEST TESULT\n%@ of %d", bestTestResult, questionsNumber, lastTestResult, questionsNumber];
 }
 

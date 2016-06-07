@@ -337,6 +337,7 @@
         self.textView.alpha = 0.5;
 	} completion:^(BOOL finished) {
         [self.textView setAttributedText:[self countIncomeResult]];
+		[self.textView flashScrollIndicators];
         self.textView.alpha = 1;
 	}];
 }
