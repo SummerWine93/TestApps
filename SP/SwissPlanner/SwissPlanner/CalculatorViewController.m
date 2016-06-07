@@ -33,7 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	//self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [self updateViewBackground];
 	
 	// setting navigation bar
@@ -41,12 +40,10 @@
 																   style:UIBarButtonItemStylePlain
 																  target:self
 																  action:nil];
-	//[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    
-    
-
+	
     if ((self.viewControllerIsInSecondaryLine == nil)||([self.viewControllerIsInSecondaryLine boolValue] == NO)) {
         // adding navigation capabilities
         self.navigationItem.leftBarButtonItem = menuButton;
@@ -58,8 +55,7 @@
             [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         }
     }
-	
-    
+
     // setting the checkbox
     [_checkbox setBackgroundImage:[UIImage imageNamed:@"notselectedcheckbox.png"]
                         forState:UIControlStateNormal];
@@ -104,7 +100,8 @@
         // during rotation
         [self updateViewBackground];
     } completion:^(id  _Nonnull context) {
-        
+		[self.textView setNeedsDisplay];
+		
         // after rotation
     }];
 }
@@ -123,10 +120,9 @@
 
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
-    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_iphone6"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
-        self.textDisplayViewLabel.font = [UIFont systemFontOfSize:(16 * 1.5)];
     } else {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
@@ -243,8 +239,7 @@
 - (IBAction)isDirectButtonClicked:(id)sender {
     checkBoxSelected = !checkBoxSelected; /* Toggle */
     [_checkbox setSelected:checkBoxSelected];
-	
-	//self.pickerLevel.userInteractionEnabled = !checkBoxSelected;
+
     NSInteger level;
 	NSInteger partnersLevel;
     if (checkBoxSelected) {
@@ -255,14 +250,7 @@
         level = 0;
 		partnersLevel = 0;
     }
-	/*
-    if (checkBoxSelected && _selectedPlanNumber) {
-        selectedPlan = [_selectedPlanNumber integerValue];
-    } else {
-        selectedPlan = 0;
-    }
-    [self.pickerPrepayment selectRow:selectedPlan inComponent:0 animated:YES];
-    self.selectedPlanLabel.text = [plansArray objectAtIndex:selectedPlan];*/
+	
     [self.pickerLevel selectRow:level inComponent:0 animated:YES];
 	[self.pickerPartnerLevel selectRow:partnersLevel inComponent:0 animated:YES];
 }
@@ -282,11 +270,6 @@
 - (NSAttributedString *) countIncomeResult {
 	NSInteger yourLevelBonus = [[bonusForLevelsArray objectAtIndex:[self.pickerLevel selectedRowInComponent:0]] integerValue];
     NSInteger partnerLevelBonus = (checkBoxSelected)? [[bonusForLevelsArray objectAtIndex:0] integerValue]:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
-	/*
-	if (partnerLevelBonus > yourLevelBonus) {
-		NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:@"Partners level can't be higher then yours. Please select the correct value."];
-		return attributedResultsString;
-	}*/
 	
 	// Showing the prepayment value
     NSInteger internetCommission = (selectedPlan>1)?50:20;
@@ -337,6 +320,7 @@
         self.textView.alpha = 0.5;
 	} completion:^(BOOL finished) {
         [self.textView setAttributedText:[self countIncomeResult]];
+		[self.textView flashScrollIndicators];
         self.textView.alpha = 1;
 	}];
 }

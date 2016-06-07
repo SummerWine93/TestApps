@@ -18,7 +18,6 @@ typedef enum {
 } pageContentItems;
 
 @implementation TestPageViewController {
-    //NSArray *pageContent;
     NSInteger lastTestQuestion;
     NSInteger currentTestResult;
     NSUserDefaults *defaults;
@@ -33,18 +32,7 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-   /* pageContent = [NSArray arrayWithObjects:
-				   
-                   [NSArray arrayWithObjects:@"Question text label 1",
-                    [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question text label 2", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question text label 3", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question 4", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question text label 5", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-                   [NSArray arrayWithObjects:@"Question text label 6", [NSArray arrayWithObjects:@"Answer1", @"Answer2", @"Answer3",nil], nil],
-
-                   nil]; */
+	
     
     [self updateViewBackground];
     [self.navigationController.navigationBar
@@ -61,7 +49,7 @@ typedef enum {
     defaults = [NSUserDefaults standardUserDefaults];
     testBaseHelper = [[TestBaseHelper alloc] init];
 	
-	currentTestResult = [[defaults objectForKey:@"lastTestResult"] integerValue];
+	
 }
 
 - (void) setCheckboxes {
@@ -81,11 +69,7 @@ typedef enum {
     UIButton *currentlySelectedCheckbox = (UIButton *)sender;
     NSInteger currentlySelectedCheckboxTag = currentlySelectedCheckbox.tag;
     selectedCheckboxTag = currentlySelectedCheckboxTag;
-	/*
-    for (UIButton *checkbox in self.checkboxButtons) {
-        BOOL isCurrentCheckboxSelected = (checkbox.tag==selectedCheckboxTag);
-        [checkbox setSelected: isCurrentCheckboxSelected];
-    }*/
+
 	[self updateCheckBoxesWithSelectedTagNumber:selectedCheckboxTag];
 }
 
@@ -119,13 +103,17 @@ typedef enum {
     [super viewWillAppear:animated];
     
     lastTestQuestion = [[defaults objectForKey:@"lastTestQuestion"] integerValue];
+	currentTestResult = lastTestQuestion?[[defaults objectForKey:@"lastTestResult"] integerValue]:0;
     
     [self jumpToTheLastVisitedSlide];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-   
+	NSInteger bestTestResult = [[defaults objectForKey:@"bestTestResult"] integerValue];
+	if (bestTestResult < currentTestResult) {
+		[defaults setObject:[NSNumber numberWithInteger:currentTestResult] forKey:@"bestTestResult"];
+	}
     [defaults setObject:[NSNumber numberWithInteger:lastTestQuestion] forKey:@"lastTestQuestion"];
 	[defaults setObject:[NSNumber numberWithInteger:currentTestResult] forKey:@"lastTestResult"];
 }

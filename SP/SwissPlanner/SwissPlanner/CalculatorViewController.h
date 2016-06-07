@@ -15,7 +15,6 @@
 @property (strong, nonatomic) NSNumber *selectedPlanNumber;
 
 @property (weak, nonatomic) IBOutlet UIView *textDisplayView;
-@property (weak, nonatomic) IBOutlet UILabel *textDisplayViewLabel;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerLevel;
