@@ -1141,9 +1141,6 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="34" y="17" width="292" height="315"/>
-                                                </variation>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.65075041118421051" blue="0.0" alpha="0.7020692567567568" colorSpace="calibratedRGB"/>
@@ -1177,9 +1174,6 @@
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="subviews">
-                                                <include reference="wpZ-UB-BoB"/>
-                                            </mask>
                                             <mask key="constraints">
                                                 <exclude reference="0V8-hR-V8p"/>
                                                 <include reference="7r3-S4-P0W"/>
@@ -1465,7 +1459,6 @@
                         <outlet property="pickerViewPrepayment" destination="Eie-h9-aa7" id="Nfi-49-KRj"/>
                         <outlet property="selectedPlanLabel" destination="i5R-2r-WUr" id="l8M-mD-RKA"/>
                         <outlet property="textDisplayView" destination="PJ1-oB-2RH" id="Tr5-y5-1EQ"/>
-                        <outlet property="textDisplayViewLabel" destination="Adw-A4-AHO" id="YGy-gj-MsX"/>
                         <outlet property="textView" destination="wpZ-UB-BoB" id="Uq2-3m-P5V"/>
                     </connections>
                 </viewController>
