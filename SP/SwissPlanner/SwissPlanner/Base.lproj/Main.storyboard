@@ -1098,7 +1098,7 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-oB-2RH">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <subviews>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Calculate the income" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-A4-AHO">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculate the income" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-A4-AHO">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2845,6 +2845,9 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8OV-aG-puh" userLabel="Label container view">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slidesback" translatesAutoresizingMaskIntoConstraints="NO" id="cYg-Mu-7IZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz2-cy-cRa">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -2852,15 +2855,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.74808728448275863" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="cYg-Mu-7IZ" firstAttribute="centerX" secondItem="8OV-aG-puh" secondAttribute="centerX" id="AQT-HP-xiJ"/>
                                             <constraint firstAttribute="bottom" secondItem="Nz2-cy-cRa" secondAttribute="bottom" constant="8" id="E8b-L5-ERi"/>
                                             <constraint firstItem="Nz2-cy-cRa" firstAttribute="top" secondItem="8OV-aG-puh" secondAttribute="top" constant="8" id="Hby-zg-ih0"/>
+                                            <constraint firstItem="cYg-Mu-7IZ" firstAttribute="width" secondItem="8OV-aG-puh" secondAttribute="width" id="NEd-br-zma"/>
+                                            <constraint firstItem="cYg-Mu-7IZ" firstAttribute="centerY" secondItem="8OV-aG-puh" secondAttribute="centerY" id="NIc-cN-hrm"/>
                                             <constraint firstItem="Nz2-cy-cRa" firstAttribute="leading" secondItem="8OV-aG-puh" secondAttribute="leading" constant="8" id="OZ3-Qb-ezt"/>
+                                            <constraint firstItem="cYg-Mu-7IZ" firstAttribute="height" secondItem="8OV-aG-puh" secondAttribute="height" id="axw-iU-JFv"/>
                                             <constraint firstAttribute="trailing" secondItem="Nz2-cy-cRa" secondAttribute="trailing" constant="8" id="vxg-hN-79k"/>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
+                                                <include reference="cYg-Mu-7IZ"/>
                                                 <include reference="Nz2-cy-cRa"/>
                                             </mask>
                                             <mask key="constraints">
@@ -2868,6 +2875,10 @@
                                                 <include reference="Hby-zg-ih0"/>
                                                 <include reference="OZ3-Qb-ezt"/>
                                                 <include reference="vxg-hN-79k"/>
+                                                <include reference="AQT-HP-xiJ"/>
+                                                <include reference="NEd-br-zma"/>
+                                                <include reference="NIc-cN-hrm"/>
+                                                <include reference="axw-iU-JFv"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -13497,6 +13508,7 @@
         <image name="notselectedcheckbox" width="24" height="24"/>
         <image name="photo navigation" width="521" height="453"/>
         <image name="settings" width="24" height="24"/>
+        <image name="slidesback" width="640" height="712"/>
         <image name="swiss_golden" width="96" height="96"/>
         <image name="table1" width="547" height="289"/>
         <image name="table2" width="547" height="289"/>

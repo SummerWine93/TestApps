@@ -73,7 +73,7 @@
     NSInteger questionsNumber = [testBaseHelper getNumberOfQuestions];
 	NSString *bestTestResult = ([defaults objectForKey:@"bestTestResult"])? [[defaults objectForKey:@"bestTestResult"] stringValue] : @"0";
     NSString *lastTestResult = ([defaults objectForKey:@"lastTestResult"])?[[defaults objectForKey:@"lastTestResult"] stringValue] : @"0";
-    self.resultLabel.text = [NSString stringWithFormat:@"BEST TEST TESULT\n%@ of %d\n\nLAST TEST TESULT\n%@ of %d", bestTestResult, questionsNumber, lastTestResult, questionsNumber];
+    self.resultLabel.text = [NSString stringWithFormat:@"BEST TEST RESULT\n%@ of %d\n\nLAST TEST RESULT\n%@ of %d", bestTestResult, questionsNumber, lastTestResult, questionsNumber];
 }
 
 - (void)didReceiveMemoryWarning {
