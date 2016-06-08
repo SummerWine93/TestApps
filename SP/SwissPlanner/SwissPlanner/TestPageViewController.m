@@ -56,7 +56,7 @@ typedef enum {
 
 - (void) setTextSizes {
 	NSString *platform = [PlatformTypeChecker platformType];
-	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S Plus"]||[platform isEqualToString:@"Simulator"]) {
+	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S Plus"]) {
 		for (UILabel *label in self.answerLabels) {
 			label.font = [UIFont systemFontOfSize:18];
 		}
