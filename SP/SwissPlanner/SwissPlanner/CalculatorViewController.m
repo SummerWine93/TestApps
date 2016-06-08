@@ -80,6 +80,8 @@
     plansArray = [NSArray arrayWithObjects:@"preliminary", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
 	
 	bonusForLevelsArray = [NSArray arrayWithObjects: @0, @15, @20, @25, @30, @35, @40, @43, @45, @47, @49, @50, nil];
+    
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -116,6 +118,17 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (NSInteger) getFontSize {
+    NSString *platform = [PlatformTypeChecker platformType];
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S Plus"]) {
+        return 20;
+    } else if ([platform isEqualToString:@"iPhone 4"]||[platform isEqualToString:@"iPhone 4S"]){
+        return 16;
+    } else {
+        return 18;
+    }
 }
 
 - (void) updateViewBackground {
@@ -306,11 +319,11 @@
 	NSString *incomeString = [NSString stringWithFormat:@"Income = €%@ * %@ = €%@%@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
 	
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@%@", turnoverString0, turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
-	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, attributedResultsString.string.length)];
+	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:[self getFontSize]] range:NSMakeRange(0, attributedResultsString.string.length)];
     
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
 	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, resultAppendix.string.length)];
-	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:([self getFontSize] + 1)] range:NSMakeRange(0, resultAppendix.string.length)];
 	
 	[attributedResultsString appendAttributedString:resultAppendix];
     
@@ -323,7 +336,7 @@
 
 - (IBAction)countIncomeButtonTapped:(id)sender {
 	
-	[UIView animateWithDuration:0.5 animations:^{
+	[UIView animateWithDuration:1.3 animations:^{
         self.textView.alpha = 0.5;
 	} completion:^(BOOL finished) {
         [self.textView setAttributedText:[self countIncomeResult]];
