@@ -36,8 +36,8 @@ typedef enum {
 	calculator,
 	education,
 	gifts,
+    testing,
 	settings,
-	testing,
 	swissgolden,
 	elenaBoychuk,
 	facebook,
@@ -72,9 +72,9 @@ typedef enum {
 	[menuItemsContentCollection insertObject:@"Cabinet" atIndex:cabinet];
 	[menuItemsContentCollection insertObject:@"Calculator" atIndex:calculator];
 	[menuItemsContentCollection insertObject:@"Education" atIndex:education];
-	[menuItemsContentCollection insertObject:@"Gifts" atIndex:gifts];
+	[menuItemsContentCollection insertObject:@"Rewards" atIndex:gifts];
+    [menuItemsContentCollection insertObject:@"Testing" atIndex:testing];
 	[menuItemsContentCollection insertObject:@"Settings" atIndex:settings];
-	[menuItemsContentCollection insertObject:@"Testing" atIndex:testing];
 	[menuItemsContentCollection insertObject:@"Swissgolden" atIndex:swissgolden];
 	[menuItemsContentCollection insertObject:@"Elena Boychuk" atIndex:elenaBoychuk];
 	[menuItemsContentCollection insertObject:@"Facebook" atIndex:facebook];
