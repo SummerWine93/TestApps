@@ -149,14 +149,19 @@
 
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
-    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)_iphone6"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+        
+        UIImage *back = [[UIImage imageNamed:@"nav_bar_iphone6"]
+                         resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+        [self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
+        
     } else {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
 }
+
 
 /*
 #pragma mark - Navigation

@@ -184,9 +184,7 @@ typedef enum {
 		
 	} else {
 		self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
-		UIImage *back = [[UIImage imageNamed:@"nav_bar"]
-						 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
-		[self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
+		[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	}
 }
 
