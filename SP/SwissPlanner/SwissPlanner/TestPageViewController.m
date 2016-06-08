@@ -49,7 +49,23 @@ typedef enum {
     defaults = [NSUserDefaults standardUserDefaults];
     testBaseHelper = [[TestBaseHelper alloc] init];
 	
+	[self setTextSizes];
 	
+	
+}
+
+- (void) setTextSizes {
+	NSString *platform = [PlatformTypeChecker platformType];
+	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S Plus"]||[platform isEqualToString:@"Simulator"]) {
+		for (UILabel *label in self.answerLabels) {
+			label.font = [UIFont systemFontOfSize:18];
+		}
+		self.questionTextLabel.font = [UIFont systemFontOfSize:20];
+	} else if ([platform isEqualToString:@"iPhone 4"]||[platform isEqualToString:@"iPhone 4S"]){
+		for (UILabel *label in self.answerLabels) {
+			label.font = [UIFont systemFontOfSize:15];
+		}
+	}
 }
 
 - (void) setCheckboxes {
@@ -158,15 +174,22 @@ typedef enum {
 
 
 - (void) updateViewBackground {
-    NSString *platform = [PlatformTypeChecker platformType];
-    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]/*||[platform isEqualToString:@"Simulator"]*/) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)_iphone6"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
-    } else {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
-    }
+	NSString *platform = [PlatformTypeChecker platformType];
+	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+		self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)_iphone6"]];
+		
+		UIImage *back = [[UIImage imageNamed:@"nav_bar_iphone6"]
+						 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+		[self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
+		
+	} else {
+		self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
+		UIImage *back = [[UIImage imageNamed:@"nav_bar"]
+						 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+		[self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
+	}
 }
+
 
 
 - (IBAction)activeButtonClicked:(id)sender {
