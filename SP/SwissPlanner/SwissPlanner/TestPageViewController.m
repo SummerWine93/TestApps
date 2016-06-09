@@ -209,7 +209,9 @@ typedef enum {
                 
 				self.questionBlockView.alpha = 0.5;
 			} completion:^(BOOL finished) {
-				self.questionBlockView.alpha = 1;
+                [UIView animateWithDuration:0.5 animations:^{
+                    self.questionBlockView.alpha = 1;
+                }];
 			}];
         }
 		

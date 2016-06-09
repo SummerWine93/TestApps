@@ -163,8 +163,6 @@
 		CE5913D21CBE60D4008A3042 /* LauncherButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherButton.m; sourceTree = "<group>"; };
 		CE5A3F841CEF58FF00B8C8E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE5A3F861CEF590400B8C8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CE5A3F871CEF590500B8C8E9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CE5A3F881CEF590600B8C8E9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE6BEC311CF48487009FB218 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
@@ -460,8 +458,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ru,
-				uk,
 			);
 			mainGroup = CE5913721CBA566C008A3042;
 			productRefGroup = CE59137C1CBA566C008A3042 /* Products */;
@@ -591,8 +587,6 @@
 			children = (
 				CE5A3F841CEF58FF00B8C8E9 /* en */,
 				CE5A3F861CEF590400B8C8E9 /* Base */,
-				CE5A3F871CEF590500B8C8E9 /* ru */,
-				CE5A3F881CEF590600B8C8E9 /* uk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
