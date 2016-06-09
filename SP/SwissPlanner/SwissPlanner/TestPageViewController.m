@@ -203,11 +203,11 @@ typedef enum {
             [self jumpToQuestion:lastTestQuestion];
 			
 			[UIView animateWithDuration:0.5 animations:^{
+				self.questionBlockView.alpha = 0.5;
+                
                 selectedCheckboxTag = 0;
                 [self indicateRightAnswerWithTagNumber:0 andWrongTagNumber:0];
                 [self updateCheckBoxesWithSelectedTagNumber:selectedCheckboxTag];
-                
-				self.questionBlockView.alpha = 0.5;
 			} completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.5 animations:^{
                     self.questionBlockView.alpha = 1;
