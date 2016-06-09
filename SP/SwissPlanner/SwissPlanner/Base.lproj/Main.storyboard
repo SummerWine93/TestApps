@@ -258,7 +258,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="uQu-WZ-cOV">
-                                        <rect key="frame" x="0.0" y="570" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="510" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="testingMenuCell" tableViewCell="uQu-WZ-cOV" id="h5E-6r-KAV">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
@@ -301,7 +301,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="PK6-Cm-Dtp">
-                                        <rect key="frame" x="0.0" y="510" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="570" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="settingsMenuCell" tableViewCell="PK6-Cm-Dtp" id="yVF-g1-UmW">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
@@ -1279,6 +1279,9 @@
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="114" height="147"/>
+                                                </variation>
                                                 <connections>
                                                     <outlet property="dataSource" destination="cZ2-7A-SWo" id="UIB-Wg-i0y"/>
                                                     <outlet property="delegate" destination="cZ2-7A-SWo" id="BLb-C7-xKY"/>

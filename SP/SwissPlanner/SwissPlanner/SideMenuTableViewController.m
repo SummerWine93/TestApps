@@ -69,12 +69,12 @@ typedef enum {
 	}
 	
 	menuItemsContentCollection = [NSMutableArray arrayWithCapacity:0];
-	[menuItemsContentCollection insertObject:@"Cabinet" atIndex:cabinet];
-	[menuItemsContentCollection insertObject:@"Calculator" atIndex:calculator];
-	[menuItemsContentCollection insertObject:@"Education" atIndex:education];
-	[menuItemsContentCollection insertObject:@"Rewards" atIndex:gifts];
-    [menuItemsContentCollection insertObject:@"Testing" atIndex:testing];
-	[menuItemsContentCollection insertObject:@"Settings" atIndex:settings];
+	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.cabinet", nil) atIndex:cabinet];
+	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.calculator", nil) atIndex:calculator];
+	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.education", nil) atIndex:education];
+	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.rewards", nil) atIndex:gifts];
+    [menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.testing", nil) atIndex:testing];
+	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.settings", nil) atIndex:settings];
 	[menuItemsContentCollection insertObject:@"Swissgolden" atIndex:swissgolden];
 	[menuItemsContentCollection insertObject:@"Elena Boychuk" atIndex:elenaBoychuk];
 	[menuItemsContentCollection insertObject:@"Facebook" atIndex:facebook];
@@ -145,7 +145,7 @@ typedef enum {
 			return nil;
 			break;
 		case 1:
-			return @"	Follow us";
+			return [NSString stringWithFormat:@"\t%@", NSLocalizedString(@"navigation.item.section.2", nil)];
 			break;
   default:
 			break;

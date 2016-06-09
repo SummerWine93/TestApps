@@ -7,6 +7,24 @@
 */
 
 
+/* Navigation */
+
+"navigation.item.cabinet" = "Cabinet";
+
+"navigation.item.calculator" = "Calculator";
+
+"navigation.item.education" = "Education";
+
+"navigation.item.rewards" = "Rewards";
+
+"navigation.item.testing" = "Testing";
+
+"navigation.item.settings" = "Settings";
+
+"navigation.item.section.2" = "FOLLOW US";
+
+
+
 
 //Calculator view controller
 /*

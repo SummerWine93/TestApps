@@ -23,7 +23,9 @@
 
 "navigation.item.section.2" = "FOLLOW US";
 
+/* Cabinet */
 
+"cabinet.title" = "My Cabinet";
 
 //Calculator view controller
 /*
