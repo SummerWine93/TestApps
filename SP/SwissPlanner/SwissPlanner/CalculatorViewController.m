@@ -26,6 +26,11 @@
 	NSInteger partnersLevel;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *yourLevelPickerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *partnersLevelePickerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *prepaymentPickerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *isDirectLabel;
+
 @end
 
 @implementation CalculatorViewController
@@ -43,6 +48,7 @@
 
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+	self.navigationItem.title = NSLocalizedString(@"calculator.title", nil);
 	
     if ((self.viewControllerIsInSecondaryLine == nil)||([self.viewControllerIsInSecondaryLine boolValue] == NO)) {
         // adding navigation capabilities
@@ -77,11 +83,21 @@
 	levelsArray = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
     prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
 	prepaymentValuesArray = [NSArray arrayWithObjects:@220, @720, @1050, @2800, @3550, @9850, nil];
-    plansArray = [NSArray arrayWithObjects:@"preliminary", @"Main", @"pre VIP", @"VIP", @"pre VIP PLUS", @"VIP PLUS", nil];
+    plansArray = [NSArray arrayWithObjects:
+				  NSLocalizedString(@"calculator.order.preOrder", nil),
+				  NSLocalizedString(@"calculator.order.mainOrder", nil),
+				  NSLocalizedString(@"calculator.order.preVipOrder", nil),
+				  NSLocalizedString(@"calculator.order.vipOrder", nil),
+				  NSLocalizedString(@"calculator.order.preVipPlusOrder", nil),
+				  NSLocalizedString(@"calculator.order.vipPlusOrder", nil),
+				  nil];
 	
 	bonusForLevelsArray = [NSArray arrayWithObjects: @0, @15, @20, @25, @30, @35, @40, @43, @45, @47, @49, @50, nil];
     
-    
+	self.yourLevelPickerLabel.text = NSLocalizedString(@"calculator.content.yourLevel", nil);
+	self.partnersLevelePickerLabel.text = NSLocalizedString(@"calculator.content.partnersLevel", nil);
+	self.prepaymentPickerLabel.text = NSLocalizedString(@"calculator.content.prepayment", nil);
+	self.isDirectLabel.text = NSLocalizedString(@"calculator.content.isDirect", nil);
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -287,36 +303,36 @@
 	// Showing the prepayment value
     NSInteger internetCommission = (selectedPlan>1)?50:20;
 	NSNumber *prepaymentValue =  [NSNumber numberWithInteger:([[prepaymentValuesArray objectAtIndex:selectedPlan] integerValue] - internetCommission)];
-	NSString *prepaymentString = [NSString stringWithFormat:@"\nPrepayment = €%@ - €%d(internet commission) = €%@\n\n", [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
+	NSString *prepaymentString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula1", nil), [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
     
     
     // Showing the turnover value
     
     NSNumber *turnoverValue0 =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *4 )];
-    NSString *turnoverString0 = [NSString stringWithFormat:@"€%@ x 4 Orders = €%@ (commodity circulation)\n\n", [prepaymentValue stringValue], [turnoverValue0 stringValue]];
+    NSString *turnoverString0 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula2", nil), [prepaymentValue stringValue], [turnoverValue0 stringValue]];
     
 	// Showing the turnover value
 	
 	NSNumber *turnoverValue =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *3 )];
-	NSString *turnoverString = [NSString stringWithFormat:@"€%@ - €%@ (reinvestment) = €%@\n\n", [turnoverValue0 stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
+	NSString *turnoverString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula3", nil), [turnoverValue0 stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
     // Showing the turnover value
     
     NSNumber *turnoverValue2 =  [NSNumber numberWithDouble:( [turnoverValue doubleValue] * 0.9 )];
-    NSString *turnoverString2 = [NSString stringWithFormat:@"€%@  - 10%% (comission) = €%@\n\n", [turnoverValue stringValue],[turnoverValue2 stringValue]];
+    NSString *turnoverString2 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula4", nil), [turnoverValue stringValue],[turnoverValue2 stringValue]];
     
 	// Showing the number of carier points value
 	NSNumber *carierPointsValue =  [NSNumber numberWithDouble:( [turnoverValue2 doubleValue]/500)];
-	NSString *carierPointsString = [NSString stringWithFormat:@"€%@ / 500 = %@ bonus units\n\n", [turnoverValue2 stringValue], [carierPointsValue stringValue]];
+	NSString *carierPointsString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula5", nil), [turnoverValue2 stringValue], [carierPointsValue stringValue]];
 	// Showing the number of carier points value
 	
 	NSNumber *carierPointPriceValue =  [NSNumber numberWithInteger:(yourLevelBonus - partnerLevelBonus)];
-	NSString *carierPointPriceString = [NSString stringWithFormat:@"Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n\n", yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
+	NSString *carierPointPriceString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula6", nil), yourLevelBonus, partnerLevelBonus, [carierPointPriceValue stringValue]];
 	// Showing the income value
 	NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
 	[nf setMaximumFractionDigits:3];
 	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue doubleValue]*[carierPointsValue doubleValue])];
-	NSString *extraInfo = @"\nYou are wasting your money!";
-	NSString *incomeString = [NSString stringWithFormat:@"Income = €%@ * %@ = €%@%@", [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
+	NSString *extraInfo = NSLocalizedString(@"calculator.content.formula7", nil);
+	NSString *incomeString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula8", nil), [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
 	
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@%@", turnoverString0, turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
 	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:[self getFontSize]] range:NSMakeRange(0, attributedResultsString.string.length)];

@@ -1479,14 +1479,18 @@
                         <outlet property="calculateButton" destination="cqr-Js-0Ga" id="p97-aR-GWl"/>
                         <outlet property="checkbox" destination="I6V-sj-eq7" id="GFg-S3-xBb"/>
                         <outlet property="euroSign" destination="dY3-f3-2Pg" id="xrw-vl-PPC"/>
+                        <outlet property="isDirectLabel" destination="1mR-fa-zWR" id="rPn-kn-mif"/>
                         <outlet property="orderSelectionMenuView" destination="32V-gu-phP" id="drT-b2-Y6E"/>
+                        <outlet property="partnersLevelePickerLabel" destination="nle-va-TYK" id="ckP-F1-ZDJ"/>
                         <outlet property="pickerLevel" destination="Jkl-D5-3XM" id="ybZ-FB-D8r"/>
                         <outlet property="pickerPartnerLevel" destination="GAs-xg-fge" id="SVv-rk-Trp"/>
                         <outlet property="pickerPrepayment" destination="TBT-0G-A4b" id="AEE-N8-Vfg"/>
                         <outlet property="pickerViewPrepayment" destination="Eie-h9-aa7" id="Nfi-49-KRj"/>
+                        <outlet property="prepaymentPickerLabel" destination="gT6-3g-rJO" id="NR3-Ah-QzM"/>
                         <outlet property="selectedPlanLabel" destination="i5R-2r-WUr" id="l8M-mD-RKA"/>
                         <outlet property="textDisplayView" destination="PJ1-oB-2RH" id="Tr5-y5-1EQ"/>
                         <outlet property="textView" destination="wpZ-UB-BoB" id="Uq2-3m-P5V"/>
+                        <outlet property="yourLevelPickerLabel" destination="EwS-tz-Iq9" id="jxI-On-PFV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38Q-FW-Iup" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3058,6 +3062,7 @@
                     <navigationItem key="navigationItem" title="Testing" id="f5A-q8-LrC"/>
                     <connections>
                         <outlet property="resultLabel" destination="Nz2-cy-cRa" id="zXJ-QT-MPi"/>
+                        <outlet property="startButton" destination="CpX-o4-NkS" id="1oI-LD-CKn"/>
                         <outletCollection property="roundedCorners" destination="8OV-aG-puh" id="miM-nt-1dC"/>
                         <outletCollection property="roundedCorners" destination="CpX-o4-NkS" id="zeP-jr-hdh"/>
                     </connections>
@@ -4123,8 +4128,11 @@
                     <navigationItem key="navigationItem" title="Settings" id="l4e-dp-7Ow"/>
                     <connections>
                         <outlet property="checkbox" destination="ZD5-Px-FfX" id="gFi-z3-zEj"/>
+                        <outlet property="isInProgramTitle" destination="ylH-6b-T9T" id="nBY-ph-gqK"/>
                         <outlet property="nameLabel" destination="lwT-KB-O2u" id="0Ip-Fe-2Rv"/>
+                        <outlet property="nameTitle" destination="L6x-5O-yxX" id="6Ad-51-A1h"/>
                         <outlet property="pointsLabel" destination="Q2O-C3-iWw" id="MbQ-Jc-2R9"/>
+                        <outlet property="pointsTitle" destination="abq-NF-vG0" id="kSC-Hy-7uU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pC-P7-erS" userLabel="First Responder" sceneMemberID="firstResponder"/>

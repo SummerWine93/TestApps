@@ -13,8 +13,12 @@
 
 @property (strong, nonatomic) NSMutableDictionary *userSettingsDictionary;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameTitle;
 @property (weak, nonatomic) IBOutlet TextFieldValidator *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pointsTitle;
 @property (weak, nonatomic) IBOutlet TextFieldValidator *pointsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *isInProgramTitle;
+
 @property (weak, nonatomic) IBOutlet UIButton *checkbox;
 
 @end

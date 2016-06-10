@@ -31,14 +31,14 @@ typedef enum {
 	[super viewDidLoad];
 	
 	pageContent = [NSArray arrayWithObjects:
-				   [NSArray arrayWithObjects:@"gift level 1", @"1 Level", nil],
-				   [NSArray arrayWithObjects:@"gift level 3", @"3 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 4", @"4 Level", nil],
-				   [NSArray arrayWithObjects:@"gift level 5", @"5 Level", nil],
-				   [NSArray arrayWithObjects:@"gift level 6", @"6 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 6_1", @"6 Level", nil],
-                   [NSArray arrayWithObjects:@"gift level 7-11", @"7-11 levels", nil],
-				   [NSArray arrayWithObjects:@"gift no level", @"Cruise", nil],
+				   [NSArray arrayWithObjects:@"gift level 1", NSLocalizedString(@"rewards.1Level", nil), nil],
+				   [NSArray arrayWithObjects:@"gift level 3", NSLocalizedString(@"rewards.3Level", nil), nil],
+                   [NSArray arrayWithObjects:@"gift level 4", NSLocalizedString(@"rewards.4Level", nil), nil],
+				   [NSArray arrayWithObjects:@"gift level 5", NSLocalizedString(@"rewards.5Level", nil), nil],
+				   [NSArray arrayWithObjects:@"gift level 6", NSLocalizedString(@"rewards.6Level", nil), nil],
+                   [NSArray arrayWithObjects:@"gift level 6_1", NSLocalizedString(@"rewards.6Level", nil), nil],
+                   [NSArray arrayWithObjects:@"gift level 7-11", NSLocalizedString(@"rewards.7-11Levels", nil), nil],
+				   [NSArray arrayWithObjects:@"gift no level", NSLocalizedString(@"rewards.cruise", nil), nil],
 				   nil];
 	/*
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
@@ -73,6 +73,7 @@ typedef enum {
 																  action:nil];
 	self.navigationItem.leftBarButtonItem = menuButton;
 	self.navigationController.navigationBar.translucent = NO;
+	self.navigationItem.title = NSLocalizedString(@"rewards.title", nil);
 	
 	SWRevealViewController *revealViewController = self.revealViewController;
 	if ( revealViewController )

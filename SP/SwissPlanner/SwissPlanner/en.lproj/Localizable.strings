@@ -43,27 +43,88 @@
 
 "cabinet.order.vipPlusOrder" = "VIP PLUS order";
 
-//Calculator view controller
-/*
+/* Calculator */
 
-//"CalculatorViewController.screenTitle" = "Calculator"
+"calculator.title" = "Calculator";
 
-//"CalculatorViewController.label.yourLevel" = "Your level"
+"calculator.order.preOrder" = "Preliminary";
 
-//"CalculatorViewController.label.partnersLevel" = "Partner's level"
+"calculator.order.mainOrder" = "Main";
 
-//"CalculatorViewController.label.prepayment" = "Prepayment"
+"calculator.order.preVipOrder" = "Pre VIP";
 
-//"CalculatorViewController.label.addToPlans" = "Add to plans"
+"calculator.order.vipOrder" = "VIP";
 
-//"CalculatorViewController.textField.formula" = "Formula"
+"calculator.order.preVipPlusOrder" = "Pre VIP PLUS";
 
-//"CalculatorViewController.textField.picker.mainPlan" = "Main"
+"calculator.order.vipPlusOrder" = "VIP PLUS";
 
-//"CalculatorViewController.textField.picker.preVIPPlan" = "Pre VIP"
+"calculator.content.yourLevel" = "Your level";
 
-//"CalculatorViewController.textField.picker.VIPPlan" = "VIP"
+"calculator.content.partnersLevel" = "Partner's level";
 
-//"CalculatorViewController.textField.picker.preVIPPlusPlan" = "Pre VIP PLUS"
+"calculator.content.prepayment" = "Prepayment";
 
-"CalculatorViewController.textField.picker.VIPPlusPlan" = "VIP PLUS" */
+"calculator.content.isDirect" = "is direct";
+
+"calculator.content.formula1" = "\nPrepayment = €%@ - €%d(internet commission) = €%@\n\n";
+
+"calculator.content.formula2" = "€%@ x 4 Orders = €%@ (commodity circulation)\n\n";
+
+"calculator.content.formula3" = "€%@ - €%@ (reinvestment) = €%@\n\n";
+
+"calculator.content.formula4" = "€%@  - 10%% (comission) = €%@\n\n";
+
+"calculator.content.formula5" = "€%@ / 500 = %@ bonus units\n\n";
+
+"calculator.content.formula6" = "Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n\n";
+
+"calculator.content.formula7" = "\nYou are wasting your money!";
+
+"calculator.content.formula8" = "Income = €%@ * %@ = €%@%@";
+
+/* Rewards */
+
+"rewards.title" = "Rewards";
+
+"rewards.1Level" = "1 Level";
+
+"rewards.3Level" = "3 Level";
+
+"rewards.4Level" = "4 Level";
+
+"rewards.5Level" = "5 Level";
+
+"rewards.6Level" = "6 Level";
+
+"rewards.7-11Levels" = "7-11 levels";
+
+"rewards.cruise" = "Cruise";
+
+/* Testing */
+
+"testing.title" = "Testing";
+
+"testing.content.bestResult" = "BEST TEST RESULT\n%@ of %d\n\n";
+
+"testing.content.lastResult" = "LAST TEST RESULT\n%@ of %d";
+
+"testing.startButton" = "START THE TEST";
+
+"testing.slide.questionLabel" = "Question %d of %d";
+
+/* Settings */
+
+"settings.title" = "Settings";
+
+"settings.cell1.title" = "Your name";
+
+"settings.cell2.title" = "Bonus units";
+
+"settings.cell3.title" = "In leadership program";
+
+"settings.sectionTitle" = "User settings";
+
+"settings.cell1.placeholder" = "Your full name";
+
+"settings.cell2.placeholder" = "Your carier points";

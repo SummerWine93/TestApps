@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) IBOutletCollection(UIView) NSArray *roundedCorners;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 @end

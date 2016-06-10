@@ -39,6 +39,7 @@
 																			 alpha:1]];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+	self.navigationItem.title = NSLocalizedString(@"testing.title", nil);
 	
 	// setting slide menu view controller
 	SWRevealViewController *revealViewController = self.revealViewController;
@@ -54,6 +55,8 @@
     }
     defaults = [NSUserDefaults standardUserDefaults];
     testBaseHelper = [[TestBaseHelper alloc] init];
+	
+	self.startButton.titleLabel.text = NSLocalizedString(@"testing.startButton", nil);
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -73,11 +76,11 @@
     NSInteger questionsNumber = [testBaseHelper getNumberOfQuestions];
     
 	
-    NSString *bestTestResult = [NSString stringWithFormat:@"BEST TEST RESULT\n%@ of %d\n\n", ([defaults objectForKey:@"bestTestResult"])? [[defaults objectForKey:@"bestTestResult"] stringValue] : @"0", questionsNumber];
+    NSString *bestTestResult = [NSString stringWithFormat:NSLocalizedString(@"testing.content.bestResult", nil), ([defaults objectForKey:@"bestTestResult"])? [[defaults objectForKey:@"bestTestResult"] stringValue] : @"0", questionsNumber];
     NSMutableAttributedString *bestResults = [[NSMutableAttributedString alloc] initWithString:bestTestResult];
     [bestResults addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(23.0/255.0) green:(105.0/255.0) blue:(90.0/255.0) alpha:1] range:NSMakeRange(0, bestResults.string.length)];
     
-    NSString *lastTestResult = [NSString stringWithFormat:@"LAST TEST RESULT\n%@ of %d", ([defaults objectForKey:@"lastTestResult"])? [[defaults objectForKey:@"lastTestResult"] stringValue] : @"0", questionsNumber];
+    NSString *lastTestResult = [NSString stringWithFormat:NSLocalizedString(@"testing.content.lastResult", nil), ([defaults objectForKey:@"lastTestResult"])? [[defaults objectForKey:@"lastTestResult"] stringValue] : @"0", questionsNumber];
     NSMutableAttributedString *lastResults = [[NSMutableAttributedString alloc] initWithString:lastTestResult];
     [lastResults addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, lastResults.string.length)];
 

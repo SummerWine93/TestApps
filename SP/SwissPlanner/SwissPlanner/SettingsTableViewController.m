@@ -34,10 +34,11 @@
 	[self updateViewBackground];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-	//[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	
 	// adding navigation capabilities
 	self.navigationItem.leftBarButtonItem = menuButton;
+	self.navigationItem.title = NSLocalizedString(@"settings.title", nil);
+	
 	SWRevealViewController *revealViewController = self.revealViewController;
 	if ( revealViewController )
 	{
@@ -67,6 +68,13 @@
 	//[_nameLabel addRegx:@"[A-Za-z]|{1,50}" withMsg:@"Only alpha numeric characters are allowed."];
 	
 	[_pointsLabel addRegx:@"^([0-9]|[1-9][0-9]|[1-9][0-9][0-9]||[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9]|1[1-9][0-9][0-9][0-9][0-9]|200000)$" withMsg:@"Only numeric characters in range from 0-200000 are allowed."];
+	
+	self.nameTitle.text = NSLocalizedString(@"settings.cell1.title", nil);
+	self.pointsTitle.text = NSLocalizedString(@"settings.cell2.title", nil);
+	self.isInProgramTitle.text = NSLocalizedString(@"settings.cell3.title", nil);
+	
+	self.nameLabel.placeholder = NSLocalizedString(@"settings.cell1.placeholder", nil);
+	self.pointsLabel.placeholder = NSLocalizedString(@"settings.cell2.placeholder", nil);
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -174,6 +182,18 @@
 	}
     
     [defaults synchronize];
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	switch (section) {
+  case 0:
+			return NSLocalizedString(@"settings.sectionTitle", nil);
+			break;
+			
+  default:
+			return nil;
+			break;
+	}
 }
 
 #pragma mark - Checkbox methods

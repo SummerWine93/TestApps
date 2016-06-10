@@ -145,7 +145,7 @@ typedef enum {
 
 - (void) jumpToQuestion: (NSInteger) questionNumber {
     
-    self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:@"Question %d of %d", (lastTestQuestion + 1), [testBaseHelper getNumberOfQuestions]];
+    self.questionNumberIndicatorLabel.text = [NSString stringWithFormat:NSLocalizedString(@"testing.slide.questionLabel", nil), (lastTestQuestion + 1), [testBaseHelper getNumberOfQuestions]];
     
     //setting the layout
     self.questionTextLabel.text = [testBaseHelper getTestQuestionWithIndex:lastTestQuestion];

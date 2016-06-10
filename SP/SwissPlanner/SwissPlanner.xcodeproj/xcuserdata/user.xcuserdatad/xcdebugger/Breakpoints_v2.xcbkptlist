@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwissPlanner/SettingsTableViewController.m"
-            timestampString = "486482789.817267"
+            timestampString = "487255448.442942"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "-viewWillDisappear:"
             landmarkType = "5">
          </BreakpointContent>
