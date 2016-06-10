@@ -18,6 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.headerBlockLabel.text = NSLocalizedString(@"education.slide13.header", nil);
+    self.headerContentBlockLabel.text = NSLocalizedString(@"education.slide13.headerContent", nil);
+    
 	dataArray = [NSArray arrayWithObjects:
 				 [NSArray arrayWithObjects:@"11", @"€1 x 100 000e = €100 000", nil],
 				 [NSArray arrayWithObjects:@"10", @"€2 x 50 000e = €100 000", nil],

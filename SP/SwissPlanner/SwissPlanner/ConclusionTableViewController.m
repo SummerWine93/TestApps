@@ -3,7 +3,7 @@
 //  SwissPlanner
 //
 //  Created by User on 4/28/16.
-//  Copyright © 2016 Elena Baoychuk. All rights reserved.
+//  Copyright © 2016 Elena Boychuk. All rights reserved.
 //
 
 #import "ConclusionTableViewController.h"
@@ -31,7 +31,15 @@ typedef enum {
 	
 	currentTableType = mainTable;
 	
-	cellNames = [NSArray arrayWithObjects:@"Main table", @"Pre VIP", @"VIP", @"Pre VIP PLUS", @"VIP PLUS",nil];
+    cellNames = [NSArray arrayWithObjects:
+                 NSLocalizedString(@"calculator.order.mainOrder", nil),
+                 NSLocalizedString(@"calculator.order.preVipOrder", nil),
+                 NSLocalizedString(@"calculator.order.vipOrder", nil),
+                 NSLocalizedString(@"calculator.order.preVipPlusOrder", nil),
+                 NSLocalizedString(@"calculator.order.vipPlusOrder", nil),
+                 nil];
+    
+    self.headerBlockLabel.text = NSLocalizedString(@"education.slideConclusion.header", nil);
 	
 	self.baseDataArray = [NSArray arrayWithObjects:
 						  [NSArray arrayWithObjects:@"1", @"-", @"€15", nil],

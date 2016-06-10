@@ -21,14 +21,14 @@
 }
 
 - (void) setSpecificViews {
-    self.headerBlockLabel.text = @"Income in the Leadership program";
-    self.headerContentBlock2Label.text = @"Main table of orders";
-    self.headerContentBlock3Label.text = @"VIP table of orders";
+    self.headerBlockLabel.text = NSLocalizedString(@"education.slide8a.header", nil);
     
-    self.contentBlock1Label.text = @"Income = Bonus units х Price differences between your level and 1 level of Leadership program\nFrom direct partner. No matter what level of your direct partner";
+    self.contentBlock1Label.text = NSLocalizedString(@"education.slide8a.block1.header", nil);
+    self.headerContentBlock2Label.text = NSLocalizedString(@"education.slide8a.block2.header", nil);
+    self.headerContentBlock3Label.text = NSLocalizedString(@"education.slide8a.block3.header", nil);
     
-    self.contentBlock2Label.text = @"You are on 9 level, your direct partner on 5 level of Leadership program. Your income is:\n3.78 х (47€ - 0€) = 177.6€";
-    self.contentBlock3Label.text = @"You are on 9 level, your direct partner on 5 level of Leadership program. Your income is:\n14.85 х (47€ - 0€) = 697.95€";
+    self.contentBlock2Label.text = NSLocalizedString(@"education.slide8a.block2.content", nil);
+    self.contentBlock3Label.text = NSLocalizedString(@"education.slide8a.block3.content", nil);
 }
 
 

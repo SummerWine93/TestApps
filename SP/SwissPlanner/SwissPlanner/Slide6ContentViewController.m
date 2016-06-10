@@ -22,15 +22,15 @@
 }
 
 - (void) setSpecificViews {
-
-    self.headerBlockLabel.text = @"Income in the leadership program";
-    self.headerContentBlock2Label.text = @"Main table of orders";
-    self.headerContentBlock3Label.text = @"VIP table of orders";
-	
-	self.contentBlock1Label.text = @"Income = Price for 1 bonus unit х Bonus units";
-	
-	self.contentBlock2Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 etc.";
-	self.contentBlock3Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 etc.";
+    
+    self.headerBlockLabel.text = NSLocalizedString(@"education.slide6.header", nil);
+    
+    self.contentBlock1Label.text = NSLocalizedString(@"education.slide6.block1.header", nil);
+    self.headerContentBlock2Label.text = NSLocalizedString(@"education.slide6.block2.header", nil);
+    self.headerContentBlock3Label.text = NSLocalizedString(@"education.slide6.block3.header", nil);
+    
+    self.contentBlock2Label.text = NSLocalizedString(@"education.slide6.block2.content", nil);
+    self.contentBlock3Label.text = NSLocalizedString(@"education.slide6.block3.content", nil);
 }
 
 

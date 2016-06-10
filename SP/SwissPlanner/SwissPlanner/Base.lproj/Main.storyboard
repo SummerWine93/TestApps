@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1246,9 +1246,6 @@
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
                                                 </prototypes>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="1" width="114" height="147"/>
-                                                </variation>
                                                 <connections>
                                                     <outlet property="dataSource" destination="cZ2-7A-SWo" id="UIB-Wg-i0y"/>
                                                     <outlet property="delegate" destination="cZ2-7A-SWo" id="BLb-C7-xKY"/>
@@ -5242,7 +5239,7 @@
                                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="5qu-Qh-uIe">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="5qu-Qh-uIe" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="1" width="240" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5qu-Qh-uIe" id="UXY-VF-ffx">
@@ -5335,6 +5332,11 @@
                                                                     </variation>
                                                                 </tableViewCellContentView>
                                                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                                                <connections>
+                                                                    <outlet property="firstCellItem" destination="MMD-uP-3Xg" id="dgI-mz-vBe"/>
+                                                                    <outlet property="secondCellItem" destination="8kg-Pa-I0d" id="dJ0-uK-5eo"/>
+                                                                    <outlet property="thirdCellItem" destination="pni-vk-NIX" id="cdj-Lf-STX"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" id="M8S-ng-c2t" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="45" width="240" height="44"/>
@@ -6045,7 +6047,7 @@
                                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="KFx-OS-0Md">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="KFx-OS-0Md" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="1" width="240" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KFx-OS-0Md" id="sfv-6O-0kU">
@@ -6138,6 +6140,11 @@
                                                                     </variation>
                                                                 </tableViewCellContentView>
                                                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                                                <connections>
+                                                                    <outlet property="firstCellItem" destination="drs-vj-bGL" id="xNc-r4-AoH"/>
+                                                                    <outlet property="secondCellItem" destination="1ak-vu-LLF" id="ysQ-VD-ZvM"/>
+                                                                    <outlet property="thirdCellItem" destination="a1a-US-GRw" id="dqa-53-Pbj"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" id="Gi0-2b-cxE" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="45" width="240" height="44"/>
@@ -6882,7 +6889,7 @@
                                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="3vp-EM-dd6">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="3vp-EM-dd6" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="1" width="240" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3vp-EM-dd6" id="eqR-CY-L1z">
@@ -6975,6 +6982,11 @@
                                                                     </variation>
                                                                 </tableViewCellContentView>
                                                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                                                <connections>
+                                                                    <outlet property="firstCellItem" destination="60w-rx-QKM" id="3A5-pb-RJj"/>
+                                                                    <outlet property="secondCellItem" destination="ewa-6s-ojO" id="ng6-iJ-kzh"/>
+                                                                    <outlet property="thirdCellItem" destination="fxo-SA-pGT" id="GOD-8F-qDq"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" id="Fdh-vZ-BSa" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="45" width="240" height="44"/>
@@ -7764,7 +7776,7 @@
                                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="8dk-fg-6cf">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="8dk-fg-6cf" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="1" width="240" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8dk-fg-6cf" id="Tli-fE-8PB">
@@ -7857,6 +7869,11 @@
                                                                     </variation>
                                                                 </tableViewCellContentView>
                                                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                                                <connections>
+                                                                    <outlet property="firstCellItem" destination="V0n-HD-2S4" id="l7w-Wo-aSM"/>
+                                                                    <outlet property="secondCellItem" destination="zFK-GP-PNR" id="Nhs-ah-Q21"/>
+                                                                    <outlet property="thirdCellItem" destination="4en-ZW-kFT" id="yW0-y2-DHy"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" id="a1p-rk-dwX" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="45" width="240" height="44"/>
@@ -9476,7 +9493,7 @@
                                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="c3e-BD-6VM">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="c3e-BD-6VM" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="1" width="240" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c3e-BD-6VM" id="Y3i-nE-vIc">
@@ -9556,6 +9573,11 @@
                                                                     </variation>
                                                                 </tableViewCellContentView>
                                                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                                                <connections>
+                                                                    <outlet property="firstCellItem" destination="wGp-Zj-hxx" id="wNv-Bj-OhS"/>
+                                                                    <outlet property="secondCellItem" destination="4Gj-ae-nEV" id="6Hm-At-fP1"/>
+                                                                    <outlet property="thirdCellItem" destination="D78-Pl-p6W" id="3an-Wh-3H0"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" id="wgA-wx-GZG" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="45" width="240" height="44"/>
@@ -12340,6 +12362,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="610"/>
                     <connections>
+                        <outlet property="headerBlockLabel" destination="ulZ-pW-Sqq" id="d2O-ii-xty"/>
                         <outlet property="segmentedControl" destination="pJp-UB-smj" id="8cd-xV-ClT"/>
                         <outlet property="tableView" destination="7Bl-dn-bFW" id="e0N-ij-aRG"/>
                         <outletCollection property="roundedCorners" destination="tV5-3h-uRb" id="biM-5m-v8N"/>
@@ -12670,6 +12693,8 @@
                     <size key="freeformSize" width="400" height="700"/>
                     <connections>
                         <outlet property="firstTableView" destination="Yxw-ay-4mZ" id="uQ3-Ga-xe6"/>
+                        <outlet property="headerBlockLabel" destination="I9D-EH-tDT" id="cGF-8J-qJI"/>
+                        <outlet property="headerContentBlockLabel" destination="4Q2-uB-bqD" id="zyG-AW-jcU"/>
                         <outletCollection property="roundedCorners" destination="ZJr-1e-N5D" id="qjT-Mg-f5S"/>
                         <outletCollection property="roundedCorners" destination="31A-As-QXB" id="93D-GB-5NI"/>
                     </connections>
@@ -12734,7 +12759,7 @@
                                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="VqY-Nc-VSf">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" id="VqY-Nc-VSf" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="1" width="240" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VqY-Nc-VSf" id="1OH-Lw-DwG">
@@ -12827,6 +12852,11 @@
                                                                     </variation>
                                                                 </tableViewCellContentView>
                                                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                                                <connections>
+                                                                    <outlet property="firstCellItem" destination="rZT-XO-Fct" id="EV0-Ct-2e1"/>
+                                                                    <outlet property="secondCellItem" destination="tDk-MR-7a8" id="gwS-Yq-8F4"/>
+                                                                    <outlet property="thirdCellItem" destination="l25-Rt-zJn" id="EG2-ZG-vAk"/>
+                                                                </connections>
                                                             </tableViewCell>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" id="SZ3-Nb-cmV" customClass="PrettyTableViewCell">
                                                                 <rect key="frame" x="0.0" y="45" width="240" height="44"/>

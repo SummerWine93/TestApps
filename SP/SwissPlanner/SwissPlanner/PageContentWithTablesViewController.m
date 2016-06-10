@@ -65,7 +65,11 @@
 		cell.firstCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section - 1)] objectAtIndex:0];
 		cell.secondCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section - 1)] objectAtIndex:1];
 		cell.thirdCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section - 1)] objectAtIndex:2];
-	}
+    } else {
+        cell.firstCellItem.text = NSLocalizedString(@"prettyTable.firstCellItem", nil);
+        cell.secondCellItem.text = NSLocalizedString(@"prettyTable.secondCellItem", nil);
+        cell.thirdCellItem.text = NSLocalizedString(@"prettyTable.thirdCellItem", nil);
+    }
 	
 	return cell;
 }

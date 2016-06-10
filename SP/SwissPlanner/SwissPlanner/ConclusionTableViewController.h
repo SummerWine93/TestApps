@@ -14,6 +14,7 @@
 
 - (IBAction)tableTypeSelected:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *headerBlockLabel;
 @property (nonatomic, strong) NSArray * baseDataArray;
 @property (nonatomic, strong) NSArray * extraDataArray;
 
