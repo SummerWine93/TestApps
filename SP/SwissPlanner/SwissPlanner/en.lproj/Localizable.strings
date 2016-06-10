@@ -23,8 +23,25 @@
 
 "navigation.item.section.2" = "FOLLOW US";
 
+/* Cabinet */
 
+"cabinet.title" = "My Cabinet";
 
+"cabinet.cellcontent.1.placeholder" = "User Name";
+
+"cabinet.cellcontent.2.title" = "My leadership level:";
+
+"cabinet.cellcontent.3.title" = "My bonus units:";
+
+"cabinet.cellcontent.4.title" = "Units to the next level:";
+
+"cabinet.cellcontent.2_3.none" = "None";
+
+"cabinet.order.mainOrder" = "Main order";
+
+"cabinet.order.vipOrder" = "VIP order";
+
+"cabinet.order.vipPlusOrder" = "VIP PLUS order";
 
 //Calculator view controller
 /*

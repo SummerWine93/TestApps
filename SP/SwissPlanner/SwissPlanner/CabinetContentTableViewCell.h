@@ -10,6 +10,7 @@
 
 @interface CabinetContentTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *contentLabel;
 
 @end

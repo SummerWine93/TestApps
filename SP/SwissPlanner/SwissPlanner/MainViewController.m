@@ -9,7 +9,9 @@
 #import "MainViewController.h"
 #import "SWRevealViewController.h"
 #import "CalculatorViewController.h"
+
 #import "CabinetContentTableViewCell.h"
+#import "OrdersTableViewCell.h"
 
 #import "PlatformTypeChecker.h"
 
@@ -54,6 +56,8 @@ typedef enum {
 	
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+	
+	self.navigationItem.title = NSLocalizedString(@"cabinet.title", nil);
 	
 	// setting slide menu view controller
 	SWRevealViewController *revealViewController = self.revealViewController;
@@ -180,28 +184,42 @@ typedef enum {
 	if (tableView.tag == 0) {
         CabinetContentTableViewCell *cell = (CabinetContentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
         NSString *cellText;
+		NSString *titleText;
 		
         switch (indexPath.row) {
             case userNameCell:
-                cellText = ([userName length])?userName:@"User Name";
+				titleText = @"";
+                cellText = ([userName length])?userName:NSLocalizedString(@"cabinet.cellcontent.1.placeholder", nil);
                 break;
             case leadershipLevelCell:
+				titleText = NSLocalizedString(@"cabinet.cellcontent.2.title", nil);
                 cellText = (userLevel)?[userLevel stringValue]:@"0";
                 break;
             case bonusUnitsCell:
-                cellText = (isInLeadershipProgram)?[userPoints stringValue]:@"None";
+				titleText = NSLocalizedString(@"cabinet.cellcontent.3.title", nil);
+                cellText = (isInLeadershipProgram)?[userPoints stringValue]:NSLocalizedString(@"cabinet.cellcontent.2_3.none", nil);
                  break;
             case pointsLeftCell:
-				cellText = (([userLevel integerValue]<11) && isInLeadershipProgram)?[pointsLeft stringValue]:@"None";
+				titleText = NSLocalizedString(@"cabinet.cellcontent.4.title", nil);
+				cellText = (([userLevel integerValue]<11) && isInLeadershipProgram)?[pointsLeft stringValue]:NSLocalizedString(@"cabinet.cellcontent.2_3.none", nil);
                  break;
             default:
                 break;
         }
         if (cellText != nil) {
             [cell contentLabel].text = cellText;
+			[cell titleLabel].text = titleText;
         }
+		
         return cell;
     } else {
+		if (indexPath.row == 0) {
+			OrdersTableViewCell *cell = (OrdersTableViewCell *) [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+			cell.mainOrderLabel.text = NSLocalizedString(@"cabinet.order.mainOrder", nil);
+			cell.vipOrderLabel.text = NSLocalizedString(@"cabinet.order.vipOrder", nil);
+			cell.vipPlusOrderLabel.text = NSLocalizedString(@"cabinet.order.vipPlusOrder", nil);
+			return cell;
+		}
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
         return cell;
     }
