@@ -29,8 +29,8 @@
 	
 	self.contentBlock1Label.text = @"Income = Price for 1 bonus unit х Bonus units";
 	
-	self.contentBlock2Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 и etc.";
-	self.contentBlock3Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 и etc.";
+	self.contentBlock2Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 etc.";
+	self.contentBlock3Label.text = @"If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 etc.";
 }
 
 
