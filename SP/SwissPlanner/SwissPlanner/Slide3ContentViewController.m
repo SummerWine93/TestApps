@@ -21,11 +21,11 @@
 }
 
 - (void) setSpecificViews {
-	self.headerBlockLabel.text = @"Terms of access to the leadership program";
-	self.headerContentBlock1Label.text = @"in a Main agreement";
-	self.headerContentBlock2Label.text = @"in a VIP agreement";
-	self.contentBlock1Label.text = @"1. You need to close your Main table\n\n2. Your 2 attracted customers should also close their Main tables\n\n3. And their 2 attracted customers should do the same";
-	self.contentBlock2Label.text = @"1. You need to close your VIP table\n\n2. Your 2 attracted customers should also close their VIP tables";
+	self.headerBlockLabel.text = NSLocalizedString(@"education.slide3.header", nil);
+	self.headerContentBlock1Label.text = NSLocalizedString(@"education.slide3.block1.header", nil);
+	self.headerContentBlock2Label.text = NSLocalizedString(@"education.slide3.block2.header", nil);
+	self.contentBlock1Label.text = NSLocalizedString(@"education.slide3.block1.content", nil);
+	self.contentBlock2Label.text = NSLocalizedString(@"education.slide3.block2.content", nil);
 }
 
 - (void)didReceiveMemoryWarning {

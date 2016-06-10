@@ -20,11 +20,11 @@
 }
 
 - (void) setSpecificViews {
-	self.headerBlockLabel.text = @"Income in the SWISSGOLDEN company";
-	self.headerContentBlock1Label.text = @"Bonus Program";
-	self.headerContentBlock2Label.text = @"Leadership Program";
-	self.contentBlock1Label.text = @"Quick start\nActive income";
-	self.contentBlock2Label.text = @"Passive income";
+	self.headerBlockLabel.text = NSLocalizedString(@"education.slide1.header", nil);
+	self.headerContentBlock1Label.text = NSLocalizedString(@"education.slide1.block1.header", nil);
+	self.headerContentBlock2Label.text = NSLocalizedString(@"education.slide1.block2.header", nil);
+	self.contentBlock1Label.text = NSLocalizedString(@"education.slide1.block1.content", nil);
+	self.contentBlock2Label.text = NSLocalizedString(@"education.slide1.block2.content", nil);
 }
 
 - (void)didReceiveMemoryWarning {

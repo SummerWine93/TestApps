@@ -129,4 +129,42 @@
 
 "settings.cell2.placeholder" = "Your carier points";
 
+/* Education */
+
+"education.title" = "Education";
+
+/* Education Slide 1 */
+
+"education.slide1.header" = "Income in the SWISSGOLDEN company";
+
+"education.slide1.block1.header" = "Bonus Program";
+
+"education.slide1.block1.content" = "Quick start\nActive income";
+
+"education.slide1.block2.header" = "Leadership Program";
+
+"education.slide1.block2.content" = "Passive income";
+
+/* Education Slide 2 */
+
+"education.slide2.block1" = "90% - The company buys Gold for its partner in Bonus program";
+
+"education.slide2.block2" = "9% - The company distributes in the Leadership program";
+
+"education.slide2.block3" = "1% - Income of the company";
+
+/* Education Slide 3 */
+
+"education.slide3.header" = "Terms of access to the leadership program";
+
+"education.slide3.block1.header" = "in a Main agreement";
+
+"education.slide3.block1.content" = "1. You need to close your Main table\n\n2. Your 2 attracted customers should also close their Main tables\n\n3. And their 2 attracted customers should do the same";
+
+"education.slide3.block2.header" = "in a VIP agreement";
+
+"education.slide3.block2.content" = "1. You need to close your VIP table\n\n2. Your 2 attracted customers should also close their VIP tables";
+
+
+
 

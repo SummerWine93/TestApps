@@ -25,9 +25,9 @@
 }
 
 - (void) setSpecificViews {
-	self.block90label.text = @"90% - The company buys Gold for its partner in Bonus program";
-	self.block9label.text = @"9% - The company distributes in the Leadership program";
-	self.block1label.text = @"1% - Income of the company";
+	self.block90label.text = NSLocalizedString(@"education.slide2.block1", nil);
+	self.block9label.text = NSLocalizedString(@"education.slide2.block2", nil);
+	self.block1label.text = NSLocalizedString(@"education.slide2.block3", nil);
 }
 
 /*
