@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LanguageHelper.h"
 
 
 @interface AppDelegate ()
@@ -21,8 +22,10 @@
 	[NSThread sleepForTimeInterval:3.0];
 	[self.window setTintColor:[UIColor whiteColor]];
     NSString * language = [[[NSLocale preferredLanguages] objectAtIndex:0] substringToIndex:2];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:language forKey:@"currentLanguage"];
+    LanguageHelper *helper = [[LanguageHelper alloc] init];
+    NSLog(@"%@", [helper getCurrentLanguage]);
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults setObject:language forKey:@"currentLanguage"];
 	
 	return YES;
 }

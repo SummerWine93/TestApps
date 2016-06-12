@@ -11,12 +11,19 @@
 
 #import "PlatformTypeChecker.h"
 
+typedef enum {
+    yourName,
+    bonusUnits,
+    inLeadershipProgram,
+    language
+} settingsItems;
 
 @interface SettingsTableViewController () {
 	NSDictionary *settingsCategories;
 	NSMutableDictionary *settings;
 	NSArray *bonusPointsArray;
 	BOOL checkBoxSelected;
+    NSArray *languagesAvailable;
 }
 
 @end
@@ -25,6 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 	
 	// setting navigation bar
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
@@ -121,7 +131,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == languagesAvailable) {
+        [self performSegueWithIdentifier:@"showTheLanguages" sender:self];
+    }
 }
 
 #pragma mark - Text field delegate methods

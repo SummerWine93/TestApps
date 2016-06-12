@@ -11,6 +11,7 @@
 		39546FFB1D06096E00710FD2 /* tests_source.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39546FFA1D06096E00710FD2 /* tests_source.txt */; };
 		39546FFE1D060A1100710FD2 /* TestBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39546FFD1D060A1100710FD2 /* TestBaseHelper.m */; };
 		39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */; };
+		39C88B971D0E092700D932C3 /* LanguageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C88B961D0E092700D932C3 /* LanguageHelper.m */; };
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
 		39D47B081D0437AB003D05EA /* TestQuestionPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */; };
 		39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */; };
@@ -82,6 +83,8 @@
 		399BD70E1D0DCD8000394FA4 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		39AB1C661D017CDA00A1622C /* TestsStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsStartingViewController.h; sourceTree = "<group>"; };
 		39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsStartingViewController.m; sourceTree = "<group>"; };
+		39C88B951D0E092700D932C3 /* LanguageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageHelper.h; sourceTree = "<group>"; };
+		39C88B961D0E092700D932C3 /* LanguageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageHelper.m; sourceTree = "<group>"; };
 		39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide8aContentViewController.h; sourceTree = "<group>"; };
 		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
 		39D47B061D0437AA003D05EA /* TestQuestionPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestQuestionPageContentViewController.h; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 		CE59137D1CBA566D008A3042 /* SwissPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				39C88B951D0E092700D932C3 /* LanguageHelper.h */,
+				39C88B961D0E092700D932C3 /* LanguageHelper.m */,
 				3908F5611CFF91EC00261709 /* TestSlides */,
 				CE5913B11CBB9431008A3042 /* MainViewController.h */,
 				CE5913B21CBB9431008A3042 /* MainViewController.m */,
@@ -522,6 +527,7 @@
 				39546FFE1D060A1100710FD2 /* TestBaseHelper.m in Sources */,
 				CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */,
 				CE5913801CBA566D008A3042 /* main.m in Sources */,
+				39C88B971D0E092700D932C3 /* LanguageHelper.m in Sources */,
 				CE05AAA61CD203F900CB7A8E /* PageContentWithMultipleTablesViewController.m in Sources */,
 				CEDA43881D002BDE00BB1AE0 /* TestTableViewCell.m in Sources */,
 				CE3CAF751CF8773100B276CD /* PlatformTypeChecker.m in Sources */,

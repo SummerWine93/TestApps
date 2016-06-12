@@ -7,11 +7,13 @@
 //
 
 #import "TestBaseHelper.h"
+#import "LanguageHelper.h"
 
 @implementation TestBaseHelper {
     NSString *currentLanguage;
     NSDictionary *currentTestsDictionary;
     NSArray *dictionaryIndexesArray;
+    LanguageHelper *languageHelper;
 }
 
 - (id) init {
@@ -19,7 +21,8 @@
         self = [super init];
     }
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    currentLanguage = [defaults objectForKey:@"currentLanguage"];
+    languageHelper = [[LanguageHelper alloc] init];
+    currentLanguage = [languageHelper getCurrentLanguage];
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"tests_source" ofType:@"txt"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];

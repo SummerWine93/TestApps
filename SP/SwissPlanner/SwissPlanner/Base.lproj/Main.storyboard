@@ -4114,6 +4114,27 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="9SG-NR-Qio">
+                                        <rect key="frame" x="0.0" y="246" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9SG-NR-Qio" id="rCW-3B-a28">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLJ-Cr-Qkw">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NLJ-Cr-Qkw" firstAttribute="width" secondItem="rCW-3B-a28" secondAttribute="width" multiplier="0.35" id="0Q4-F8-qPH"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="NLJ-Cr-Qkw" secondAttribute="leading" id="FlD-CN-fRI"/>
+                                                <constraint firstItem="NLJ-Cr-Qkw" firstAttribute="centerY" secondItem="rCW-3B-a28" secondAttribute="centerY" id="Ttx-n8-Tok"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -4130,11 +4151,40 @@
                         <outlet property="nameTitle" destination="L6x-5O-yxX" id="6Ad-51-A1h"/>
                         <outlet property="pointsLabel" destination="Q2O-C3-iWw" id="MbQ-Jc-2R9"/>
                         <outlet property="pointsTitle" destination="abq-NF-vG0" id="kSC-Hy-7uU"/>
+                        <segue destination="8Hq-5V-4cP" kind="showDetail" identifier="showTheLanguages" id="D4y-T6-aZG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pC-P7-erS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2637" y="2777.25"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="t4g-xq-CWZ">
+            <objects>
+                <tableViewController id="8Hq-5V-4cP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="km6-si-f0F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="checkmark" id="o9Q-4U-KeH">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9Q-4U-KeH" id="bO3-eV-bYH">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Hq-5V-4cP" id="xZO-78-dyj"/>
+                            <outlet property="delegate" destination="8Hq-5V-4cP" id="nIG-7q-FLh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQX-p1-Gev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3339" y="2777.25"/>
         </scene>
         <!--Gifts Page Content View Controller-->
         <scene sceneID="86p-7p-b7E">
@@ -13593,7 +13643,7 @@
         <image name="youtube" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tqq-7b-Ixo"/>
         <segue reference="597-xI-Mli"/>
+        <segue reference="Tqq-7b-Ixo"/>
     </inferredMetricsTieBreakers>
 </document>
