@@ -363,5 +363,191 @@
 			" Только продать и получить деньги ": 0,
 			"Выбрать любую услугу, которую предоставляет компания для своих клиентов.": 1
 		}
-	}
+	},
+
+"es": {
+"1. ¿Qué es la corporación Swissgolden?": {
+"Compañía Internacional": 1,
+"Companía inversionista": 0,
+"Caja de ayuda mutua": 0
+},
+
+"2. ¿Qué hace la corporación Swissgolden?": {
+"Las ventas de oro": 0,
+"Hace servicios de compra y venta, entrega y almacenamiento de barras de oro": 1,
+"Cobra dinero y garantías públicas retorno de la inversión.": 0
+},
+
+"3. ¿Qué producto se presenta en la tienda online de la compañía?": {
+"barras de oro": 0,
+"barras de oro o de inversión con un peso de 1 a 100 gramos": 0,
+"barras de oro o de inversión  de 999,9 leyes de 1 a 100 gramos": 1
+},
+
+"4. ¿Lingotes de qué fabricante ofrece la empresa Swissgolden?": {
+"Valcambi, Degussa, UBS ": 0,
+"Degussa, Metalor, Argor Heraeus ": 0,
+"Argor Heraeus, Valcambi, Degussa ": 1
+},
+
+"5. ¿Dónde están las oficinas de la empresa Swissgolden?": {
+"Londres, Stuttgart": 1,
+"Stuttgart": 0,
+"Londres, San Petersburgo": 0
+},
+
+"6. ¿Dónde está el centro de estudios de la empresa?": {
+"Londres": 0,
+"Stuttgart": 0,
+"San Petersburgo": 1
+},
+
+"7. ¿Dónde está registrada la companía Swissgolden?": {
+"Offshore de Chipre": 0,
+"Islas Vírgenes Británicas": 1,
+"Zona de DMCC": 0
+},
+
+"8. La fecha de registración de la compañía Swissgolden": {
+"1 de febrero de, 2013": 0,
+"14 de de junio de 2012": 1,
+"1 de marzo de, 2014": 0
+},
+
+"9. ¿Qué impuestos son pagados por el comprador en la transacción?": {
+"el 18% de IVA": 0,
+"Impuesto sobre beneficios - el 9%": 0,
+"compra no está sometida a impuesto": 1
+},
+
+"10. ¿Cuál es el tamaño de las comisiones de comercio en la compra de oro en la tienda online Swissgolden?": {
+"No hay comisión": 0,
+"Comisión 10%": 1,
+"Comisión 1,2%": 0
+},
+
+"11. ¿Cuál es la cantidad de oro que la compañía garantiza para entregar en cualquier parte del mundo?": {
+"50 gramos": 0,
+"5 gramos": 0,
+"hasta 5 gramos incluido": 1
+},
+
+"12. ¿Dónde y cómo está organizado el almacenamiento de oro, que compraron los clientes en la tienda online de la compañía?": {
+"Almacenamiento Pro Aurum en las cuentas individuales": 0,
+"Almacenamiento colectivo en el depósito Pro Aurum y VIA MAT": 1,
+"El almacenamiento colectivo en el depósito VIA MAT": 0
+},
+
+"13. ¿Cuál es el valor del oro almacenado en la empresa Swissgolden?": {
+"0,1% del valor del oro almacena en un mes": 1,
+"1,2% del valor de oro almacena en un mes": 0,
+"0,1% del valor del oro almacenado por año": 0
+},
+
+"14. ¿Cuál es la cantidad mínima de compra de oro en la tienda online de la compañía Swissgolden?": {
+"10 000 euros ": 0,
+"7 000 euros ": 1,
+"17 000 euros": 0
+},
+
+"15. ¿Cómo es el precio del oro en la tienda online de la compañía Swissgolden?": {
+"Sobre la base de la fijación de Londres": 1,
+"Sobre la base del intercambio de datos en Hong Kong": 0,
+"Basado en los datos CBR": 0
+},
+
+"16. Lo que prohíbe la empresa compra a sus clientes?": {
+"Cada lingote de oro de inversión con un peso de 1 a 100 gramos": 0,
+"Los lingotes de oro, que han sido adquiridos en la tienda online de la compañía": 1,
+"lingotes, que fueron comprados en la tienda online y se entrega al cliente a su casa": 0
+},
+
+"17. Lingotes de instrumentos estándar de internet-shop Swissgolden?": {
+"estándar LBMA 'good delivery'": 1,
+"dmcc Estándar": 0,
+"rusa GOST": 0
+},
+
+"18. ¿A qué precio hay redención en los clientes de lingote Swissgolden empresa?": {
+"Dependiendo de las barras de estado": 0,
+"o no por debajo del precio mundial actual del oro": 0,
+"El precio depende del estado de ánimo del propietario": 0
+},
+
+"19. ¿Qué tipo de marketing utilizada por la empresa para avanzar en el mercado?": {
+"Categoría Classic": 0,
+"Red": 0,
+"Afiliado": 1
+},
+
+"20. ¿De qué fuente generado Swissgolden ingresos?": {
+"actividades de inversión": 0,
+"Nuevos usuarios": 0,
+"Facturación": 1
+},
+
+"21. Kakova objetivo Swissgolden como una empresa comercial?": {
+"Aumento de la base de clientes": 1,
+"La utilidad": 0,
+"Apertura de nuevas oficinas": 0
+},
+
+"22. ¿Quién proporciona la facturación para la empresa?": {
+"Asalariados": 0,
+"Clientes": 1,
+"Socios": 0
+},
+
+"23. Lo que es necesario para el flujo de nuevos clientes a la empresa?": {
+"Una gran cantidad de oficinas en diferentes ciudades": 0,
+"Las grandes inversiones": 0,
+"Publicidad": 1
+},
+
+"24. S qué propósito la compañía ha introducido un programa de afiliados?": {
+"Para ampliar la esfera de influencia.": 0,
+"Para reducir al mínimo su propio presupuesto de publicidad": 1,
+"Para vender más oro.": 0
+},
+
+"25. ¿Cuáles son los beneficios de los socios de la cooperación de la empresa se retira la publicidad? Seleccione varias opciones": {
+"la oportunidad para crear su propio negocio de información en línea y comprar oro al precio más competitivo": 1,
+"Programa de afiliados le permite organizar su propia pirámide financiera.": 0,
+"La posibilidad de obtener un beneficio después de los costos iniciales mínimos.": 0
+},
+
+"26. ¿Quién puede convertirse en un socio de publicidad?": {
+"Alguien que tenga experiencia en la publicidad": 0,
+"Alguien que tenga experiencia en las compañías de redes": 0,
+"Cualquier adulto o persona capaz.": 1
+},
+
+"27. ¿Cuáles son los objetivos de negocio del socio de publicidad Swissgolden? Seleccionar más de una respuesta": {
+"inscribirse a tantas personas como sea posible": 0,
+" Asesorar personas que están interesados ​​en la cooperación con la empresa. La formación de nuevos socios en el programa de afiliados de la empresa. Creación de sus propios materiales de información sobre la empresa": 1,
+"Registro de clientes, envío de documentos a la empresa": 0
+},
+
+"28. Lo que se pone socio bonos publicidad Swissgolden?": {
+"Para el aumento de la base de clientes": 0,
+"Para cada nuevo cliente, que ha celebrado un contrato con la compañía.": 0,
+"Para el comercio, que es un socio de publicidad dispuestas para nosotros.": 1
+},
+
+"29. ¿Qué tipos de bonificaciones existentes en la empresa? Seleccionar más de una respuesta": {
+"Conjunto de lingotes de oro en la cantidad de 1.890 euros": 0,
+"Conjunto de lingotes de oro en la cantidad de 7.000, 27.500 y 98.000 euros": 1,
+"Conjunto de lingotes de oro en la cantidad de 7.425 euros": 0,
+"Conjunto de lingotes de oro en la cantidad de 24.750 euros": 0
+},
+
+"30. Como socio de la publicidad puede ordenar bono lingotes de oro?": {
+"Debe salir para el almacenamiento.": 0,
+"solamente vender y conseguir dinero": 0,
+"Elija cualquier servicio que la empresa ofrece a sus clientes.": 1
+}
+}
+
+
+
 }]

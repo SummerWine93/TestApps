@@ -56,7 +56,8 @@
     defaults = [NSUserDefaults standardUserDefaults];
     testBaseHelper = [[TestBaseHelper alloc] init];
 	
-	self.startButton.titleLabel.text = NSLocalizedString(@"testing.startButton", nil);
+	//self.startButton.titleLabel.text = NSLocalizedString(@"testing.startButton", nil);
+    [self.startButton setTitle:NSLocalizedString(@"testing.startButton", nil) forState:UIControlStateNormal];
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {

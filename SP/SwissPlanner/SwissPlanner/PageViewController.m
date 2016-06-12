@@ -69,6 +69,7 @@
 	//[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationItem.title = NSLocalizedString(@"education.title", nil);
 	
 	SWRevealViewController *revealViewController = self.revealViewController;
 	if ( revealViewController )

@@ -65,7 +65,13 @@
 			cell.secondCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section )] objectAtIndex:1];
 			cell.thirdCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section )] objectAtIndex:2];
 		//}
-	}
+    } else {
+        if ([reuseIdentifier isEqualToString: @"importantContentCell"]) {
+            cell.firstCellItem.text = NSLocalizedString(@"simpleTable.firstCellItem", nil);
+        } else if ([reuseIdentifier isEqualToString: @"contentCell"]) {
+            cell.firstCellItem.text = NSLocalizedString(@"simpleTable.secondCellItem", nil);
+        }
+    }
 	
 	return cell;
 }

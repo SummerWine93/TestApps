@@ -68,15 +68,22 @@ typedef enum {
 						  [NSArray arrayWithObjects:@"189", @"108", @"742.50", @"373.50", @"2 646", nil],
 						  nil];
 	
+    for (int i; i < [cellNames count]; i++) {
+        [self.segmentedControl setTitle:cellNames[i] forSegmentAtIndex:i];
+    }
+    
 	for (id segment in [self.segmentedControl subviews]) {
+        
 		for (id label in [segment subviews]) {
 			if ([label isKindOfClass:[UILabel class]]) {
 				UILabel *titleLabel = (UILabel *) label;
 				titleLabel.numberOfLines = 0;
-				//[titleLabel setTextColor:[UIColor redColor]];
+                //titleLabel.text = cellNames[i];
 			}
 		}
+        
 	}
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -130,6 +137,9 @@ typedef enum {
 		cell.thirdCellItem.backgroundColor = currentRowColor;
 		cell.fourthCellItem.backgroundColor = currentRowColor;
 	} else {
+        cell.firstCellItem.text = NSLocalizedString(@"prettyTable.firstCellItem", nil);
+        cell.secondCellItem.text = NSLocalizedString(@"prettyTable.secondCellItem", nil);
+        cell.thirdCellItem.text = NSLocalizedString(@"prettyTable.thirdCellItem", nil);
 		cell.fourthCellItem.text = [cellNames objectAtIndex:currentTableType];
 	}
 	

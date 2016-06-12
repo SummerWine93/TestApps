@@ -65,7 +65,7 @@
 
 "calculator.content.prepayment" = "Prepayment";
 
-"calculator.content.isDirect" = "is direct";
+"calculator.content.isDirect" = "Direct Partner";
 
 "calculator.content.formula1" = "\nPrepayment = €%@ - €%d(internet commission) = €%@\n\n";
 
@@ -79,7 +79,7 @@
 
 "calculator.content.formula6" = "Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n\n";
 
-"calculator.content.formula7" = "\nYou are wasting your money!";
+"calculator.content.formula7" = "\nYou are losing your money!";
 
 "calculator.content.formula8" = "Income = €%@ * %@ = €%@%@";
 
@@ -157,11 +157,11 @@
 
 "education.slide3.header" = "Terms of access to the leadership program";
 
-"education.slide3.block1.header" = "in a Main agreement";
+"education.slide3.block1.header" = "in the Main agreement";
 
 "education.slide3.block1.content" = "1. You need to close your Main table\n\n2. Your 2 attracted customers should also close their Main tables\n\n3. And their 2 attracted customers should do the same";
 
-"education.slide3.block2.header" = "in a VIP agreement";
+"education.slide3.block2.header" = "in the VIP agreement";
 
 "education.slide3.block2.content" = "1. You need to close your VIP table\n\n2. Your 2 attracted customers should also close their VIP tables";
 
@@ -241,7 +241,7 @@
 
 "education.slide8a.header" = "Income in the Leadership program";
 
-"education.slide8a.block1.header" = "Income = Bonus units х Price differences between your level and 1 level of Leadership program\nFrom direct partner. No matter what level of your direct partner";
+"education.slide8a.block1.header" = "Income from your direct partner (doesn't matter what's your partner's level is) = Bonus units х Price differences between your level and 1 level of Leadership program";
 
 "education.slide8a.block2.header" = "Main table of orders";
 
