@@ -26,11 +26,11 @@
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"tests_source" ofType:@"txt"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
-   // NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+
     NSDictionary *buffer = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil] objectAtIndex:0];
     currentTestsDictionary = [buffer objectForKey:([[buffer allKeys] containsObject:currentLanguage])?currentLanguage:@"en"];
     dictionaryIndexesArray = [[currentTestsDictionary allKeys]  sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-    //dictionaryIndexesArray = [currentTestsDictionary allKeys];
+
     return self;
 }
 
