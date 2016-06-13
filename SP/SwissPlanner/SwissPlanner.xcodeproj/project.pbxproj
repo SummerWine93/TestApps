@@ -39,6 +39,7 @@
 		CE3CAF751CF8773100B276CD /* PlatformTypeChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */; };
 		CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5519011CF326CF00196675 /* UISegmentedControl+Multiline.m */; };
 		CE58D4891D0AAE9B00F81961 /* OrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58D4881D0AAE9B00F81961 /* OrdersTableViewCell.m */; };
+		CE58D48C1D0EB21E00F81961 /* LanguageSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58D48B1D0EB21E00F81961 /* LanguageSelectionTableViewController.m */; };
 		CE5913801CBA566D008A3042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE59137F1CBA566D008A3042 /* main.m */; };
 		CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5913821CBA566D008A3042 /* AppDelegate.m */; };
 		CE5913891CBA566D008A3042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5913871CBA566D008A3042 /* Main.storyboard */; };
@@ -141,6 +142,8 @@
 		CE5519011CF326CF00196675 /* UISegmentedControl+Multiline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+Multiline.m"; sourceTree = "<group>"; };
 		CE58D4871D0AAE9B00F81961 /* OrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersTableViewCell.h; sourceTree = "<group>"; };
 		CE58D4881D0AAE9B00F81961 /* OrdersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersTableViewCell.m; sourceTree = "<group>"; };
+		CE58D48A1D0EB21E00F81961 /* LanguageSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSelectionTableViewController.h; sourceTree = "<group>"; };
+		CE58D48B1D0EB21E00F81961 /* LanguageSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageSelectionTableViewController.m; sourceTree = "<group>"; };
 		CE59137B1CBA566C008A3042 /* SwissPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwissPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE59137F1CBA566D008A3042 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE5913811CBA566D008A3042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 				CE59137E1CBA566D008A3042 /* Supporting Files */,
 				CE6BEC311CF48487009FB218 /* Settings.plist */,
 				CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */,
+				CE58D48A1D0EB21E00F81961 /* LanguageSelectionTableViewController.h */,
+				CE58D48B1D0EB21E00F81961 /* LanguageSelectionTableViewController.m */,
 				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
 				39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */,
 				39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */,
@@ -527,6 +532,7 @@
 				39546FFE1D060A1100710FD2 /* TestBaseHelper.m in Sources */,
 				CE05AADB1CD74E8800CB7A8E /* NavigationTableViewCell.m in Sources */,
 				CE5913801CBA566D008A3042 /* main.m in Sources */,
+				CE58D48C1D0EB21E00F81961 /* LanguageSelectionTableViewController.m in Sources */,
 				39C88B971D0E092700D932C3 /* LanguageHelper.m in Sources */,
 				CE05AAA61CD203F900CB7A8E /* PageContentWithMultipleTablesViewController.m in Sources */,
 				CEDA43881D002BDE00BB1AE0 /* TestTableViewCell.m in Sources */,

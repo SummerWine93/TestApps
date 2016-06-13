@@ -57,11 +57,11 @@ typedef enum {
 		[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 	}
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+    /*UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     
-    [self.view addGestureRecognizer:tap];
+    [self.view addGestureRecognizer:tap]; */
 	
 	bonusPointsArray = [NSArray arrayWithObjects:@0, @0, @100, @300, @1000, @2500, @5000, @10000, @25000, @50000, @100000, @200000, nil];
 	
@@ -131,13 +131,24 @@ typedef enum {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 3;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == languagesAvailable) {
-        [self performSegueWithIdentifier:@"showTheLanguages" sender:self];
+	
+	NSLog(@"OK");
+    if (indexPath.row == language) {
+        //[self performSegueWithIdentifier:@"showTheLanguages" sender:self];
     }
+	//[self dismissKeyboard]; */
+}
+
+- (IBAction)tableTapped:(id)sender {
+	UIView *view = (UIView *)sender;
+	if (view.tag == language) {
+		//[self performSegueWithIdentifier:@"showTheLanguages" sender:self];
+	}
+	[self dismissKeyboard];
 }
 
 #pragma mark - Text field delegate methods

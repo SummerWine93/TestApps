@@ -23,6 +23,7 @@
 	[self.window setTintColor:[UIColor whiteColor]];
     NSString * language = [[[NSLocale preferredLanguages] objectAtIndex:0] substringToIndex:2];
     LanguageHelper *helper = [[LanguageHelper alloc] init];
+	[helper setCurrentLanguage:language];
     NSLog(@"%@", [helper getCurrentLanguage]);
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //[defaults setObject:language forKey:@"currentLanguage"];
