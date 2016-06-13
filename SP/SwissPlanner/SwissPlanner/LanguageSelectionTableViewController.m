@@ -56,7 +56,19 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[languageHelper setCurrentLanguage:[[languageHelper getAllTheLanguages] objectAtIndex:indexPath.row]];
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Title" message:@"You need to restart the app in order to see the changes. Do you want to restart the app?" preferredStyle:UIAlertControllerStyleAlert];
 	
+	UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+		exit(0);
+	}];
+	[alertController addAction:ok];
+	[alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+	
+	
+	[self presentViewController:alertController animated:YES completion:nil];
+	
+	alertController.view.tintColor = [UIColor darkGrayColor];
 }
 
 

@@ -117,6 +117,17 @@ typedef enum {
     }
 }
 
+- (NSInteger) getFontSize {
+	NSString *platform = [PlatformTypeChecker platformType];
+	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S Plus"]) {
+		return 16;
+	} else if ([platform isEqualToString:@"iPhone 4"]||[platform isEqualToString:@"iPhone 4S"]||[platform isEqualToString:@"Simulator"]){
+		return 10;
+	} else {
+		return 14;
+	}
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -207,8 +218,10 @@ typedef enum {
                 break;
         }
         if (cellText != nil) {
+			NSInteger size = [self getFontSize];
             [cell contentLabel].text = cellText;
 			[cell titleLabel].text = titleText;
+			//cell.titleLabel.font = [UIFont systemFontOfSize:[self getFontSize]];
         }
 		
         return cell;

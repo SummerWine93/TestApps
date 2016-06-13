@@ -82,6 +82,7 @@ typedef enum {
 	self.nameTitle.text = NSLocalizedString(@"settings.cell1.title", nil);
 	self.pointsTitle.text = NSLocalizedString(@"settings.cell2.title", nil);
 	self.isInProgramTitle.text = NSLocalizedString(@"settings.cell3.title", nil);
+	self.languageTitle.text = NSLocalizedString(@"settings.cell4.title", nil);
 	
 	self.nameLabel.placeholder = NSLocalizedString(@"settings.cell1.placeholder", nil);
 	self.pointsLabel.placeholder = NSLocalizedString(@"settings.cell2.placeholder", nil);
@@ -131,7 +132,7 @@ typedef enum {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

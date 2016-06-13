@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *pointsTitle;
 @property (weak, nonatomic) IBOutlet TextFieldValidator *pointsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *isInProgramTitle;
+@property (weak, nonatomic) IBOutlet UILabel *languageTitle;
 
 @property (weak, nonatomic) IBOutlet UIButton *checkbox;
 

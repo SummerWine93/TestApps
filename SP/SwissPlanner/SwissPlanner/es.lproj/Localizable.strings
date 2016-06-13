@@ -29,11 +29,11 @@
 
 "cabinet.cellcontent.1.placeholder" = "Nombre del usuario";
 
-"cabinet.cellcontent.2.title" = "Nivel del programa de líderes:";
+"cabinet.cellcontent.2.title" = "Nivel de líderes:";
 
 "cabinet.cellcontent.3.title" = "Mis Unidades Bono:";
 
-"cabinet.cellcontent.4.title" = "Unidades para el siguente nivel:";
+"cabinet.cellcontent.4.title" = "Para el siguente nivel:";
 
 "cabinet.cellcontent.2_3.none" = "Nada";
 
@@ -73,7 +73,7 @@
 
 "calculator.content.formula3" = "€%@ - €%@ (reinversión) = €%@\n\n";
 
-"calculator.content.formula4" = "€%@  - 10%% (comisión) = €%@\n\n";
+"calculator.content.formula4" = "€%@  - 10%% (comisión) = €%@ (сompra de oro)\n\n";
 
 "calculator.content.formula5" = "€%@ / 500 = %@ las unidades bono\n\n";
 
@@ -81,7 +81,7 @@
 
 "calculator.content.formula7" = "\nUd esta perdiendo su dinero!";
 
-"calculator.content.formula8" = "Ingresos = €%@ * %@ = €%@%@";
+"calculator.content.formula8" = "Ingresos = €%@ * %@ = €%@ (сompra de oro) %@";
 
 /* Rewards */
 
@@ -122,6 +122,8 @@
 "settings.cell2.title" = "Las unidades bono";
 
 "settings.cell3.title" = "En el programa de líderes";
+
+"settings.cell4.title" = "Idioma";
 
 "settings.sectionTitle" = "Ajustes del usuario";
 

@@ -73,7 +73,7 @@
 
 "calculator.content.formula3" = "€%@ - €%@ (reinvestment) = €%@\n\n";
 
-"calculator.content.formula4" = "€%@  - 10%% (comission) = €%@\n\n";
+"calculator.content.formula4" = "€%@  - 10%% (commission) = €%@ (buying gold)\n\n";
 
 "calculator.content.formula5" = "€%@ / 500 = %@ bonus units\n\n";
 
@@ -81,7 +81,7 @@
 
 "calculator.content.formula7" = "\nYou are losing your money!";
 
-"calculator.content.formula8" = "Income = €%@ * %@ = €%@%@";
+"calculator.content.formula8" = "Income = €%@ * %@ = €%@ (buying gold) %@";
 
 /* Rewards */
 
@@ -122,6 +122,8 @@
 "settings.cell2.title" = "Bonus units";
 
 "settings.cell3.title" = "In leadership program";
+
+"settings.cell4.title" = "Languages";
 
 "settings.sectionTitle" = "User settings";
 

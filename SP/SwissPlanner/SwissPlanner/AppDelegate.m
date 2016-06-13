@@ -21,12 +21,35 @@
 
 	[NSThread sleepForTimeInterval:3.0];
 	[self.window setTintColor:[UIColor whiteColor]];
+	
+	[[UIView appearanceWhenContainedIn:[UIAlertController class], nil] setTintColor:[UIColor blackColor]];
+	
     NSString * language = [[[NSLocale preferredLanguages] objectAtIndex:0] substringToIndex:2];
     LanguageHelper *helper = [[LanguageHelper alloc] init];
-	[helper setCurrentLanguage:language];
+	//[helper setCurrentLanguage:language];
     NSLog(@"%@", [helper getCurrentLanguage]);
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //[defaults setObject:language forKey:@"currentLanguage"];
+	
+	
+	
+	NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
+	if ([version isEqualToString:@"1.4"] ) {
+		//if new version of the app
+		//Clean user defaults
+		NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+		if (![[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce1"])
+		{
+			[[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+			
+			
+			[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce1"];
+			[[NSUserDefaults standardUserDefaults] synchronize];
+		}
+		
+				//[[NSUserDefaults standardUserDefaults] setObject:version forKey:@"appVersion"];
+	}
+	
 	
 	return YES;
 }

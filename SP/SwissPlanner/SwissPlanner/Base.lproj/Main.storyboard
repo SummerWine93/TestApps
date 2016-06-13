@@ -4041,11 +4041,17 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="11" width="180" height="21"/>
+                                                    </variation>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your carier points" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-C3-iWw" customClass="TextFieldValidator">
                                                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="196" y="0.0" width="188" height="43"/>
+                                                    </variation>
                                                     <connections>
                                                         <outlet property="delegate" destination="obk-ld-jSP" id="Szc-My-HZ8"/>
                                                         <outlet property="presentInView" destination="6ng-sc-iEi" id="Rkf-Gi-kJd"/>
@@ -4057,17 +4063,21 @@
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="height" secondItem="xXI-YR-dm8" secondAttribute="height" id="Yvc-SI-TLe"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="leading" secondItem="abq-NF-vG0" secondAttribute="trailing" constant="8" id="YzI-GG-YyK"/>
                                                 <constraint firstItem="abq-NF-vG0" firstAttribute="width" secondItem="xXI-YR-dm8" secondAttribute="width" multiplier="0.45" id="buo-v4-wF1"/>
+                                                <constraint firstItem="abq-NF-vG0" firstAttribute="width" secondItem="xXI-YR-dm8" secondAttribute="width" multiplier="0.5" id="hQW-Iy-tGs"/>
                                                 <constraint firstItem="Q2O-C3-iWw" firstAttribute="centerY" secondItem="xXI-YR-dm8" secondAttribute="centerY" id="xOn-WI-AcD"/>
                                                 <constraint firstItem="abq-NF-vG0" firstAttribute="centerY" secondItem="xXI-YR-dm8" secondAttribute="centerY" id="yrp-vg-Gba"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="abq-NF-vG0" secondAttribute="leading" id="zRX-Ug-MCz"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="hQW-Iy-tGs"/>
                                                     <exclude reference="Yvc-SI-TLe"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="constraints">
+                                                    <exclude reference="buo-v4-wF1"/>
+                                                    <include reference="hQW-Iy-tGs"/>
                                                     <include reference="Yvc-SI-TLe"/>
                                                 </mask>
                                             </variation>
@@ -4150,6 +4160,7 @@
                     <connections>
                         <outlet property="checkbox" destination="ZD5-Px-FfX" id="gFi-z3-zEj"/>
                         <outlet property="isInProgramTitle" destination="ylH-6b-T9T" id="nBY-ph-gqK"/>
+                        <outlet property="languageTitle" destination="NLJ-Cr-Qkw" id="WCc-fe-835"/>
                         <outlet property="nameLabel" destination="lwT-KB-O2u" id="0Ip-Fe-2Rv"/>
                         <outlet property="nameTitle" destination="L6x-5O-yxX" id="6Ad-51-A1h"/>
                         <outlet property="pointsLabel" destination="Q2O-C3-iWw" id="MbQ-Jc-2R9"/>

@@ -50,8 +50,11 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([languagesAvailable containsObject:newLanguage]) {
         [defaults setObject:newLanguage forKey:@"appLanguage"];
+		[defaults setObject:[NSArray arrayWithObjects:newLanguage, nil] forKey:@"AppleLanguages"];
+		
     } else {
         [defaults setObject:[languagesAvailable objectAtIndex:0] forKey:@"appLanguage"];
+		[defaults setObject:[NSArray arrayWithObjects:[languagesAvailable objectAtIndex:0], nil] forKey:@"AppleLanguages"];
     }
 }
 
