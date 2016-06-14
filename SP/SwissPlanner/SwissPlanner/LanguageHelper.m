@@ -35,12 +35,12 @@
 
 - (NSString *) getCurrentLanguage{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *currentLanguage = [defaults objectForKey:@"appLanguage"];
+    NSString *currentLanguage = [defaults objectForKey:@"applicationLanguage"];
     
     if (!currentLanguage) {
         NSString * systemLanguage = [[[NSLocale preferredLanguages] objectAtIndex:0] substringToIndex:2];
         [self setCurrentLanguage:systemLanguage];
-        return [self getCurrentLanguage];
+        currentLanguage = [self getCurrentLanguage];
     }
     
     return currentLanguage;
@@ -49,11 +49,13 @@
 - (void) setCurrentLanguage: (NSString *) newLanguage {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([languagesAvailable containsObject:newLanguage]) {
-        [defaults setObject:newLanguage forKey:@"appLanguage"];
-		[defaults setObject:[NSArray arrayWithObjects:newLanguage, nil] forKey:@"AppleLanguages"];
+        [defaults setObject:newLanguage forKey:@"applicationLanguage"];
+        NSArray *lang = [NSArray arrayWithObjects:newLanguage, nil];
+		[defaults setObject: lang forKey:@"AppleLanguages"];
 		
     } else {
-        [defaults setObject:[languagesAvailable objectAtIndex:0] forKey:@"appLanguage"];
+        [defaults setObject:@"en" forKey:@"applicationLanguage"];
+         NSArray *lang = [NSArray arrayWithObjects:@"en", nil];
 		[defaults setObject:[NSArray arrayWithObjects:[languagesAvailable objectAtIndex:0], nil] forKey:@"AppleLanguages"];
     }
 }
