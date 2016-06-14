@@ -171,7 +171,7 @@
 
 "education.slide3.block1.header" = "En el contrato principal";
 
-"education.slide3.block1.content" = "1. Ud. Tiene que cerrar su mesa principal\n\n2. Sus 2 personas invitadas  tambien tienen  cerrar sus mesas principales\n\n3. And their 2 attracted customers should do the same";
+"education.slide3.block1.content" = "1. Ud. Tiene que cerrar su mesa principal\n\n2. Sus 2 personas invitadas  tambien tienen  cerrar sus mesas principales\n\n3.  Sus 2 personas invitadas  tambien tienen cerrar sus mesas principales";
 
 "education.slide3.block2.header" = "En el contrato VIP";
 
@@ -187,7 +187,7 @@
 
 "education.slide4.block2.header" = "Mesa principal de pedidos";
 
-"education.slide4.block2.content" = "2100€ - 10% = 1890€ (circulación de mercancías)\n1890€ / 500 = 3.78 unidades bono\nud va a obtener para una mesa Principal cerrada";
+"education.slide4.block2.content" = "2100€ - 10% = 1890€ (circulación de mercancías)\n1890€ / 500 = 3.78 unidades bono\nUd. va a obtener para una mesa Principal cerrada";
 
 "education.slide4.block3.header" = "Mesa VIP de pedidos";
 
@@ -197,15 +197,15 @@
 
 "education.slide5.header" = "Ingresos en el programa de líderes";
 
-"education.slide5.block1.header" = "Ingresos= precio para 1 unidad bono x Unidades bono";
+"education.slide5.block1.header" = "Ingresos = precio para 1 unidad bono x Unidades bono";
 
 "education.slide5.block2.header" = "Mesa VIP de pedidos";
 
-"education.slide5.block2.content" = "On the 1st level of the leadership program You earn €15 for 1 bonus unit.\n€15 х 3.78 = €56.70 \nOn the 2nd level of the leadership program You earn €20 for 1 bonus unit.\n€20 х 3.78 = €75.60";
+"education.slide5.block2.content" = "En el 1 nivel del programa de líderes Ud. gana €15 para 1 unidad bono.\n€15 х 3.78 = €56.70 \nEn el 2 nivel del programa de líderes Ud. gana €20 para 1 unidad bono.\n€20 х 3.78 = €75.60";
 
 "education.slide5.block3.header" = "VIP table of orders";
 
-"education.slide5.block3.content" = "En el 1 nivel del programa de líderes ud gana €15 para 1 unidad bono.\n€15 х 14.85 = €222.75 \nEn el 2 nivel del programa de líderes Ud. gana €20 para 1 unidad bono.\n€20 х 14.85 = €297.00";
+"education.slide5.block3.content" = "En el 1 nivel del programa de líderes Ud. gana €15 para 1 unidad bono.\n€15 х 14.85 = €222.75 \nEn el 2 nivel del programa de líderes Ud. gana €20 para 1 unidad bono.\n€20 х 14.85 = €297.00";
 
 /* Education Slide 6 */
 
