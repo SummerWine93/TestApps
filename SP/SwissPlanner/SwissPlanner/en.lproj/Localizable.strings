@@ -131,6 +131,16 @@
 
 "settings.cell2.placeholder" = "Your carier points";
 
+/* Language Settings */
+
+"language.settings.alert.title" = "Language changing";
+
+"language.settings.alert.text" = "You need to restart the app in order to see the changes. Do you want to shut down the app?";
+
+"language.settings.alert.ok" = "OK";
+
+"language.settings.alert.cancel" = "Cancel";
+
 /* Education */
 
 "education.title" = "Education";

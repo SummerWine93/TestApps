@@ -57,13 +57,13 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[languageHelper setCurrentLanguage:[[languageHelper getAllTheLanguages] objectAtIndex:indexPath.row]];
-	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Title" message:@"You need to restart the app in order to see the changes. Do you want to restart the app?" preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle: NSLocalizedString(@"language.settings.alert.title", nil) message:NSLocalizedString(@"language.settings.alert.text", nil) preferredStyle:UIAlertControllerStyleAlert];
 	
-	UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+	UIAlertAction* ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"language.settings.alert.ok", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 		exit(0);
 	}];
 	[alertController addAction:ok];
-	[alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+	[alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"language.settings.alert.cancel", nil) style:UIAlertActionStyleCancel handler:nil]];
 	
 	
 	[self presentViewController:alertController animated:YES completion:nil];

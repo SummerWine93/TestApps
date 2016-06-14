@@ -79,7 +79,7 @@
 
 "calculator.content.formula6" = "Diferencias de precios entre los niveles = €%d (el coste de puntos para su nivel) - €%d (el coste de puntos para el nivel de su socio) = €%@\n\n";
 
-"calculator.content.formula7" = "\nUd esta perdiendo su dinero!";
+"calculator.content.formula7" = "\nUd. esta perdiendo su dinero!";
 
 "calculator.content.formula8" = "Ingresos = €%@ * %@ = €%@ (сompra de oro) %@";
 
@@ -130,6 +130,16 @@
 "settings.cell1.placeholder" = "Su nombre completo";
 
 "settings.cell2.placeholder" = "Sus unidades de carrera";
+
+/* Language Settings */
+
+"language.settings.alert.title" = "Cambio de Idioma";
+
+"language.settings.alert.text" = ".? Ud. tiene que reiniciar la aplicación para ver los cambios ¿Quiere apagar la aplicación";
+
+"language.settings.alert.ok" = "OK";
+
+"language.settings.alert.cancel" = "Cancelar";
 
 /* Education */
 
@@ -195,7 +205,7 @@
 
 "education.slide5.block3.header" = "VIP table of orders";
 
-"education.slide5.block3.content" = "En el 1 nivel del programa de líderes ud gana €15 para 1 unidad bono.\n€15 х 14.85 = €222.75 \nEn el 2 nivel del programa de líderes Ud gana €20 para 1 unidad bono.\n€20 х 14.85 = €297.00";
+"education.slide5.block3.content" = "En el 1 nivel del programa de líderes ud gana €15 para 1 unidad bono.\n€15 х 14.85 = €222.75 \nEn el 2 nivel del programa de líderes Ud. gana €20 para 1 unidad bono.\n€20 х 14.85 = €297.00";
 
 /* Education Slide 6 */
 
