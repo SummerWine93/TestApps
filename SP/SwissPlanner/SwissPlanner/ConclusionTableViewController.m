@@ -32,12 +32,19 @@ typedef enum {
 	currentTableType = mainTable;
 	
     cellNames = [NSArray arrayWithObjects:
-                 NSLocalizedString(@"calculator.order.mainOrder", nil),
-                 NSLocalizedString(@"calculator.order.preVipOrder", nil),
-                 NSLocalizedString(@"calculator.order.vipOrder", nil),
-                 NSLocalizedString(@"calculator.order.preVipPlusOrder", nil),
-                 NSLocalizedString(@"calculator.order.vipPlusOrder", nil),
+                 [NSString stringWithFormat:NSLocalizedString(@"calculator.order.mainOrder", nil)],
+                 [NSString stringWithFormat:NSLocalizedString(@"calculator.order.preVipOrder", nil)],
+                 [NSString stringWithFormat:NSLocalizedString(@"calculator.order.vipOrder", nil)],
+                 [NSString stringWithFormat:NSLocalizedString(@"calculator.order.preVipPlusOrder", nil)],
+                 [NSString stringWithFormat:NSLocalizedString(@"calculator.order.vipPlusOrder", nil)],
                  nil];
+    /*cellNames = [NSArray arrayWithObjects:
+                 @"1",
+                 @"2",
+                 @"3",
+                 @"4",
+                 @"5",
+                 nil];*/
     
     self.headerBlockLabel.text = NSLocalizedString(@"education.slideConclusion.header", nil);
 	
@@ -67,10 +74,11 @@ typedef enum {
 						  [NSArray arrayWithObjects:@"185.22", @"105.84", @"727.65", @"366.03", @"2 593.08", nil],
 						  [NSArray arrayWithObjects:@"189", @"108", @"742.50", @"373.50", @"2 646", nil],
 						  nil];
-	
+	/*
     for (int i; i < [cellNames count]; i++) {
         [self.segmentedControl setTitle:cellNames[i] forSegmentAtIndex:i];
-    }
+        NSLog(@"%@", cellNames[i]);
+    } */
     
 	for (id segment in [self.segmentedControl subviews]) {
         
