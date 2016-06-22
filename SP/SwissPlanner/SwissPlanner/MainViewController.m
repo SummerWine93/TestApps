@@ -43,6 +43,12 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.backgroundView = [UIView new];
+    self.tableView.backgroundView.backgroundColor = [UIColor clearColor];
+    
+   
+    
     [self updateViewBackground];
 	
 	// setting navigation bar

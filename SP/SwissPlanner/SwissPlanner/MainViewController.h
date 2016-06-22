@@ -12,6 +12,7 @@
 @interface MainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewB;
 
 - (IBAction)openOrderButtonCLicked:(id)sender;
 @end
