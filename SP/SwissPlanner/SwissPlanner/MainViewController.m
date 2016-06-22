@@ -203,6 +203,8 @@ typedef enum {
         NSString *cellText;
 		NSString *titleText;
 		
+        [cell setBackgroundColor:[UIColor clearColor]];
+        
         switch (indexPath.row) {
             case userNameCell:
 				titleText = @"";

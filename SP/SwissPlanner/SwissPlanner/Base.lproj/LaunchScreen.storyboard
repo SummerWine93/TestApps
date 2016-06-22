@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -54,7 +54,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eleaboychulk" translatesAutoresizingMaskIntoConstraints="NO" id="175-wq-fyd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eleaboychulk" translatesAutoresizingMaskIntoConstraints="NO" id="175-wq-fyd">
                                 <rect key="frame" x="0.0" y="202" width="600" height="496"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="175-wq-fyd" secondAttribute="height" multiplier="40:21" id="4j1-gd-zqn"/>
@@ -78,6 +78,7 @@
                             <constraint firstItem="175-wq-fyd" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Dfn-Lv-p5C"/>
                             <constraint firstItem="mdA-tg-eHC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Iv9-Ho-vRq"/>
                             <constraint firstItem="mdA-tg-eHC" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="L56-3c-hTd"/>
+                            <constraint firstItem="175-wq-fyd" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="NHS-8h-vxz"/>
                             <constraint firstItem="6Zn-Ba-rMf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.4" id="Wkm-4C-GWn"/>
                             <constraint firstItem="6Zn-Ba-rMf" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="hYn-Rl-LzJ"/>
                             <constraint firstItem="6Zn-Ba-rMf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pwx-MO-aGa"/>
@@ -86,7 +87,14 @@
                             <constraint firstItem="cON-gK-AFX" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="ukO-mM-0Rm"/>
                             <constraint firstItem="cON-gK-AFX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="urM-pJ-tQy"/>
                             <constraint firstItem="mdA-tg-eHC" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="utd-NU-MLe"/>
+                            <constraint firstItem="6Zn-Ba-rMf" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="v2C-OF-HZT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NHS-8h-vxz"/>
+                                <exclude reference="v2C-OF-HZT"/>
+                            </mask>
+                        </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="mdA-tg-eHC"/>
@@ -99,15 +107,23 @@
                                 <include reference="L56-3c-hTd"/>
                                 <include reference="qWw-gY-obU"/>
                                 <include reference="utd-NU-MLe"/>
-                                <include reference="Wkm-4C-GWn"/>
-                                <include reference="hYn-Rl-LzJ"/>
-                                <include reference="pwx-MO-aGa"/>
-                                <include reference="A7e-7f-Ll9"/>
-                                <include reference="Dfn-Lv-p5C"/>
-                                <include reference="qzQ-un-e1W"/>
                                 <include reference="8HR-EO-h73"/>
                                 <include reference="ukO-mM-0Rm"/>
                                 <include reference="urM-pJ-tQy"/>
+                                <include reference="A7e-7f-Ll9"/>
+                                <include reference="Dfn-Lv-p5C"/>
+                                <include reference="qzQ-un-e1W"/>
+                                <include reference="Wkm-4C-GWn"/>
+                                <include reference="hYn-Rl-LzJ"/>
+                                <include reference="pwx-MO-aGa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Dfn-Lv-p5C"/>
+                                <include reference="NHS-8h-vxz"/>
+                                <exclude reference="hYn-Rl-LzJ"/>
+                                <include reference="v2C-OF-HZT"/>
                             </mask>
                         </variation>
                     </view>
