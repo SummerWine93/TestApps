@@ -30,11 +30,6 @@
 			" London, Sankt-Petersburg ": 0
 		},
 
-		"6. Where are situated training center of the company?": {
-			"London ": 0,
-			"Stuttgart ": 0,
-			"Sankt-Petersburg": 1
-		},
 
 		"7. Where was registered Swissgolden company? ": {
 			"Cyprus offshore ": 0,
@@ -211,12 +206,6 @@
 "Londres, Stuttgart": 1,
 "Stuttgart": 0,
 "Londres, San Petersburgo": 0
-},
-
-"6. ¿Dónde está el centro de estudios de la empresa?": {
-"Londres": 0,
-"Stuttgart": 0,
-"San Petersburgo": 1
 },
 
 "7. ¿Dónde está registrada la companía Swissgolden?": {

@@ -7,10 +7,21 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CalculatorViewController.h"
 
 @interface SwissPlannerTests : XCTestCase
 
+@property (nonatomic) CalculatorViewController *vcToTest;
+
 @end
+
+@interface CalculatorViewController (Test)
+
+- (NSInteger) getFontSize;
+- (void) updateViewBackground;
+
+@end
+
 
 @implementation SwissPlannerTests
 
@@ -33,6 +44,7 @@
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
+		[self.vcToTest updateViewBackground];
     }];
 }
 

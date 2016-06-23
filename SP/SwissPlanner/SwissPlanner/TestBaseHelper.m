@@ -20,7 +20,6 @@
     if (self == nil) {
         self = [super init];
     }
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     languageHelper = [[LanguageHelper alloc] init];
     currentLanguage = [languageHelper getCurrentLanguage];
     

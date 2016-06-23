@@ -24,7 +24,6 @@
     return self;
 }
 
-
 - (NSArray *) getAllTheLanguages{
     return languagesAvailable;
 }
@@ -54,9 +53,10 @@
 		[defaults setObject: lang forKey:@"AppleLanguages"];
 		
     } else {
-        [defaults setObject:@"en" forKey:@"applicationLanguage"];
-         NSArray *lang = [NSArray arrayWithObjects:@"en", nil];
-		[defaults setObject:[NSArray arrayWithObjects:[languagesAvailable objectAtIndex:0], nil] forKey:@"AppleLanguages"];
+        NSString *baseLang = @"en";
+        [defaults setObject:baseLang forKey:@"applicationLanguage"];
+         NSArray *baseLangsArray = [NSArray arrayWithObjects:baseLang, nil];
+		[defaults setObject:baseLangsArray forKey:@"AppleLanguages"];
     }
 }
 

@@ -459,7 +459,7 @@
 				TargetAttributes = {
 					CE59137A1CBA566C008A3042 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = F2NHY2ECRQ;
+						DevelopmentTeam = RCC8C9ZN9J;
 					};
 					CE5913931CBA566E008A3042 = {
 						CreatedOnToolsVersion = 7.3;
@@ -711,7 +711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ElenaBoychuk.SwissPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -727,7 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ElenaBoychuk.SwissPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

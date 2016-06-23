@@ -202,7 +202,7 @@ typedef enum {
 				break;
 				
 			case EBSite:
-				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://elenaboychuk.com/"]];
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.facebook.com/olena.boychuk.1"]];
 				break;
 			case FB:
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.facebook.com/Swissgolden.Inc/?pnref=lhc"]];

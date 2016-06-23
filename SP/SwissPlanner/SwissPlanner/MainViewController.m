@@ -43,6 +43,12 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.backgroundView = [UIView new];
+    self.tableView.backgroundView.backgroundColor = [UIColor clearColor];
+    
+   
+    
     [self updateViewBackground];
 	
 	// setting navigation bar
@@ -197,6 +203,8 @@ typedef enum {
         NSString *cellText;
 		NSString *titleText;
 		
+        [cell setBackgroundColor:[UIColor clearColor]];
+        
         switch (indexPath.row) {
             case userNameCell:
 				titleText = @"";
@@ -218,7 +226,7 @@ typedef enum {
                 break;
         }
         if (cellText != nil) {
-			NSInteger size = [self getFontSize];
+			//NSInteger size = [self getFontSize];
             [cell contentLabel].text = cellText;
 			[cell titleLabel].text = titleText;
 			//cell.titleLabel.font = [UIFont systemFontOfSize:[self getFontSize]];
