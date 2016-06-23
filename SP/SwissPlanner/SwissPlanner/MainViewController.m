@@ -226,7 +226,7 @@ typedef enum {
                 break;
         }
         if (cellText != nil) {
-			NSInteger size = [self getFontSize];
+			//NSInteger size = [self getFontSize];
             [cell contentLabel].text = cellText;
 			[cell titleLabel].text = titleText;
 			//cell.titleLabel.font = [UIFont systemFontOfSize:[self getFontSize]];

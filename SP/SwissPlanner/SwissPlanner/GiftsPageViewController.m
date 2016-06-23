@@ -12,8 +12,6 @@
 
 #import "PlatformTypeChecker.h"
 
-#define MAX_NUM 3
-
 typedef enum {
 	mainImage,
 	labelText
@@ -40,9 +38,6 @@ typedef enum {
                    [NSArray arrayWithObjects:@"gift level 7-11", NSLocalizedString(@"rewards.7-11Levels", nil), nil],
 				   [NSArray arrayWithObjects:@"gift no level", NSLocalizedString(@"rewards.cruise", nil), nil],
 				   nil];
-	/*
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];*/
     
     [self updateViewBackground];
     
@@ -171,15 +166,5 @@ typedef enum {
     }
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

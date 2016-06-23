@@ -19,8 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	//self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
-    [self updateViewBackground];
+     [self updateViewBackground];
 	
 	// setting navigation bar
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
@@ -41,24 +40,16 @@
 		[self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
 		[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 	}
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    // before rotation
-    
     [coordinator animateAlongsideTransition:^(id  _Nonnull context) {
-        // during rotation
         [self updateViewBackground];
-    } completion:^(id  _Nonnull context) {
-        
-        // after rotation
-    }];
+    } completion:^(id  _Nonnull context) {}];
 }
 
 - (void) updateViewBackground {
@@ -75,16 +66,5 @@
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

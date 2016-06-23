@@ -22,8 +22,6 @@
     BOOL orderSelecting;
     
     NSInteger selectedPlan;
-	NSInteger myLevel;
-	NSInteger partnersLevel;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *yourLevelPickerLabel;
@@ -303,7 +301,7 @@
 	// Showing the prepayment value
     NSInteger internetCommission = (selectedPlan>1)?50:20;
 	NSNumber *prepaymentValue =  [NSNumber numberWithInteger:([[prepaymentValuesArray objectAtIndex:selectedPlan] integerValue] - internetCommission)];
-	NSString *prepaymentString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula1", nil), [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
+	//NSString *prepaymentString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula1", nil), [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
     
     
     // Showing the turnover value
