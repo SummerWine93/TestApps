@@ -81,6 +81,7 @@
 		39546FFA1D06096E00710FD2 /* tests_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tests_source.txt; sourceTree = "<group>"; };
 		39546FFC1D060A1100710FD2 /* TestBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBaseHelper.h; sourceTree = "<group>"; };
 		39546FFD1D060A1100710FD2 /* TestBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBaseHelper.m; sourceTree = "<group>"; };
+		398EADB91D1C87D500351BE9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		39AB1C661D017CDA00A1622C /* TestsStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsStartingViewController.h; sourceTree = "<group>"; };
 		39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsStartingViewController.m; sourceTree = "<group>"; };
 		39C88B951D0E092700D932C3 /* LanguageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageHelper.h; sourceTree = "<group>"; };
@@ -475,6 +476,7 @@
 				en,
 				Base,
 				es,
+				"zh-Hans",
 			);
 			mainGroup = CE5913721CBA566C008A3042;
 			productRefGroup = CE59137C1CBA566C008A3042 /* Products */;
@@ -608,6 +610,7 @@
 				CE5A3F841CEF58FF00B8C8E9 /* en */,
 				CE5A3F861CEF590400B8C8E9 /* Base */,
 				39F91F7A1D0BF8E000D0B05E /* es */,
+				398EADB91D1C87D500351BE9 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
