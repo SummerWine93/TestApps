@@ -40,7 +40,7 @@ typedef enum {
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"]
 																   style:UIBarButtonItemStylePlain
 																  target:self
-																  action:nil];
+																  action:@selector(dismissKeyboard)];
 	[self updateViewBackground];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -171,6 +171,7 @@ typedef enum {
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
+    
     // Store the user data
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -230,6 +231,11 @@ typedef enum {
 	checkBoxSelected = !checkBoxSelected; /* Toggle */
 	[_checkbox setSelected:checkBoxSelected];
 	
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    [self.view endEditing:YES];
 }
 
 
