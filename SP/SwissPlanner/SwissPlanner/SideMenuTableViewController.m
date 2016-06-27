@@ -301,12 +301,19 @@ typedef enum {
 
 - (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 			
-	UIView *back = [UIView new];
-	back.backgroundColor = [UIColor colorWithRed:(215/255.0)
-										   green:(148/255.0)
-											blue:(92/255.0)
-										   alpha:1];
-	cell.selectedBackgroundView = back;
+	//UIView *back = [UIView new];
+    cell.backgroundColor = [UIColor colorWithRed:(135/255.0)
+                                           green:(98/255.0)
+                                            blue:(80/255.0)
+                                           alpha:1];
+    UIView *back = [UIView new];
+    back.backgroundColor = [UIColor colorWithRed:(215/255.0)
+                                           green:(148/255.0)
+                                            blue:(92/255.0)
+                                           alpha:1];
+    cell.selectedBackgroundView = back;
+    
+	//cell.selectedBackgroundView = back;
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
