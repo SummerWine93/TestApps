@@ -175,14 +175,21 @@ typedef enum {
 
 - (void) updateViewBackground {
 	NSString *platform = [PlatformTypeChecker platformType];
-	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]) {
 		self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)_iphone6"]];
 		
 		UIImage *back = [[UIImage imageNamed:@"nav_bar_iphone6"]
 						 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
 		[self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
 		
-	} else {
+	}
+    else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)_iphone6"]];
+        UIImage *back = [[UIImage imageNamed:@"nav_bar_iphone6"]
+                         resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+        [self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
+    }
+    else {
 		self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(gifts)"]];
 		[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	}
