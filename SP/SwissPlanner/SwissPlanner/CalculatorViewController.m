@@ -71,7 +71,7 @@
 
 	// making fancy corners
 	self.calculateButton.clipsToBounds = YES;
-	self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
+	//self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
 	self.textDisplayView.layer.cornerRadius = self.textDisplayView.frame.size.width / 40;
 	self.pickerLevel.layer.cornerRadius = 5;
 	self.pickerPartnerLevel.layer.cornerRadius = 5;
@@ -146,11 +146,18 @@
 }
 
 - (void) updateViewBackground {
+    self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
     NSString *platform = [PlatformTypeChecker platformType];
-    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"Simulator"]) {
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_iphone6"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
-    } else {
+    }
+    else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
+        self.calculateButton.layer.cornerRadius = 140 / 2.0 ;
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    }
+    else{
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
