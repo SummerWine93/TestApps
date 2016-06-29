@@ -59,6 +59,12 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.tableView.alwaysBounceVertical = NO;
+    
+    self.tableView.backgroundView = [UIView new];
+    self.tableView.backgroundView.backgroundColor = [UIColor colorWithRed:(135/255.0)
+                                                                    green:(98/255.0)
+                                                                     blue:(80/255.0)
+                                                                    alpha:1];
 	
 	lastSelectedIndexPath = [NSIndexPath indexPathForRow:1 inSection:0];
 	
@@ -301,12 +307,16 @@ typedef enum {
 
 - (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 			
-	UIView *back = [UIView new];
+	/*UIView *back = [UIView new];
 	back.backgroundColor = [UIColor colorWithRed:(215/255.0)
 										   green:(148/255.0)
 											blue:(92/255.0)
 										   alpha:1];
-	cell.selectedBackgroundView = back;
+	cell.selectedBackgroundView = back;*/
+    cell.backgroundColor = [UIColor colorWithRed:(135/255.0)
+                                           green:(98/255.0)
+                                            blue:(80/255.0)
+                                           alpha:1];
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -325,7 +335,7 @@ typedef enum {
     } completion:^(id  _Nonnull context) {
         
         // after rotation
-    }];
+     }];
 }
 
 /*
