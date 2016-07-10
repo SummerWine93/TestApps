@@ -3,7 +3,7 @@
   SwissPlanner
 
   Created by Anastasiya Yarovenko on 20.05.16.
-  Copyright © 2016 Elena Baoychuk. All rights reserved.
+  Copyright © 2016 Elena Boychuk. All rights reserved.
 */
 
 
@@ -21,7 +21,7 @@
 
 "navigation.item.settings" = "调试";
 
-"navigation.item.section.2" = "FOLLOW US";
+"navigation.item.section.2" = "跟着我们";
 
 /* Cabinet */
 
@@ -67,21 +67,21 @@
 
 "calculator.content.isDirect" = "直接合作人";
 
-"calculator.content.formula1" = "\nPrepayment = €%@ - €%d(internet commission) = €%@\n\n";
+"calculator.content.formula1" = "\n预付款 = €%@ - €%d(网络手续费) = €%@\n\n";
 
-"calculator.content.formula2" = "€%@ x 4 Orders = €%@ (commodity circulation)\n\n";
+"calculator.content.formula2" = "€%@ x 4 定货 = €%@ (商品流转)\n\n";
 
-"calculator.content.formula3" = "€%@ - €%@ (reinvestment) = €%@\n\n";
+"calculator.content.formula3" = "€%@ - €%@ (再次投资) = €%@\n\n";
 
-"calculator.content.formula4" = "€%@  - 10%% (commission) = €%@ (buying gold)\n\n";
+"calculator.content.formula4" = "€%@  - 10%% (手续费) = €%@ (购买黄金)\n\n";
 
-"calculator.content.formula5" = "€%@ / 500 = %@ bonus units\n\n";
+"calculator.content.formula5" = "€%@ / 500 = %@  获奖数量\n\n";
 
-"calculator.content.formula6" = "Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n\n";
+"calculator.content.formula6" = "等级之间的差价 = €%d (您的等级中的单价) - €%d (您的合作人的等级中的单价) = €%@\n\n";
 
 "calculator.content.formula7" = "\n您受到的损失";
 
-"calculator.content.formula8" = "Income = €%@ * %@ = €%@ (buying gold) %@";
+"calculator.content.formula8" = "收入 = €%@ * %@ = €%@ (购买黄金) %@";
 
 /* Rewards */
 
@@ -111,7 +111,7 @@
 
 "testing.startButton" = "开始测试";
 
-"testing.slide.questionLabel" = "Question %d / %d";
+"testing.slide.questionLabel" = "题 %d / %d";
 
 /* Settings */
 
@@ -123,7 +123,7 @@
 
 "settings.cell3.title" = "在领导人项目中";
 
-"settings.cell4.title" = "Languages";
+"settings.cell4.title" = "语言";
 
 "settings.sectionTitle" = "用户调试";
 
@@ -133,13 +133,13 @@
 
 /* Language Settings */
 
-"language.settings.alert.title" = "Language changing";
+"language.settings.alert.title" = "语言变化";
 
-"language.settings.alert.text" = "You need to restart the app in order to see the changes. Do you want to shut down the app?";
+"language.settings.alert.text" = "您需要重新启动应用程序才能看到的变化。你想关闭应用程序？";
 
-"language.settings.alert.ok" = "OK";
+"language.settings.alert.ok" = "好";
 
-"language.settings.alert.cancel" = "Cancel";
+"language.settings.alert.cancel" = "取消";
 
 /* Education */
 
@@ -151,7 +151,7 @@
 
 "education.slide1.block1.header" = "奖励项目";
 
-"education.slide1.block1.content" = "Quick start\nActive income";
+"education.slide1.block1.content" = "快速开始\n活动收入";
 
 "education.slide1.block2.header" = "领导人项目";
 
@@ -171,11 +171,11 @@
 
 "education.slide3.block1.header" = "在主合同内";
 
-"education.slide3.block1.content" = "1. You need to close your Main table\n\n2. Your 2 attracted customers should also close their Main tables\n\n3. And their 2 invited partners should do the same";
+"education.slide3.block1.content" = "1 您需要关闭您的主表格 \n\n2 您的2个被邀请者也必须关闭自己表格\n\n3他们的2个被邀请者也必须关闭自己表格e";
 
-"education.slide3.block2.header" = "in the VIP agreement";
+"education.slide3.block2.header" = "在VIP协议";
 
-"education.slide3.block2.content" = "1. You need to close your VIP table\n\n2. Your 2 invited partners should also close their VIP tables";
+"education.slide3.block2.content" = "1 您需要关闭您的VIP表\n\n2 您的2个被邀请者也应关闭其VIP表";
 
 /* Education Slide 4 */
 
@@ -195,122 +195,122 @@
 
 /* Education Slide 5 */
 
-"education.slide5.header" = "Income in the Leadership program";
+"education.slide5.header" = "在领导人项目中所获取的收入";
 
-"education.slide5.block1.header" = "Income = Price for 1 bonus unit х Bonus units";
+"education.slide5.block1.header" = "收入 = 1个奖励的价格 х 获奖数量";
 
-"education.slide5.block2.header" = "Main table of orders";
+"education.slide5.block2.header" = "主定货表";
 
-"education.slide5.block2.content" = "On the 1st level of the leadership program You earn €15 for 1 bonus unit.\n€15 х 3.78 = €56.70 \nOn the 2nd level of the leadership program You earn €20 for 1 bonus unit.\n€20 х 3.78 = €75.60";
+"education.slide5.block2.content" = "在第1等级领导人项目中您获得€15/ 1获奖数量 .\n€15 х 3.78 = €56.70 \第2等级领导人项目中您获得€20 за 1 获奖数量.\n€20 х 3.78 = €75.60";
 
-"education.slide5.block3.header" = "VIP table of orders";
+"education.slide5.block3.header" = "VIP定货表";
 
-"education.slide5.block3.content" = "On the 1st level of the leadership program You earn €15 for 1 bonus unit.\n€15 х 14.85 = €222.75 \nOn the 2nd level of the leadership program You earn €20 for 1 bonus unit.\n€20 х 14.85 = €297.00";
+"education.slide5.block3.content" = "在第1等级领导人项目中您获得€15/ 1获奖数量 .\n€15 х 14.85 = €222.75 \第2等级领导人项目中您获得€20 за 1 获奖数量.\n€20 х 14.85 = €297.00";
 
 /* Education Slide 6 */
 
-"education.slide6.header" = "Income in the Leadership program";
+"education.slide6.header" = "在领导人项目中所获取的收入";
 
-"education.slide6.block1.header" = "Income = Price for 1 bonus unit х Bonus units";
+"education.slide6.block1.header" = "收入 = 1个奖励的价格 х 获奖数量";
 
-"education.slide6.block2.header" = "Main table of orders";
+"education.slide6.block2.header" = "主定货表";
 
-"education.slide6.block2.content" = "If You are in the Leadership program and Your partner has not yet than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 etc.";
+"education.slide6.block2.content" = "如果您处于领导人项目中, 但您的合作人不处于领导人项目中,这样您可在第3等级以每个奖励单位€25\n€25 х 3.78 = €94.50 等等";
 
-"education.slide6.block3.header" = "VIP table of orders";
+"education.slide6.block3.header" = "VIP定货表";
 
-"education.slide6.block3.content" = "If You are in the Leadership program and Your partner has not yet than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 etc.";
+"education.slide6.block3.content" = "如果您处于领导人项目中, 但您的合作人不处于领导人项目中,这样您可在第3等级以每个奖励单位€25\n€25 х 14.85 = €371.25 获取收入 等等";
 
 /* Education Slide 7 */
 
-"education.slide7.header" = "Income in the Leadership program";
+"education.slide7.header" = "在领导人项目中所获取的收入";
 
-"education.slide7.block1.header" = "Income = Bonus units х Price differences between levels";
+"education.slide7.block1.header" = "收入 = 等级之间的差价 х 获奖数量";
 
-"education.slide7.block2.header" = "Main table of orders";
+"education.slide7.block2.header" = "主定货表";
 
-"education.slide7.block2.content" = "If You are on the 2nd level, and Your partner is on the 1st level of the Leadership program Your income is:\n3.78 х (€20 - €15) = €18.90";
+"education.slide7.block2.content" = "如果您处于第2等级领导人项目中,但您的合作人处于第1等级领导人项目中 您的收入:\n3.78 х (€20 - €15) = €18.90";
 
-"education.slide7.block3.header" = "VIP table of orders";
+"education.slide7.block3.header" = "VIP定货表";
 
-"education.slide7.block3.content" = "If You are on the 2nd level, and Your partner is on the 1st level of the Leadership program Your income is:\n14.85 х (€20 - €15) = €74.25";
+"education.slide7.block3.content" = "如果您处于第2等级领导人项目中,但您的合作人处于第1等级领导人项目中 您的收入:\n14.85 х (€20 - €15) = €74.25";
 
 /* Education Slide 8 */
 
-"education.slide8.header" = "Income in the Leadership program";
+"education.slide8.header" = "在领导人项目中所获取的收入";
 
-"education.slide8.block1.header" = "Income = Bonus units х Price differences between levels";
+"education.slide8.block1.header" = "收入 = 等级之间的差价 х 获奖数量";
 
-"education.slide8.block2.header" = "Main table of orders";
+"education.slide8.block2.header" = "主定货表";
 
-"education.slide8.block2.content" = "If You are on the 4th level and Your partner is on the 1st level of the Leadership program Your income is:\n3.78 х (€30 - €15) = €56.70";
+"education.slide8.block2.content" = "如果您处于第4等级领导人项目中,但您的合作人处于第1等级领导人项目中 您的收入:\n3.78 х (€30 - €15) = €56.70";
 
-"education.slide8.block3.header" = "VIP table of orders";
+"education.slide8.block3.header" = "VIP定货表";
 
-"education.slide8.block3.content" = "If You are on the 4th level and Your partner is on the 1st level of the Leadership program Your income is:\n14.85 х (€30 - €15) = €222.75";
+"education.slide8.block3.content" = "如果您处于第4等级领导人项目中,但您的合作人处于第1等级领导人项目中 您的收入:\n14.85 х (€30 - €15) = €222.75";
 
 /* Education Slide 8a */
 
-"education.slide8a.header" = "Income in the Leadership program";
+"education.slide8a.header" = "在领导人项目中所获取的收入";
 
-"education.slide8a.block1.header" = "Income from your direct partner (doesn't matter what's your partner's level is) = Bonus units х Price differences between your level and 1 level of Leadership program";
+"education.slide8a.block1.header" = "收入 = 您的等级单价х获奖数量 (与您的合作人的等级无关)";
 
-"education.slide8a.block2.header" = "Main table of orders";
+"education.slide8a.block2.header" = "主定货表";
 
-"education.slide8a.block2.content" = "You are on 9 level, your direct partner on 5 level of Leadership program. Your income is:\n3.78 х (47€ - 0€) = 177.6€";
+"education.slide8a.block2.content" = "如果您处于第9等级领导人项目中,但您的合作人处于第5等级领导人项目中 您的收入:\n3.78 х (47€ - 0€) = 177.6€";
 
-"education.slide8a.block3.header" = "VIP table of orders";
+"education.slide8a.block3.header" = "VIP定货表";
 
-"education.slide8a.block3.content" = "You are on 9 level, your direct partner on 5 level of Leadership program. Your income is:\n14.85 х (47€ - 0€) = 697.95€";
+"education.slide8a.block3.content" = "如果您处于第9等级领导人项目中,但您的合作人处于第5等级领导人项目中 您的收入:\n14.85 х (47€ - 0€) = 697.95€";
 
 /* Education Slide 9 */
 
-"education.slide9.header" = "How much money the company distributes in the Main agreement of the Leadership program";
+"education.slide9.header" = "公司会给领导人项目之主合同中分配多少资金";
 
-"education.slide9.block2.content" = "2100 x 10% = €210 \n10% - company commission for one Main table";
+"education.slide9.block2.content" = "2100 x 10% = €210 \n10% - 1个主表格的手续费";
 
-"education.slide9.block3.content" = "€189.00 - the company distributes in the Leadership program";
+"education.slide9.block3.content" = "€189.00 - 公司分配给领导人项目";
 
-"education.slide9.block4.content" = "€2100 x 9% = €189 \n9% - goes to the Leadership program \n1% - remains as an income of the company";
+"education.slide9.block4.content" = "2100 x 9% = €189 \n9% - 分配给领导人项目\n1% - 公司收入";
 
 /* Education Slide 10 */
 
-"education.slide10.header" = "How much money the company distributes in the VIP agreement of the Leadership program";
+"education.slide10.header" = "公司会给领导人项目之VIP合同中分配多少资金";
 
-"education.slide10.block2.content" = "8250 x 10% = €825 \n10% - company commission for one VIP table";
+"education.slide10.block2.content" = "8250 x 10% = €825 \n10% - 1个VIP表格的手续费";
 
-"education.slide10.block3.content" = "€742.5 - the company distributes in the Leadership program";
+"education.slide10.block3.content" = "€742.5 - 公司分配给领导人项目";
 
-"education.slide10.block4.content" = "€8250 x 9% = €742.5 \n9% - goes to the Leadership program \n1% - remains as an income of the company";
+"education.slide10.block4.content" = "8250 x 9% = €742.5 \n9% - 分配给领导人项目\n1% -公司收入";
 
 /* Education Slide 11 */
 
-"education.slide11.header" = "How much money the company distributes in the VIP PLUS agreement of the Leadership program";
+"education.slide11.header" = "公司会给领导人项目之VIP PLUS 合同中分配多少资金";
 
-"education.slide11.block2.content" = "29400 x 10% = €2940 \n10% - company commission for one VIP PLUS table";
+"education.slide11.block2.content" = "29400 x 10% = €2940 \n10% -  1个VIP PLUS表格的手续费";
 
-"education.slide11.block3.content" = "€2646 - the company distributes in the Leadership program";
+"education.slide11.block3.content" = "€2646 - 公司分配给领导人项目";
 
-"education.slide11.block4.content" = "€29400 x 9% = €2646 \n9% - goes to the Leadership program \n1% - remains as an income of the company";
+"education.slide11.block4.content" = "€29400 x 9% = €2646 \n9%  -  分配给领导人项目\n1% -公司收入";
 
 /* Education Slide Conclusion */
 
-"education.slideConclusion.header" = "Leadership Bonus Calculations";
+"education.slideConclusion.header" = "领导人项目奖励金计算";
 
 /* Education Slide 13 */
 
-"education.slide13.header" = "The price of one recomendation in the Leadership program";
+"education.slide13.header" = "领导人项目每建意的单价";
 
-"education.slide13.headerContent" = "if the difference between you and your partner is always one level";
+"education.slide13.headerContent" = "如果您和您的合作人之间相差1个等级";
 
 /* Education Tables */
 
-"prettyTable.firstCellItem" = "Level";
+"prettyTable.firstCellItem" = "等级";
 
-"prettyTable.secondCellItem" = "Bonus units";
+"prettyTable.secondCellItem" = "获奖数量";
 
-"prettyTable.thirdCellItem" = "Price";
+"prettyTable.thirdCellItem" = "价格";
 
-"simpleTable.firstCellItem" = "You";
+"simpleTable.firstCellItem" = "您";
 
-"simpleTable.secondCellItem" = "partner";
+"simpleTable.secondCellItem" = "合作人";
