@@ -10,6 +10,7 @@
 		3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3908F5631CFF922D00261709 /* TestPageViewController.m */; };
 		39546FFB1D06096E00710FD2 /* tests_source.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39546FFA1D06096E00710FD2 /* tests_source.txt */; };
 		39546FFE1D060A1100710FD2 /* TestBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39546FFD1D060A1100710FD2 /* TestBaseHelper.m */; };
+		3996E2451D330A6B00FEB468 /* FontsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3996E2441D330A6B00FEB468 /* FontsHelper.m */; };
 		39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */; };
 		39C88B971D0E092700D932C3 /* LanguageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C88B961D0E092700D932C3 /* LanguageHelper.m */; };
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
@@ -82,6 +83,8 @@
 		39546FFC1D060A1100710FD2 /* TestBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBaseHelper.h; sourceTree = "<group>"; };
 		39546FFD1D060A1100710FD2 /* TestBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBaseHelper.m; sourceTree = "<group>"; };
 		398EADB91D1C87D500351BE9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3996E2431D330A6B00FEB468 /* FontsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontsHelper.h; sourceTree = "<group>"; };
+		3996E2441D330A6B00FEB468 /* FontsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontsHelper.m; sourceTree = "<group>"; };
 		39AB1C661D017CDA00A1622C /* TestsStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsStartingViewController.h; sourceTree = "<group>"; };
 		39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsStartingViewController.m; sourceTree = "<group>"; };
 		39C88B951D0E092700D932C3 /* LanguageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageHelper.h; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
 				39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */,
 				39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */,
+				3996E2431D330A6B00FEB468 /* FontsHelper.h */,
+				3996E2441D330A6B00FEB468 /* FontsHelper.m */,
 				CE3CAF731CF8773100B276CD /* PlatformTypeChecker.h */,
 				CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */,
 			);
@@ -543,6 +548,7 @@
 				CE58D4891D0AAE9B00F81961 /* OrdersTableViewCell.m in Sources */,
 				CEDA438F1D002FD600BB1AE0 /* AnswerTestTableViewCell.m in Sources */,
 				CE05AAA31CD12D4D00CB7A8E /* PageContentWithTablesViewController.m in Sources */,
+				3996E2451D330A6B00FEB468 /* FontsHelper.m in Sources */,
 				CE05AA9D1CD0FFE000CB7A8E /* Slide1ContentViewController.m in Sources */,
 				CE05AAB61CD267E000CB7A8E /* Slide7ContentViewController.m in Sources */,
 				CE5913B61CBBA789008A3042 /* SideMenuTableViewController.m in Sources */,
