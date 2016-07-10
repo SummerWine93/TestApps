@@ -8,6 +8,7 @@
 
 #import "LanguageSelectionTableViewController.h"
 #import "LanguageHelper.h"
+#import "FontsHelper.h"
 
 @interface LanguageSelectionTableViewController () {
 	LanguageHelper *languageHelper;
@@ -49,6 +50,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 	
 	cell.textLabel.text = [languagesNames objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:[FontsHelper getFontSize]];
     
     return cell;
 }

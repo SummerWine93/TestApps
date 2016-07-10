@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 
 #import "PlatformTypeChecker.h"
+#import "FontsHelper.h"
 
 typedef enum {
     yourName,
