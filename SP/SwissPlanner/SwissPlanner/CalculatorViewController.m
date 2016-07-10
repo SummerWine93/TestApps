@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 
 #import "PlatformTypeChecker.h"
+#import "FontsHelper.h"
 
 @interface CalculatorViewController () {
 	NSArray *levelsArray;
@@ -204,7 +205,7 @@
 	{
 		pickerLabel = [[UILabel alloc] init];
 		
-		pickerLabel.font = [UIFont fontWithName:@"SourceSansPro-Semibold"                size:16];
+		pickerLabel.font = [UIFont systemFontOfSize:[FontsHelper getFontSize]];
 		pickerLabel.textColor = [UIColor whiteColor];
 		pickerLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		
@@ -251,7 +252,7 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     cell.textLabel.text = [plansArray objectAtIndex:indexPath.row];
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.font = [UIFont systemFontOfSize:[FontsHelper getFontSize]];
 	cell.textLabel.textColor = [UIColor whiteColor];
 	cell.textLabel.adjustsFontSizeToFitWidth = YES;
 	cell.backgroundColor = [UIColor clearColor];
@@ -340,11 +341,11 @@
 	NSString *incomeString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula8", nil), [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
 	
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@%@", turnoverString0, turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
-	[attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:[self getFontSize]] range:NSMakeRange(0, attributedResultsString.string.length)];
+    [attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:([FontsHelper getFontSize] + 1)] range:NSMakeRange(0, attributedResultsString.string.length)];
     
 	NSMutableAttributedString *resultAppendix = [[NSMutableAttributedString alloc] initWithString:incomeString];
 	[resultAppendix addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, resultAppendix.string.length)];
-	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:([self getFontSize] + 1)] range:NSMakeRange(0, resultAppendix.string.length)];
+	[resultAppendix addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:([FontsHelper getFontSize] + 2)] range:NSMakeRange(0, resultAppendix.string.length)];
 	
 	[attributedResultsString appendAttributedString:resultAppendix];
     
