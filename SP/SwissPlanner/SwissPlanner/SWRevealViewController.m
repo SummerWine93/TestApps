@@ -27,6 +27,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "SWRevealViewController.h"
+#import "PlatformTypeChecker.h"
 
 
 #pragma mark - StatusBar Helper Function
@@ -629,7 +630,12 @@ const int FrontViewPositionNone = 0xff;
     _frontViewPosition = FrontViewPositionLeft;
     _rearViewPosition = FrontViewPositionLeft;
     _rightViewPosition = FrontViewPositionLeft;
-    _rearViewRevealWidth = 260.0f;
+    NSString *platform = [PlatformTypeChecker platformType];
+    if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]) {
+        _rearViewRevealWidth = 400.0f;
+    } else {
+        _rearViewRevealWidth = 260.0f;
+    }
     _rearViewRevealOverdraw = 60.0f;
     _rearViewRevealDisplacement = 40.0f;
     _rightViewRevealWidth = 260.0f;
