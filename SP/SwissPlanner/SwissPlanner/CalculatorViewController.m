@@ -154,7 +154,7 @@
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
     }
     else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
-        self.calculateButton.layer.cornerRadius = 140 / 2.0 ;
+        self.calculateButton.layer.cornerRadius = 110 / 2.0 ;
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
