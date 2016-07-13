@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,7 +22,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background(launcher)" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-tg-eHC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greetings_gold" translatesAutoresizingMaskIntoConstraints="NO" id="cON-gK-AFX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="greetings_gold" translatesAutoresizingMaskIntoConstraints="NO" id="cON-gK-AFX">
                                 <rect key="frame" x="0.0" y="-303" width="600" height="1206"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cON-gK-AFX" secondAttribute="height" multiplier="3:2" id="wPl-hW-PSc"/>
@@ -38,11 +38,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Zn-Ba-rMf" secondAttribute="height" multiplier="25:6" id="UUS-c9-qaO"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UUS-c9-qaO"/>
-                                    </mask>
-                                </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="UUS-c9-qaO"/>
@@ -54,11 +49,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="175-wq-fyd" secondAttribute="height" multiplier="3:2" id="4j1-gd-zqn"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4j1-gd-zqn"/>
-                                    </mask>
-                                </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="4j1-gd-zqn"/>
@@ -82,7 +72,7 @@
                             <constraint firstItem="cON-gK-AFX" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="ukO-mM-0Rm"/>
                             <constraint firstItem="cON-gK-AFX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="urM-pJ-tQy"/>
                             <constraint firstItem="mdA-tg-eHC" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="utd-NU-MLe"/>
-                            <constraint firstItem="6Zn-Ba-rMf" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.7" id="v2C-OF-HZT"/>
+                            <constraint firstItem="6Zn-Ba-rMf" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="v2C-OF-HZT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
