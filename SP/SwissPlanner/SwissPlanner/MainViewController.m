@@ -112,29 +112,22 @@ typedef enum {
 
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
+    NSString *navBarImageName, *backImageName;
     if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_iphone6"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+        navBarImageName = @"nav_bar_iphone6";
+        backImageName = @"background_iphone6";
     }
     else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        navBarImageName = @"nav_bar";
+        backImageName = @"background";
     }
     else {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        navBarImageName = @"nav_bar";
+        backImageName = @"background";
     }
-}
-
-- (NSInteger) getFontSize {
-	NSString *platform = [PlatformTypeChecker platformType];
-	if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]||[platform isEqualToString:@"iPhone 6 Plus"]||[platform isEqualToString:@"iPhone 6S Plus"]) {
-		return 16;
-	} else if ([platform isEqualToString:@"iPhone 4"]||[platform isEqualToString:@"iPhone 4S"]||[platform isEqualToString:@"Simulator"]){
-		return 10;
-	} else {
-		return 14;
-	}
+    UIImage *stretchableBackground = [[UIImage imageNamed:navBarImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0,0,self.navigationController.view.frame.size.height,self.navigationController.view.frame.size.width) resizingMode:UIImageResizingModeStretch];
+    [self.navigationController.navigationBar setBackgroundImage:stretchableBackground forBarMetrics:UIBarMetricsDefault];
+    self.view.layer.contents = (id)[UIImage imageNamed:backImageName].CGImage;
 }
 
 #pragma mark - Table view data source
@@ -229,10 +222,8 @@ typedef enum {
                 break;
         }
         if (cellText != nil) {
-			//NSInteger size = [self getFontSize];
             [cell contentLabel].text = cellText;
 			[cell titleLabel].text = titleText;
-			//cell.titleLabel.font = [UIFont systemFontOfSize:[self getFontSize]];
         }
 		
         return cell;
