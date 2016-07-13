@@ -150,24 +150,22 @@
 
 - (void) updateViewBackground {
     NSString *platform = [PlatformTypeChecker platformType];
+    NSString *navBarImageName, *backImageName;
     if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)_iphone6"]];
-        
-        UIImage *back = [[UIImage imageNamed:@"nav_bar_iphone6"]
-                         resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
-        [self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
-        
+        navBarImageName = @"nav_bar_iphone6";
+        backImageName = @"background(education)_iphone6";
     }
     else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)"]];
-        UIImage *back = [[UIImage imageNamed:@"nav_bar_iphone6"]
-                         resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
-        [self.navigationController.navigationBar setBackgroundImage:back forBarMetrics:UIBarMetricsDefault];
+        navBarImageName = @"nav_bar";
+        backImageName = @"background(education)";
     }
     else {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background(education)"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+        navBarImageName = @"nav_bar";
+         backImageName = @"background(education)";
     }
+   UIImage *stretchableBackground = [[UIImage imageNamed:navBarImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0,0,self.navigationController.view.frame.size.height,self.navigationController.view.frame.size.width) resizingMode:UIImageResizingModeStretch];
+     [self.navigationController.navigationBar setBackgroundImage:stretchableBackground forBarMetrics:UIBarMetricsDefault];
+     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:backImageName]];
 }
 
 
