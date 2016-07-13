@@ -147,21 +147,26 @@
 }
 
 - (void) updateViewBackground {
-    self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
     NSString *platform = [PlatformTypeChecker platformType];
+    NSString *navBarImageName, *backImageName;
     if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_iphone6"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar_iphone6"] forBarMetrics:UIBarMetricsDefault];
+        navBarImageName = @"nav_bar_iphone6";
+        backImageName = @"background_iphone6";
+        self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
     }
     else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
+        navBarImageName = @"nav_bar";
+        backImageName = @"background";
         self.calculateButton.layer.cornerRadius = 110 / 2.0 ;
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     }
-    else{
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
+    else {
+        navBarImageName = @"nav_bar";
+        backImageName = @"background";
+        self.calculateButton.layer.cornerRadius = 65 / 2.0 ;
     }
+    UIImage *stretchableBackground = [[UIImage imageNamed:navBarImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0,0,self.navigationController.view.frame.size.height,self.navigationController.view.frame.size.width) resizingMode:UIImageResizingModeStretch];
+    [self.navigationController.navigationBar setBackgroundImage:stretchableBackground forBarMetrics:UIBarMetricsDefault];
+    self.view.layer.contents = (id)[UIImage imageNamed:backImageName].CGImage;
 }
 
 #pragma mark - Pickerview delegate methods
@@ -204,8 +209,12 @@
 	if (!pickerLabel)
 	{
 		pickerLabel = [[UILabel alloc] init];
-		
-		pickerLabel.font = [UIFont systemFontOfSize:[FontsHelper getFontSize]];
+        CGFloat fontSize = [FontsHelper getFontSize];
+        NSString *platform = [PlatformTypeChecker platformType];
+        if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
+            fontSize += 5;
+        }
+		pickerLabel.font = [UIFont systemFontOfSize:fontSize];
 		pickerLabel.textColor = [UIColor whiteColor];
 		pickerLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		
