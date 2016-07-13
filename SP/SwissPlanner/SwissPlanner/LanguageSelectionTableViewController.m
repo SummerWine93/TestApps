@@ -9,6 +9,7 @@
 #import "LanguageSelectionTableViewController.h"
 #import "LanguageHelper.h"
 #import "FontsHelper.h"
+#import "PlatformTypeChecker.h"
 
 @interface LanguageSelectionTableViewController () {
 	LanguageHelper *languageHelper;
@@ -23,16 +24,28 @@
     [super viewDidLoad];
 	languageHelper = [[LanguageHelper alloc] init];
 	languagesNames = [languageHelper getAllTheLanguagesNames];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self updateViewBackground];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) updateViewBackground {
+    NSString *platform = [PlatformTypeChecker platformType];
+    NSString *navBarImageName;
+    if ([platform isEqualToString:@"iPhone 6"]||[platform isEqualToString:@"iPhone 6S"]) {
+        navBarImageName = @"nav_bar_iphone6";
+    }
+    else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
+        navBarImageName = @"nav_bar";
+    }
+    else {
+        navBarImageName = @"nav_bar";
+    }
+    UIImage *stretchableBackground = [[UIImage imageNamed:navBarImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0,0,self.navigationController.view.frame.size.height,self.navigationController.view.frame.size.width) resizingMode:UIImageResizingModeStretch];
+    [self.navigationController.navigationBar setBackgroundImage:stretchableBackground forBarMetrics:UIBarMetricsDefault];
 }
 
 #pragma mark - Table view data source
