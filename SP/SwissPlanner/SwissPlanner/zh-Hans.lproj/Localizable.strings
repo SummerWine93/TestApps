@@ -21,7 +21,7 @@
 
 "navigation.item.settings" = "调试";
 
-"navigation.item.section.2" = "跟着我们";
+"navigation.item.section.2" = "与我们联系";
 
 /* Cabinet */
 
@@ -47,17 +47,17 @@
 
 "calculator.title" = "计算器";
 
-"calculator.order.preOrder" = "预签合同";
+"calculator.order.preOrder" = "初步定货表";
 
-"calculator.order.mainOrder" = "主合同";
+"calculator.order.mainOrder" = "主定货表";
 
-"calculator.order.preVipOrder" = "前VIP合同";
+"calculator.order.preVipOrder" = "初步vip定货表";
 
-"calculator.order.vipOrder" = "VIP合同";
+"calculator.order.vipOrder" = "vip定货表";
 
-"calculator.order.preVipPlusOrder" = "前VIP PLUS 合同";
+"calculator.order.preVipPlusOrder" = "初步vip plus定货表";
 
-"calculator.order.vipPlusOrder" = "VIP PLUS 合同";
+"calculator.order.vipPlusOrder" = "vip plus定货表";
 
 "calculator.content.yourLevel" = " 您的等级";
 
@@ -73,7 +73,7 @@
 
 "calculator.content.formula3" = "€%@ - €%@ (再次投资) = €%@\n\n";
 
-"calculator.content.formula4" = "€%@  - 10%% (手续费) = €%@ (购买黄金)\n\n";
+"calculator.content.formula4" = "€%@  - 10%% (手续费) = €%@ (所购黄金的价格)\n\n";
 
 "calculator.content.formula5" = "€%@ / 500 = %@  获奖数量\n\n";
 
@@ -81,7 +81,7 @@
 
 "calculator.content.formula7" = "\n您受到的损失";
 
-"calculator.content.formula8" = "收入 = €%@ * %@ = €%@ (购买黄金) %@";
+"calculator.content.formula8" = "收入 = €%@ * %@ = €%@ (所购黄金的价格) %@";
 
 /* Rewards */
 
@@ -151,7 +151,7 @@
 
 "education.slide1.block1.header" = "奖励项目";
 
-"education.slide1.block1.content" = "快速开始\n活动收入";
+"education.slide1.block1.content" = "快速开始\n积及收入";
 
 "education.slide1.block2.header" = "领导人项目";
 
@@ -181,17 +181,17 @@
 
 "education.slide4.header" = "在领导人项目中所获取的收入";
 
-"education.slide4.block1.header" = "商品流转 \ 500 = 获奖数量";
+"education.slide4.block1.header" = "商品流转 / 500 = 获奖数量";
 
 "education.slide4.block1.content" = "在领导人项目中所获奖数量";
 
 "education.slide4.block2.header" = "主定货表";
 
-"education.slide4.block2.content" = "2100€ - 10% = 1890€ (商品流转)\n1890€ \ 500 = 3.78 获奖数量\n在关闭1个表格后您所获取的奖励";
+"education.slide4.block2.content" = "2100€ - 10% = 1890€ (商品流转)\n1890€ / 500 = 3.78 获奖数量\n在关闭1个主定货表后获得的奖励";
 
 "education.slide4.block3.header" = "VIP定货表";
 
-"education.slide4.block3.content" = "8250€ - 10% = 7425€ (商品流转)\n7425€ / 500 = 14.85 获奖数量\n在关闭1个表格后您所获取的奖励";
+"education.slide4.block3.content" = "8250€ - 10% = 7425€ (商品流转)\n7425€ / 500 = 14.85 获奖数量\n在关闭1个VIP定货表后获得的奖励";
 
 /* Education Slide 5 */
 
@@ -251,9 +251,9 @@
 
 /* Education Slide 8a */
 
-"education.slide8a.header" = "在领导人项目中所获取的收入";
+"education.slide8a.header" = "从您的直接合作人那里获取的收入";
 
-"education.slide8a.block1.header" = "收入 = 您的等级单价х获奖数量 (与您的合作人的等级无关)";
+"education.slide8a.block1.header" = "收入 = 您的等级单价х获奖数量 (与您的直接合作人的等级无关)";
 
 "education.slide8a.block2.header" = "主定货表";
 
@@ -299,7 +299,7 @@
 
 /* Education Slide 13 */
 
-"education.slide13.header" = "领导人项目每建意的单价";
+"education.slide13.header" = "在领导人项目中您每个被邀请者的单价";
 
 "education.slide13.headerContent" = "如果您和您的合作人之间相差1个等级";
 

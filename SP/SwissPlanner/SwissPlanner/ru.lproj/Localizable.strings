@@ -7,28 +7,311 @@
 */
 
 
+/* Navigation */
 
-//Calculator view controller
-/*
+"navigation.item.cabinet" = "Кабинет";
 
-//"CalculatorViewController.screenTitle" = "Calculator"
+"navigation.item.calculator" = "Калькулятор";
 
-//"CalculatorViewController.label.yourLevel" = "Your level"
+"navigation.item.education" = "Образование";
 
-//"CalculatorViewController.label.partnersLevel" = "Partner's level"
+"navigation.item.rewards" = "Награды";
 
-//"CalculatorViewController.label.prepayment" = "Prepayment"
+"navigation.item.testing" = "Тесты";
 
-//"CalculatorViewController.label.addToPlans" = "Add to plans"
+"navigation.item.settings" = "Настройки";
 
-//"CalculatorViewController.textField.formula" = "Formula"
+"navigation.item.section.2" = "Присоединяйтесь к нам";
 
-//"CalculatorViewController.textField.picker.mainPlan" = "Main"
+/* Cabinet */
 
-//"CalculatorViewController.textField.picker.preVIPPlan" = "Pre VIP"
+"cabinet.title" = "Мой кабинет";
 
-//"CalculatorViewController.textField.picker.VIPPlan" = "VIP"
+"cabinet.cellcontent.1.placeholder" = "Имя пользователя";
 
-//"CalculatorViewController.textField.picker.preVIPPlusPlan" = "Pre VIP PLUS"
+"cabinet.cellcontent.2.title" = "Мой лидерский уровень:";
 
-"CalculatorViewController.textField.picker.VIPPlusPlan" = "VIP PLUS" */
+"cabinet.cellcontent.3.title" = "Мои бонусные единицы:";
+
+"cabinet.cellcontent.4.title" = "До следующего уровня:";
+
+"cabinet.cellcontent.2_3.none" = "Нет";
+
+"cabinet.order.mainOrder" = "Главный договор";
+
+"cabinet.order.vipOrder" = "VIP договор";
+
+"cabinet.order.vipPlusOrder" = "VIP Plus договор";
+
+/* Calculator */
+
+"calculator.title" = "Калькулятор";
+
+"calculator.order.preOrder" = "Preliminary";
+
+"calculator.order.mainOrder" = "Main";
+
+"calculator.order.preVipOrder" = "Pre VIP";
+
+"calculator.order.vipOrder" = "VIP";
+
+"calculator.order.preVipPlusOrder" = "Pre VIP PLUS";
+
+"calculator.order.vipPlusOrder" = "VIP PLUS";
+
+"calculator.content.yourLevel" = "Твой уровень";
+
+"calculator.content.partnersLevel" = "Уровень партнера";
+
+"calculator.content.prepayment" = "Предоплата";
+
+"calculator.content.isDirect" = "Прямой партнер";
+
+"calculator.content.formula1" = "\Предоплата = €%@ - €%d(интернет комиссия) = €%@\n\n";
+
+"calculator.content.formula2" = "€%@ x 4 Заказа = €%@ (товарооборот)\n\n";
+
+"calculator.content.formula3" = "€%@ - €%@ (реинвест) = €%@\n\n";
+
+"calculator.content.formula4" = "€%@  - 10%% (комиссия) = €%@ (покупается золото)\n\n";
+
+"calculator.content.formula5" = "€%@ / 500 = %@ бон. ед.\n\n";
+
+"calculator.content.formula6" = "Разница цен между уровнями = €%d (цена за бонусную единицу за твой уровень) - €%d (цена единицы за уровень партнера) = €%@\n\n";
+
+"calculator.content.formula7" = "\nТы теряешь свои деньги!";
+
+"calculator.content.formula8" = "Доход = €%@ * %@ = €%@ (покупается золото) %@";
+
+/* Rewards */
+
+"rewards.title" = "Награды";
+
+"rewards.1Level" = "1 уровень";
+
+"rewards.3Level" = "3 уровень";
+
+"rewards.4Level" = "4 уровень";
+
+"rewards.5Level" = "5 уровень";
+
+"rewards.6Level" = "6 уровень";
+
+"rewards.7-11Levels" = "7-11 уровень";
+
+"rewards.cruise" = "Круиз";
+
+/* Testing */
+
+"testing.title" = "Тест";
+
+"testing.content.bestResult" = "Лучший результат \n%@ из %d\n\n";
+
+"testing.content.lastResult" = "Последний результат\n%@ из %d";
+
+"testing.startButton" = "НАЧАТЬ ТЕСТ";
+
+"testing.slide.questionLabel" = "Вопрос %d из %d";
+
+/* Settings */
+
+"settings.title" = "Настройки";
+
+"settings.cell1.title" = "Твоё имя";
+
+"settings.cell2.title" = "Бонусные единицы";
+
+"settings.cell3.title" = "В лидерской программе";
+
+"settings.cell4.title" = "Языки";
+
+"settings.sectionTitle" = "Пользовательские настройки";
+
+"settings.cell1.placeholder" = "Твоё полное имя";
+
+"settings.cell2.placeholder" = "Твои каръерные единицы";
+
+/* Language Settings */
+
+"language.settings.alert.title" = "Изменение языка";
+
+"language.settings.alert.text" = "Вам нужно перезапустить приложение, чтобы изменения вошли в силу. Хотите ли Вы остановить приложение?";
+
+"language.settings.alert.ok" = "Да";
+
+"language.settings.alert.cancel" = "Нет";
+
+/* Education */
+
+"education.title" = "Образование";
+
+/* Education Slide 1 */
+
+"education.slide1.header" = "Доход в компании Swissgolden";
+
+"education.slide1.block1.header" = "Бонусная программа";
+
+"education.slide1.block1.content" = "Быстрый старт\nАктивный доход";
+
+"education.slide1.block2.header" = "Лидерская программа";
+
+"education.slide1.block2.content" = "Пассивный доход";
+
+/* Education Slide 2 */
+
+"education.slide2.block1" = "90% - Покупка золота партнеру в Бонусной программе";
+
+"education.slide2.block2" = "9% - распределяется компанией в Лидерской программе";
+
+"education.slide2.block3" = "1% - Доход компании";
+
+/* Education Slide 3 */
+
+"education.slide3.header" = "Условия выхода партнера в Лидерскую программу";
+
+"education.slide3.block1.header" = "В Главном договоре";
+
+"education.slide3.block1.content" = "1. Вы должны закрыть свою Главную таблицу\n\n2. Ваши 2 прямых партнера должны также закрыть свои таблицы.\n\n3. И их по 2 прямых должны закрыть свои таблицы.";
+
+"education.slide3.block2.header" = "в VIP, VIP Plus договоре";
+
+"education.slide3.block2.content" = "1. Вы должны закрыть свою  VIP или VIP Plus таблицу.\n\n2. Ваши 2 прямых должны также закрыть свои VIP или VIP Plus таблицы.";
+
+/* Education Slide 4 */
+
+"education.slide4.header" = "Доходы в Лидерской программе";
+
+"education.slide4.block1.header" = "Товарооборот / 500 = Бонусные единицы";
+
+"education.slide4.block1.content" = "Бонусные единицы в Лидерской программе накапливаются";
+
+"education.slide4.block2.header" = "Главная Таблица заказов";
+
+"education.slide4.block2.content" = "2100€ - 10% = 1890€ (товарооборот)\n1890€ / 500 = 3.78  бон. ед.\nВы получаете за одну закрытую Главную таблицу";
+
+"education.slide4.block3.header" = "Vip Таблица заказов";
+
+"education.slide4.block3.content" = "8250€ - 10% = 7425€ (товарооборот)\n7425€ / 500 = 14.85 бон. ед.\nВы получаете за одну закрытую  VIP  таблицу";
+
+/* Education Slide 5 */
+
+"education.slide5.header" = "Доходы в Лидерской программе";
+
+"education.slide5.block1.header" = "Доход = Цена за 1 Бонусную единицу x Бонусные единицы";
+
+"education.slide5.block2.header" = "Main table of orders";
+
+"education.slide5.block2.content" = "На 1 уровне в Лидерской программе Вы зарабатываете 15€ за 1 бон. ед.\n€15 х 3.78 = €56.70 \nНа 2 уровне в Лидерской программе Вы зарабатываете 20€ за 1 бон. ед.\n€20 х 3.78 = €75.60";
+
+"education.slide5.block3.header" = "Vip Таблица заказов";
+
+"education.slide5.block3.content" = "На 1 уровне в Лидерской программе Вы зарабатываете 15€ за 1 бон. ед.\n€15 х 14.85 = €222.75 \nНа 2 уровне в Лидерской программе Вы зарабатываете 20€ за 1 бон. ед.\n€20 х 14.85 = €297.00";
+
+/* Education Slide 6 */
+
+"education.slide6.header" = "Доходы в Лидерской программе";
+
+"education.slide6.block1.header" = "ДОХОД = Цена за Бонусную единицу х Бонусные единицы";
+
+"education.slide6.block2.header" = "Главная таблица заказов";
+
+"education.slide6.block2.content" = "Если Вы находитесь в Лидерской программе, а Ваш партнер еще нет - тогда на 3 уровне Лидерской программе Вы будете зарабатывать 25€ за 1 Бонусную единицу.\n€25 х 3.78 = €94.50 и тд.";
+
+"education.slide6.block3.header" = "Vip Таблица заказов";
+
+"education.slide6.block3.content" = "Если Вы находитесь в Лидерской программе, а Ваш партнер еще нет - тогда на 3 уровне Лидерской программе Вы будете зарабатывать 25€ за 1 Бонусную единицу.\n€25 х 14.85 = €371.25 и тд.";
+
+/* Education Slide 7 */
+
+"education.slide7.header" = "Доходы в Лидерской программе";
+
+"education.slide7.block1.header" = "ДОХОД = Бонусные единицы х Разницу цен между уровнями";
+
+"education.slide7.block2.header" = "Главная таблица заказов";
+
+"education.slide7.block2.content" = "Если Вы находитесь на 2 уровне, а Ваш партнер на 1 уровне в Лидерской программе Ваш доход составит:\n3.78 х (€20 - €15) = €18.90";
+
+"education.slide7.block3.header" = "Vip Таблица заказов";
+
+"education.slide7.block3.content" = "Если Вы находитесь на 2 уровне, а Ваш партнер на 1 уровне в Лидерской программе Ваш доход составит:\n14.85 х (€20 - €15) = €74.25";
+
+/* Education Slide 8 */
+
+"education.slide8.header" = "Доходы в Лидерской программе";
+
+"education.slide8.block1.header" = "ДОХОД = Бонусные единицы х Разница цен за Бонусные единицы между уровнями";
+
+"education.slide8.block2.header" = "Главная таблица заказов";
+
+"education.slide8.block2.content" = "Если Вы находитесь на 4 уровне, а Ваш партнер находится на 1 уровне Лидерской программы Ваш доход составит:\n3.78 х (€30 - €15) = €56.70";
+
+"education.slide8.block3.header" = " VIP таблица заказов";
+
+"education.slide8.block3.content" = "Если Вы находитесь на 4 уровне, а Ваш партнер находится на 1 уровне Лидерской программы Ваш доход составит:\n14.85 х (€30 - €15) = €222.75";
+
+/* Education Slide 8a */
+
+"education.slide8a.header" = "Доходы в Лидерской программе";
+
+"education.slide8a.block1.header" = "ДОХОД от прямого партнера= Бонусные единицы х Цену бонусной единицы Вашего уровня (Независимо от уровня Вашего прямого партнера)";
+
+"education.slide8a.block2.header" = "Главная таблица заказов";
+
+"education.slide8a.block2.content" = "Вы находитесь на 9 уровне, ваш прямой на 5 уровне Лидерской программе. Ваш доход составит:\n3.78 х (47€ - 0€) = 177.6€";
+
+"education.slide8a.block3.header" = " VIP таблица заказов";
+
+"education.slide8a.block3.content" = "Вы находитесь на 9 уровне, ваш прямой на 5 уровне Лидерской программе. Ваш доход составит:\n14.85 х (47€ - 0€) = 697.95€";
+
+/* Education Slide 9 */
+
+"education.slide9.header" = "Сколько денег распределяется компанией в Главном договоре в Лидерской программе";
+
+"education.slide9.block2.content" = "2100€ x 10% = 210€ \n10% - комиссия компании с одной Главной таблицы ";
+
+"education.slide9.block3.content" = "189.00€ - компания распределяет в Лидерской программе";
+
+"education.slide9.block4.content" = "2100€ x 9% = 189€ \n9% - идет в Лидерскую программу \n1% - это доход компании";
+
+/* Education Slide 10 */
+
+"education.slide10.header" = "Сколько денег распределяется компанией в VIP договоре в Лидерской программе";
+
+"education.slide10.block2.content" = "8250€ х 10% = 825€ \n10% - комиссия компании с одной  VIP таблицы";
+
+"education.slide10.block3.content" = "742.5€ - компания распределяет в Лидерской программе";
+
+"education.slide10.block4.content" = "8250€ х 9% = 742.5€ \n9% - идет в Лидерскую программу \n1% - это доход компании";
+
+/* Education Slide 11 */
+
+"education.slide11.header" = "Сколько денег распределяется компанией в VIP Plus договоре в Лидерской программе";
+
+"education.slide11.block2.content" = "29400€ х 10% = 2940€ \n10% - комиссия компании с одной  VIP таблицы";
+
+"education.slide11.block3.content" = "2646€ - компания распределяет в Лидерской программе";
+
+"education.slide11.block4.content" = "29400€ х 9% = 2646€ \n9% - идет в Лидерскую программу \n1% - это доход компании";
+
+/* Education Slide Conclusion */
+
+"education.slideConclusion.header" = "Калькулятор Лидерской программы";
+
+/* Education Slide 13 */
+
+"education.slide13.header" = "Цена одной Вашей рекомендации в Лидерской программе,";
+
+"education.slide13.headerContent" = "если разница между Вами и Вашим партнером всегда составляет 1 уровень";
+
+/* Education Tables */
+
+"prettyTable.firstCellItem" = "Уровень";
+
+"prettyTable.secondCellItem" = "Бонусные единицы";
+
+"prettyTable.thirdCellItem" = "Цена";
+
+"simpleTable.firstCellItem" = "Ты";
+
+"simpleTable.secondCellItem" = "партнер";
+
