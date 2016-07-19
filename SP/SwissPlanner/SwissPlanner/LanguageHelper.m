@@ -18,8 +18,8 @@
         self = [super init];
     }
     
-    languagesAvailable = [NSArray arrayWithObjects:@"en", @"es", @"zh",nil];
-    languagesNamesAvailable = [NSArray arrayWithObjects:@"English", @"Español", @"中文", nil];
+    languagesAvailable = [NSArray arrayWithObjects:@"en", @"es", @"zh", @"ru", nil];
+    languagesNamesAvailable = [NSArray arrayWithObjects:@"English", @"Español", @"中文", @"Русский", nil];
    
     return self;
 }
