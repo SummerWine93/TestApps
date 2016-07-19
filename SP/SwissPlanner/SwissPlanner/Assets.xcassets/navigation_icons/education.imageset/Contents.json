@@ -14,6 +14,16 @@
       "idiom" : "universal",
       "filename" : "ic_school_white_3x.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "ic_school_white_2x-1.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "ic_school_white_3x-1.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

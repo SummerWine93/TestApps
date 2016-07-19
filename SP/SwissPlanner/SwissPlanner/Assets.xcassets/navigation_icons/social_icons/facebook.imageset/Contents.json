@@ -14,6 +14,16 @@
       "idiom" : "universal",
       "filename" : "Facebook-96.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "Facebook-49.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "Facebook-97.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

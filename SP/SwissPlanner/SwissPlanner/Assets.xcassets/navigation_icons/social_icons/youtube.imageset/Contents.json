@@ -14,6 +14,16 @@
       "idiom" : "universal",
       "filename" : "YouTube-96.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "YouTube-49.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "YouTube-97.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

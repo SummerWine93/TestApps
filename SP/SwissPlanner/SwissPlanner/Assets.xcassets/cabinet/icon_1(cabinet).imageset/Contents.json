@@ -14,6 +14,16 @@
       "idiom" : "universal",
       "filename" : "Positive Dynamic-72.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "Positive Dynamic-36.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "Positive Dynamic-73.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
