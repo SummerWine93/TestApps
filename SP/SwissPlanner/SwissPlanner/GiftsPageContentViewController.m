@@ -7,6 +7,7 @@
 //
 
 #import "GiftsPageContentViewController.h"
+#import "PlatformTypeChecker.h"
 
 @interface GiftsPageContentViewController ()
 
@@ -25,6 +26,16 @@
     [super didReceiveMemoryWarning];
 }
 
-
+- (BOOL)willAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    NSString *platform = [PlatformTypeChecker platformType];
+    if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]) {
+        if ((interfaceOrientation == UIDeviceOrientationPortrait) || (interfaceOrientation == UIDeviceOrientationPortraitUpsideDown))  {
+            [self.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@ hor", self.imageFile]]];
+        } else {
+            [self.imageView setImage:[UIImage imageNamed:self.imageFile]];
+        }
+    }
+    return YES;
+}
 
 @end
