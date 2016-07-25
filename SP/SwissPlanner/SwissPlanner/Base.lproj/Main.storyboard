@@ -5085,6 +5085,7 @@
                         <outlet property="block1label" destination="sef-Ws-mun" id="cHj-M8-wV6"/>
                         <outlet property="block90label" destination="G8A-4q-9hE" id="fdB-7W-4Yy"/>
                         <outlet property="block9label" destination="zGZ-j1-FwB" id="72H-yO-lSP"/>
+                        <outlet property="tableBonus" destination="TKt-qk-AfE" id="DLW-40-6jH"/>
                         <outletCollection property="roundedCorners" destination="UOP-r2-EiG" id="RtO-2O-YQS"/>
                         <outletCollection property="roundedCorners" destination="4mG-cb-caq" id="W21-32-hPv"/>
                         <outletCollection property="roundedCorners" destination="ewW-ye-9vG" id="nY7-xC-4fT"/>
@@ -9632,8 +9633,9 @@
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="0.0" y="2" width="240" height="42"/>
                                                                             </variation>
-                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                                <rect key="frame" x="0.0" y="2" width="240" height="42"/>
                                                                             </variation>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow_upward" translatesAutoresizingMaskIntoConstraints="NO" id="jiq-QF-Nkg">
@@ -9653,6 +9655,9 @@
                                                                                 <rect key="frame" x="209" y="2" width="31" height="42"/>
                                                                             </variation>
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="209" y="2" width="31" height="42"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                                                 <rect key="frame" x="209" y="2" width="31" height="42"/>
                                                                             </variation>
                                                                         </imageView>
@@ -11946,6 +11951,9 @@
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="2" width="60" height="42"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="2" width="60" height="42"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewp-nl-Qj9">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -11968,9 +11976,6 @@
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="2" width="102" height="42"/>
                                                                             </variation>
-                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                                                <rect key="frame" x="68" y="2" width="99" height="42"/>
-                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-Lj-8P8">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -11992,9 +11997,6 @@
                                                                             </variation>
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="2" width="60" height="42"/>
-                                                                            </variation>
-                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                                                <rect key="frame" x="168" y="2" width="58" height="42"/>
                                                                             </variation>
                                                                         </label>
                                                                     </subviews>
@@ -13822,6 +13824,9 @@
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="8" y="2" width="60" height="42"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="8" y="2" width="60" height="42"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200 000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="575-g8-rTG">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -13841,6 +13846,9 @@
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                                                 <rect key="frame" x="69" y="2" width="102" height="42"/>
                                                                             </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                                                <rect key="frame" x="69" y="2" width="102" height="42"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50€" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5R-OZ-pBl">
                                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -13858,6 +13866,9 @@
                                                                                 <rect key="frame" x="172" y="2" width="60" height="44"/>
                                                                             </variation>
                                                                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="172" y="2" width="60" height="42"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                                                 <rect key="frame" x="172" y="2" width="60" height="42"/>
                                                                             </variation>
                                                                         </label>

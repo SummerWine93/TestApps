@@ -26,6 +26,7 @@
     [super didReceiveMemoryWarning];
 }
 
+
 - (BOOL)willAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     NSString *platform = [PlatformTypeChecker platformType];
     if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]) {
@@ -37,5 +38,6 @@
     }
     return YES;
 }
+
 
 @end

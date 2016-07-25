@@ -19,6 +19,7 @@ typedef enum {
 
 @interface GiftsPageViewController () {
 	NSArray *pageContent;
+    UIInterfaceOrientation orientation;
 }
 
 @end
@@ -159,17 +160,30 @@ typedef enum {
         backImageName = @"background(gifts)_iphone6";
     }
     else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
-        navBarImageName = @"nav_bar";
-        backImageName = @"background(gifts)";
+        if (UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]))  {
+            navBarImageName = @"nav_bar";
+            backImageName = @"background(gifts)";
+        } else {
+            navBarImageName = @"nav_bar";
+            backImageName = @"background(gifts)-horizontal";
+        }
     }
     else {
         navBarImageName = @"nav_bar";
         backImageName = @"background(gifts)";
     }
+    
     UIImage *stretchableBackground = [[UIImage imageNamed:navBarImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0,0,self.navigationController.view.frame.size.height,self.navigationController.view.frame.size.width) resizingMode:UIImageResizingModeStretch];
     [self.navigationController.navigationBar setBackgroundImage:stretchableBackground forBarMetrics:UIBarMetricsDefault];
     self.view.layer.contents = (id)[UIImage imageNamed:backImageName].CGImage;
 }
+
+- (BOOL)willAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    orientation = interfaceOrientation;
+    [self updateViewBackground];
+    return YES;
+}
+
 
 
 @end

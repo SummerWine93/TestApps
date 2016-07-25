@@ -28,16 +28,8 @@
 	self.block90label.text = NSLocalizedString(@"education.slide2.block1", nil);
 	self.block9label.text = NSLocalizedString(@"education.slide2.block2", nil);
 	self.block1label.text = NSLocalizedString(@"education.slide2.block3", nil);
+    NSString *tableBonus = NSLocalizedString(@"education.slide2.tableBonus", nil);
+    [self.tableBonus setImage:[UIImage imageNamed: tableBonus]];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

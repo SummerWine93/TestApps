@@ -85,6 +85,9 @@
 		398EADB91D1C87D500351BE9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3996E2431D330A6B00FEB468 /* FontsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontsHelper.h; sourceTree = "<group>"; };
 		3996E2441D330A6B00FEB468 /* FontsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontsHelper.m; sourceTree = "<group>"; };
+		399A208C1D3A97BB001AAC95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		399A208D1D3A97BC001AAC95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		399A208E1D3A9810001AAC95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		39AB1C661D017CDA00A1622C /* TestsStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsStartingViewController.h; sourceTree = "<group>"; };
 		39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsStartingViewController.m; sourceTree = "<group>"; };
 		39C88B951D0E092700D932C3 /* LanguageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageHelper.h; sourceTree = "<group>"; };
@@ -321,9 +324,9 @@
 				CE59137E1CBA566D008A3042 /* Supporting Files */,
 				CE6BEC311CF48487009FB218 /* Settings.plist */,
 				CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */,
+				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
 				CE58D48A1D0EB21E00F81961 /* LanguageSelectionTableViewController.h */,
 				CE58D48B1D0EB21E00F81961 /* LanguageSelectionTableViewController.m */,
-				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
 				39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */,
 				39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */,
 				3996E2431D330A6B00FEB468 /* FontsHelper.h */,
@@ -482,6 +485,7 @@
 				Base,
 				es,
 				"zh-Hans",
+				ru,
 			);
 			mainGroup = CE5913721CBA566C008A3042;
 			productRefGroup = CE59137C1CBA566C008A3042 /* Products */;
@@ -598,6 +602,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE5913881CBA566D008A3042 /* Base */,
+				399A208C1D3A97BB001AAC95 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE59138D1CBA566D008A3042 /* Base */,
+				399A208D1D3A97BC001AAC95 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -617,6 +623,7 @@
 				CE5A3F861CEF590400B8C8E9 /* Base */,
 				39F91F7A1D0BF8E000D0B05E /* es */,
 				398EADB91D1C87D500351BE9 /* zh-Hans */,
+				399A208E1D3A9810001AAC95 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

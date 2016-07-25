@@ -165,6 +165,8 @@
 
 "education.slide2.block3" = "1% - Доход компании";
 
+"education.slide2.tableBonus" = "tableBonus-ru";
+
 /* Education Slide 3 */
 
 "education.slide3.header" = "Условия выхода партнера в Лидерскую программу";

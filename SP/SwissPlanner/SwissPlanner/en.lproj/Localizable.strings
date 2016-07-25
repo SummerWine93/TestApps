@@ -165,6 +165,8 @@
 
 "education.slide2.block3" = "1% - Income of the company";
 
+"education.slide2.tableBonus" = "tableBonus-base";
+
 /* Education Slide 3 */
 
 "education.slide3.header" = "Terms of access to the leadership program";

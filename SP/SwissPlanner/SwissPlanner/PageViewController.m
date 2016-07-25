@@ -13,7 +13,7 @@
 #import "PlatformTypeChecker.h"
 
 @interface PageViewController () {
-	
+	UIInterfaceOrientation orientation;
 }
 
 
@@ -156,8 +156,13 @@
         backImageName = @"background(education)_iphone6";
     }
     else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
-        navBarImageName = @"nav_bar";
-        backImageName = @"background(education)";
+        if (UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]))  {
+            navBarImageName = @"nav_bar";
+            backImageName = @"background(education)";
+        } else {
+            navBarImageName = @"nav_bar";
+            backImageName = @"background(education)-horizontal";
+        }
     }
     else {
         navBarImageName = @"nav_bar";
@@ -165,7 +170,7 @@
     }
    UIImage *stretchableBackground = [[UIImage imageNamed:navBarImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0,0,self.navigationController.view.frame.size.height,self.navigationController.view.frame.size.width) resizingMode:UIImageResizingModeStretch];
      [self.navigationController.navigationBar setBackgroundImage:stretchableBackground forBarMetrics:UIBarMetricsDefault];
-     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:backImageName]];
+     self.view.layer.contents = (id)[UIImage imageNamed:backImageName].CGImage;
 }
 
 

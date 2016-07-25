@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *block90label;
 @property (weak, nonatomic) IBOutlet UILabel *block9label;
 @property (weak, nonatomic) IBOutlet UILabel *block1label;
+@property (weak, nonatomic) IBOutlet UIImageView *tableBonus;
 
 @end
