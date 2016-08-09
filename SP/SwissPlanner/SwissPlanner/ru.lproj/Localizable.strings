@@ -25,13 +25,13 @@
 
 /* Cabinet */
 
-"cabinet.title" = "Мой кабинет";
+"cabinet.title" = "Кабинет";
 
 "cabinet.cellcontent.1.placeholder" = "Имя пользователя";
 
-"cabinet.cellcontent.2.title" = "Мой лидерский уровень:";
+"cabinet.cellcontent.2.title" = "Лидерский уровень:";
 
-"cabinet.cellcontent.3.title" = "Мои бонусные единицы:";
+"cabinet.cellcontent.3.title" = "Бонусные единицы:";
 
 "cabinet.cellcontent.4.title" = "До следующего уровня:";
 
@@ -59,7 +59,7 @@
 
 "calculator.order.vipPlusOrder" = "VIP PLUS";
 
-"calculator.content.yourLevel" = "Твой уровень";
+"calculator.content.yourLevel" = "Ваш уровень";
 
 "calculator.content.partnersLevel" = "Уровень партнера";
 
@@ -77,9 +77,9 @@
 
 "calculator.content.formula5" = "€%@ / 500 = %@ бон. ед.\n\n";
 
-"calculator.content.formula6" = "Разница цен между уровнями = €%d (цена за бонусную единицу за твой уровень) - €%d (цена единицы за уровень партнера) = €%@\n\n";
+"calculator.content.formula6" = "Разница цен между уровнями = €%d (цена за бонусную единицу за Ваш уровень) - €%d (цена единицы за уровень партнера) = €%@\n\n";
 
-"calculator.content.formula7" = "\nТы теряешь свои деньги!";
+"calculator.content.formula7" = "\nВы теряете свои деньги!";
 
 "calculator.content.formula8" = "Доход = €%@ * %@ = €%@ (покупается золото) %@";
 
@@ -117,7 +117,7 @@
 
 "settings.title" = "Настройки";
 
-"settings.cell1.title" = "Твоё имя";
+"settings.cell1.title" = "Ваше имя";
 
 "settings.cell2.title" = "Бонусные единицы";
 
@@ -127,9 +127,9 @@
 
 "settings.sectionTitle" = "Пользовательские настройки";
 
-"settings.cell1.placeholder" = "Твоё полное имя";
+"settings.cell1.placeholder" = "Ваше полное имя";
 
-"settings.cell2.placeholder" = "Твои каръерные единицы";
+"settings.cell2.placeholder" = "Ваши каръерные единицы";
 
 /* Language Settings */
 
@@ -201,7 +201,7 @@
 
 "education.slide5.block1.header" = "Доход = Цена за 1 Бонусную единицу x Бонусные единицы";
 
-"education.slide5.block2.header" = "Main table of orders";
+"education.slide5.block2.header" = "Главная Таблица заказов";
 
 "education.slide5.block2.content" = "На 1 уровне в Лидерской программе Вы зарабатываете 15€ за 1 бон. ед.\n€15 х 3.78 = €56.70 \nНа 2 уровне в Лидерской программе Вы зарабатываете 20€ за 1 бон. ед.\n€20 х 3.78 = €75.60";
 
@@ -255,7 +255,7 @@
 
 "education.slide8a.header" = "Доходы в Лидерской программе";
 
-"education.slide8a.block1.header" = "ДОХОД от прямого партнера= Бонусные единицы х Цену бонусной единицы Вашего уровня (Независимо от уровня Вашего прямого партнера)";
+"education.slide8a.block1.header" = "ДОХОД от прямого партнера= Бонусные единицы х Цену бонусной единицы Вашего уровня (независимо от уровня Вашего прямого партнера)";
 
 "education.slide8a.block2.header" = "Главная таблица заказов";
 
@@ -313,7 +313,7 @@
 
 "prettyTable.thirdCellItem" = "Цена";
 
-"simpleTable.firstCellItem" = "Ты";
+"simpleTable.firstCellItem" = "Вы";
 
 "simpleTable.secondCellItem" = "партнер";
 

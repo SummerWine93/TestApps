@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "ipad",
-      "filename" : "5 level гориз (2880x1572)-2.png",
+      "filename" : "6 level(2048x1536).png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "5 level гориз (2880x1572)-1.png",
+      "filename" : "6 level(2048x1536)-1.png",
       "scale" : "2x"
     }
   ],

@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "ipad",
-      "filename" : "background(2048x1536)-1.png",
+      "filename" : "background2(2048x1536)-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "background(2048x1536).png",
+      "filename" : "background2(2048x1536)-1.png",
       "scale" : "2x"
     }
   ],
