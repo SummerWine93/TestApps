@@ -66,7 +66,6 @@
 																  target:self
 																  action:nil];
 	self.navigationItem.leftBarButtonItem = menuButton;
-	//[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
 	[self.navigationController.navigationBar
 	 setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationItem.title = NSLocalizedString(@"education.title", nil);
@@ -79,6 +78,11 @@
 		[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 	}
  
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateViewBackground];
 }
 
 #pragma mark - Page View Controller Data Source
@@ -156,12 +160,12 @@
         backImageName = @"background(education)_iphone6";
     }
     else if ([platform containsString:@"iPad"]||[platform isEqualToString:@"Simulator"]){
-        if (UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]))  {
-            navBarImageName = @"nav_bar";
-            backImageName = @"background(education)";
-        } else {
+        if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])){
             navBarImageName = @"nav_bar";
             backImageName = @"background(education)-horizontal";
+        } else {
+            navBarImageName = @"nav_bar";
+            backImageName = @"background(education)";
         }
     }
     else {
@@ -170,18 +174,11 @@
     }
    UIImage *stretchableBackground = [[UIImage imageNamed:navBarImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(0,0,self.navigationController.view.frame.size.height,self.navigationController.view.frame.size.width) resizingMode:UIImageResizingModeStretch];
      [self.navigationController.navigationBar setBackgroundImage:stretchableBackground forBarMetrics:UIBarMetricsDefault];
-     self.view.layer.contents = (id)[UIImage imageNamed:backImageName].CGImage;
+    self.view.layer.contents = (id)[UIImage imageNamed:backImageName].CGImage;
+     dispatch_async(dispatch_get_main_queue(),
+                   ^{
+                       
+                   });
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

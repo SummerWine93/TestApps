@@ -65,7 +65,7 @@ typedef enum {
 						  [NSArray arrayWithObjects:@"56.70", @"32.40", @"222.75", @"112.05", @"793,80", nil],
 						  [NSArray arrayWithObjects:@"75.60", @"43.20", @"297", @"149.40", @"1058.40", nil],
 						  [NSArray arrayWithObjects:@"94.50", @"54", @"371.25", @"186.75", @"1323", nil],
-						  [NSArray arrayWithObjects:@"113.40", @"64.80", @"445.50", @"224.10", @"1 058.40", nil],
+						  [NSArray arrayWithObjects:@"113.40", @"64.80", @"445.50", @"224.10", @"1587.60", nil],
 						  [NSArray arrayWithObjects:@"132.30", @"75.60", @"519.75", @"261.45", @"1 852.20", nil],
 						  [NSArray arrayWithObjects:@"151.20", @"86.40", @"594", @"298.80", @"2 116.80", nil],
 						  [NSArray arrayWithObjects:@"162.54", @"92.88", @"638.55", @"321.21", @"2 275.56", nil],

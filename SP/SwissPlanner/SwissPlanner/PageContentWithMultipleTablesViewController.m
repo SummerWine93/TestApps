@@ -43,9 +43,11 @@
 			break;
 		case 1:
 			if (indexPath.section == 0) {
-				reuseIdentifier = @"importantContentCell";
-			} else {
-				reuseIdentifier = @"contentCell";
+				reuseIdentifier = @"level0ContentCell";
+            } else if (indexPath.section == 1) {
+                reuseIdentifier = @"level1ContentCell";
+            }else {
+				reuseIdentifier = @"level2ContentCell";
 			}
 			break;
 		case 2:
@@ -66,10 +68,12 @@
 			cell.thirdCellItem.text = [[self.dataArray objectAtIndex:(indexPath.section )] objectAtIndex:2];
 		//}
     } else {
-        if ([reuseIdentifier isEqualToString: @"importantContentCell"]) {
-            cell.firstCellItem.text = NSLocalizedString(@"simpleTable.firstCellItem", nil);
-        } else if ([reuseIdentifier isEqualToString: @"contentCell"]) {
-            cell.firstCellItem.text = NSLocalizedString(@"simpleTable.secondCellItem", nil);
+        if ([reuseIdentifier isEqualToString: @"level0ContentCell"]) {
+            cell.firstCellItem.text = NSLocalizedString(@"simpleTable.level0CellItem", nil);
+        } else if ([reuseIdentifier isEqualToString: @"level1ContentCell"]) {
+            cell.firstCellItem.text = NSLocalizedString(@"simpleTable.level1CellItem", nil);
+        } else if ([reuseIdentifier isEqualToString: @"level2ContentCell"]) {
+            cell.firstCellItem.text = NSLocalizedString(@"simpleTable.level2CellItem", nil);
         }
     }
 	

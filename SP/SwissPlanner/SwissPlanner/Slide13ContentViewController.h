@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *firstTableView;
 @property (weak, nonatomic) IBOutlet UILabel *headerBlockLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerContentBlockLabel;
+@property (weak, nonatomic) IBOutlet UILabel *extraInfoBlock;
 
 @end

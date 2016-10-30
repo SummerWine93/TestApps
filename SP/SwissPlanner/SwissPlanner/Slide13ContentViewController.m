@@ -7,6 +7,7 @@
 //
 
 #import "Slide13ContentViewController.h"
+#import "FontsHelper.h"
 
 @interface Slide13ContentViewController () {
 	NSArray *dataArray;
@@ -35,6 +36,13 @@
 				 [NSArray arrayWithObjects:@"2", @"€5 x 100e = €500", nil],
 				 [NSArray arrayWithObjects:@"1", nil],
 				  nil];
+    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] initWithString:@"€ 320 000\n"];
+    [result addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:([FontsHelper getFontSize] + 5)] range:NSMakeRange(0, result.string.length)];
+    [result addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(128.0/255.0) green:(0) blue:(0) alpha:1] range:NSMakeRange(0, result.string.length)];
+    NSMutableAttributedString *extraInfo = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"education.slide13.extraInfo", nil)];
+    [extraInfo addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:([FontsHelper getFontSize] + 2)] range:NSMakeRange(0, extraInfo.string.length)];
+    [result appendAttributedString:extraInfo];
+    self.extraInfoBlock.attributedText = result;
 }
 
 - (void)setSpecificViews {

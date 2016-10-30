@@ -81,7 +81,7 @@
 
 "calculator.content.formula7" = "\n您受到的损失";
 
-"calculator.content.formula8" = "收入 = €%@ * %@ = €%@ (所购黄金的价格) %@";
+"calculator.content.formula8" = "您从您的组织所选择的合作人之关闭表所获得的收入 = €%@ * %@ = €%@ (所购黄金的价格) %@";
 
 /* Rewards */
 
@@ -305,6 +305,8 @@
 
 "education.slide13.headerContent" = "如果您和您的合作人之间相差1个等级";
 
+"education.slide13.extraInfo" = "如果您亲自邀请的合作人接受您其他合作人的邀请,您会损失32000€";
+
 /* Education Tables */
 
 "prettyTable.firstCellItem" = "等级";
@@ -313,6 +315,8 @@
 
 "prettyTable.thirdCellItem" = "价格";
 
-"simpleTable.firstCellItem" = "您";
+"simpleTable.level0CellItem" = " 您";
 
-"simpleTable.secondCellItem" = "合作人";
+"simpleTable.level1CellItem" = "令";
+
+"simpleTable.level2CellItem" = "合作人";

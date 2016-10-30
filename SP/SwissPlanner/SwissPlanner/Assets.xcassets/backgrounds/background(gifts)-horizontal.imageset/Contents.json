@@ -4,6 +4,11 @@
       "idiom" : "ipad",
       "filename" : "2048x1536.png",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "2048x1536-1.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

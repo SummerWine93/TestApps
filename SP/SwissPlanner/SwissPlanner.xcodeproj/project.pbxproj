@@ -82,6 +82,9 @@
 		39546FFA1D06096E00710FD2 /* tests_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tests_source.txt; sourceTree = "<group>"; };
 		39546FFC1D060A1100710FD2 /* TestBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBaseHelper.h; sourceTree = "<group>"; };
 		39546FFD1D060A1100710FD2 /* TestBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBaseHelper.m; sourceTree = "<group>"; };
+		398E03FC1D5FC3A300354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		398E03FD1D5FC3A300354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		398E03FE1D5FC3A400354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		398EADB91D1C87D500351BE9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3996E2431D330A6B00FEB468 /* FontsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontsHelper.h; sourceTree = "<group>"; };
 		3996E2441D330A6B00FEB468 /* FontsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontsHelper.m; sourceTree = "<group>"; };
@@ -486,6 +489,7 @@
 				es,
 				"zh-Hans",
 				ru,
+				pl,
 			);
 			mainGroup = CE5913721CBA566C008A3042;
 			productRefGroup = CE59137C1CBA566C008A3042 /* Products */;
@@ -603,6 +607,7 @@
 			children = (
 				CE5913881CBA566D008A3042 /* Base */,
 				399A208C1D3A97BB001AAC95 /* ru */,
+				398E03FC1D5FC3A300354D06 /* pl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -612,6 +617,7 @@
 			children = (
 				CE59138D1CBA566D008A3042 /* Base */,
 				399A208D1D3A97BC001AAC95 /* ru */,
+				398E03FD1D5FC3A300354D06 /* pl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -624,6 +630,7 @@
 				39F91F7A1D0BF8E000D0B05E /* es */,
 				398EADB91D1C87D500351BE9 /* zh-Hans */,
 				399A208E1D3A9810001AAC95 /* ru */,
+				398E03FE1D5FC3A400354D06 /* pl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

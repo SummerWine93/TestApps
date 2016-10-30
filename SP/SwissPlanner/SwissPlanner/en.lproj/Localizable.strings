@@ -81,7 +81,7 @@
 
 "calculator.content.formula7" = "\nYou are losing your money!";
 
-"calculator.content.formula8" = "Income = €%@ * %@ = €%@ (buying gold) %@";
+"calculator.content.formula8" = "Income from every closed Table in the structure of this partner = €%@ * %@ = €%@ (buying gold) %@";
 
 /* Rewards */
 
@@ -173,11 +173,11 @@
 
 "education.slide3.block1.header" = "in the Main agreement";
 
-"education.slide3.block1.content" = "1. You need to close your Main table\n\n2. Your 2 attracted customers should also close their Main tables\n\n3. And their 2 invited partners should do the same";
+"education.slide3.block1.content" = "1. You need to close your Main table\n\n2. Your 2 direct partners should also close their Main tables\n\n3. And their 2 direct partners should do the same";
 
 "education.slide3.block2.header" = "in the VIP agreement";
 
-"education.slide3.block2.content" = "1. You need to close your VIP table\n\n2. Your 2 invited partners should also close their VIP tables";
+"education.slide3.block2.content" = "1. You need to close your VIP table\n\n2. Your 2 direct partners should also close their VIP tables";
 
 /* Education Slide 4 */
 
@@ -217,11 +217,11 @@
 
 "education.slide6.block2.header" = "Main table of orders";
 
-"education.slide6.block2.content" = "If You are in the Leadership program and Your partner has not yet than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 etc.";
+"education.slide6.block2.content" = "If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 etc.";
 
 "education.slide6.block3.header" = "VIP table of orders";
 
-"education.slide6.block3.content" = "If You are in the Leadership program and Your partner has not yet than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 etc.";
+"education.slide6.block3.content" = "If You are in the Leadership program and Your partner has not yet - than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 etc.";
 
 /* Education Slide 7 */
 
@@ -301,9 +301,11 @@
 
 /* Education Slide 13 */
 
-"education.slide13.header" = "The price of one recomendation in the Leadership program";
+"education.slide13.header" = "The price of Your one recomendation in the Leadership program";
 
 "education.slide13.headerContent" = "if the difference between you and your partner is always one level";
+
+"education.slide13.extraInfo" = "at least 320 000 euros you are losing in the Leadership program if you subscribe your own partners in the depth of the structure";
 
 /* Education Tables */
 
@@ -313,9 +315,11 @@
 
 "prettyTable.thirdCellItem" = "Price";
 
-"simpleTable.firstCellItem" = "You";
+"simpleTable.level0CellItem" = "You";
 
-"simpleTable.secondCellItem" = "partner";
+"simpleTable.level1CellItem" = "Your";
+
+"simpleTable.level2CellItem" = "\tpartner";
 
 
 

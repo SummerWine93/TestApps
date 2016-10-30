@@ -81,7 +81,7 @@
 
 "calculator.content.formula7" = "\nYou are losing your money!";
 
-"calculator.content.formula8" = "Income = €%@ * %@ = €%@ (buying gold) %@";
+"calculator.content.formula8" = "Income from every closed Table in the structure of this partner = €%@ * %@ = €%@ (buying gold) %@";
 
 /* Rewards */
 
@@ -305,6 +305,8 @@
 
 "education.slide13.headerContent" = "if the difference between you and your partner is always one level";
 
+"education.slide13.extraInfo" = "at least 320 000 euros you are losing in the Leadership program if you subscribe your own partners in the depth of the structure";
+
 /* Education Tables */
 
 "prettyTable.firstCellItem" = "Level";
@@ -313,6 +315,8 @@
 
 "prettyTable.thirdCellItem" = "Price";
 
-"simpleTable.firstCellItem" = "You";
+"simpleTable.level0CellItem" = "You";
 
-"simpleTable.secondCellItem" = "partner";
+"simpleTable.level1CellItem" = "Your";
+
+"simpleTable.level2CellItem" = " partner";

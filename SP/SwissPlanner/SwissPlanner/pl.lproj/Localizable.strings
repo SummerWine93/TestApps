@@ -9,312 +9,314 @@
 
 /* Navigation */
 
-"navigation.item.cabinet" = "Cabinet";
+"navigation.item.cabinet" = "Biuro";
 
-"navigation.item.calculator" = "Calculator";
+"navigation.item.calculator" = "Kalkulator";
 
-"navigation.item.education" = "Education";
+"navigation.item.education" = "Edukacja";
 
-"navigation.item.rewards" = "Rewards";
+"navigation.item.rewards" = "Wyróżnienia";
 
-"navigation.item.testing" = "Testing";
+"navigation.item.testing" = "Testowanie";
 
-"navigation.item.settings" = "Settings";
+"navigation.item.settings" = "Ustawienia";
 
-"navigation.item.section.2" = "FOLLOW US";
+"navigation.item.section.2" = "PODĄŻAJ ZA NAMI";
 
 /* Cabinet */
 
-"cabinet.title" = "Cabinet";
+"cabinet.title" = "Biuro";
 
-"cabinet.cellcontent.1.placeholder" = "User Name";
+"cabinet.cellcontent.1.placeholder" = "Nazwa użytkownika";
 
-"cabinet.cellcontent.2.title" = "Leadership level:";
+"cabinet.cellcontent.2.title" = "Poziom przywództwa:";
 
-"cabinet.cellcontent.3.title" = "Bonus units:";
+"cabinet.cellcontent.3.title" = "Jednostki bonusowe:";
 
-"cabinet.cellcontent.4.title" = "Units to the next level:";
+"cabinet.cellcontent.4.title" = "Do następnego poziomu:";
 
-"cabinet.cellcontent.2_3.none" = "None";
+"cabinet.cellcontent.2_3.none" = "Żaden";
 
-"cabinet.order.mainOrder" = "Main order";
+"cabinet.order.mainOrder" = "Umowa Główna";
 
-"cabinet.order.vipOrder" = "VIP order";
+"cabinet.order.vipOrder" = "Umowa VIP";
 
-"cabinet.order.vipPlusOrder" = "VIP PLUS order";
+"cabinet.order.vipPlusOrder" = "Umowa VIP PLUS";
 
 /* Calculator */
 
-"calculator.title" = "Calculator";
+"calculator.title" = "Kalkulator";
 
-"calculator.order.preOrder" = "Preliminary";
+"calculator.order.preOrder" = "Wstępny";
 
-"calculator.order.mainOrder" = "Main";
+"calculator.order.mainOrder" = "Główny";
 
-"calculator.order.preVipOrder" = "Pre VIP";
+"calculator.order.preVipOrder" = "Wst. VIP";
 
 "calculator.order.vipOrder" = "VIP";
 
-"calculator.order.preVipPlusOrder" = "Pre VIP PLUS";
+"calculator.order.preVipPlusOrder" = "Wst. VIP Plus";
 
-"calculator.order.vipPlusOrder" = "VIP PLUS";
+"calculator.order.vipPlusOrder" = "VIP Plus";
 
-"calculator.content.yourLevel" = "Your level";
+"calculator.content.yourLevel" = "Twój poziom";
 
-"calculator.content.partnersLevel" = "Partner's level";
+"calculator.content.partnersLevel" = "Poziom partnera";
 
-"calculator.content.prepayment" = "Prepayment";
+"calculator.content.prepayment" = "Przedpłata";
 
-"calculator.content.isDirect" = "Direct Partner";
+"calculator.content.isDirect" = "Bezpośredni polecony";
 
-"calculator.content.formula1" = "\nPrepayment = €%@ - €%d(internet commission) = €%@\n\n";
+"calculator.content.formula1" = "\nPrzedpłata = €%@ - €%d(internet komisji) = €%@\n\n";
 
-"calculator.content.formula2" = "€%@ x 4 Orders = €%@ (commodity circulation)\n\n";
+"calculator.content.formula2" = "€%@ x 4 Zamówienia = €%@ (handel)\n\n";
 
-"calculator.content.formula3" = "€%@ - €%@ (reinvestment) = €%@\n\n";
+"calculator.content.formula3" = "€%@ - €%@ (reinwestowanie) = €%@\n\n";
 
-"calculator.content.formula4" = "€%@  - 10%% (commission) = €%@ (buying gold)\n\n";
+"calculator.content.formula4" = "€%@  - 10%% (komisja) = €%@ (buying gold)\n\n";
 
-"calculator.content.formula5" = "€%@ / 500 = %@ bonus units\n\n";
+"calculator.content.formula5" = "€%@ / 500 = %@ jednostki bonusowe\n\n";
 
-"calculator.content.formula6" = "Price difference between levels = €%d (point cost for your level) - €%d (point cost for partners level) = €%@\n\n";
+"calculator.content.formula6" = "Różnica między poziomem cen = €%d (cena jednostkowa dla Twojego poziomu) - €%d (cena jednostkowa dla poziomu partnera) = €%@\n\n";
 
-"calculator.content.formula7" = "\nYou are losing your money!";
+"calculator.content.formula7" = "\nTracisz pieniądze!";
 
-"calculator.content.formula8" = "Income from every closed Table in the structure of this partner = €%@ * %@ = €%@ (buying gold) %@";
+"calculator.content.formula8" = "Zarobek = €%@ * %@ = €%@ (kupując złoto) %@";
 
 /* Rewards */
 
-"rewards.title" = "Rewards";
+"rewards.title" = "Wyróżnienia";
 
-"rewards.1Level" = "1 Level";
+"rewards.1Level" = "Poziom 1";
 
-"rewards.3Level" = "3 Level";
+"rewards.3Level" = "Poziom 3";
 
-"rewards.4Level" = "4 Level";
+"rewards.4Level" = "Poziom 4";
 
-"rewards.5Level" = "5 Level";
+"rewards.5Level" = "Poziom 5";
 
-"rewards.6Level" = "6 Level";
+"rewards.6Level" = "Poziom 6";
 
-"rewards.7-11Levels" = "7-11 levels";
+"rewards.7-11Levels" = "7-11 poziom";
 
-"rewards.cruise" = "Cruise";
+"rewards.cruise" = "Rejs";
 
 /* Testing */
 
-"testing.title" = "Testing";
+"testing.title" = "Testowanie";
 
-"testing.content.bestResult" = "BEST TEST RESULT\n%@ of %d\n\n";
+"testing.content.bestResult" = "NAJLEPSZY WYNIK TESTU\n%@ / %d\n\n";
 
-"testing.content.lastResult" = "LAST TEST RESULT\n%@ of %d";
+"testing.content.lastResult" = "OSTATNI WYNIK TESTU\n%@ / %d";
 
-"testing.startButton" = "START THE TEST";
+"testing.startButton" = "START TEST";
 
-"testing.slide.questionLabel" = "Question %d of %d";
+"testing.slide.questionLabel" = "Pytanie %d od %d";
 
 /* Settings */
 
-"settings.title" = "Settings";
+"settings.title" = "Ustawienia";
 
-"settings.cell1.title" = "Your name";
+"settings.cell1.title" = "Imię";
 
-"settings.cell2.title" = "Bonus units";
+"settings.cell2.title" = "Jednostek bonusowych";
 
-"settings.cell3.title" = "In leadership program";
+"settings.cell3.title" = "W programie liderskim";
 
-"settings.cell4.title" = "Languages";
+"settings.cell4.title" = "Języki";
 
-"settings.sectionTitle" = "User settings";
+"settings.sectionTitle" = "Ustawienia użytkownika";
 
-"settings.cell1.placeholder" = "Your full name";
+"settings.cell1.placeholder" = "Twoje imię i nazwisko";
 
-"settings.cell2.placeholder" = "Your carier points";
+"settings.cell2.placeholder" = "Twoje jednostki bonusowe";
 
 /* Language Settings */
 
-"language.settings.alert.title" = "Language changing";
+"language.settings.alert.title" = "Zmiana języka";
 
-"language.settings.alert.text" = "You need to restart the app in order to see the changes. Do you want to shut down the app?";
+"language.settings.alert.text" = "Musisz ponownie uruchomić aplikację, aby zobaczyć zmiany. Chcesz zamykania aplikacji?";
 
 "language.settings.alert.ok" = "OK";
 
-"language.settings.alert.cancel" = "Cancel";
+"language.settings.alert.cancel" = "Kasować";
 
 /* Education */
 
-"education.title" = "Education";
+"education.title" = "Edukcja";
 
 /* Education Slide 1 */
 
-"education.slide1.header" = "Income in the SWISSGOLDEN company";
+"education.slide1.header" = "Dochód w firmie Swissgolden";
 
-"education.slide1.block1.header" = "Bonus Program";
+"education.slide1.block1.header" = "Program bonusowy";
 
-"education.slide1.block1.content" = "Quick start\nActive income";
+"education.slide1.block1.content" = "Szybki start\nAktywny dochód";
 
-"education.slide1.block2.header" = "Leadership Program";
+"education.slide1.block2.header" = "Program liderski";
 
-"education.slide1.block2.content" = "Passive income";
+"education.slide1.block2.content" = "Dochód pasywny";
 
 /* Education Slide 2 */
 
-"education.slide2.block1" = "90% - The company buys Gold for its partner in Bonus program";
+"education.slide2.block1" = "90% - zakup złota przez partnera w prog. Bonusowym";
 
-"education.slide2.block2" = "9% - The company distributes in the Leadership program";
+"education.slide2.block2" = "9% - rozdziela się na program liderski";
 
-"education.slide2.block3" = "1% - Income of the company";
+"education.slide2.block3" = "1% - dochód firmy";
 
 "education.slide2.tableBonus" = "tableBonus-base";
 
 /* Education Slide 3 */
 
-"education.slide3.header" = "Terms of access to the leadership program";
+"education.slide3.header" = "Warunki wejścia do programu liderskiego";
 
-"education.slide3.block1.header" = "in the Main agreement";
+"education.slide3.block1.header" = "w Umowie głównej";
 
-"education.slide3.block1.content" = "1. You need to close your Main table\n\n2. Your 2 attracted customers should also close their Main tables\n\n3. And their 2 invited partners should do the same";
+"education.slide3.block1.content" = "1. Powinienieś zamknąć swoją główną tabelę\n\n2. Twoich dwóch poleconych także muszą zamkną swoje tabele\n\n3. Ich dwóch poleconych musza też zamknąć swoje tabele";
 
-"education.slide3.block2.header" = "in the VIP agreement";
+"education.slide3.block2.header" = "w Umowie VIP";
 
-"education.slide3.block2.content" = "1. You need to close your VIP table\n\n2. Your 2 invited partners should also close their VIP tables";
+"education.slide3.block2.content" = "1. Ty musisz zamknąć swoją tabelę VIP\n\n2. Twoich 2 poleconych także musza zamknąć swoje tabele VIP";
 
 /* Education Slide 4 */
 
-"education.slide4.header" = "Income in the Leadership program";
+"education.slide4.header" = "Dochody w programie liderskim";
 
-"education.slide4.block1.header" = "Commodity circulation / 500 = Bonus units";
+"education.slide4.block1.header" = "Obrót towarowy / 500 = jednostki bonusowe";
 
-"education.slide4.block1.content" = "The bonus units accumulate in the leadership program";
+"education.slide4.block1.content" = "Jednostki bonusowe w programie liderskim gromadzą się";
 
-"education.slide4.block2.header" = "Main table of orders";
+"education.slide4.block2.header" = "Główna tabela zamówień";
 
-"education.slide4.block2.content" = "2100€ - 10% = 1890€ (commodity circulation)\n1890€ / 500 = 3.78 bonus units\nyou will get for one closed Main table";
+"education.slide4.block2.content" = "2100€ - 10% = 1890€ (obrót towarowy\n1890€ / 500 = 3.78 jednostek bonusowych\nTy otrzymasz za jedną zamkniętą tabelę";
 
-"education.slide4.block3.header" = "VIP table of orders";
+"education.slide4.block3.header" = "Tabela zamowień VIP";
 
-"education.slide4.block3.content" = "8250€ - 10% = 7425€ (commodity circulation)\n7425€ / 500 = 14.85 bonus units\nyou will get for one closed VIP table";
+"education.slide4.block3.content" = "8250€ - 10% = 7425€ ( obrót towarowy\n 7425 / 500 = 14.84 jednostek bonusowych \n Ty otrzymasz za jedną zamkniętą tabelę VIP";
 
 /* Education Slide 5 */
 
-"education.slide5.header" = "Income in the Leadership program";
+"education.slide5.header" = "Dochody w programie liderskim";
 
-"education.slide5.block1.header" = "Income = Price for 1 bonus unit х Bonus units";
+"education.slide5.block1.header" = "Dochód = Cena za jednostkę bonusową x jednostki bonusowe";
 
-"education.slide5.block2.header" = "Main table of orders";
+"education.slide5.block2.header" = "Główna tabela zamowień";
 
-"education.slide5.block2.content" = "On the 1st level of the leadership program You earn €15 for 1 bonus unit.\n€15 х 3.78 = €56.70 \nOn the 2nd level of the leadership program You earn €20 for 1 bonus unit.\n€20 х 3.78 = €75.60";
+"education.slide5.block2.content" = "Na pierwszym poziomie programu liderskiego zarabiasz 15€ za jednostke bonusową.\t 15€ x 3.78 = 56.70€.\n Na 2-gim poziomie w programie liderów zarabiasz 20€ na 1 jednostkę bonusową \n20€ x 3.78 = 75.60€";
 
-"education.slide5.block3.header" = "VIP table of orders";
+"education.slide5.block3.header" = "Tabela zamówień VIP";
 
-"education.slide5.block3.content" = "On the 1st level of the leadership program You earn €15 for 1 bonus unit.\n€15 х 14.85 = €222.75 \nOn the 2nd level of the leadership program You earn €20 for 1 bonus unit.\n€20 х 14.85 = €297.00";
+"education.slide5.block3.content" = "Na 1 poziomie programie liderskiego zarabiasz 15€ za 1 jednostkę bonusową \n15€ x 14.85 = 222.75€\n Na 2 -gimpoziomie programu liderskiego zarabiasz 20€ za 1 jednostkę bonusową \20€ x 14.85 = 297.00€";
 
 /* Education Slide 6 */
 
-"education.slide6.header" = "Income in the Leadership program";
+"education.slide6.header" = "Dochody w programie liderskim";
 
-"education.slide6.block1.header" = "Income = Price for 1 bonus unit х Bonus units";
+"education.slide6.block1.header" = "Dochód = Cena za jednostkę bonusową x jednostki bonusowe";
 
-"education.slide6.block2.header" = "Main table of orders";
+"education.slide6.block2.header" = "Główna tabela zamówień";
 
-"education.slide6.block2.content" = "If You are in the Leadership program and Your partner has not yet than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 3.78 = €94.50 etc.";
+"education.slide6.block2.content" = "Jeżeli Ty jesteś w programie liderskim a Twój partner jeszcze nie - wtedy na 3 poziomie Ty zarabiasz 25€ na 1 jednostke bonusową \n25€ х 3.78 = 94.50€ itd.";
 
-"education.slide6.block3.header" = "VIP table of orders";
+"education.slide6.block3.header" = "Tabela zamówień VIP";
 
-"education.slide6.block3.content" = "If You are in the Leadership program and Your partner has not yet than on the 3rd level You will earn €25 for 1 bonus unit\n€25 х 14.85 = €371.25 etc.";
+"education.slide6.block3.content" = "Jeżeli Ty jesteś w programie liderskim a Twój partner jeszcze nie - wtedy na 3 poziomie Ty zarabiasz 25€ na 1 jednostkę bonusową \n25€ х14,85 = 371.25€ itd.";
 
 /* Education Slide 7 */
 
-"education.slide7.header" = "Income in the Leadership program";
+"education.slide7.header" = "Dochody w programie liderskim";
 
-"education.slide7.block1.header" = "Income = Bonus units х Price differences between levels";
+"education.slide7.block1.header" = "Dochód = Jednostki bonusowe x Różnica cen między poziomami";
 
-"education.slide7.block2.header" = "Main table of orders";
+"education.slide7.block2.header" = "Główna tabela zamówień";
 
-"education.slide7.block2.content" = "If You are on the 2nd level, and Your partner is on the 1st level of the Leadership program Your income is:\n3.78 х (€20 - €15) = €18.90";
+"education.slide7.block2.content" = "Jeżeli Ty jesteś na poziomie 2-gim, a Twój partner na poziomie 1 programu liderskiego to Twój dochód będzie wynosił: \n3.78 x (20€ - 15€) = 18.90€";
 
-"education.slide7.block3.header" = "VIP table of orders";
+"education.slide7.block3.header" = "Tabela zamówień VIP";
 
-"education.slide7.block3.content" = "If You are on the 2nd level, and Your partner is on the 1st level of the Leadership program Your income is:\n14.85 х (€20 - €15) = €74.25";
+"education.slide7.block3.content" = "Jeżeli Ty jesteś na poziomie 2-gim, a Twój partner na poziomie 1 programu liderskiego to Twój dochód będzie wynosil: \n14,85 x (20€ - 15€) = 74,25€";
 
 /* Education Slide 8 */
 
-"education.slide8.header" = "Income in the Leadership program";
+"education.slide8.header" = "Dochody w programie liderskim";
 
-"education.slide8.block1.header" = "Income = Bonus units х Price differences between levels";
+"education.slide8.block1.header" = "Dochód = Jednostki bonusowe x Różnica cen między poziomami";
 
-"education.slide8.block2.header" = "Main table of orders";
+"education.slide8.block2.header" = "Główna tabela zamówień";
 
-"education.slide8.block2.content" = "If You are on the 4th level and Your partner is on the 1st level of the Leadership program Your income is:\n3.78 х (€30 - €15) = €56.70";
+"education.slide8.block2.content" = "Jeżeli Ty jesteś na poziomie 4-tym, a Twój partner na poziomie 1 programu liderskiego to Twój dochód będzie wynosił: \n3.78 x (30€ - 15€) = 56.70€";
 
-"education.slide8.block3.header" = "VIP table of orders";
+"education.slide8.block3.header" = "Tabela zamówień VIP";
 
-"education.slide8.block3.content" = "If You are on the 4th level and Your partner is on the 1st level of the Leadership program Your income is:\n14.85 х (€30 - €15) = €222.75";
+"education.slide8.block3.content" = "Jeżeli Ty jesteś na poziomie 4-tym a Twój partner na poziomie 1 programu liderskiego to Twój dochód będzie wynosił: \n14.85 x (30€ - 15€) = 222.75€";
 
 /* Education Slide 8a */
 
-"education.slide8a.header" = "Income in the Leadership program";
+"education.slide8a.header" = "Dochody w programie liderskim";
 
-"education.slide8a.block1.header" = "Income from your direct partner (doesn't matter what's your partner's level is) = Bonus units х Price differences between your level and 1 level of Leadership program";
+"education.slide8a.block1.header" = "Dochód = Jednostki bonusowe x Cena jednostki bonusowej Twojego poziomu ( niezależnie od poziomu Twojego bezpośredniego partnera)";
 
-"education.slide8a.block2.header" = "Main table of orders";
+"education.slide8a.block2.header" = "Główna tabela zamówień";
 
-"education.slide8a.block2.content" = "You are on 9 level, your direct partner on 5 level of Leadership program. Your income is:\n3.78 х (47€ - 0€) = 177.6€";
+"education.slide8a.block2.content" = "Jezli Ty jesteś na poziomie 9-tym a Twój partner na poziomie 5-tym programu liderskiego Twój dochód wynosi: \n3.78 x (47€ - 0€) = 177.66€";
 
-"education.slide8a.block3.header" = "VIP table of orders";
+"education.slide8a.block3.header" = "Tabela zamówień VIP";
 
-"education.slide8a.block3.content" = "You are on 9 level, your direct partner on 5 level of Leadership program. Your income is:\n14.85 х (47€ - 0€) = 697.95€";
+"education.slide8a.block3.content" = "Jezli Ty jesteś na poziomie 9-tym a Twój partner na poziomie 5-tym programu liderskiego Twój dochód wynosi: \n14.85x (47€ - 0€) = 697.95€";
 
 /* Education Slide 9 */
 
-"education.slide9.header" = "How much money the company distributes in the Main agreement of the Leadership program";
+"education.slide9.header" = "Ile pieniędzy rozdziela firma z Umowy Główej  w programie liderskim";
 
-"education.slide9.block2.content" = "2100 x 10% = €210 \n10% - company commission for one Main table";
+"education.slide9.block2.content" = "2100 x 10% = €210 \n10% - Komisja handlowa z jednej tabeli głównej";
 
-"education.slide9.block3.content" = "€189.00 - the company distributes in the Leadership program";
+"education.slide9.block3.content" = "€189.00 - Firma przeznacza na program liderski";
 
-"education.slide9.block4.content" = "€2100 x 9% = €189 \n9% - goes to the Leadership program \n1% - remains as an income of the company";
+"education.slide9.block4.content" = "2100 x 9% = €189 \n9% - idzie do programu liderskiego \n1% - zostaje jako dochód firmy";
 
 /* Education Slide 10 */
 
-"education.slide10.header" = "How much money the company distributes in the VIP agreement of the Leadership program";
+"education.slide10.header" = "Ile pieniędzy rozdziela firma z Umowy VIP  w programie liderskim";
 
-"education.slide10.block2.content" = "8250 x 10% = €825 \n10% - company commission for one VIP table";
+"education.slide10.block2.content" = "8250 x 10% = 825€ \n10% - Komisja  handlowa z jednej tabeli VIP";
 
-"education.slide10.block3.content" = "€742.5 - the company distributes in the Leadership program";
+"education.slide10.block3.content" = "742.5€ - Firma przeznacza na program liderski";
 
-"education.slide10.block4.content" = "€8250 x 9% = €742.5 \n9% - goes to the Leadership program \n1% - remains as an income of the company";
+"education.slide10.block4.content" = "8250 x 9% = 742.5€ \n9% - idzie do proggramu liderskiego  \n1% - zostaje jako dochód firmy";
 
 /* Education Slide 11 */
 
-"education.slide11.header" = "How much money the company distributes in the VIP PLUS agreement of the Leadership program";
+"education.slide11.header" = "Ile pieniędzy rozdziela firma z Umowy VIP PLUS  w programie liderskim";
 
-"education.slide11.block2.content" = "29400 x 10% = €2940 \n10% - company commission for one VIP PLUS table";
+"education.slide11.block2.content" = "29400 x 10% = 2940€ \n10% - Komisja handlowa z jednej tabeli VIP PLUS";
 
-"education.slide11.block3.content" = "€2646 - the company distributes in the Leadership program";
+"education.slide11.block3.content" = "2646€ - Firma przeznacza na program liderski";
 
-"education.slide11.block4.content" = "€29400 x 9% = €2646 \n9% - goes to the Leadership program \n1% - remains as an income of the company";
+"education.slide11.block4.content" = "29400€ x 9% = 2646€ \n9%  idzie do programu liderskiego \n1% - zostaje jako dochód firmy";
 
 /* Education Slide Conclusion */
 
-"education.slideConclusion.header" = "Leadership Bonus Calculations";
+"education.slideConclusion.header" = "Obliczenia bonusów liderskich";
 
 /* Education Slide 13 */
 
-"education.slide13.header" = "The price of one recomendation in the Leadership program";
+"education.slide13.header" = "Cena jednej rekomendacji w programie liderskim";
 
-"education.slide13.headerContent" = "if the difference between you and your partner is always one level";
+"education.slide13.headerContent" = "Jeżli różnica między Tobą i Twoim partnerem zawsze wynosi 1 poziom";
 
-"education.slide13.extraInfo" = "at least 320 000 euros you are losing in the Leadership program if you subscribe your own partners in the depth of the structure";
+"education.slide13.extraInfo" = "";
 
 /* Education Tables */
 
-"prettyTable.firstCellItem" = "Level";
+"prettyTable.firstCellItem" = "Poziom";
 
-"prettyTable.secondCellItem" = "Bonus units";
+"prettyTable.secondCellItem" = "Jednostki bonusowe";
 
-"prettyTable.thirdCellItem" = "Price";
+"prettyTable.thirdCellItem" = "Cena";
 
-"simpleTable.firstCellItem" = "You";
+"simpleTable.level0CellItem" = "Ty";
 
-"simpleTable.secondCellItem" = "partner";
+"simpleTable.level1CellItem" = "Twój";
+
+"simpleTable.level2CellItem" = " Partner";

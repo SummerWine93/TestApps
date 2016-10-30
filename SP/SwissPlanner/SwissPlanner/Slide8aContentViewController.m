@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.yourCellsRows = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:2], [NSNumber numberWithInt:11], nil];
-    self.partnerCellsRows = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:6], nil];
+    self.yourCellsRows = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:3], nil];
+    self.partnerCellsRows = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:7], nil];
 }
 
 - (void) setSpecificViews {

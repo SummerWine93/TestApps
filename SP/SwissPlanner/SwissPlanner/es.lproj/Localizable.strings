@@ -81,7 +81,7 @@
 
 "calculator.content.formula7" = "\nUd. esta perdiendo su dinero!";
 
-"calculator.content.formula8" = "Ingresos = €%@ * %@ = €%@ (сompra de oro) %@";
+"calculator.content.formula8" = "El ingreso de cada Mesa cerrada en la estructura de este socio = €%@ * %@ = €%@ (сompra de oro) %@";
 
 /* Rewards */
 
@@ -173,7 +173,7 @@
 
 "education.slide3.block1.header" = "En el contrato principal";
 
-"education.slide3.block1.content" = "1. Ud. Tiene que cerrar su mesa principal\n\n2. Sus 2 personas invitadas  tambien tienen  cerrar sus mesas principales\n\n3.  Sus 2 personas invitadas  tambien tienen cerrar sus mesas principales";
+"education.slide3.block1.content" = "1. Ud. Tiene que cerrar su mesa principal\n\n2. Sus 2 personas invitadas  tambien tienen  cerrar sus mesas principales\n\n3. Sus 2 personas invitadas tambien tienen cerrar sus mesas principales";
 
 "education.slide3.block2.header" = "En el contrato VIP";
 
@@ -305,6 +305,8 @@
 
 "education.slide13.headerContent" = "Si la diferencia entre usted y su socio siempre forma 1 nivel";
 
+"education.slide13.extraInfo" = "Ud. esta perdiendo 320 000 euros mínimo en el programa de Lideres si esta suscribiendo sus socios personales en la profundidad de la estructura";
+
 /* Education Tables */
 
 "prettyTable.firstCellItem" = "Nivel";
@@ -313,6 +315,8 @@
 
 "prettyTable.thirdCellItem" = "Precio";
 
-"simpleTable.firstCellItem" = "Usted";
+"simpleTable.level0CellItem" = "Usted";
 
-"simpleTable.secondCellItem" = "\tSocio";
+"simpleTable.level1CellItem" = "Tu";
+
+"simpleTable.level2CellItem" = " Socio";

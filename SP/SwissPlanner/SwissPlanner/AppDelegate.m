@@ -24,6 +24,10 @@
 	
 	[[UIView appearanceWhenContainedIn:[UIAlertController class], nil] setTintColor:[UIColor blackColor]];
     
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor lightGrayColor];
+    
     LanguageHelper *helper = [[LanguageHelper alloc] init];
 	//[helper setCurrentLanguage:language];
     NSLog(@"%@", [helper getCurrentLanguage]);

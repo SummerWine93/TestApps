@@ -118,7 +118,7 @@
         [self updateViewBackground];
     } completion:^(id  _Nonnull context) {
 		[self.textView setNeedsDisplay];
-		
+        [self.textView setAttributedText:[self countIncomeResult]];
         // after rotation
     }];
 }

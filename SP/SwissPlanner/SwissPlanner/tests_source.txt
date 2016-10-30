@@ -1,6 +1,6 @@
 ﻿[{
 	"en": {
-		"1. What is Swissgolden corporation? ": {
+		"1. What is the Swissgolden corporation? ": {
 			"International company ": 1,
 			"Investment company ": 0,
 			"Benefit-society": 0
@@ -12,50 +12,50 @@
 			"Taking money from people and giving them guaranties about income from investings.": 0
 		},
 
-		"3. Which product is presenting in the internet-shop of the company? ": {
+		"3. What product is presented in the internet-shop Swissgolden? ": {
 			"Gold bars ": 0,
 			" An investment gold in bars in any values from 1 to 100 grams ": 0,
 			" An investment gold in bullions of 999,9 gold sample in any values from 1 to 100 grams": 1
 		},
 
-		"4. Bullions of which companies are offering in Swissgolden? ": {
+		"4. Bullions of what companies are offered in Swissgolden? ": {
 			"Valcambi, Degussa, UBS ": 0,
 			"Degussa, Metalor, Argor Heraeus ": 0,
 			"Argor Heraeus, Valcambi, Degussa ": 1
 		},
 
-		"5. Where are situated Swissgolden offices? ": {
+        "5. Where are the Swissgolden offices situated? ": {
 			" London, Stuttgart ": 1,
 			" Stuttgart ": 0,
 			" London, Sankt-Petersburg ": 0
 		},
 
 
-		"7. Where was registered Swissgolden company? ": {
+		"7. Where was the Swissgolden company registered? ": {
 			"Cyprus offshore ": 0,
 			"British Virgin Islands": 1,
 			"DMCC zone": 0
 		},
 
-		"8. Date, when Swissgolden company was registered?": {
+		"8. What is the date the Swissgolden company was registered?": {
 			"1 February 2013 ": 0,
 			"14 June 2012 ": 1,
 			"1 March 2014 ": 0
 		},
 
-		"9. Which taxes paid by the buyer in the transaction?": {
+		"9. What taxes does the buyer pay in the transaction?": {
 			"VAT 18% ": 0,
 			"Tax on profits 9% ": 0,
 			"Purchase is not taxed": 1
 		},
 
-		"10. What size of trade commission when you purchase gold in the internet-shop of Swissgolden company?": {
+		"10. What is the size of trade commission when you purchase gold in the internet-shop of the Swissgolden company?": {
 			"No commission ": 0,
 			"Commission 10% ": 1,
 			"Commission 1,2% ": 0
 		},
 
-		"11. Which amount of gold the company can guarantee deliver to any point of the world? ": {
+		"11. Which amount of gold the company is guaranteed to deliver to any point of the world? ": {
 			"50 grams ": 0,
 			"5 grams ": 0,
 			"Up to 5 grams inclusive": 1
@@ -67,25 +67,25 @@
 			"Collective keeping in VIA MAT storages": 0
 		},
 
-		"13. How much does the storage of gold in Swissgolden company is cost?": {
+		"13. What is the cost of the storage of gold in the Swissgolden company?": {
 			"0,1% from the value of stored gold per month": 1,
 			"1,2% from the value of stored gold per month": 0,
 			"0,1% from the value of stored gold per year": 0
 		},
 
-		"14. What amount of minimal purchase of the gold in the Swissgolden internet-shop? ": {
+		"14. What amount of minimal purchase of gold in the Swissgolden internet-shop? ": {
 			"10 000 euro ": 0,
 			"7 000 euro ": 1,
-			"17 000 euor ": 0
+			"17 000 euro ": 0
 		},
 
-		"15. How is going price formation on fold in the Swissgolden internet-shop?": {
+		"15. How is the price formation on gold being done in the Swissgolden internet-shop?": {
 			"On the London fixing base": 1,
 			"On the base of data from the stock exchanges in Hong Kong": 0,
 			"On the base of data CB RF ": 0
 		},
 
-		"16. What kind of bullions company is purchasing from the clients?": {
+		"16. What kind of bullions is the company purchasing from the clients?": {
 			"Any gold bullion of any value from 1 to 100 grams ": 0,
 			"Gold bullions, bought in the internet-shop of the company": 1,
 			"Gold bullions, bought in the internet-shop and delivered to the client’s house": 0
@@ -142,12 +142,12 @@
 		"25. What benefits advertising partners are getting from cooperation with the company?": {
 			"The opportunity for creating information online-business and purchasing the gold at the best price.": 1,
 			"Partners program are allowing to organize own financial pyramid.": 0,
-			"The opportunity of getting income after minimal initial costs.": 0
+			"The opportunity of getting income without initial payment.": 0
 		},
 
 		"26. Who can be an advertising partner of the company? ": {
-			"That one, who have an experience in the advertising.": 0,
-			"That one, who have an experience in the network companies.": 0,
+			"The one who has experience in the advertising.": 0,
+			"The one who has experience in the network companies.": 0,
 			"Any adult person who can work.": 1
 		},
 
@@ -163,11 +163,10 @@
 			"For turnover, which were organized for the company by advertising partner.": 1
 		},
 
-		"29. What kind of bonuses are exist in the company? Chose a few answers": {
+		"29. What kind of bonuses exist in the company?": {
 			"Set of gold bullions on amount of 1890 euro": 0,
 			"Set of gold bullions on amount of 7000, 27500, and 98000 euro": 1,
-			"Set of gold bullions on amount of 7425 euro": 0,
-			"Set of gold bullions on amount of 24750 euro": 0
+			"Set of gold bullions on amount of 7425 euro": 0
 		},
 
 		"30. How can advertising partner use the bonus gold bullions?": {
@@ -276,7 +275,7 @@
 
 "18. ¿A qué precio hay redención en los clientes de lingote Swissgolden empresa?": {
 "Dependiendo de las barras de estado": 0,
-"o no por debajo del precio mundial actual del oro": 0,
+"o no por debajo del precio mundial actual del oro": 1,
 "El precio depende del estado de ánimo del propietario": 0
 },
 
@@ -343,8 +342,7 @@
 "29. ¿Qué tipos de bonificaciones existentes en la empresa? Seleccionar más de una respuesta": {
 "Conjunto de lingotes de oro en la cantidad de 1.890 euros": 0,
 "Conjunto de lingotes de oro en la cantidad de 7.000, 27.500 y 98.000 euros": 1,
-"Conjunto de lingotes de oro en la cantidad de 7.425 euros": 0,
-"Conjunto de lingotes de oro en la cantidad de 24.750 euros": 0
+"Conjunto de lingotes de oro en la cantidad de 7.425 euros": 0
 },
 
 "30. Como socio de la publicidad puede ordenar bono lingotes de oro?": {
@@ -490,7 +488,7 @@
 "23. Какую выгоду от сотрудничества извлекают рекламные партнеры компании ": {
 " Возможность создать собственный информационный онлайн-бизнес и покупать золото по максимально выгодной цене. ": 1,
 "Партнерская программа позволяет организовать собственную финансовую пирамиду. ": 0,
-"Возможность получать прибыль после минимальных первоначальных затрат. ": 0
+"Возможность получать прибыль не делая первоначальных затрат. ": 0
 },
 
 "24. Кто может стать рекламным партнером компании? ": {
@@ -499,7 +497,7 @@
 "Любой взрослый дееспособный человек.": 1
 },
 
-"25. Каковы бизнес-задачи рекламного партнера компании Swissgolden? Отметьте несколько вариантов ответа": {
+"25. Каковы бизнес-задачи рекламного партнера компании Swissgolden?": {
 "Подписать, как можно больше людей ": 0,
 "Консультирование людей, которые заинтересовались сотрудничеством с компанией. Обучение новых партнеров работе в партнерской программе компании. Создание собственных информационных материалов о компаниии др. ": 1,
 "Регистрация клиентов, отправление документов в компанию": 0
@@ -514,8 +512,7 @@
 "27. Какие типы бонусов существуют в компании?  ": {
 "Набор золотых слитков на сумму 1890 евро ": 0,
 "Набор золотых слитков на сумму 7000, 27500 и 98000 евро ": 1,
-" Набор золотых слитков на сумму 7425 евро ": 0,
-" Набор золотых слитков на сумму 24750 евро ": 0
+" Набор золотых слитков на сумму 7425 евро ": 0
 },
 
 "28. Как рекламный партнер может распорядиться бонусными золотыми слитками? ": {
@@ -699,6 +696,182 @@
 "存入金库": 0,
 "只可卖出并获取现金": 0,
 "可选择该公司提供的任何一种服务": 1
+}
+},
+
+"pl": {
+"1. Czym jest korporacja Swissgolden?": {
+"Firmą międzynarodową": 1,
+"Firmą inwestycyjną": 0,
+"Kasą wzajemnej pomocy": 0
+},
+
+"2. Czym zajmuje się korporacja Swissgolden?": {
+"Sprzedażą złota": 0,
+"Świadczy usługi  kupna i sprzedaży oraz dostawy i magazynowania sztabek złota": 1,
+"Zbieraniem środków pieniężnych z gwarancją dochodowości  inwestycji": 0
+},
+
+"3. Który produkt jest prezentowany w sklepie internetowym firmy?": {
+"Sztabki złota": 0,
+"Złoto inwestycyjne w sztabkach o wadze od 1 do 100 gramów": 0,
+"Sztabki złota inwestycyjnego  999,9  o wadze od 1 do 100 gramów": 1
+},
+
+"4. Sztabki jakich producentów oferuje firma Swissgolden?": {
+"Valcambi, Degussa, UBS": 0,
+"Degussa, Metalor, Argor - Heraeus": 0,
+"Argor - Heraeus, Degussa, Valcambi": 1
+},
+
+"5. Gdzie znajdują się biura firmy Swissgolden?": {
+"Londyn, Stuttgart": 1,
+"Stuttgart": 0,
+"Londyn, Petersburg": 0
+},
+
+"6. Gdzie zarejestrowana jest  firma  Swissgolden?": {
+"W cypryjskiej strefie  offshore": 0,
+"Na Brytyjskich Wyspach Dziewiczych": 1,
+"W strefie DMCC": 0
+},
+
+"7. Jaka jest data rejestracji firmy Swissgolden?": {
+"1 lutego 2013": 0,
+"14 czerwca 2012": 1,
+"01 marzec 2014": 0
+},
+
+"8. Jakie podatki są płacone przy transakcji kupna": {
+"18% VAT": 0,
+"Podatek  dochodowy 9%": 0,
+"Zakup nie jest opodatkowany": 1
+},
+
+"9. Jaka jest wielkość prowizji handlowych przy zakupie złota w sklepie internetowym Swissgolden?": {
+"Brak prowizji": 1,
+"10% prowizji": 0,
+"1,2% prowizji": 0
+},
+
+"10. Jaka jest ilość złota, którą  firma  gwarantuje dostarczyć  w dowolne miejsce na świecie?": {
+"50 gramów": 0,
+"5 gramów": 0,
+"do 5 gramów włącznie": 1
+},
+
+"11. Gdzie i jak zorganizowane jest przechowywanie złota, który uzyskali klienci w sklepie internetowym firmy?": {
+"Skarbiec Pro Aurum na indywidualnych kontach": 0,
+"Zbiorowe przechowywanie w podziemiach Pro Aurum i VIA MAT": 1,
+"Zbiorowe przechowywanie w podziemiach VIA MAT": 0
+},
+
+"12. Jaki jest koszt przechowywania złota  w firmie Swissgolden?": {
+"0,1% od wartości  przechowywanego złota w miesiącu": 1,
+"1,2% od wartości przechowywanego złota w miesiącu": 0,
+"0,1% od wartości przechowywanego złota rocznie": 0
+},
+
+"13. Jaka jest minimalna kwota zakupu złota w sklepie internetowym firmy Swissgolden?": {
+"10 000 EUR": 0,
+"7000 EURO": 1,
+"17 000 EURO": 0
+},
+
+"14. Jak jest wycena złota w sklepie internetowym firmy Swissgolden?": {
+"Na podstawie fixingu London": 1,
+"Na podstawie wymiany danych w Hong Kongu": 0,
+"Na podstawie danych Centralnego Banku Federacji Rosyjskiej": 0
+},
+
+"15. Jakie sztabki firma kupuje od swoich klientów?": {
+"Dowolne sztabki inwestycyjnego złota o wadze od 1 do 100 gramów": 0,
+"Sztabki złota, które zostały nabyte w sklepie internetowym firmy": 1,
+"Sztabki, które zostały zakupione w sklepie internetowym i dostarczane do domu klienta": 0
+},
+
+"16. Jakiego standardu sztabki  ma sklep internetowy Swissgolden?": {
+"Standardowy LBMA Good Delivery ": 1,
+"Standardowy DMCC": 0,
+"Rosyjskie GOST": 0
+},
+
+"17. Po jakiej cenie jest wykup sztabek od  klientów  firmy Swissgolden?": {
+"W zależności od stanu sztabek": 0,
+"Nie poniżej aktualnej ceny złota na świecie": 1,
+"Cena zależy od nastroju właściciela": 0
+},
+
+"18. Jaki rodzaj marketingu jest stosowany przez firmę dla jej promocji?": {
+"Klasyczny": 0,
+"Sieciowy": 0,
+"Partnerski": 1
+},
+
+"19. Z jakiego źródła generuje się  dochód Swissgolden?": {
+"Działalność inwestycyjna": 0,
+" Nowi użytkownicy": 0,
+"Obrót  towarowy": 1
+},
+
+"20. Jaki jest cel Swissgolden, jako spółki prawa handlowego?": {
+"Zwiększenie bazy klientów": 1,
+" Zysk": 0,
+"Otwarcie nowych biur": 0
+},
+
+"21. Kto zapewnia obrót dla firmy?": {
+"Pracownicy najemni": 0,
+" Klienci": 1,
+"Partnerzy": 0
+},
+
+"22. Co jest niezbędne dla przypływu nowych klientów dla firmy?": {
+"Wiele biur w różnych miastach": 0,
+"Duże inwestycje": 0,
+"Reklama": 1
+},
+
+"23. W jakim celu firma wprowadziła program partnerski?": {
+"Aby poszerzyć sferę wpływów": 0,
+"Aby zminimalizować swój budżet reklamowy": 1,
+"Aby sprzedać więcej złota": 0
+},
+
+"24. Jakie są korzyści wynikają ze współpracy firmy  z partnerami reklamowymi  spółki ": {
+"Możliwość tworzenia własnych informacji o biznesie online i kupić złoto w najbardziej konkurencyjnej cenie": 1,
+"Program Partnerski pozwala zorganizować własną piramidę finansową": 0,
+"Zdolność do zysku bez robienia kosztów początkowych": 0
+},
+
+"25. Kto może zostać partnerem reklamowym firmy?": {
+"Ktoś, kto ma doświadczenie w reklamie": 0,
+"Ktoś, kto ma doświadczenie w firmach sieciowych": 0,
+"Osoby dorosłej osobie zdolnej": 1
+},
+
+"26. Jakie są cele biznesowe z partnerów reklamowych Swissgolden?": {
+"Aby podpisać jak najwięcej ludzi, jak to możliwe": 0,
+"Doradzanie ludziom, którzy są zainteresowani współpracą z firmą. Szkolenie dla nowych partnerów w programie partnerskim firmy. Tworzyć własne materiały informacyjne o firmie": 1,
+"Rejestracji klientów, wysyłanie dokumentów do firmy": 0
+},
+
+"27. Za co dostaje premie ( bonusy) partner reklamowy firmy Swissgolden?": {
+"Za  zwiększenie bazy klientów": 0,
+"Za każdego nowego klienta, który zawarł umowę z firmą": 0,
+"Za obrót towarowy, który partner reklamowy zorganizował dla firmy": 1
+},
+
+"28. Jakie rodzaje premii istnieją w firmie?": {
+" Zestaw sztabek złota o wartości 1890 euro": 0,
+"Zestaw sztabek złota o wartości 7.000, 27.500 i 98.000 euro": 1,
+"Zestaw sztabek złota o wartości 7425 euro": 0
+},
+
+"29. Jak partner reklamowy firmy może rozporządzać  bonusowymi sztabkami złota": {
+"Pozostawić do przechowywania": 0,
+"Tylko sprzedać i dostać pieniądze": 0,
+"Wybrać  dowolną usługę, którą firma zapewnia swoim klientom": 1
 }
 }
 
