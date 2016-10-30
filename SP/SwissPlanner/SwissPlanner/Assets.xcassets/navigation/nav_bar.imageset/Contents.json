@@ -35,23 +35,23 @@
     },
     {
       "idiom" : "ipad",
-      "filename" : "phone2-2.png",
+      "filename" : "bar-vertical2048x1536.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "3x-2.png",
+      "filename" : "bar-horizontal2048x1536.png",
       "scale" : "2x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "phone2-3.png",
+      "filename" : "bar-vertical2048x1536-1.png",
       "height-class" : "compact",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "3x-4.png",
+      "filename" : "bar-horizontal2048x1536-1.png",
       "height-class" : "compact",
       "scale" : "2x"
     }

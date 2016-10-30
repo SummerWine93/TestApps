@@ -2,13 +2,8 @@
   "images" : [
     {
       "idiom" : "ipad",
-      "filename" : "gifts(1024x768).png",
+      "filename" : "2048x1536.png",
       "scale" : "1x"
-    },
-    {
-      "idiom" : "ipad",
-      "filename" : "gifts(2048x1536).png",
-      "scale" : "2x"
     }
   ],
   "info" : {

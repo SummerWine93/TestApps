@@ -2,40 +2,40 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "1x-9.png",
+      "filename" : "1x_v.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "1x-10.png",
+      "filename" : "1x_v-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "1x-11.png",
+      "filename" : "1x_v-2.png",
       "scale" : "3x"
     },
     {
       "idiom" : "universal",
-      "filename" : "1x-1.png",
+      "filename" : "1x_h.png",
       "height-class" : "compact",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "2x-1.png",
+      "filename" : "2x_h.png",
       "height-class" : "compact",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3x-1.png",
+      "filename" : "2x_h-1.png",
       "height-class" : "compact",
       "scale" : "3x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "1 level(2048x1536).png",
+      "filename" : "1 level(2048x1536)-4.png",
       "scale" : "1x"
     },
     {
