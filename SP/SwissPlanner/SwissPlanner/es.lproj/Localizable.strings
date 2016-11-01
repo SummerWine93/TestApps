@@ -73,6 +73,12 @@
 
 "calculator.content.formula3" = "€%@ - €%@ (reinversión) = €%@\n\n";
 
+"calculator.content.formula3.1" = "€%@ - €%@ (";
+
+"calculator.content.formula3.2.1" = "reinversión";
+
+"calculator.content.formula3.3" = ") = €%@\n\n";
+
 "calculator.content.formula4" = "€%@  - 10%% (comisión) = €%@ (сompra de oro)\n\n";
 
 "calculator.content.formula5" = "€%@ / 500 = %@ las unidades bono\n\n";

@@ -73,6 +73,12 @@
 
 "calculator.content.formula3" = "€%@ - €%@ (reinvestment) = €%@\n\n";
 
+"calculator.content.formula3.1" = "€%@ - €%@ (";
+
+"calculator.content.formula3.2.1" = "reinvestment";
+
+"calculator.content.formula3.3" = ") = €%@\n\n";
+
 "calculator.content.formula4" = "€%@  - 10%% (commission) = €%@ (buying gold)\n\n";
 
 "calculator.content.formula5" = "€%@ / 500 = %@ bonus units\n\n";

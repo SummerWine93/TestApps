@@ -73,6 +73,12 @@
 
 "calculator.content.formula3" = "€%@ - €%@ (再次投资) = €%@\n\n";
 
+"calculator.content.formula3.1" = "€%@ - €%@ (";
+
+"calculator.content.formula3.2.1" = "再次投资";
+
+"calculator.content.formula3.3" = ") = €%@\n\n";
+
 "calculator.content.formula4" = "€%@  - 10%% (手续费) = €%@ (所购黄金的价格)\n\n";
 
 "calculator.content.formula5" = "€%@ / 500 = %@  获奖数量\n\n";

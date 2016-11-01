@@ -325,11 +325,23 @@
     
     NSNumber *turnoverValue0 =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *4 )];
     NSString *turnoverString0 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula2", nil), [prepaymentValue stringValue], [turnoverValue0 stringValue]];
-    
+    NSNumber *prepaymentValue0 = [NSNumber numberWithDouble:[[prepaymentValuesArray objectAtIndex: ((selectedPlan % 2 == 0) ? (selectedPlan + 1) : selectedPlan)] integerValue]];
 	// Showing the turnover value
 	
-	NSNumber *turnoverValue =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *3 )];
+    NSNumber *turnoverValue =  [NSNumber numberWithDouble:( [turnoverValue0 doubleValue] - [prepaymentValue0 doubleValue])];
+    /*
 	NSString *turnoverString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula3", nil), [turnoverValue0 stringValue], [prepaymentValue stringValue],[turnoverValue stringValue]];
+     */
+    
+    NSString *turnoverString_1 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula3.1", nil), [turnoverValue0 stringValue], [prepaymentValue0 stringValue]];
+    NSString *turnoverString_2 = (selectedPlan % 2 == 0) ? [plansArray objectAtIndex:(selectedPlan + 1)] : [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula3.2.1", nil)];
+    NSString *turnoverString_3 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula3.3", nil), [turnoverValue stringValue]];
+    
+    NSString *turnoverString = [NSString stringWithFormat:@"%@%@%@",
+                                turnoverString_1,
+                                turnoverString_2,
+                                turnoverString_3];
+     
     // Showing the turnover value
     
     NSNumber *turnoverValue2 =  [NSNumber numberWithDouble:( [turnoverValue doubleValue] * 0.9 )];
