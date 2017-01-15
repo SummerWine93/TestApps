@@ -38,6 +38,7 @@ typedef enum {
                    [NSArray arrayWithObjects:@"gift level 6_1", NSLocalizedString(@"rewards.6Level", nil), nil],
                    [NSArray arrayWithObjects:@"gift level 7-11", NSLocalizedString(@"rewards.7-11Levels", nil), nil],
 				   [NSArray arrayWithObjects:@"gift no level", NSLocalizedString(@"rewards.cruise", nil), nil],
+                   [NSArray arrayWithObjects:@"gift promotion", NSLocalizedString(@"rewards.promotion", nil), nil],
 				   nil];
     
     [self updateViewBackground];

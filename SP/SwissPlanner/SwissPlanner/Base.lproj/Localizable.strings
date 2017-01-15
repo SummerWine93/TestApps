@@ -69,7 +69,7 @@
 
 "calculator.content.formula1" = "\nPrepayment = €%@ - €%d(internet commission) = €%@\n\n";
 
-"calculator.content.formula2" = "€%@ x 4 Orders = €%@ (commodity circulation)\n\n";
+"calculator.content.formula2" = "€%@ (commodity circulation)\n\n";
 
 "calculator.content.formula3" = "€%@ - €%@ (reinvestment) = €%@\n\n";
 
@@ -106,6 +106,8 @@
 "rewards.7-11Levels" = "7-11 levels";
 
 "rewards.cruise" = "Cruise";
+
+"rewards.promotion" = "Promotion";
 
 /* Testing */
 

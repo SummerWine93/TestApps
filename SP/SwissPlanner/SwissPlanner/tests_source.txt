@@ -21,7 +21,7 @@
 		"4. Bullions of what companies are offered in Swissgolden? ": {
 			"Valcambi, Degussa, UBS ": 0,
 			"Degussa, Metalor, Argor Heraeus ": 0,
-			"Argor Heraeus, Valcambi, Degussa ": 1
+			"Argor-Heraeus, Valcambi, Degussa, SG ": 1
 		},
 
         "5. Where are the Swissgolden offices situated? ": {
@@ -198,7 +198,7 @@
 "4. ¿Lingotes de qué fabricante ofrece la empresa Swissgolden?": {
 "Valcambi, Degussa, UBS ": 0,
 "Degussa, Metalor, Argor Heraeus ": 0,
-"Argor Heraeus, Valcambi, Degussa ": 1
+"Argor-Heraeus, Valcambi, Degussa, SG ": 1
 },
 
 "5. ¿Dónde están las oficinas de la empresa Swissgolden?": {
@@ -374,7 +374,7 @@
 "4. Слитки каких производителей предлагает компания Swissgolden? ": {
 "Valcambi, Degussa, UBS ": 0,
 "Degussa, Metalor, Argor Heraeus ": 0,
-"Argor Heraeus, Valcambi, Degussa ": 1
+"Argor-Heraeus, Valcambi, Degussa, SG ": 1
 },
 
 "5. Где зарегистрирована компания Swissgolden?": {
@@ -544,7 +544,7 @@
 "4. Swissgolden公司与哪些生产商合作": {
 "Valcambi, Degussa, UBS ": 0,
 "Degussa, Metalor, Argor Heraeus ": 0,
-"Argor Heraeus, Valcambi, Degussa ": 1
+"Argor-Heraeus, Valcambi, Degussa, SG ": 1
 },
 
 "5. Swissgolden公司的办公室在哪": {
@@ -721,7 +721,7 @@
 "4. Sztabki jakich producentów oferuje firma Swissgolden?": {
 "Valcambi, Degussa, UBS": 0,
 "Degussa, Metalor, Argor - Heraeus": 0,
-"Argor - Heraeus, Degussa, Valcambi": 1
+"Argor-Heraeus, Degussa, Valcambi, SG ": 1
 },
 
 "5. Gdzie znajdują się biura firmy Swissgolden?": {

@@ -324,7 +324,7 @@
     // Showing the turnover value
     
     NSNumber *turnoverValue0 =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *4 )];
-    NSString *turnoverString0 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula2", nil), [prepaymentValue stringValue], [turnoverValue0 stringValue]];
+    NSString *turnoverString0 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula2", nil), [turnoverValue0 stringValue]];
     NSNumber *prepaymentValue0 = [NSNumber numberWithDouble:[[prepaymentValuesArray objectAtIndex: ((selectedPlan % 2 == 0) ? (selectedPlan + 1) : selectedPlan)] integerValue]];
 	// Showing the turnover value
 	

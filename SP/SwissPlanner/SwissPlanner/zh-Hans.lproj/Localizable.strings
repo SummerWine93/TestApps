@@ -69,7 +69,7 @@
 
 "calculator.content.formula1" = "\n预付款 = €%@ - €%d(网络手续费) = €%@\n\n";
 
-"calculator.content.formula2" = "€%@ x 4 定货 = €%@ (商品流转)\n\n";
+"calculator.content.formula2" = "€%@ (商品流转)\n\n";
 
 "calculator.content.formula3" = "€%@ - €%@ (再次投资) = €%@\n\n";
 
@@ -106,6 +106,8 @@
 "rewards.7-11Levels" = "等级7-11";
 
 "rewards.cruise" = "游轮";
+
+"rewards.promotion" = "Promotion";
 
 /* Testing */
 
