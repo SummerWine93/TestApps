@@ -329,3 +329,14 @@
 
 "simpleTable.level2CellItem" = " партнер";
 
+/* Channel */
+
+"channel.item1" = "1. Основы бизнеса";
+
+"channel.item2" = "2. Лидерство";
+
+"channel.item3" = "3. Мотивация";
+
+"channel.item4" = "4. Истории успеха";
+
+"channel.item5" = "5. Видеоматериалы";

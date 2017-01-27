@@ -328,3 +328,15 @@
 "simpleTable.level1CellItem" = "令";
 
 "simpleTable.level2CellItem" = "合作人";
+
+/* Channel */
+
+"channel.item1" = "1. 商业基础";
+
+"channel.item2" = "2. 领导力";
+
+"channel.item3" = "3. 动机";
+
+"channel.item4" = "4. 成就历史";
+
+"channel.item5" = "5. 影相材料";

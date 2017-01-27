@@ -329,6 +329,16 @@
 
 "simpleTable.level2CellItem" = "\tpartner";
 
+/* Channel */
 
+"channel.item1" = "1. Basics of business";
+
+"channel.item2" = "2. Leadership";
+
+"channel.item3" = "3. Motivation";
+
+"channel.item4" = "4. Histories of success";
+
+"channel.item5" = "5. Video materials";
 
 

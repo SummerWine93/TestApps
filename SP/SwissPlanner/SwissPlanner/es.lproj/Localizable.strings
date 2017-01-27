@@ -328,3 +328,15 @@
 "simpleTable.level1CellItem" = "Tu";
 
 "simpleTable.level2CellItem" = " Socio";
+
+/* Channel */
+
+"channel.item1" = "1. Fundaciones de negocio";
+
+"channel.item2" = "2. Liderazgo";
+
+"channel.item3" = "3. Motivación";
+
+"channel.item4" = "4. Historias de éxito";
+
+"channel.item5" = "5. Videos";

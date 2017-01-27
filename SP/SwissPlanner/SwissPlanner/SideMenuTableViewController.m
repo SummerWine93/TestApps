@@ -27,6 +27,7 @@ typedef enum {
 	educationMenuItem,
 	testingMenuItem,
 	settingsMenuItem,
+    channelMenuItem,
 	giftsMenuItem,
 	footerMenuItem
 }menuItems;
@@ -36,6 +37,7 @@ typedef enum {
 	calculator,
 	education,
 	gifts,
+    channel,
     testing,
 	settings,
 	swissgolden,
@@ -79,6 +81,7 @@ typedef enum {
 	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.calculator", nil) atIndex:calculator];
 	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.education", nil) atIndex:education];
 	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.rewards", nil) atIndex:gifts];
+    [menuItemsContentCollection insertObject:@"Channel" atIndex:channel];
     [menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.testing", nil) atIndex:testing];
 	[menuItemsContentCollection insertObject:NSLocalizedString(@"navigation.item.settings", nil) atIndex:settings];
 	[menuItemsContentCollection insertObject:@"Swissgolden" atIndex:swissgolden];
@@ -119,7 +122,7 @@ typedef enum {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	switch (section) {
 		case 0:
-			return 7;
+			return 8;
             //return 6;
 			break;
 		case 1:
