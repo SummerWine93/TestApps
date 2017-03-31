@@ -8,14 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3908F5631CFF922D00261709 /* TestPageViewController.m */; };
+		393A2EA31E70AE3400406E19 /* OrdersTablesPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393A2EA21E70AE3400406E19 /* OrdersTablesPageViewController.m */; };
 		39546FFB1D06096E00710FD2 /* tests_source.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39546FFA1D06096E00710FD2 /* tests_source.txt */; };
 		39546FFE1D060A1100710FD2 /* TestBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39546FFD1D060A1100710FD2 /* TestBaseHelper.m */; };
+		396544C01E37B08A00DBA290 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396544BF1E37B08A00DBA290 /* BaseViewController.m */; };
+		396544C31E37B12300DBA290 /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396544C21E37B12300DBA290 /* VideosTableViewController.m */; };
+		396544C61E37B33C00DBA290 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396544C51E37B33C00DBA290 /* BaseTableViewController.m */; };
+		396544C91E39305300DBA290 /* ChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396544C81E39305300DBA290 /* ChannelTableViewController.m */; };
 		3996E2451D330A6B00FEB468 /* FontsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3996E2441D330A6B00FEB468 /* FontsHelper.m */; };
 		39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */; };
 		39C88B971D0E092700D932C3 /* LanguageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C88B961D0E092700D932C3 /* LanguageHelper.m */; };
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
 		39D47B081D0437AB003D05EA /* TestQuestionPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */; };
 		39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */; };
+		39F8448F1E3BDC1A00D6C736 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F8448E1E3BDC1A00D6C736 /* VideoViewController.m */; };
 		CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */; };
 		CE05AA941CD0F0C900CB7A8E /* Slide3ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA931CD0F0C900CB7A8E /* Slide3ContentViewController.m */; };
 		CE05AA9D1CD0FFE000CB7A8E /* Slide1ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA9C1CD0FFE000CB7A8E /* Slide1ContentViewController.m */; };
@@ -79,9 +85,19 @@
 /* Begin PBXFileReference section */
 		3908F5621CFF922D00261709 /* TestPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPageViewController.h; sourceTree = "<group>"; };
 		3908F5631CFF922D00261709 /* TestPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPageViewController.m; sourceTree = "<group>"; };
+		393A2EA11E70AE3400406E19 /* OrdersTablesPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersTablesPageViewController.h; sourceTree = "<group>"; };
+		393A2EA21E70AE3400406E19 /* OrdersTablesPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersTablesPageViewController.m; sourceTree = "<group>"; };
 		39546FFA1D06096E00710FD2 /* tests_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tests_source.txt; sourceTree = "<group>"; };
 		39546FFC1D060A1100710FD2 /* TestBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBaseHelper.h; sourceTree = "<group>"; };
 		39546FFD1D060A1100710FD2 /* TestBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBaseHelper.m; sourceTree = "<group>"; };
+		396544BE1E37B08A00DBA290 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		396544BF1E37B08A00DBA290 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		396544C11E37B12300DBA290 /* VideosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosTableViewController.h; sourceTree = "<group>"; };
+		396544C21E37B12300DBA290 /* VideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
+		396544C41E37B33C00DBA290 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		396544C51E37B33C00DBA290 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		396544C71E39305300DBA290 /* ChannelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelTableViewController.h; path = ../ChannelTableViewController.h; sourceTree = "<group>"; };
+		396544C81E39305300DBA290 /* ChannelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelTableViewController.m; path = ../ChannelTableViewController.m; sourceTree = "<group>"; };
 		398E03FC1D5FC3A300354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		398E03FD1D5FC3A300354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		398E03FE1D5FC3A400354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -101,6 +117,8 @@
 		39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestQuestionPageContentViewController.m; sourceTree = "<group>"; };
 		39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinetContentTableViewCell.h; sourceTree = "<group>"; };
 		39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabinetContentTableViewCell.m; sourceTree = "<group>"; };
+		39F8448D1E3BDC1A00D6C736 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		39F8448E1E3BDC1A00D6C736 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		39F869691D0376C500CA09C2 /* TestCheckerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCheckerDelegate.h; sourceTree = "<group>"; };
 		39F91F7A1D0BF8E000D0B05E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE05AA8F1CD0B1AA00CB7A8E /* Slide2ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slide2ContentViewController.h; sourceTree = "<group>"; };
@@ -240,9 +258,9 @@
 				CE05AA8F1CD0B1AA00CB7A8E /* Slide2ContentViewController.h */,
 				CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */,
 				CE05AA921CD0F0C900CB7A8E /* Slide3ContentViewController.h */,
-				CE05AA931CD0F0C900CB7A8E /* Slide3ContentViewController.m */,
 				CE05AA9B1CD0FFE000CB7A8E /* Slide1ContentViewController.h */,
 				CE05AA9C1CD0FFE000CB7A8E /* Slide1ContentViewController.m */,
+				CE05AA931CD0F0C900CB7A8E /* Slide3ContentViewController.m */,
 				CE05AAA71CD24C1F00CB7A8E /* Slide9ContentWithMultipleTablesViewController.h */,
 				CE05AAA81CD24C1F00CB7A8E /* Slide9ContentWithMultipleTablesViewController.m */,
 				CE05AAAB1CD2598900CB7A8E /* Slide4ContentViewController.h */,
@@ -251,9 +269,9 @@
 				CE05AAAF1CD25AFB00CB7A8E /* Slide5ViewController.m */,
 				CE05AAB11CD2646F00CB7A8E /* Slide6ContentViewController.h */,
 				CE05AAB21CD2646F00CB7A8E /* Slide6ContentViewController.m */,
+				CE05AAB71CD271B500CB7A8E /* Slide8ContentViewController.h */,
 				CE05AAB41CD267E000CB7A8E /* Slide7ContentViewController.h */,
 				CE05AAB51CD267E000CB7A8E /* Slide7ContentViewController.m */,
-				CE05AAB71CD271B500CB7A8E /* Slide8ContentViewController.h */,
 				CE05AAB81CD271B500CB7A8E /* Slide8ContentViewController.m */,
 				39CD84891CF38A1E000D8025 /* Slide8aContentViewController.h */,
 				39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */,
@@ -283,6 +301,8 @@
 		CE5913721CBA566C008A3042 = {
 			isa = PBXGroup;
 			children = (
+				393A2EA11E70AE3400406E19 /* OrdersTablesPageViewController.h */,
+				393A2EA21E70AE3400406E19 /* OrdersTablesPageViewController.m */,
 				CE59137D1CBA566D008A3042 /* SwissPlanner */,
 				CE5913971CBA566E008A3042 /* SwissPlannerTests */,
 				CE59137C1CBA566C008A3042 /* Products */,
@@ -301,6 +321,8 @@
 		CE59137D1CBA566D008A3042 /* SwissPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				396544C71E39305300DBA290 /* ChannelTableViewController.h */,
+				396544C81E39305300DBA290 /* ChannelTableViewController.m */,
 				39C88B951D0E092700D932C3 /* LanguageHelper.h */,
 				39C88B961D0E092700D932C3 /* LanguageHelper.m */,
 				3908F5611CFF91EC00261709 /* TestSlides */,
@@ -319,7 +341,6 @@
 				CE5913821CBA566D008A3042 /* AppDelegate.m */,
 				CE5913D11CBE60D4008A3042 /* LauncherButton.h */,
 				CE5913D21CBE60D4008A3042 /* LauncherButton.m */,
-				CE5913871CBA566D008A3042 /* Main.storyboard */,
 				CE58D4871D0AAE9B00F81961 /* OrdersTableViewCell.h */,
 				CE58D4881D0AAE9B00F81961 /* OrdersTableViewCell.m */,
 				CE59138C1CBA566D008A3042 /* LaunchScreen.storyboard */,
@@ -336,6 +357,14 @@
 				3996E2441D330A6B00FEB468 /* FontsHelper.m */,
 				CE3CAF731CF8773100B276CD /* PlatformTypeChecker.h */,
 				CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */,
+				396544C41E37B33C00DBA290 /* BaseTableViewController.h */,
+				396544C51E37B33C00DBA290 /* BaseTableViewController.m */,
+				396544BE1E37B08A00DBA290 /* BaseViewController.h */,
+				396544BF1E37B08A00DBA290 /* BaseViewController.m */,
+				396544C11E37B12300DBA290 /* VideosTableViewController.h */,
+				396544C21E37B12300DBA290 /* VideosTableViewController.m */,
+				39F8448D1E3BDC1A00D6C736 /* VideoViewController.h */,
+				39F8448E1E3BDC1A00D6C736 /* VideoViewController.m */,
 			);
 			path = SwissPlanner;
 			sourceTree = "<group>";
@@ -371,6 +400,7 @@
 				CE5913AE1CBB8664008A3042 /* SWRevealViewController.h */,
 				CE5913AF1CBB8664008A3042 /* SWRevealViewController.m */,
 				CE05AAD91CD74E8800CB7A8E /* NavigationTableViewCell.h */,
+				CE5913871CBA566D008A3042 /* Main.storyboard */,
 				CE05AADA1CD74E8800CB7A8E /* NavigationTableViewCell.m */,
 			);
 			name = "Navigation Menu";
@@ -530,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				396544C91E39305300DBA290 /* ChannelTableViewController.m in Sources */,
 				CEDA43821CFF021F00BB1AE0 /* TextFieldValidator.m in Sources */,
 				CE05AAB01CD25AFB00CB7A8E /* Slide5ViewController.m in Sources */,
 				CEDA43851D00297600BB1AE0 /* TestsPageContentViewController.m in Sources */,
@@ -537,6 +568,7 @@
 				CE05AAA01CD11C3E00CB7A8E /* PrettyTableViewCell.m in Sources */,
 				CE05AAB31CD2646F00CB7A8E /* Slide6ContentViewController.m in Sources */,
 				CE05AAB91CD271B500CB7A8E /* Slide8ContentViewController.m in Sources */,
+				396544C01E37B08A00DBA290 /* BaseViewController.m in Sources */,
 				CE5913CD1CBE3616008A3042 /* GiftsViewController.m in Sources */,
 				39D47B081D0437AB003D05EA /* TestQuestionPageContentViewController.m in Sources */,
 				CE5913831CBA566D008A3042 /* AppDelegate.m in Sources */,
@@ -551,6 +583,7 @@
 				CEDA43881D002BDE00BB1AE0 /* TestTableViewCell.m in Sources */,
 				CE3CAF751CF8773100B276CD /* PlatformTypeChecker.m in Sources */,
 				3908F5641CFF922D00261709 /* TestPageViewController.m in Sources */,
+				396544C31E37B12300DBA290 /* VideosTableViewController.m in Sources */,
 				CE05AABC1CD27BA000CB7A8E /* Slide10ContentViewController.m in Sources */,
 				CE05AAC21CD28D9C00CB7A8E /* ConclusionTableViewController.m in Sources */,
 				CE58D4891D0AAE9B00F81961 /* OrdersTableViewCell.m in Sources */,
@@ -562,6 +595,7 @@
 				CE5913B61CBBA789008A3042 /* SideMenuTableViewController.m in Sources */,
 				CE5913B31CBB9431008A3042 /* MainViewController.m in Sources */,
 				CE05AA941CD0F0C900CB7A8E /* Slide3ContentViewController.m in Sources */,
+				39F8448F1E3BDC1A00D6C736 /* VideoViewController.m in Sources */,
 				CE05AAC51CD2998500CB7A8E /* PrettyExpandedTableViewCell.m in Sources */,
 				CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */,
 				CE5913D31CBE60D4008A3042 /* LauncherButton.m in Sources */,
@@ -569,12 +603,14 @@
 				CE5913B01CBB8664008A3042 /* SWRevealViewController.m in Sources */,
 				CE05AAC81CD2AEC000CB7A8E /* PrettySimpleTableViewCell.m in Sources */,
 				CE5913BD1CBCE019008A3042 /* PageContentViewController.m in Sources */,
+				396544C61E37B33C00DBA290 /* BaseTableViewController.m in Sources */,
 				CE05AACB1CD2AFBE00CB7A8E /* Slide13ContentViewController.m in Sources */,
 				CE5913C01CBCE6ED008A3042 /* PageViewController.m in Sources */,
 				CE05AAA91CD24C1F00CB7A8E /* Slide9ContentWithMultipleTablesViewController.m in Sources */,
 				CE05AAAD1CD2598900CB7A8E /* Slide4ContentViewController.m in Sources */,
 				CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */,
 				CE18D6181CC8EC600056D9A4 /* GiftsPageViewController.m in Sources */,
+				393A2EA31E70AE3400406E19 /* OrdersTablesPageViewController.m in Sources */,
 				39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */,
 				39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */,
 				CE5913C61CBCF968008A3042 /* CalculatorViewController.m in Sources */,
@@ -728,6 +764,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = F2NHY2ECRQ;
 				INFOPLIST_FILE = SwissPlanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -744,6 +781,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = F2NHY2ECRQ;
 				INFOPLIST_FILE = SwissPlanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

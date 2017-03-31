@@ -631,7 +631,7 @@ const int FrontViewPositionNone = 0xff;
     _rearViewPosition = FrontViewPositionLeft;
     _rightViewPosition = FrontViewPositionLeft;
     NSString *platform = [PlatformTypeChecker platformType];
-    if ([platform containsString:@"iPad"]/*||[platform isEqualToString:@"Simulator"]*/) {
+    if ([platform containsString:@"iPad"]/*||[platform isEqualToString:@"Simulator"]*/ ) {
         _rearViewRevealWidth = 400.0f;
     } else {
         _rearViewRevealWidth = 260.0f;

@@ -37,6 +37,8 @@
 
 "cabinet.cellcontent.2_3.none" = "Нет";
 
+"cabinet.order.startOrder" = "Старт договор";
+
 "cabinet.order.mainOrder" = "Главный договор";
 
 "cabinet.order.vipOrder" = "VIP договор";
@@ -46,6 +48,10 @@
 /* Calculator */
 
 "calculator.title" = "Калькулятор";
+
+"calculator.order.preStartOrder" = "Pre Start";
+
+"calculator.order.startOrder" = "Start";
 
 "calculator.order.preOrder" = "Preliminary";
 

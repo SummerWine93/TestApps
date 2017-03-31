@@ -8,8 +8,13 @@
 
 #import "VideosTableViewController.h"
 
+#define API_KEY @"AIzaSyASzw3p4duf4yJcsKH-4D0Xdf0Vwh4pl2s"
+#define API_URL @"https://www.googleapis.com/youtube/v3/channels?part=contentDetails,snippet&forUsername=%@&key=%@"
+
 @interface VideosTableViewController () {
     NSMutableArray *videosArray;
+    NSArray *desiredChannelsArray;
+    NSMutableArray *channelsDataArray;
 }
 
 @end
@@ -36,6 +41,8 @@
                    @"Video5",
                    @"Video6",
                    nil];
+    
+    desiredChannelsArray = [NSArray arrayWithObjects:@"Apple", @"Google", nil];
 }
 
 - (void) performGetDataForUrl: (NSURL *) theUrl RequestWithCompletitionHandler: (void (^) (NSData *data, NSURLResponse *response, NSError *error )) comletitionHandler{
@@ -45,14 +52,16 @@
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        completitionHandler(data, response, error);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            comletitionHandler(data, response, error);
+        });
     }];
     [dataTask resume];
     
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [videosArray count];
+    return [desiredChannelsArray count];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -65,7 +74,7 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"videoCell"];
-    cell.textLabel.text = [videosArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [desiredChannelsArray objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:@"video-icon"];
     cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
     cell.textColor = [UIColor whiteColor];
@@ -74,7 +83,20 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/user/infoswissgolden"]];
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://www.youtube.com/user/infoswissgolden"]];
+    [self getChannelInfo:indexPath.row];
+}
+
+- (void) getChannelInfo: (int) channelIndex {
+    NSString *urlString = [NSString stringWithFormat:API_URL, [desiredChannelsArray objectAtIndex:channelIndex], API_KEY];
+    NSURL *url = [NSURL URLWithString:urlString];
+    [self performGetDataForUrl:url RequestWithCompletitionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *result = [NSJSONSerialization
+                                JSONObjectWithData:data
+                                options:NSJSONReadingMutableLeaves
+                                error:nil];
+        NSLog(@"%@", result);
+    }];
 }
 
 #pragma mark - Navigation

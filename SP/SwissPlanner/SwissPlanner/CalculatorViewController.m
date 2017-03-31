@@ -80,10 +80,12 @@
 	self.pickerViewPrepayment.layer.cornerRadius = 5;
 
 	levelsArray = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11",nil];
-    prepaymentArray = [NSArray arrayWithObjects:@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
-	prepaymentValuesArray = [NSArray arrayWithObjects:@220, @720, @1050, @2800, @3550, @9850, nil];
+    prepaymentArray = [NSArray arrayWithObjects:@"75",@"200",@"220", @"720", @"1050", @"2800", @"3550", @"9850", nil];
+	prepaymentValuesArray = [NSArray arrayWithObjects:@75, @200, @220, @720, @1050, @2800, @3550, @9850, nil];
     plansArray = [NSArray arrayWithObjects:
-				  NSLocalizedString(@"calculator.order.preOrder", nil),
+                  NSLocalizedString(@"calculator.order.preStartOrder", nil),
+                  NSLocalizedString(@"calculator.order.startOrder", nil),
+                  NSLocalizedString(@"calculator.order.preOrder", nil),
 				  NSLocalizedString(@"calculator.order.mainOrder", nil),
 				  NSLocalizedString(@"calculator.order.preVipOrder", nil),
 				  NSLocalizedString(@"calculator.order.vipOrder", nil),
@@ -316,7 +318,7 @@
     NSInteger partnerLevelBonus = (checkBoxSelected)? [[bonusForLevelsArray objectAtIndex:0] integerValue]:[[bonusForLevelsArray objectAtIndex:[self.pickerPartnerLevel selectedRowInComponent:0]] integerValue];
 	
 	// Showing the prepayment value
-    NSInteger internetCommission = (selectedPlan>1)?50:20;
+    NSInteger internetCommission = (selectedPlan == 0)?10:(selectedPlan>3)?50:20;
 	NSNumber *prepaymentValue =  [NSNumber numberWithInteger:([[prepaymentValuesArray objectAtIndex:selectedPlan] integerValue] - internetCommission)];
 	//NSString *prepaymentString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula1", nil), [[prepaymentValuesArray objectAtIndex:selectedPlan] stringValue], internetCommission, [prepaymentValue stringValue]];
     
@@ -325,7 +327,7 @@
     
     NSNumber *turnoverValue0 =  [NSNumber numberWithDouble:( [prepaymentValue integerValue] *4 )];
     NSString *turnoverString0 = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula2", nil), [turnoverValue0 stringValue]];
-    NSNumber *prepaymentValue0 = [NSNumber numberWithDouble:[[prepaymentValuesArray objectAtIndex: ((selectedPlan % 2 == 0) ? (selectedPlan + 1) : selectedPlan)] integerValue]];
+    NSNumber *prepaymentValue0 = [NSNumber numberWithDouble:[[prepaymentValuesArray objectAtIndex: ((selectedPlan % 2 == 0) ? (selectedPlan + 1) : selectedPlan)] integerValue] - (((selectedPlan % 2 == 0) ? 0 : (selectedPlan>3)?50:20))];
 	// Showing the turnover value
 	
     NSNumber *turnoverValue =  [NSNumber numberWithDouble:( [turnoverValue0 doubleValue] - [prepaymentValue0 doubleValue])];
@@ -357,9 +359,11 @@
 	// Showing the income value
 	NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
 	[nf setMaximumFractionDigits:3];
-	NSNumber *incomeValue =  [NSNumber numberWithDouble:([carierPointPriceValue doubleValue]*[carierPointsValue doubleValue])];
+    [nf setRoundingMode: NSNumberFormatterRoundDown];
+    [nf setNumberStyle:NSNumberFormatterDecimalStyle];
+	NSNumber *incomeValue =  [NSNumber numberWithFloat:([carierPointPriceValue floatValue]*[carierPointsValue floatValue])];
 	NSString *extraInfo = NSLocalizedString(@"calculator.content.formula7", nil);
-	NSString *incomeString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula8", nil), [carierPointPriceValue stringValue], [carierPointsValue stringValue], [ nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
+	NSString *incomeString = [NSString stringWithFormat:NSLocalizedString(@"calculator.content.formula8", nil), [carierPointPriceValue stringValue], [carierPointsValue stringValue], [nf stringFromNumber:incomeValue], ([incomeValue intValue]>0)?@"":extraInfo];
 	
 	NSMutableAttributedString *attributedResultsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@%@", turnoverString0, turnoverString, turnoverString2, carierPointsString, carierPointPriceString]];
     [attributedResultsString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:([FontsHelper getFontSize] + 1)] range:NSMakeRange(0, attributedResultsString.string.length)];

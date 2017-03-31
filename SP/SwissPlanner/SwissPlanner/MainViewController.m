@@ -25,6 +25,10 @@
 	BOOL isInLeadershipProgram;
 	
 	NSArray *levelsPointsArray;
+    NSInteger _numberOfCells;
+    OrdersTableViewCell *ordersCellContainer;
+    NSUInteger orderNumber;
+    NSArray *orderTablesDataArray;
 }
 
 @end
@@ -83,6 +87,25 @@ typedef enum {
 							 nil];
 	
 	levelsPointsArray = [NSArray arrayWithObjects:@0, @0, @100, @300, @1000, @2500, @5000, @10000, @25000, @50000, @100000, @20000, nil];
+    
+    orderTablesDataArray = [NSArray arrayWithObjects:
+                            [NSArray arrayWithObjects:@"table0", NSLocalizedString(@"cabinet.order.startOrder", nil), nil],
+                            [NSArray arrayWithObjects:@"table1", NSLocalizedString(@"cabinet.order.mainOrder", nil), nil],
+                            [NSArray arrayWithObjects:@"table2", NSLocalizedString(@"cabinet.order.vipOrder", nil), nil],
+                            [NSArray arrayWithObjects:@"table3", NSLocalizedString(@"cabinet.order.vipPlusOrder", nil), nil],
+                            nil];
+    
+    _numberOfCells = 3;
+    
+    self.leftSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:)];
+    self.rightSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:)];
+    
+    self.leftSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    self.rightSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight
+    ;
+    [self.revealViewController.panGestureRecognizer requireGestureRecognizerToFail:self.rightSwipeGestureRecognizer];
+    
+    orderNumber = 0;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -230,9 +253,16 @@ typedef enum {
     } else {
 		if (indexPath.row == 0) {
 			OrdersTableViewCell *cell = (OrdersTableViewCell *) [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-			cell.mainOrderLabel.text = NSLocalizedString(@"cabinet.order.mainOrder", nil);
+            
+            cell.orderLabel.text = orderTablesDataArray[orderNumber][1];
+            cell.orderImage.image = [UIImage imageNamed:orderTablesDataArray[orderNumber][0]];
 			cell.vipOrderLabel.text = NSLocalizedString(@"cabinet.order.vipOrder", nil);
 			cell.vipPlusOrderLabel.text = NSLocalizedString(@"cabinet.order.vipPlusOrder", nil);
+            
+            ordersCellContainer = cell;
+            [ordersCellContainer addGestureRecognizer:self.leftSwipeGestureRecognizer];
+            [ordersCellContainer addGestureRecognizer:self.rightSwipeGestureRecognizer];
+            
 			return cell;
 		}
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
@@ -260,16 +290,76 @@ typedef enum {
             
 			break;
 		case 1:
-			segueIdentifier = [NSString stringWithFormat:@"segueCabinet2"];
+			//segueIdentifier = [NSString stringWithFormat:@"segueCabinet2"];
+            [self showNextOrderReverse:true];
 			break;
 		case 2:
-			segueIdentifier = [NSString stringWithFormat:@"segueCabinet3"];
+			//segueIdentifier = [NSString stringWithFormat:@"segueCabinet3"];
+            [self showNextOrderReverse:false];
 			break;
   default:
 			break;
 	}
 	[self performSegueWithIdentifier:segueIdentifier sender:self];
 }
+
+- (IBAction)selectOrderButtonCLicked:(id)sender {
+    UIButton *button = sender;
+    
+    switch (button.tag) {
+        case 0:
+            break;
+        case 1:
+            [self showNextOrderReverse:true];
+            break;
+        case 2:
+            [self showNextOrderReverse:false];
+            break;
+        default:
+            break;
+    }
+ }
+
+
+- (void)handleSwipes:(UISwipeGestureRecognizer *)sender
+{
+    BOOL reverse = false;
+    if (sender.direction == UISwipeGestureRecognizerDirectionRight)
+    {
+        //orderNumber = ((orderNumber == 0) ? 3 : (orderNumber - 1));
+        reverse = true;
+        
+    }
+    
+    if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
+        //orderNumber = (orderNumber + 1)%4;
+        reverse = false;
+    }
+    //ordersCellContainer.orderLabel.text = orderTablesDataArray[orderNumber][1];
+    //ordersCellContainer.orderImage.image = [UIImage imageNamed:orderTablesDataArray[orderNumber][0]];
+    [self showNextOrderReverse:reverse];
+}
+
+-(void)showNextOrderReverse:(BOOL)isReverse {
+    if (isReverse) {
+        orderNumber = ((orderNumber == 0) ? 3 : (orderNumber - 1));
+    } else {
+        orderNumber = (orderNumber + 1)%4;
+
+    }
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        ordersCellContainer.alpha = 0.5;
+    } completion:^(BOOL finished) {
+        ordersCellContainer.orderLabel.text = orderTablesDataArray[orderNumber][1];
+        ordersCellContainer.orderImage.image = [UIImage imageNamed:orderTablesDataArray[orderNumber][0]];
+        ordersCellContainer.alpha = 1;
+    }];
+    
+    
+}
+
 
 
 #pragma mark - Navigation
@@ -284,8 +374,41 @@ typedef enum {
     } else if ([segue.identifier isEqualToString:@"segueCabinet3"]) {
         vc.selectedPlanNumber = [NSNumber numberWithInt:5];
     }
+    vc.selectedPlanNumber = [NSNumber numberWithInt:(2 * orderNumber + 1)];
     vc.viewControllerIsInSecondaryLine = [NSNumber numberWithBool:YES];
 }
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    
+    return _numberOfCells;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UICollectionViewCell *cell = (UICollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"orderTableCell" forIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    //NSInteger viewWidth = self.collectionView.bounds.size.width;
+    
+    
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return YES;
+}
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    return YES;
+}
 
 @end

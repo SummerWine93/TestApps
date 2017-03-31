@@ -37,9 +37,11 @@
 
 "cabinet.cellcontent.2_3.none" = "None";
 
+"cabinet.order.startOrder" = "Start 合同";
+
 "cabinet.order.mainOrder" = "主合同";
 
-"cabinet.order.vipOrder" = "VIP合同";
+"cabinet.order.vipOrder" = "VIP 合同";
 
 "cabinet.order.vipPlusOrder" = "VIP PLUS 合同";
 
@@ -47,17 +49,21 @@
 
 "calculator.title" = "计算器";
 
-"calculator.order.preOrder" = "初步定货表";
+"calculator.order.preStartOrder" = "Pre Start";
 
-"calculator.order.mainOrder" = "主定货表";
+"calculator.order.startOrder" = "Start";
 
-"calculator.order.preVipOrder" = "初步vip定货表";
+"calculator.order.preOrder" = "Preliminary";
 
-"calculator.order.vipOrder" = "vip定货表";
+"calculator.order.mainOrder" = "Main";
 
-"calculator.order.preVipPlusOrder" = "初步vip plus定货表";
+"calculator.order.preVipOrder" = "Pre VIP";
 
-"calculator.order.vipPlusOrder" = "vip plus定货表";
+"calculator.order.vipOrder" = "VIP";
+
+"calculator.order.preVipPlusOrder" = "Pre VIP PLUS";
+
+"calculator.order.vipPlusOrder" = "VIP PLUS";
 
 "calculator.content.yourLevel" = " 您的等级";
 

@@ -10,6 +10,8 @@
 #import "PrettyExpandedTableViewCell.h"
 
 typedef enum {
+    preStartTable,
+    startTable,
 	mainTable,
 	preVipTable,
 	VipTable,
@@ -32,6 +34,8 @@ typedef enum {
 	currentTableType = mainTable;
 	
     cellNames = [NSArray arrayWithObjects:
+                 [NSString stringWithFormat:NSLocalizedString(@"calculator.order.preStartOrder", nil)],
+                 [NSString stringWithFormat:NSLocalizedString(@"calculator.order.startOrder", nil)],
                  [NSString stringWithFormat:NSLocalizedString(@"calculator.order.mainOrder", nil)],
                  [NSString stringWithFormat:NSLocalizedString(@"calculator.order.preVipOrder", nil)],
                  [NSString stringWithFormat:NSLocalizedString(@"calculator.order.vipOrder", nil)],
@@ -62,24 +66,24 @@ typedef enum {
 						  [NSArray arrayWithObjects:@"11", @"200 000", @"€50", nil],
 						  nil];
 	self.extraDataArray = [NSArray arrayWithObjects:
-						  [NSArray arrayWithObjects:@"56.70", @"32.40", @"222.75", @"112.05", @"793,80", nil],
-						  [NSArray arrayWithObjects:@"75.60", @"43.20", @"297", @"149.40", @"1058.40", nil],
-						  [NSArray arrayWithObjects:@"94.50", @"54", @"371.25", @"186.75", @"1323", nil],
-						  [NSArray arrayWithObjects:@"113.40", @"64.80", @"445.50", @"224.10", @"1587.60", nil],
-						  [NSArray arrayWithObjects:@"132.30", @"75.60", @"519.75", @"261.45", @"1 852.20", nil],
-						  [NSArray arrayWithObjects:@"151.20", @"86.40", @"594", @"298.80", @"2 116.80", nil],
-						  [NSArray arrayWithObjects:@"162.54", @"92.88", @"638.55", @"321.21", @"2 275.56", nil],
-						  [NSArray arrayWithObjects:@"170.10", @"97.20", @"668.25", @"336.15", @"2 381.40", nil],
-						  [NSArray arrayWithObjects:@"177.66", @"101.52", @"697.95", @"351.09", @"2 487.24", nil],
-						  [NSArray arrayWithObjects:@"185.22", @"105.84", @"727.65", @"366.03", @"2 593.08", nil],
-						  [NSArray arrayWithObjects:@"189", @"108", @"742.50", @"373.50", @"2 646", nil],
+						  [NSArray arrayWithObjects:@"1.62",@"14.58",@"56.70", @"32.40", @"222.75", @"112.05", @"793,80", nil],
+						  [NSArray arrayWithObjects:@"2.16",@"19.44",@"75.60", @"43.20", @"297", @"149.40", @"1058.40", nil],
+						  [NSArray arrayWithObjects:@"2.70",@"24.30",@"94.50", @"54", @"371.25", @"186.75", @"1323", nil],
+						  [NSArray arrayWithObjects:@"3.24",@"29.16",@"113.40", @"64.80", @"445.50", @"224.10", @"1587.60", nil],
+						  [NSArray arrayWithObjects:@"3.78",@"34.02",@"132.30", @"75.60", @"519.75", @"261.45", @"1 852.20", nil],
+						  [NSArray arrayWithObjects:@"4.32",@"38.88",@"151.20", @"86.40", @"594", @"298.80", @"2 116.80", nil],
+						  [NSArray arrayWithObjects:@"4.64",@"41.80",@"162.54", @"92.88", @"638.55", @"321.21", @"2 275.56", nil],
+						  [NSArray arrayWithObjects:@"4.86",@"43.74",@"170.10", @"97.20", @"668.25", @"336.15", @"2 381.40", nil],
+						  [NSArray arrayWithObjects:@"5.08",@"45.68",@"177.66", @"101.52", @"697.95", @"351.09", @"2 487.24", nil],
+						  [NSArray arrayWithObjects:@"5.29",@"47.63",@"185.22", @"105.84", @"727.65", @"366.03", @"2 593.08", nil],
+						  [NSArray arrayWithObjects:@"5.40",@"48.60",@"189", @"108", @"742.50", @"373.50", @"2 646", nil],
 						  nil];
 	/*
     for (int i; i < [cellNames count]; i++) {
         [self.segmentedControl setTitle:cellNames[i] forSegmentAtIndex:i];
         NSLog(@"%@", cellNames[i]);
     } */
-    
+    //int i = 0;
 	for (id segment in [self.segmentedControl subviews]) {
         
 		for (id label in [segment subviews]) {
@@ -87,6 +91,7 @@ typedef enum {
 				UILabel *titleLabel = (UILabel *) label;
 				titleLabel.numberOfLines = 0;
                 //titleLabel.text = cellNames[i];
+                //i++;
 			}
 		}
         

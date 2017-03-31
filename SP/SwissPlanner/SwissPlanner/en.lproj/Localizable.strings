@@ -37,6 +37,8 @@
 
 "cabinet.cellcontent.2_3.none" = "None";
 
+"cabinet.order.startOrder" = "Start order";
+
 "cabinet.order.mainOrder" = "Main order";
 
 "cabinet.order.vipOrder" = "VIP order";
@@ -46,6 +48,10 @@
 /* Calculator */
 
 "calculator.title" = "Calculator";
+
+"calculator.order.preStartOrder" = "Pre Start";
+
+"calculator.order.startOrder" = "Start";
 
 "calculator.order.preOrder" = "Preliminary";
 

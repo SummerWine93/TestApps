@@ -37,6 +37,8 @@
 
 "cabinet.cellcontent.2_3.none" = "Żaden";
 
+"cabinet.order.startOrder" = "Umova Start";
+
 "cabinet.order.mainOrder" = "Umowa Główna";
 
 "cabinet.order.vipOrder" = "Umowa VIP";
@@ -46,6 +48,10 @@
 /* Calculator */
 
 "calculator.title" = "Kalkulator";
+
+"calculator.order.preStartOrder" = "Pre Start";
+
+"calculator.order.startOrder" = "Start";
 
 "calculator.order.preOrder" = "Wstępny";
 
