@@ -13,6 +13,7 @@
 - (NSArray *) getAllTheLanguages;
 - (NSArray *) getAllTheLanguagesNames;
 - (NSString *) getCurrentLanguage;
++ (NSString *) getCurrentLanguage;
 - (void) setCurrentLanguage: (NSString *) newLanguage;
 
 @end

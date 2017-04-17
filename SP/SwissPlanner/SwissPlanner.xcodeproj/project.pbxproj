@@ -15,6 +15,7 @@
 		396544C31E37B12300DBA290 /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396544C21E37B12300DBA290 /* VideosTableViewController.m */; };
 		396544C61E37B33C00DBA290 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396544C51E37B33C00DBA290 /* BaseTableViewController.m */; };
 		396544C91E39305300DBA290 /* ChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396544C81E39305300DBA290 /* ChannelTableViewController.m */; };
+		396EED691E98C8B200EAEBD2 /* WebApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396EED681E98C8B200EAEBD2 /* WebApiController.m */; };
 		3996E2451D330A6B00FEB468 /* FontsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3996E2441D330A6B00FEB468 /* FontsHelper.m */; };
 		39AB1C681D017CDA00A1622C /* TestsStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AB1C671D017CDA00A1622C /* TestsStartingViewController.m */; };
 		39C88B971D0E092700D932C3 /* LanguageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C88B961D0E092700D932C3 /* LanguageHelper.m */; };
@@ -85,8 +86,8 @@
 /* Begin PBXFileReference section */
 		3908F5621CFF922D00261709 /* TestPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPageViewController.h; sourceTree = "<group>"; };
 		3908F5631CFF922D00261709 /* TestPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPageViewController.m; sourceTree = "<group>"; };
-		393A2EA11E70AE3400406E19 /* OrdersTablesPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersTablesPageViewController.h; sourceTree = "<group>"; };
-		393A2EA21E70AE3400406E19 /* OrdersTablesPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersTablesPageViewController.m; sourceTree = "<group>"; };
+		393A2EA11E70AE3400406E19 /* OrdersTablesPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrdersTablesPageViewController.h; path = ../OrdersTablesPageViewController.h; sourceTree = "<group>"; };
+		393A2EA21E70AE3400406E19 /* OrdersTablesPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrdersTablesPageViewController.m; path = ../OrdersTablesPageViewController.m; sourceTree = "<group>"; };
 		39546FFA1D06096E00710FD2 /* tests_source.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tests_source.txt; sourceTree = "<group>"; };
 		39546FFC1D060A1100710FD2 /* TestBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBaseHelper.h; sourceTree = "<group>"; };
 		39546FFD1D060A1100710FD2 /* TestBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBaseHelper.m; sourceTree = "<group>"; };
@@ -98,6 +99,8 @@
 		396544C51E37B33C00DBA290 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		396544C71E39305300DBA290 /* ChannelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChannelTableViewController.h; path = ../ChannelTableViewController.h; sourceTree = "<group>"; };
 		396544C81E39305300DBA290 /* ChannelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChannelTableViewController.m; path = ../ChannelTableViewController.m; sourceTree = "<group>"; };
+		396EED671E98C8B200EAEBD2 /* WebApiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebApiController.h; sourceTree = "<group>"; };
+		396EED681E98C8B200EAEBD2 /* WebApiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebApiController.m; sourceTree = "<group>"; };
 		398E03FC1D5FC3A300354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		398E03FD1D5FC3A300354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		398E03FE1D5FC3A400354D06 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -252,6 +255,67 @@
 			name = TestSlides;
 			sourceTree = "<group>";
 		};
+		396EED661E98C86300EAEBD2 /* WebApi */ = {
+			isa = PBXGroup;
+			children = (
+				396EED671E98C8B200EAEBD2 /* WebApiController.h */,
+				396EED681E98C8B200EAEBD2 /* WebApiController.m */,
+			);
+			name = WebApi;
+			sourceTree = "<group>";
+		};
+		39E79FA91EA4FDC50022809A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE5913B71CBBA7A4008A3042 /* Navigation Menu */,
+				CE18D6151CC8EC230056D9A4 /* GiftsSlides */,
+				CE5913CA1CBE35A1008A3042 /* EducationSlides */,
+				3908F5611CFF91EC00261709 /* TestSlides */,
+				CE5913C71CBE3592008A3042 /* TestingViewController.h */,
+				CE5913C81CBE3592008A3042 /* TestingViewController.m */,
+				396544C41E37B33C00DBA290 /* BaseTableViewController.h */,
+				396544C51E37B33C00DBA290 /* BaseTableViewController.m */,
+				396544BE1E37B08A00DBA290 /* BaseViewController.h */,
+				396544BF1E37B08A00DBA290 /* BaseViewController.m */,
+				396544C11E37B12300DBA290 /* VideosTableViewController.h */,
+				396544C21E37B12300DBA290 /* VideosTableViewController.m */,
+				39F8448D1E3BDC1A00D6C736 /* VideoViewController.h */,
+				39F8448E1E3BDC1A00D6C736 /* VideoViewController.m */,
+				CE5913CB1CBE3616008A3042 /* GiftsViewController.h */,
+				CE5913CC1CBE3616008A3042 /* GiftsViewController.m */,
+				CE58D4871D0AAE9B00F81961 /* OrdersTableViewCell.h */,
+				CE58D4881D0AAE9B00F81961 /* OrdersTableViewCell.m */,
+				CE5913B11CBB9431008A3042 /* MainViewController.h */,
+				CE5913B21CBB9431008A3042 /* MainViewController.m */,
+				CE5913C41CBCF968008A3042 /* CalculatorViewController.h */,
+				CE5913C51CBCF968008A3042 /* CalculatorViewController.m */,
+				393A2EA11E70AE3400406E19 /* OrdersTablesPageViewController.h */,
+				393A2EA21E70AE3400406E19 /* OrdersTablesPageViewController.m */,
+				396544C71E39305300DBA290 /* ChannelTableViewController.h */,
+				396544C81E39305300DBA290 /* ChannelTableViewController.m */,
+				CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */,
+				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
+				CE58D48A1D0EB21E00F81961 /* LanguageSelectionTableViewController.h */,
+				CE58D48B1D0EB21E00F81961 /* LanguageSelectionTableViewController.m */,
+				39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */,
+				39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		39E79FAA1EA4FDEB0022809A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3996E2431D330A6B00FEB468 /* FontsHelper.h */,
+				3996E2441D330A6B00FEB468 /* FontsHelper.m */,
+				CE3CAF731CF8773100B276CD /* PlatformTypeChecker.h */,
+				CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */,
+				39C88B951D0E092700D932C3 /* LanguageHelper.h */,
+				39C88B961D0E092700D932C3 /* LanguageHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		CE05AAAA1CD258CF00CB7A8E /* Slides */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,8 +365,6 @@
 		CE5913721CBA566C008A3042 = {
 			isa = PBXGroup;
 			children = (
-				393A2EA11E70AE3400406E19 /* OrdersTablesPageViewController.h */,
-				393A2EA21E70AE3400406E19 /* OrdersTablesPageViewController.m */,
 				CE59137D1CBA566D008A3042 /* SwissPlanner */,
 				CE5913971CBA566E008A3042 /* SwissPlannerTests */,
 				CE59137C1CBA566C008A3042 /* Products */,
@@ -321,50 +383,17 @@
 		CE59137D1CBA566D008A3042 /* SwissPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				396544C71E39305300DBA290 /* ChannelTableViewController.h */,
-				396544C81E39305300DBA290 /* ChannelTableViewController.m */,
-				39C88B951D0E092700D932C3 /* LanguageHelper.h */,
-				39C88B961D0E092700D932C3 /* LanguageHelper.m */,
-				3908F5611CFF91EC00261709 /* TestSlides */,
-				CE5913B11CBB9431008A3042 /* MainViewController.h */,
-				CE5913B21CBB9431008A3042 /* MainViewController.m */,
-				CE5913C41CBCF968008A3042 /* CalculatorViewController.h */,
-				CE5913C51CBCF968008A3042 /* CalculatorViewController.m */,
-				CE5913CA1CBE35A1008A3042 /* EducationSlides */,
-				CE18D6151CC8EC230056D9A4 /* GiftsSlides */,
-				CE5913C71CBE3592008A3042 /* TestingViewController.h */,
-				CE5913C81CBE3592008A3042 /* TestingViewController.m */,
-				CE5913CB1CBE3616008A3042 /* GiftsViewController.h */,
-				CE5913CC1CBE3616008A3042 /* GiftsViewController.m */,
-				CE5913B71CBBA7A4008A3042 /* Navigation Menu */,
+				39E79FAA1EA4FDEB0022809A /* Helpers */,
+				39E79FA91EA4FDC50022809A /* ViewControllers */,
+				396EED661E98C86300EAEBD2 /* WebApi */,
 				CE5913811CBA566D008A3042 /* AppDelegate.h */,
 				CE5913821CBA566D008A3042 /* AppDelegate.m */,
 				CE5913D11CBE60D4008A3042 /* LauncherButton.h */,
 				CE5913D21CBE60D4008A3042 /* LauncherButton.m */,
-				CE58D4871D0AAE9B00F81961 /* OrdersTableViewCell.h */,
-				CE58D4881D0AAE9B00F81961 /* OrdersTableViewCell.m */,
 				CE59138C1CBA566D008A3042 /* LaunchScreen.storyboard */,
 				CE59138F1CBA566D008A3042 /* Info.plist */,
 				CE59137E1CBA566D008A3042 /* Supporting Files */,
 				CE6BEC311CF48487009FB218 /* Settings.plist */,
-				CE6BEC331CF48BB3009FB218 /* SettingsTableViewController.h */,
-				CE6BEC341CF48BB3009FB218 /* SettingsTableViewController.m */,
-				CE58D48A1D0EB21E00F81961 /* LanguageSelectionTableViewController.h */,
-				CE58D48B1D0EB21E00F81961 /* LanguageSelectionTableViewController.m */,
-				39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */,
-				39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */,
-				3996E2431D330A6B00FEB468 /* FontsHelper.h */,
-				3996E2441D330A6B00FEB468 /* FontsHelper.m */,
-				CE3CAF731CF8773100B276CD /* PlatformTypeChecker.h */,
-				CE3CAF741CF8773100B276CD /* PlatformTypeChecker.m */,
-				396544C41E37B33C00DBA290 /* BaseTableViewController.h */,
-				396544C51E37B33C00DBA290 /* BaseTableViewController.m */,
-				396544BE1E37B08A00DBA290 /* BaseViewController.h */,
-				396544BF1E37B08A00DBA290 /* BaseViewController.m */,
-				396544C11E37B12300DBA290 /* VideosTableViewController.h */,
-				396544C21E37B12300DBA290 /* VideosTableViewController.m */,
-				39F8448D1E3BDC1A00D6C736 /* VideoViewController.h */,
-				39F8448E1E3BDC1A00D6C736 /* VideoViewController.m */,
 			);
 			path = SwissPlanner;
 			sourceTree = "<group>";
@@ -613,6 +642,7 @@
 				393A2EA31E70AE3400406E19 /* OrdersTablesPageViewController.m in Sources */,
 				39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */,
 				39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */,
+				396EED691E98C8B200EAEBD2 /* WebApiController.m in Sources */,
 				CE5913C61CBCF968008A3042 /* CalculatorViewController.m in Sources */,
 				CE5913C91CBE3592008A3042 /* TestingViewController.m in Sources */,
 				CE05AABF1CD2839000CB7A8E /* Slide11ContentViewController.m in Sources */,

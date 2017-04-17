@@ -11,6 +11,6 @@
 
 @interface VideosTableViewController : BaseTableViewController
 
-
+@property (strong, nonatomic) NSArray *videosArray;
 
 @end

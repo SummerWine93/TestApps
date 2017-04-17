@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LanguageHelper.h"
+#import "WebApiController.h"
 
 
 @interface AppDelegate ()
@@ -31,6 +32,8 @@
     LanguageHelper *helper = [[LanguageHelper alloc] init];
 	//[helper setCurrentLanguage:language];
     NSLog(@"%@", [helper getCurrentLanguage]);
+    
+    //[[[WebApiController alloc] init] makeApiRequest:@"" withOptionsDictionary:NULL success:NULL error:NULL];
 
 	return YES;
 }
