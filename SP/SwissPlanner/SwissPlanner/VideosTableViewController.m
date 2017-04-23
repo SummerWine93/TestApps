@@ -18,7 +18,7 @@
     NSArray *desiredChannelsArray;
     NSMutableArray *channelsDataArray;
     WebApiController *apiController;
-    NSDictionary * selectedVideoObject;
+    NSMutableDictionary * selectedVideoObject;
 }
 
 @end
@@ -89,7 +89,7 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"videoCell"];
     cell.textLabel.text = [[videosArray objectAtIndex:indexPath.row] objectForKey:@"title"];
-    cell.imageView.image = [UIImage imageNamed:@"video-icon"];
+    cell.imageView.image = [UIImage imageNamed:@"video"];
     cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
     cell.textColor = [UIColor whiteColor];
     
@@ -101,9 +101,12 @@
     //[self getChannelInfo:indexPath.row];
     selectedVideoObject = nil;
     if (indexPath.section == 0) {
-        selectedVideoObject = [videosArray objectAtIndex:indexPath.row];
+        selectedVideoObject = [NSMutableDictionary dictionaryWithDictionary:[videosArray objectAtIndex:indexPath.row]];
+        [selectedVideoObject setObject:[[self.videosArray objectAtIndex:indexPath.row] objectForKey:@"youtube_id"] forKey:@"youtube_id"];
+        [self performSegueWithIdentifier:@"showVideoSegue" sender:nil];
+        
     }
-    
+
 }
 
 - (void) getChannelInfo: (int) channelIndex {
@@ -122,6 +125,8 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    VideoViewController * vc = segue.destinationViewController;
+    vc.videoDataObject = selectedVideoObject;
     NSLog(@"123");
 }
 

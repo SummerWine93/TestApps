@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 @import AVFoundation;
 @import AVKit;
+#import "YTPlayerView.h"
 
 @interface VideoViewController : UIViewController
 
 @property (strong, nonatomic) NSDictionary *videoDataObject;
+@property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
 
 - (void) presentVideo;
 

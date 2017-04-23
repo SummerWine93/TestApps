@@ -37,6 +37,15 @@
     }];
 }
 
+- (void) getAudiosWithSuccess:(void (^)(NSArray* data))successBlock
+                        error:(void (^)(NSError *error))errorBlock {
+    [self makeApiRequest:audio withOptionsDictionary:NULL success:^(NSArray* data) {
+        successBlock(data);
+    } error:^(NSError *error) {
+        errorBlock(error);
+    }];
+}
+
 - (void) getCategoriesWithSuccess:(void (^)(NSArray* data))successBlock
                         error:(void (^)(NSError *error))errorBlock {
     [self makeApiRequest:category withOptionsDictionary:NULL success:^(NSArray* data) {

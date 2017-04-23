@@ -29,6 +29,10 @@ typedef enum {
 - (void) getVideosWithSuccess:(void (^)(NSArray* data))successBlock
                         error:(void (^)(NSError *error))errorBlock;
 
+- (void) getAudiosWithSuccess:(void (^)(NSArray* data))successBlock
+                        error:(void (^)(NSError *error))errorBlock;
+
+
 - (void) getYoutubeVideoWithId: (NSString *) videoId cess:(void (^)(NSDictionary* data))successBlock
                          error:(void (^)(NSError *error))errorBlock;
 

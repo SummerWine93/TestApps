@@ -13,6 +13,7 @@
 @interface ChannelTableViewController () {
     NSMutableArray *channelsArray;
     NSMutableArray *videosArray;
+    NSMutableArray *audiosArray;
     NSString * selectedCategoryIndex;
     WebApiController *apiController;
 }
@@ -41,6 +42,16 @@
     
     [apiController getVideosWithSuccess:^(NSArray *data) {
         videosArray = [NSMutableArray arrayWithArray:data];
+        // stop spinner
+        NSLog(@"OK");
+        
+    } error:^(NSError *error) {
+        // stop spinner
+        NSLog(@"not OK");
+    }];
+    
+    [apiController getAudiosWithSuccess:^(NSArray *data) {
+        audiosArray = [NSMutableArray arrayWithArray:data];
         // stop spinner
         NSLog(@"OK");
         

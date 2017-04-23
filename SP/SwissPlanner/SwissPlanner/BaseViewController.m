@@ -24,7 +24,7 @@
     
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationItem.title = NSLocalizedString(@"calculator.title", nil);
+    //self.navigationItem.title = NSLocalizedString(@"calculator.title", nil);
     
     if ((self.viewControllerIsInSecondaryLine == nil)||([self.viewControllerIsInSecondaryLine boolValue] == NO)) {
         // adding navigation capabilities

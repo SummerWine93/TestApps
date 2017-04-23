@@ -21,6 +21,8 @@
 		39C88B971D0E092700D932C3 /* LanguageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C88B961D0E092700D932C3 /* LanguageHelper.m */; };
 		39CD848B1CF38A1E000D8025 /* Slide8aContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */; };
 		39D47B081D0437AB003D05EA /* TestQuestionPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */; };
+		39E79FAD1EA552D10022809A /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E79FAC1EA552D10022809A /* YTPlayerView.m */; };
+		39E79FAF1EA552EB0022809A /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 39E79FAE1EA552EB0022809A /* Assets.bundle */; };
 		39F734ED1CF6172D00057957 /* CabinetContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */; };
 		39F8448F1E3BDC1A00D6C736 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F8448E1E3BDC1A00D6C736 /* VideoViewController.m */; };
 		CE05AA911CD0B1AA00CB7A8E /* Slide2ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05AA901CD0B1AA00CB7A8E /* Slide2ContentViewController.m */; };
@@ -118,6 +120,9 @@
 		39CD848A1CF38A1E000D8025 /* Slide8aContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slide8aContentViewController.m; sourceTree = "<group>"; };
 		39D47B061D0437AA003D05EA /* TestQuestionPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestQuestionPageContentViewController.h; sourceTree = "<group>"; };
 		39D47B071D0437AA003D05EA /* TestQuestionPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestQuestionPageContentViewController.m; sourceTree = "<group>"; };
+		39E79FAB1EA552D10022809A /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		39E79FAC1EA552D10022809A /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		39E79FAE1EA552EB0022809A /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		39F734EB1CF6172D00057957 /* CabinetContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinetContentTableViewCell.h; sourceTree = "<group>"; };
 		39F734EC1CF6172D00057957 /* CabinetContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabinetContentTableViewCell.m; sourceTree = "<group>"; };
 		39F8448D1E3BDC1A00D6C736 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -306,6 +311,8 @@
 		39E79FAA1EA4FDEB0022809A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				39E79FAB1EA552D10022809A /* YTPlayerView.h */,
+				39E79FAC1EA552D10022809A /* YTPlayerView.m */,
 				3996E2431D330A6B00FEB468 /* FontsHelper.h */,
 				3996E2441D330A6B00FEB468 /* FontsHelper.m */,
 				CE3CAF731CF8773100B276CD /* PlatformTypeChecker.h */,
@@ -390,6 +397,7 @@
 				CE5913821CBA566D008A3042 /* AppDelegate.m */,
 				CE5913D11CBE60D4008A3042 /* LauncherButton.h */,
 				CE5913D21CBE60D4008A3042 /* LauncherButton.m */,
+				CE5913871CBA566D008A3042 /* Main.storyboard */,
 				CE59138C1CBA566D008A3042 /* LaunchScreen.storyboard */,
 				CE59138F1CBA566D008A3042 /* Info.plist */,
 				CE59137E1CBA566D008A3042 /* Supporting Files */,
@@ -402,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDA437E1CFF018500BB1AE0 /* Assets.xcassets */,
+				39E79FAE1EA552EB0022809A /* Assets.bundle */,
 				39546FFA1D06096E00710FD2 /* tests_source.txt */,
 				CEDA437D1CFF009300BB1AE0 /* TextFieldValidator */,
 				CE59137F1CBA566D008A3042 /* main.m */,
@@ -429,7 +438,6 @@
 				CE5913AE1CBB8664008A3042 /* SWRevealViewController.h */,
 				CE5913AF1CBB8664008A3042 /* SWRevealViewController.m */,
 				CE05AAD91CD74E8800CB7A8E /* NavigationTableViewCell.h */,
-				CE5913871CBA566D008A3042 /* Main.storyboard */,
 				CE05AADA1CD74E8800CB7A8E /* NavigationTableViewCell.m */,
 			);
 			name = "Navigation Menu";
@@ -569,6 +577,7 @@
 				CE59138E1CBA566D008A3042 /* LaunchScreen.storyboard in Resources */,
 				CE5A3F831CEF58FF00B8C8E9 /* Localizable.strings in Resources */,
 				CE5913891CBA566D008A3042 /* Main.storyboard in Resources */,
+				39E79FAF1EA552EB0022809A /* Assets.bundle in Resources */,
 				CE6BEC321CF48487009FB218 /* Settings.plist in Resources */,
 				CEDA437F1CFF018500BB1AE0 /* Assets.xcassets in Resources */,
 				39546FFB1D06096E00710FD2 /* tests_source.txt in Resources */,
@@ -635,6 +644,7 @@
 				396544C61E37B33C00DBA290 /* BaseTableViewController.m in Sources */,
 				CE05AACB1CD2AFBE00CB7A8E /* Slide13ContentViewController.m in Sources */,
 				CE5913C01CBCE6ED008A3042 /* PageViewController.m in Sources */,
+				39E79FAD1EA552D10022809A /* YTPlayerView.m in Sources */,
 				CE05AAA91CD24C1F00CB7A8E /* Slide9ContentWithMultipleTablesViewController.m in Sources */,
 				CE05AAAD1CD2598900CB7A8E /* Slide4ContentViewController.m in Sources */,
 				CE5519021CF326CF00196675 /* UISegmentedControl+Multiline.m in Sources */,
